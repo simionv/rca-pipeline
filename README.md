@@ -75,7 +75,7 @@ python tools/link_archive.py /path/to/rca-data-archive
 ```
 
 The archive's `ARCHIVE_INDEX.md` lists every original file and where it went during consolidation.
-A pre-commit hook (`pip install pre-commit && pre-commit install`) and CI block commits that contain
+A pre-commit hook (with the virtual environment activated: `pip install pre-commit && pre-commit install`) and CI block commits that contain
 notebook outputs, e-mail addresses, passwords or large files.
 
 ## Commands

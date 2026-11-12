@@ -6,5 +6,5 @@ repos:
       - id: check-repo
         name: no customer data, secrets or notebook outputs
         entry: python tools/check_repo.py
-        language: system
+        language: python
         pass_filenames: true
