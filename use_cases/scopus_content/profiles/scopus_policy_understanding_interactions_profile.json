@@ -1,0 +1,18 @@
+{
+  "input":        "data/Scopus_Content_Collapsed.xlsx",
+  "output":       "runs/output/Scopus_Content_Collapsed_policy_enriched.xlsx",
+  "text_col":     "Conversation",
+  "id_col":       "Integration Id",
+  "taxonomy_dir": "generated/taxonomies",
+  "modules":      ["policy_understanding"],
+  "batch_size":   8,
+  "concurrency":  3,
+  "retries":      4,
+  "run_name":     "Scopus Policy Understanding — Agent Interactions",
+
+  "track_costs":      true,
+  "cost_report_dir":  "runs/cost_reports",
+
+  "run_quality_check":  true,
+  "quality_report_dir": "runs/quality_reports"
+}

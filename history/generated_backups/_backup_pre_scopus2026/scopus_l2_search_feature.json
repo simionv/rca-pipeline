@@ -1,0 +1,36 @@
+{
+  "SCSF1": {
+    "label": "Search / Feature Question",
+    "children": {
+      "SCSF1.1": {
+        "label": "Feature Availability / Functionality Query",
+        "description": "Definition: The user is unsure whether or how a Scopus feature works or is available."
+      },
+      "SCSF1.2": {
+        "label": "Training / User Guidance",
+        "description": "Definition: The user needs guidance, tutorials or training on using Scopus."
+      },
+      "SCSF1.3": {
+        "label": "Export / Download Query",
+        "description": "Definition: The user has a question on exporting or downloading results."
+      },
+      "SCSF1.4": {
+        "label": "Search Syntax / Query Help",
+        "description": "Definition: The user needs help constructing searches."
+      },
+      "SCSF1.5": {
+        "label": "Scopus AI Usage",
+        "description": "Definition: The user has a question on using Scopus AI."
+      },
+      "SCSF1.6": {
+        "label": "Alerts / Saved Searches",
+        "description": "Definition: The user has a question about alerts or saved searches."
+      },
+      "SCSF1.7": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The nature of the question is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Search / Feature Question'. Choose the Level 2 value from this group only. 'Search / Feature Question' means: Definition: How-to, search syntax, export questions, alerts, Scopus AI usage, training, feature availability — customer can access Scopus."
+  }
+}

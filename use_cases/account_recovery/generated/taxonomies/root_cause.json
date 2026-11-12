@@ -1,0 +1,24 @@
+{
+  "RC1": {
+    "label": "Account Configuration & Data Issues",
+    "children": {
+      "RC1.1": {
+        "label": "Accidental Account Deletion",
+        "description": "The account was removed unintentionally — by the user acting in error, an admin mistake, or an automated process that incorrectly targeted the account. The customer did not intend for the deletion to occur and typically contacts support immediately upon losing access. Resolution involves account recovery or restoration from backup, identity verification, and investigating the deletion trigger to prevent recurrence."
+      },
+      "RC1.2": {
+        "label": "Deliberate Account Deletion / Deletion Request",
+        "description": "The account was deleted as the result of an intentional request — either submitted by the customer, actioned by an admin on their behalf, or processed through an automated offboarding or data retention workflow. The customer later regrets the deletion, disputes that the request was authorised, or encounters downstream issues as a result (such as losing access to associated services or data). Resolution may involve attempting recovery within any applicable retention window, clarifying the deletion policy, or confirming that the deletion was correctly fulfilled if the request was legitimate."
+      },
+      "RC1.3": {
+        "label": "Account Already Exists / Email Already in Use",
+        "description": "A new account cannot be created, or an action is blocked, because the email address provided is already associated with an existing record in the system. This may occur when a user has forgotten a previous registration, when duplicate records exist due to a data migration or integration issue, or when a prior account was not fully deleted. Resolution involves locating the existing account, merging or deduplicating records where necessary, or guiding the user through account recovery rather than re-registration."
+      },
+      "RC1.4": {
+        "label": "Email Update Request",
+        "description": "The customer wants to change the email address associated with their existing account — typically due to a change in personal or work email, a domain migration, or a desire to consolidate accounts. This is a routine account maintenance action rather than an error state, but it may surface complications such as the new email already being in use, verification failures, or email changes being restricted by admin or SSO policies. Resolution involves verifying ownership of both addresses where required and updating the record, or escalating if policy or technical constraints prevent the change."
+      }
+    },
+    "description": "Requests related to problems that originate from incorrect, incomplete, or misaligned setup of a customer's account, preferences, or underlying data records. This includes misconfigured settings (such as permissions, billing plans, or feature flags), data integrity problems (such as duplicate records, corrupted fields, or out-of-sync states between systems), and provisioning errors that occur at onboarding or during account changes. Issues in this category are typically not caused by a product defect or user error, but by how the account was established or maintained, meaning the fix usually involves correcting data or configuration directly rather than a code change."
+  }
+}

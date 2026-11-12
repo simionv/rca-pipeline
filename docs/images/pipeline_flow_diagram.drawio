@@ -1,0 +1,250 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="page1" name="Page-1">
+    <mxGraphModel dx="1740" dy="782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="2900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F4E79;fontColor=#ffffff;strokeColor=none;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Customer Support Analytics Pipeline — Process Flow&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="1360" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E79;fontColor=#A8D4F5;strokeColor=none;fontSize=10;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;19 modules  ·  148 fields  ·  10 taxonomies  ·  Feedback-driven continuous improvement&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="1360" x="20" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#444444;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="SETUP / CONFIG" vertex="1">
+          <mxGeometry height="260" width="1360" x="20" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5C6B7A;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Pipeline Definition&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;generic_pipeline_definition.xlsx&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;modules · fields · taxonomy (if known)&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="360" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5C6B7A;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;build_pipeline.py&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Validates definition&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Generates configs &amp;amp; taxonomies&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="360" x="520" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8A9BAA;fontColor=#ffffff;strokeColor=none;fontSize=9;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;taxonomies/*.json&lt;/font&gt;" vertex="1">
+          <mxGeometry height="58" width="210" x="980" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8A9BAA;fontColor=#ffffff;strokeColor=none;fontSize=9;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;pipeline_config.json&lt;/font&gt;" vertex="1">
+          <mxGeometry height="58" width="210" x="980" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8A9BAA;fontColor=#ffffff;strokeColor=none;fontSize=9;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;modules/*.py&lt;/font&gt;" vertex="1">
+          <mxGeometry height="58" width="210" x="980" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#D4A800;strokeWidth=2;dashed=1;fontSize=9;fontStyle=0;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=8;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;✔  BUILD CHECK&lt;/b&gt;  ·  Verify all taxonomy/*.json files generated  ·  Spot-check 3–5 taxonomy codes  ·  Confirm module fields match expected schema  ·  Fix any validation errors before proceeding&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="1360" x="20" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A6B3E;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="&lt;font style=&quot;font-size: 14px; color: rgb(255, 255, 255);&quot;&gt;DISCOVERY  &lt;font style=&quot;font-style: italic;&quot;&gt;(optional — run when no taxonomy exists yet, or to validate an existing one)&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="300" width="1360" x="20" y="452" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Pass 1 — extract_actions()&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Parallel LLM batches on a transcript sample&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Extracts abstract category phrases per contact&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Pre-dedup collapses near-duplicates (token overlap ≥ 0.75)&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="380" x="60" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Pass 2 — normalise()&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Single LLM call on top-N frequency phrases&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Produces structured 2-level taxonomy&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;with dot-notation codes (e.g. CR1.2)&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="380" x="530" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;fontColor=#ffffff;strokeColor=none;fontSize=9;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Draft Taxonomy JSON&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Saved via save_discovered_taxonomy()&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Human reviews &amp;amp; imports into Excel&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="310" x="1035" y="546" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=none;fontSize=8;fontStyle=2;fontColor=#1A6B3E;align=left;verticalAlign=middle;" value="&lt;font style=&#39;font-size:8px;font-style:italic;&#39;&gt;Notebook: 01_build_and_discover.ipynb&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="400" x="60" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#CCFFFF;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#CCFFFF;strokeWidth=1.5;fontColor=#1A6B3E;fontStyle=1;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="18" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;→ human review&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="18" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1A6B3E;strokeWidth=1.5;dashed=1;fontColor=#1A6B3E;fontStyle=2;fontSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;align=center;" target="5" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;update taxonomy&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1165" y="429" />
+              <mxPoint x="1244" y="429" />
+              <mxPoint x="1244" y="132" />
+              <mxPoint x="462" y="132" />
+              <mxPoint x="462" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;dashed=1;fontSize=9;fontStyle=0;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=8;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;✔  TAXONOMY COVERAGE GATE&lt;/b&gt;  ·  Review discovered clusters — do they align with the taxonomy?  ·  Fill any uncovered topic gaps in pipeline_definition.xlsx  ·  Re-run build_pipeline.py if taxonomy was updated  ·  Only proceed when taxonomy covers &amp;gt; 90 % of sampled contacts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="1360" x="20" y="764" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F4E79;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="&lt;font style=&quot;font-size: 14px; color: rgb(255, 255, 255);&quot;&gt;INGEST&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="1360" x="20" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Contact Transcripts&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;contacts.xlsx / .csv&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;One row per contact interaction&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="380" x="60" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5A8FAA;fontColor=#ffffff;strokeColor=none;fontSize=9;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;CRM / ticket&lt;br&gt;metadata (optional)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="45" width="155" x="60" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Batch Loader&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;Splits into batches (default: 10 / call)&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Applies column mapping from config&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="380" x="540" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="25" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8DC;strokeColor=#D4A800;strokeWidth=2;dashed=1;fontSize=9;fontStyle=0;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=8;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;✔  DATA READINESS CHECK&lt;/b&gt;  ·  Verify column mapping resolves correctly  ·  Check for empty or very short transcripts (&amp;lt; 30 words)  ·  Confirm language / encoding  ·  Recommend: run a pilot batch of 50–100 contacts first&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="1360" x="20" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F4E79;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="CLASSIFY" vertex="1">
+          <mxGeometry height="510" width="1360" x="20" y="1146" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Classification Engine&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;run_pipeline.py  →  pipeline.py&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;One LLM call per enabled module per batch&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="1300" x="60" y="1176" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Core&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;contact_reason · interaction_classif.&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="70" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Why &amp;amp; Intent&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;root_cause · customer_intent&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="254.57142857142858" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Customer Exp.&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;sentiment · effort · VoC · journey&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="439.14285714285717" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Agent &amp;amp; Comms&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;performance · effectiveness&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="623.7142857142858" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Resolution&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;quality · escalation · actions · follow-up&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="808.2857142857143" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Self-Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;containment · knowledge · insights&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="992.8571428571429" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E75B6;fontColor=#ffffff;strokeColor=none;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Risk &amp;amp; Profile&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(189, 217, 240);&quot;&gt;compliance · customer_profile&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="172.57142857142858" x="1177.4285714285716" y="1282" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D5A70;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Few-shot Examples&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(170, 204, 221);&quot;&gt;From FeedbackStore&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(170, 204, 221);&quot;&gt;Injected into module prompts&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="380" x="60" y="1456" as="geometry" />
+        </mxCell>
+        <mxCell id="40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3D5A70;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;LLM API&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(170, 204, 221);&quot;&gt;Claude / GPT / Gemini&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(170, 204, 221);&quot;&gt;via llm_client.py&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="380" x="600" y="1456" as="geometry" />
+        </mxCell>
+        <mxCell id="41" edge="1" parent="1" source="27" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="758" y="1024" />
+              <mxPoint x="758" y="1138" />
+              <mxPoint x="710" y="1138" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" edge="1" parent="1" source="39" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#5599BB;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" target="31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="247" y="1456" />
+              <mxPoint x="247" y="1277" />
+              <mxPoint x="320" y="1277" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="43" edge="1" parent="1" source="40" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#5599BB;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" target="31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="1413" />
+              <mxPoint x="1171" y="1413" />
+              <mxPoint x="1171" y="1276" />
+              <mxPoint x="1100" y="1276" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;dashed=1;fontSize=9;fontStyle=0;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=8;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;✔  PILOT VALIDATION&lt;/b&gt;  ·  Inspect one output row per module for reasonableness  ·  Check code labels resolve correctly  ·  Verify evidence / justification fields are populated  ·  Fix prompt issues before scaling to full dataset&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="1360" x="20" y="1668" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E6B4A;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;OUTPUT&lt;/font&gt;" vertex="1">
+          <mxGeometry height="380" width="1360" x="20" y="1728" as="geometry" />
+        </mxCell>
+        <mxCell id="46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFFF;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Confidence Scoring&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;enrich_with_confidence()&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Flags _needs_review=True when score &amp;lt; 0.70&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="480" x="460" y="1758" as="geometry" />
+        </mxCell>
+        <mxCell id="47" parent="1" style="rounded=0;html=1;fillColor=none;strokeColor=none;fontSize=9;fontStyle=1;fontColor=#1E6B4A;align=center;verticalAlign=middle;" value="&lt;b&gt;confidence ≥ 0.70?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="320" x="540" y="1890" as="geometry" />
+        </mxCell>
+        <mxCell id="48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFCC;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Enriched Output&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;enhanced_sample_enriched.xlsx&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;All module fields + metadata&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="440" x="60" y="1938" as="geometry" />
+        </mxCell>
+        <mxCell id="49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B45A00;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Low-Confidence Queue&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;&quot;&gt;review_queue.xlsx&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;&quot;&gt;Sorted by _confidence ascending&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="460" x="860" y="1938" as="geometry" />
+        </mxCell>
+        <mxCell id="50" edge="1" parent="1" source="31" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="46" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="51" edge="1" parent="1" source="46" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#CCFFCC;strokeWidth=2;fontColor=#1E6B4A;fontStyle=1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="48" value="&lt;font style=&quot;color: rgb(30, 107, 74); font-size: 12px;&quot;&gt;YES&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="1" source="46" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#B45A00;strokeWidth=2;fontColor=#B45A00;fontStyle=1;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="49" value="&lt;font style=&quot;color: rgb(180, 90, 0); font-size: 12px;&quot;&gt;NO&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#E65100;strokeWidth=2;dashed=1;fontSize=9;fontStyle=0;align=left;verticalAlign=middle;spacingLeft=12;spacingRight=8;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b style=&quot;&quot;&gt;✔  CONFIDENCE CALIBRATION&lt;/b&gt;  ·  Inspect confidence score distribution  ·  If &amp;gt; 30 % flagged: lower threshold or improve prompts  ·  If &amp;lt; 5 % flagged: raise threshold or add edge-case examples  ·  Target: 10–20 % routed to human review&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48" width="1360" x="20" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B4513;strokeColor=#D0D8E4;strokeWidth=1;fontSize=10;fontStyle=3;fontColor=#444444;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;" value="REVIEW &amp;amp; IMPROVE" vertex="1">
+          <mxGeometry height="500" width="1360" x="20" y="2180" as="geometry" />
+        </mxCell>
+        <mxCell id="55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B45A00;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;b&gt;Human Review&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;SME fills corrections_examples.xlsx&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;(label → corrected label)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="380" x="80" y="2210" as="geometry" />
+        </mxCell>
+        <mxCell id="56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8B4513;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;b&gt;FeedbackStore&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;feedback/*.json&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Persists original / corrected pairs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="380" x="560" y="2210" as="geometry" />
+        </mxCell>
+        <mxCell id="57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A5C6A;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;b&gt;Gold Set Evaluation&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;gold_set_evaluation.ipynb&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Precision · Recall · F1&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;per module and code&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="380" x="80" y="2410" as="geometry" />
+        </mxCell>
+        <mxCell id="58" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A5C6A;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;b&gt;Quality Dashboard&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;quality_dashboard.py&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Confidence trends&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Error analysis per module&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="380" x="560" y="2410" as="geometry" />
+        </mxCell>
+        <mxCell id="59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5C6B7A;fontColor=#ffffff;strokeColor=none;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;b&gt;Taxonomy Refinement&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Edit definitions xlsx&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Add / remove L1 or L2&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:9px;&#39;&gt;Re-run build_pipeline.py&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:8px;color:#A8D4F5;&#39;&gt;Incremental mode: incremental.py&lt;/font&gt;" vertex="1">
+          <mxGeometry height="200" width="310" x="1020" y="2290" as="geometry" />
+        </mxCell>
+        <mxCell id="60" edge="1" parent="1" source="49" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#B45A00;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="55" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="2096" />
+              <mxPoint x="1367" y="2096" />
+              <mxPoint x="1367" y="2175" />
+              <mxPoint x="270" y="2175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" edge="1" parent="1" source="55" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="56" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="62" edge="1" parent="1" source="56" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="58" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="63" edge="1" parent="1" source="55" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#555555;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="57" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64" edge="1" parent="1" source="59" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#5C6B7A;strokeWidth=1.5;dashed=1;fontColor=#5C6B7A;fontStyle=2;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="6" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;rebuild&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="2390" />
+              <mxPoint x="1380" y="385" />
+              <mxPoint x="900" y="385" />
+              <mxPoint x="900" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="65" edge="1" parent="1" source="56" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#B45A00;strokeWidth=2;fontColor=#B45A00;fontStyle=1;fontSize=9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;align=right;" target="39" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(180, 90, 0), rgb(216, 138, 61));&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Few-shot&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(180, 90, 0), rgb(216, 138, 61));&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;feedback&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;color: light-dark(rgb(180, 90, 0), rgb(216, 138, 61)); font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;loop&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/font&gt;&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1367" y="2275" />
+              <mxPoint x="1367" y="1625" />
+              <mxPoint x="517" y="1625" />
+              <mxPoint x="517" y="1531" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

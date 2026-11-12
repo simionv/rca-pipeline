@@ -1,0 +1,19 @@
+{
+  "_comment": "Stage 2 of 2 - sub-contact reason, run only on the subset stage 1 classified as Accessing content. The input path is overridden per call; the value here is the full-run subset written by section 11.",
+  "input": "runs/intermediate/sd_ac_stage2_input.csv",
+  "output": "runs/output/sd_2026_ac_step2_subreason.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "sd_ac_subreason"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports",
+  "temperature": 0.0
+}

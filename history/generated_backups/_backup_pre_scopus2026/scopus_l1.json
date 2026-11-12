@@ -1,0 +1,146 @@
+{
+  "SCLV1": {
+    "label": "Access",
+    "children": {
+      "SCLV1.1": {
+        "label": "Access",
+        "description": "Definition: Login failure or lockout; forgotten password or reset not working; no verification code; institutional/SSO error ('problem with your account'); organisation not recognised at sign-in; stuck on Scopus Preview / 'Check access' / limited access; expired or cut-off subscription; institution not subscribed; IP not recognised; remote/off-campus failure; blocked or suspended account; failed registration; requests to grant or remove user access. Revised taxonomy: Revised taxonomy: Account Management is no longer a separate category. Account changes are Access even when the customer can already sign in: changing or correcting the account email, account name or details, duplicate or multiple accounts and merging them, closing or deleting the account, how to register or set up an account, which email is registered or what the account status is, and password or security-settings questions."
+      }
+    }
+  },
+  "SCLV2": {
+    "label": "Scopus AI Access",
+    "children": {
+      "SCLV2.1": {
+        "label": "Scopus AI Access",
+        "description": "Definition: A conversation about Scopus AI access (not activated, not in the subscription, tab missing, access lost) is tagged Scopus AI Access instead of Access. How-to questions about using Scopus AI go to Search / Feature Question. Scopus AI Access uses the same 11 root causes as Access."
+      }
+    }
+  },
+  "SCLV3": {
+    "label": "Performance & Functionality Issues",
+    "children": {
+      "SCLV3.1": {
+        "label": "Performance & Functionality Issues",
+        "description": "Definition: Formerly 'Technical Error'. Export or download failures, exports stuck in a queue, feature malfunctions, page or search errors, slow loading and browser problems for a customer who can access Scopus."
+      }
+    }
+  },
+  "SCLV4": {
+    "label": "Author Profile Correction",
+    "children": {
+      "SCLV4.1": {
+        "label": "Author Profile Correction",
+        "description": "Definition: Merge/split profiles, missing or wrong documents, name or affiliation fixes, profile not found/created, wrong profile linked — for a customer who can use Scopus. Rule 1 applies."
+      }
+    }
+  },
+  "SCLV5": {
+    "label": "Citation / Metrics",
+    "children": {
+      "SCLV5.1": {
+        "label": "Citation / Metrics",
+        "description": "Definition: Missing documents/journals/issues, incorrect document data, missing titles/metadata, duplicates, retractions (Content / Indexing); citation count, h-index, CiteScore/metric discrepancies and the CiteScore data file request (Citation / Metrics)."
+      }
+    }
+  },
+  "SCLV6": {
+    "label": "Unclear / No Query",
+    "children": {
+      "SCLV6.1": {
+        "label": "Unclear / No Query",
+        "description": "Definition: Empty chats, bounce/auto-reply emails, survey/feedback forms, spam, thank-you or 'resolved' only, with no discernible issue even after reading the agent text and subject."
+      }
+    }
+  },
+  "SCLV7": {
+    "label": "Funding / Awarded Grants Data",
+    "children": {
+      "SCLV7.1": {
+        "label": "Funding / Awarded Grants Data",
+        "description": "Definition: Corrections to funding text, funding numbers or sponsors on document records, and requests to add, correct or remove awarded grants."
+      }
+    }
+  },
+  "SCLV8": {
+    "label": "Content / Indexing",
+    "children": {
+      "SCLV8.1": {
+        "label": "Content / Indexing",
+        "description": "Definition: Missing documents/journals/issues, incorrect document data, missing titles/metadata, duplicates, retractions (Content / Indexing); citation count, h-index, CiteScore/metric discrepancies and the CiteScore data file request (Citation / Metrics)."
+      }
+    }
+  },
+  "SCLV9": {
+    "label": "Help Article Feedback",
+    "children": {
+      "SCLV9.1": {
+        "label": "Help Article Feedback",
+        "description": "Definition: Auto-generated help-article rating forms (helpful / not helpful, with any stated reason). They carry no customer request."
+      }
+    }
+  },
+  "SCLV10": {
+    "label": "Search / Feature Question",
+    "children": {
+      "SCLV10.1": {
+        "label": "Search / Feature Question",
+        "description": "Definition: How-to, search syntax, export questions, alerts, Scopus AI usage, training, feature availability — customer can access Scopus."
+      }
+    }
+  },
+  "SCLV11": {
+    "label": "Institution Admin / Support",
+    "children": {
+      "SCLV11.1": {
+        "label": "Institution Admin / Support",
+        "description": "Definition: Institution-level items that are not access blockers: admin console/roles, SSO/SAML setup, organisation/affiliation profile data, IP/entitlement maintenance, link resolver, usage reports, logo/branding, training/onboarding."
+      }
+    }
+  },
+  "SCLV12": {
+    "label": "Data / Privacy Request",
+    "children": {
+      "SCLV12.1": {
+        "label": "Data / Privacy Request",
+        "description": "Definition: The user requests information about, or removal of, their personal data. Revised taxonomy: Use for requests about personal data: what personal data is held, a copy or export of it, or removal of personal data on privacy or GDPR grounds. A request to close or delete the account itself is Access; a request to remove an author profile is Author Profile Correction."
+      }
+    }
+  },
+  "SCLV13": {
+    "label": "Subscription / Sales",
+    "children": {
+      "SCLV13.1": {
+        "label": "Subscription / Sales",
+        "description": "Definition: Pricing, quotes, trials, renewals, order/agreement processing, interest in subscribing. A trial or complimentary access that was granted but is not working is Access; a request for a trial is Subscription / Sales."
+      }
+    }
+  },
+  "SCLV14": {
+    "label": "Non-Scopus / Wrong Product",
+    "children": {
+      "SCLV14.1": {
+        "label": "Non-Scopus / Wrong Product",
+        "description": "Definition: Tickets about Web of Science, ScienceDirect, ClinicalKey/other Elsevier products, journal submission or publishing, or other companies."
+      }
+    }
+  },
+  "SCLV15": {
+    "label": "ORCID Issue",
+    "children": {
+      "SCLV15.1": {
+        "label": "ORCID Issue",
+        "description": "Definition: Linking, changing, unlinking or syncing ORCID is the main need and the customer is not blocked from access."
+      }
+    }
+  },
+  "SCLV16": {
+    "label": "API / Integration",
+    "children": {
+      "SCLV16.1": {
+        "label": "API / Integration",
+        "description": "Definition: API keys, institutional tokens, SUSHI/COUNTER, Pure/SciVal integrations."
+      }
+    }
+  }
+}

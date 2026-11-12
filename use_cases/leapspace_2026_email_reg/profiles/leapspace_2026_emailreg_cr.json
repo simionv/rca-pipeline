@@ -1,0 +1,19 @@
+{
+  "_comment": "Stage C: main contact reason for the stage-A negatives, using the LeapSpace contact reason taxonomy copied verbatim from leapspace_2026_pipeline_definition.xlsx. Input written by notebooks/18_leapspace_2026_email_registration.ipynb.",
+  "input": "runs/intermediate/ls_emailreg_cr_input.csv",
+  "output": "runs/output/leapspace_2026_emailreg_contact_reason.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "leapspace_contact_reason"
+  ],
+  "batch_size": 1,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 4096,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports",
+  "temperature": 0.0
+}

@@ -1,0 +1,12 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "e016c68aae3d87207c17c7a5448045716064e2838d3ffdecc802f2dbe4411294",
+      "taxonomy_written_at": "2026-11-12T14:04:00.014951+00:00",
+      "py_hash": "e016c68aae3d87207c17c7a5448045716064e2838d3ffdecc802f2dbe4411294",
+      "py_generated_at": "2026-11-12T13:58:24.167125+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:00.015496+00:00",
+  "generator_version": "1.7.0"
+}

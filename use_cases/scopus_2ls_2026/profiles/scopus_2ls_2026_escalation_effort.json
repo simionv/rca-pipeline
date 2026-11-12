@@ -1,0 +1,19 @@
+{
+  "_comment": "Scopus Content 2LS: escalation check, back-and-forth count, internal notes and customer effort, with evidence. Input is the deduplicated transcript rebuilt from the raw thread TSV by notebooks/17_scopus_2ls_escalation_effort.ipynb.",
+  "input": "runs/intermediate/s2ls_sample_input.csv",
+  "output": "runs/output/scopus_2ls_2026_sample.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "s2ls_escalation_effort"
+  ],
+  "batch_size": 1,
+  "max_chars": 50000,
+  "concurrency": 8,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports",
+  "temperature": 0.0
+}

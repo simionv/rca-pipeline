@@ -1,0 +1,72 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_prefix": "CR",
+      "taxonomy_file": "contact_reason.json",
+      "taxonomy_key": "contact_reason",
+      "reorder_group": "contact",
+      "reorder_order": 1,
+      "description": "Classifies why the customer contacted Mendeley support. Uses a 2-level taxonomy (L1 group → L2 leaf).",
+      "classify_fn": "classify_contact_reason",
+      "code_field": "contact_reason_primary_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "root_cause": {
+      "taxonomy_prefix": "RC",
+      "taxonomy_file": "root_cause.json",
+      "taxonomy_key": "root_cause",
+      "reorder_group": "root",
+      "reorder_order": 3,
+      "description": "Identifies the root cause of the support issue with justification and evidence from the transcript.",
+      "classify_fn": "classify_root_cause",
+      "code_field": "root_cause_primary_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "access_classification_contact",
+    "contact_reason_primary_code",
+    "contact_reason_primary_description",
+    "contact_reason_type",
+    "secondary_codes",
+    "root_cause_access_domain",
+    "root_cause_primary_code",
+    "root_cause_primary_description",
+    "root_cause_justification",
+    "root_cause_evidence",
+    "root_cause_evidence_type",
+    "contributing_codes"
+  ],
+  "reorder_groups": {
+    "contact": 1,
+    "root": 3
+  },
+  "enum_validators": {
+    "access_classification_contact": [
+      "institutional",
+      "personal"
+    ],
+    "contact_reason_type": [
+      "incident",
+      "service_request",
+      "user_guidance"
+    ],
+    "root_cause_evidence_type": [
+      "customer_symptom",
+      "agent_action",
+      "system_message"
+    ]
+  },
+  "list_fields": [
+    "secondary_codes",
+    "contributing_codes"
+  ],
+  "object_list_fields": {},
+  "code_fields": [
+    "contact_reason_primary_code",
+    "root_cause_primary_code"
+  ],
+  "output_exclude": []
+}

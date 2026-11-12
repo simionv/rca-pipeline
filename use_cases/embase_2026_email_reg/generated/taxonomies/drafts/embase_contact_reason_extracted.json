@@ -1,0 +1,190 @@
+{
+  "domain": "embase_contact_reason",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "correction to a record",
+      "frequency": 257
+    },
+    {
+      "item": "missing or incomplete indexed content",
+      "frequency": 127
+    },
+    {
+      "item": "institutional access set-up",
+      "frequency": 117
+    },
+    {
+      "item": "search or export feature question",
+      "frequency": 115
+    },
+    {
+      "item": "order, renewal or invoice",
+      "frequency": 46
+    },
+    {
+      "item": "access issue",
+      "frequency": 9
+    },
+    {
+      "item": "usage report request",
+      "frequency": 8
+    },
+    {
+      "item": "general inquiry",
+      "frequency": 5
+    },
+    {
+      "item": "usage statistics request",
+      "frequency": 5
+    },
+    {
+      "item": "other",
+      "frequency": 4
+    },
+    {
+      "item": "usage data request",
+      "frequency": 3
+    },
+    {
+      "item": "general inquiry or assistance",
+      "frequency": 2
+    },
+    {
+      "item": "general inquiry or feedback",
+      "frequency": 2
+    },
+    {
+      "item": "indexing status inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "feedback or product improvement suggestion",
+      "frequency": 1
+    },
+    {
+      "item": "unsubscribe request",
+      "frequency": 1
+    },
+    {
+      "item": "request for journal indexing status",
+      "frequency": 1
+    },
+    {
+      "item": "usage data inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "general support inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "content or data sourcing inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "request for documentation or guides",
+      "frequency": 1
+    },
+    {
+      "item": "access or technical issue",
+      "frequency": 1
+    },
+    {
+      "item": "user data or analytics request",
+      "frequency": 1
+    },
+    {
+      "item": "information request about embase usage",
+      "frequency": 1
+    },
+    {
+      "item": "service outage or access issue",
+      "frequency": 1
+    },
+    {
+      "item": "licensing or usage inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "technical issue with integration",
+      "frequency": 1
+    },
+    {
+      "item": "email delivery issue",
+      "frequency": 1
+    },
+    {
+      "item": "login or access issue",
+      "frequency": 1
+    },
+    {
+      "item": "technical support request",
+      "frequency": 1
+    },
+    {
+      "item": "technical issue with alerts or notifications",
+      "frequency": 1
+    },
+    {
+      "item": "user interface feedback",
+      "frequency": 1
+    },
+    {
+      "item": "credentials configuration request",
+      "frequency": 1
+    },
+    {
+      "item": "feedback or enhancement request",
+      "frequency": 1
+    },
+    {
+      "item": "follow-up on support ticket",
+      "frequency": 1
+    },
+    {
+      "item": "access or login issue",
+      "frequency": 1
+    },
+    {
+      "item": "other inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "referral to another service",
+      "frequency": 1
+    },
+    {
+      "item": "general inquiry or confirmation",
+      "frequency": 1
+    },
+    {
+      "item": "product update or feature announcement",
+      "frequency": 1
+    },
+    {
+      "item": "technical issue with embase ai",
+      "frequency": 1
+    },
+    {
+      "item": "access or authentication issue",
+      "frequency": 1
+    },
+    {
+      "item": "complaint regarding indexed content",
+      "frequency": 1
+    },
+    {
+      "item": "feature enhancement request",
+      "frequency": 1
+    },
+    {
+      "item": "user access request",
+      "frequency": 1
+    },
+    {
+      "item": "concerns regarding indexed content quality",
+      "frequency": 1
+    }
+  ]
+}

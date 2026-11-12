@@ -1,0 +1,12 @@
+{
+  "modules": {
+    "s2ls_escalation_effort": {
+      "taxonomy_hash": "2d60d523ff58da67673ff5e3342414a46ab6496d27adbf7d9b9fd3693fb48b2b",
+      "taxonomy_written_at": "2026-11-12T14:04:01.417090+00:00",
+      "py_hash": "2d60d523ff58da67673ff5e3342414a46ab6496d27adbf7d9b9fd3693fb48b2b",
+      "py_generated_at": "2026-11-12T13:58:25.622528+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:01.418237+00:00",
+  "generator_version": "1.7.0"
+}

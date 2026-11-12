@@ -1,0 +1,167 @@
+{
+  "CR1": {
+    "label": "Institutional user cannot access",
+    "children": {
+      "CR1.1": {
+        "label": "Elsevier ID+ SSO access denied error"
+      },
+      "CR1.2": {
+        "label": "Not enough info"
+      },
+      "CR1.3": {
+        "label": "Change-org feature error"
+      },
+      "CR1.4": {
+        "label": "Session data conflict/ cache and cookies issue"
+      },
+      "CR1.5": {
+        "label": "Institution not entitled"
+      },
+      "CR1.6": {
+        "label": "Institutional entitlement overriding individual entitlement"
+      },
+      "CR1.7": {
+        "label": "SD AI → LeapSpace migration gap"
+      },
+      "CR1.8": {
+        "label": "Institution entitled incorrectly"
+      },
+      "CR1.9": {
+        "label": "Other"
+      },
+      "CR1.10": {
+        "label": "Wayfless link issue"
+      }
+    },
+    "description": "Contact reason: Institutional user cannot access"
+  },
+  "CR2": {
+    "label": "User not able to access",
+    "children": {
+      "CR2.1": {
+        "label": "Session data conflict/ cache and cookies issue"
+      },
+      "CR2.2": {
+        "label": "Not enough info"
+      },
+      "CR2.3": {
+        "label": "User not supposed to be entitled"
+      },
+      "CR2.4": {
+        "label": "Personal account being recognized as institutional"
+      },
+      "CR2.5": {
+        "label": "Other"
+      },
+      "CR2.6": {
+        "label": "SD AI → LeapSpace migration gap"
+      }
+    },
+    "description": "Contact reason: User not able to access"
+  },
+  "CR3": {
+    "label": "Subscription cancellation and (or) refund",
+    "children": {
+      "CR3.1": {
+        "label": "Unable to locate the self-service cancellation option"
+      },
+      "CR3.2": {
+        "label": "Cancellation and or refund service request"
+      },
+      "CR3.3": {
+        "label": "Billing/credit card error"
+      },
+      "CR3.4": {
+        "label": "Forgot to cancel"
+      },
+      "CR3.5": {
+        "label": "Other"
+      }
+    },
+    "description": "Contact reason: Subscription cancellation and (or) refund"
+  },
+  "CR4": {
+    "label": "Internal staff access",
+    "children": {
+      "CR4.1": {
+        "label": "Not enough info"
+      },
+      "CR4.2": {
+        "label": "Change-org feature error"
+      },
+      "CR4.3": {
+        "label": "Other"
+      },
+      "CR4.4": {
+        "label": "Session data conflict/ cache and cookies issue"
+      }
+    },
+    "description": "Contact reason: Internal staff access"
+  },
+  "CR5": {
+    "label": "Billing",
+    "children": {
+      "CR5.1": {
+        "label": "Payment method update"
+      },
+      "CR5.2": {
+        "label": "Invoice request"
+      },
+      "CR5.3": {
+        "label": "Payment issues"
+      },
+      "CR5.4": {
+        "label": "Other"
+      }
+    },
+    "description": "Contact reason: Billing"
+  },
+  "CR6": {
+    "label": "General info",
+    "children": {
+      "CR6.1": {
+        "label": "Security info"
+      },
+      "CR6.2": {
+        "label": "Difference between LeapSpace and Scopus AI"
+      },
+      "CR6.3": {
+        "label": "Questions about LeapSpace features"
+      },
+      "CR6.4": {
+        "label": "Other"
+      },
+      "CR6.5": {
+        "label": "LeapSpace result inconsistency"
+      }
+    },
+    "description": "Contact reason: General info"
+  },
+  "CR7": {
+    "label": "Not enough info",
+    "children": {
+      "CR7.1": {
+        "label": "Not enough info"
+      }
+    },
+    "description": "Contact reason: Not enough info"
+  },
+  "CR8": {
+    "label": "Subscription request (incl. resub and trial)",
+    "children": {
+      "CR8.1": {
+        "label": "Subscription info request"
+      },
+      "CR8.2": {
+        "label": "Other"
+      },
+      "CR8.3": {
+        "label": "Subscription service request"
+      },
+      "CR8.4": {
+        "label": "Billing/credit card error"
+      }
+    },
+    "description": "Contact reason: Subscription request (incl. resub and trial)"
+  }
+}

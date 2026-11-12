@@ -1,0 +1,69 @@
+{
+  "TS1": {
+    "label": "Authentication steps",
+    "children": {
+      "TS1.1": {
+        "label": "Reset password",
+        "description": "Agent initiated or guided a password reset."
+      },
+      "TS1.2": {
+        "label": "Clear browser cache and cookies",
+        "description": "Agent instructed user to clear browser cache and cookies."
+      },
+      "TS1.3": {
+        "label": "Try incognito or private mode",
+        "description": "Agent asked user to try an incognito or private browser window."
+      },
+      "TS1.4": {
+        "label": "Try a different browser",
+        "description": "Agent suggested switching to a different browser."
+      },
+      "TS1.5": {
+        "label": "Other authentication step",
+        "description": "Authentication troubleshooting steps not covered above."
+      }
+    }
+  },
+  "TS2": {
+    "label": "Network & access steps",
+    "children": {
+      "TS2.1": {
+        "label": "Check IP address",
+        "description": "Agent checked or asked user to verify their IP address."
+      },
+      "TS2.2": {
+        "label": "Disable VPN",
+        "description": "Agent asked user to disable their VPN."
+      },
+      "TS2.3": {
+        "label": "Whitelist IP or domain",
+        "description": "Agent requested IT to whitelist an IP address or domain."
+      },
+      "TS2.4": {
+        "label": "Other network step",
+        "description": "Network troubleshooting steps not covered above."
+      }
+    }
+  },
+  "TS3": {
+    "label": "Account steps",
+    "children": {
+      "TS3.1": {
+        "label": "Verify email address",
+        "description": "Agent confirmed or corrected the email address on the account."
+      },
+      "TS3.2": {
+        "label": "Resend verification email",
+        "description": "Agent resent a verification or activation email."
+      },
+      "TS3.3": {
+        "label": "Merge duplicate accounts",
+        "description": "Agent merged two accounts for the same user."
+      },
+      "TS3.4": {
+        "label": "Other account step",
+        "description": "Account troubleshooting steps not covered above."
+      }
+    }
+  }
+}

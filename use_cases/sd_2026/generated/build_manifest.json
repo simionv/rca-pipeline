@@ -1,0 +1,78 @@
+{
+  "modules": {
+    "sd_contact_reason": {
+      "taxonomy_hash": "a0f65c68527fb0acc01196110f4bfe86c390f5466e1cee972136ec4740e6d9d7",
+      "taxonomy_written_at": "2026-11-12T14:05:59.581656+00:00",
+      "py_hash": "a0f65c68527fb0acc01196110f4bfe86c390f5466e1cee972136ec4740e6d9d7",
+      "py_generated_at": "2026-11-12T13:58:26.339234+00:00"
+    },
+    "sd_rc_security_block": {
+      "taxonomy_hash": "1cb04781bee37a4edc1615afc08b2af8a8fdfc3623b4d234196cf1a6857f868c",
+      "taxonomy_written_at": "2026-11-12T14:05:59.582842+00:00",
+      "py_hash": "1cb04781bee37a4edc1615afc08b2af8a8fdfc3623b4d234196cf1a6857f868c",
+      "py_generated_at": "2026-11-12T13:58:26.341020+00:00"
+    },
+    "sd_rc_access_reports": {
+      "taxonomy_hash": "89d4505152f5b9ba9501918a4cb39002389bff2c284b27550b72dd0e3ad0d309",
+      "taxonomy_written_at": "2026-11-12T14:05:59.583970+00:00",
+      "py_hash": "89d4505152f5b9ba9501918a4cb39002389bff2c284b27550b72dd0e3ad0d309",
+      "py_generated_at": "2026-11-12T13:58:26.342416+00:00"
+    },
+    "sd_rc_institutional_signin": {
+      "taxonomy_hash": "e8b66b6ee66dc847ff3fdaaac7be4d852d6a678cd0c758a7d3d7a9fbbbb470da",
+      "taxonomy_written_at": "2026-11-12T14:05:59.585080+00:00",
+      "py_hash": "e8b66b6ee66dc847ff3fdaaac7be4d852d6a678cd0c758a7d3d7a9fbbbb470da",
+      "py_generated_at": "2026-11-12T13:58:26.343655+00:00"
+    },
+    "sd_rc_close_delete": {
+      "taxonomy_hash": "b0910b157475897b3902b059f3c66ac34fbdc54b1f7d9b95b6ca98e26e53b820",
+      "taxonomy_written_at": "2026-11-12T14:05:59.586513+00:00",
+      "py_hash": "b0910b157475897b3902b059f3c66ac34fbdc54b1f7d9b95b6ca98e26e53b820",
+      "py_generated_at": "2026-11-12T13:58:26.345077+00:00"
+    },
+    "sd_rc_login": {
+      "taxonomy_hash": "ccfbce0262c7793a8146f688e6bb59b1ff591fa91f36525a734b52b558df0d0c",
+      "taxonomy_written_at": "2026-11-12T14:05:59.587873+00:00",
+      "py_hash": "ccfbce0262c7793a8146f688e6bb59b1ff591fa91f36525a734b52b558df0d0c",
+      "py_generated_at": "2026-11-12T13:58:26.346680+00:00"
+    },
+    "sd_rc_bulk_account": {
+      "taxonomy_hash": "0b4563b11513ca43cd454cbfc66ff0470fa07f18dc1d574f490eab65832570fe",
+      "taxonomy_written_at": "2026-11-12T14:05:59.589009+00:00",
+      "py_hash": "0b4563b11513ca43cd454cbfc66ff0470fa07f18dc1d574f490eab65832570fe",
+      "py_generated_at": "2026-11-12T13:58:26.348008+00:00"
+    },
+    "sd_rc_teams_departments": {
+      "taxonomy_hash": "35d127b11bdf6013f82b133f6f0b57af71e249285fea05b4f76291e17153515d",
+      "taxonomy_written_at": "2026-11-12T14:05:59.590226+00:00",
+      "py_hash": "35d127b11bdf6013f82b133f6f0b57af71e249285fea05b4f76291e17153515d",
+      "py_generated_at": "2026-11-12T13:58:26.349473+00:00"
+    },
+    "sd_rc_update_email": {
+      "taxonomy_hash": "e58aaad99452b0cd9b543225974f209344535a1e272f3f1f9b78971dd181f3af",
+      "taxonomy_written_at": "2026-11-12T14:05:59.591282+00:00",
+      "py_hash": "e58aaad99452b0cd9b543225974f209344535a1e272f3f1f9b78971dd181f3af",
+      "py_generated_at": "2026-11-12T13:58:26.350759+00:00"
+    },
+    "sd_rc_download_config": {
+      "taxonomy_hash": "54fd8d16a580f22e23caeca9be1709d70c75ac10299d2b55960c9bd1e04b30d3",
+      "taxonomy_written_at": "2026-11-12T14:05:59.592373+00:00",
+      "py_hash": "54fd8d16a580f22e23caeca9be1709d70c75ac10299d2b55960c9bd1e04b30d3",
+      "py_generated_at": "2026-11-12T13:58:26.352028+00:00"
+    },
+    "sd_rc_accessing_content": {
+      "taxonomy_hash": "6266589435c9b6aad390373f22074841f4437d7b4c0943caeed98420e2bce944",
+      "taxonomy_written_at": "2026-11-12T14:05:59.593541+00:00",
+      "py_hash": "6266589435c9b6aad390373f22074841f4437d7b4c0943caeed98420e2bce944",
+      "py_generated_at": "2026-11-12T13:58:26.353488+00:00"
+    },
+    "sd_rc_other_not_access": {
+      "taxonomy_hash": "e90bf429ede5ab4911d6e645ed687f00bb8480971a4c9834786b17e231d0ba0e",
+      "taxonomy_written_at": "2026-11-12T14:05:59.594857+00:00",
+      "py_hash": "e90bf429ede5ab4911d6e645ed687f00bb8480971a4c9834786b17e231d0ba0e",
+      "py_generated_at": "2026-11-12T13:58:26.354919+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:05:59.597276+00:00",
+  "generator_version": "1.7.0"
+}

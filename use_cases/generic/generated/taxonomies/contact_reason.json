@@ -1,0 +1,252 @@
+{
+  "CR1": {
+    "label": "Technical & platform issues",
+    "children": {
+      "CR1.1": {
+        "label": "Login or authentication failure",
+        "description": "Customer cannot sign in: password not working, account locked, MFA not functioning, SSO issues, or session expiring unexpectedly."
+      },
+      "CR1.2": {
+        "label": "Application error or crash",
+        "description": "Customer encounters an error message, application crash, exception, or unexpected termination that prevents normal use."
+      },
+      "CR1.3": {
+        "label": "Performance degradation or slow response",
+        "description": "Application or service is noticeably slower than expected, timing out, or experiencing intermittent delays that impair usability."
+      },
+      "CR1.4": {
+        "label": "Feature not working as expected",
+        "description": "A specific product feature behaves incorrectly, produces wrong results, or does not behave as documented or as the customer expects."
+      },
+      "CR1.5": {
+        "label": "Integration or API issue",
+        "description": "A third-party integration, webhook, or API call is failing, returning incorrect data, or not authenticating correctly."
+      },
+      "CR1.6": {
+        "label": "Data loss or corruption",
+        "description": "Customer reports that data has been deleted, corrupted, or is displaying incorrectly within the application."
+      },
+      "CR1.7": {
+        "label": "Other technical issue",
+        "description": "A technical problem that does not fit any other sub-category above."
+      }
+    },
+    "description": "Customer contacts support because a product, service, or platform is not functioning as expected. Covers errors, outages, performance problems, and integration failures."
+  },
+  "CR2": {
+    "label": "Billing & payment",
+    "children": {
+      "CR2.1": {
+        "label": "Invoice query or dispute",
+        "description": "Customer questions the accuracy of an invoice, requests a copy, or disputes a charge."
+      },
+      "CR2.2": {
+        "label": "Payment failure or declined transaction",
+        "description": "Payment could not be processed: card declined, bank transfer failed, or payment gateway error."
+      },
+      "CR2.3": {
+        "label": "Subscription or plan change request",
+        "description": "Customer wants to upgrade, downgrade, pause, or modify their subscription or plan tier."
+      },
+      "CR2.4": {
+        "label": "Overcharge or unexpected charge",
+        "description": "Customer was charged more than expected, charged twice, or charged for something they did not authorise."
+      },
+      "CR2.5": {
+        "label": "Refund or credit request",
+        "description": "Customer requests a refund for a charge they believe is incorrect or for a service they are dissatisfied with."
+      },
+      "CR2.6": {
+        "label": "Other billing issue",
+        "description": "A billing or payment issue that does not fit another sub-category."
+      }
+    },
+    "description": "Customer contacts support about financial transactions: invoices, charges, payment methods, subscriptions, or refunds related to billing."
+  },
+  "CR3": {
+    "label": "Account & access management",
+    "children": {
+      "CR3.1": {
+        "label": "Password reset or recovery",
+        "description": "Customer needs to reset or recover their password, or cannot complete the password reset flow."
+      },
+      "CR3.2": {
+        "label": "Account locked or suspended",
+        "description": "Customer account has been suspended, locked due to failed login attempts, or restricted by a security or compliance action."
+      },
+      "CR3.3": {
+        "label": "Update account details",
+        "description": "Customer wants to change their email address, name, contact details, billing address, or other profile information."
+      },
+      "CR3.4": {
+        "label": "Multi-factor authentication issue",
+        "description": "Customer cannot complete MFA: lost authenticator device, phone number changed, backup codes not working."
+      },
+      "CR3.5": {
+        "label": "Account deletion or data removal request",
+        "description": "Customer requests deletion of their account or removal of personal data under GDPR, CCPA, or similar regulations."
+      },
+      "CR3.6": {
+        "label": "User permissions or role management",
+        "description": "Customer needs to adjust user roles, add or remove team members, or change permission levels within the account."
+      },
+      "CR3.7": {
+        "label": "Other account management issue",
+        "description": "An account or access request that does not fit another sub-category."
+      }
+    },
+    "description": "Customer needs help managing their account: credentials, profile details, permissions, or account lifecycle actions such as creation, deletion, or transfer."
+  },
+  "CR4": {
+    "label": "Product inquiry",
+    "children": {
+      "CR4.1": {
+        "label": "Feature availability or capability question",
+        "description": "Customer asks whether a specific feature exists or is included in their plan."
+      },
+      "CR4.2": {
+        "label": "Pricing or licensing question",
+        "description": "Customer asks about pricing tiers, seat licences, enterprise pricing, or contract terms."
+      },
+      "CR4.3": {
+        "label": "How-to or usage guidance",
+        "description": "Customer needs step-by-step instructions on how to use a feature they already have access to."
+      },
+      "CR4.4": {
+        "label": "Compatibility or integration question",
+        "description": "Customer asks whether the product is compatible with their tech stack, OS, or third-party tool."
+      },
+      "CR4.5": {
+        "label": "Other product inquiry",
+        "description": "A product or service question that does not fit another sub-category."
+      }
+    },
+    "description": "Customer is seeking information about the product or service: features, pricing, compatibility, usage guidance, or documentation."
+  },
+  "CR5": {
+    "label": "Complaint",
+    "children": {
+      "CR5.1": {
+        "label": "Product quality dissatisfaction",
+        "description": "Customer expresses dissatisfaction with the quality, reliability, or performance of the product."
+      },
+      "CR5.2": {
+        "label": "Agent behaviour or service quality complaint",
+        "description": "Customer complains about the behaviour, attitude, or professionalism of a support agent."
+      },
+      "CR5.3": {
+        "label": "Process or policy complaint",
+        "description": "Customer disagrees with or is frustrated by a company policy, process, or rule."
+      },
+      "CR5.4": {
+        "label": "Unresolved prior issue complaint",
+        "description": "Customer contacts again because a previous issue was not resolved or the resolution did not hold."
+      },
+      "CR5.5": {
+        "label": "Other complaint",
+        "description": "A complaint that does not fit another sub-category."
+      }
+    },
+    "description": "Customer contacts support primarily to express dissatisfaction with the product, service quality, or a prior support interaction."
+  },
+  "CR6": {
+    "label": "Delivery & logistics",
+    "children": {
+      "CR6.1": {
+        "label": "Delayed or late delivery",
+        "description": "Shipment has not arrived by the expected date and the customer is following up."
+      },
+      "CR6.2": {
+        "label": "Missing or lost item",
+        "description": "Customer did not receive their package, or the tracking shows delivered but item not received."
+      },
+      "CR6.3": {
+        "label": "Damaged item on arrival",
+        "description": "Product arrived physically damaged due to shipping or handling."
+      },
+      "CR6.4": {
+        "label": "Wrong item delivered",
+        "description": "Customer received an incorrect product - wrong item, colour, size, or quantity."
+      },
+      "CR6.5": {
+        "label": "Delivery address or scheduling issue",
+        "description": "Customer needs to change delivery address, reschedule a delivery slot, or the delivery was attempted at the wrong address."
+      },
+      "CR6.6": {
+        "label": "Other delivery issue",
+        "description": "A delivery or logistics issue that does not fit another sub-category."
+      }
+    },
+    "description": "Customer contacts support about the physical delivery of goods or the logistics of a physical order. Applicable to products with a physical fulfilment component."
+  },
+  "CR7": {
+    "label": "Data & privacy",
+    "children": {
+      "CR7.1": {
+        "label": "Subject access request (SAR)",
+        "description": "Customer requests a copy of all personal data held about them under GDPR or equivalent."
+      },
+      "CR7.2": {
+        "label": "Data correction request",
+        "description": "Customer requests that incorrect personal data be corrected or updated in company systems."
+      },
+      "CR7.3": {
+        "label": "Marketing opt-out or communication preferences",
+        "description": "Customer requests to unsubscribe from marketing, update notification settings, or manage communication preferences."
+      },
+      "CR7.4": {
+        "label": "Data breach or security concern",
+        "description": "Customer is concerned that their data may have been exposed, compromised, or misused."
+      },
+      "CR7.5": {
+        "label": "Other data or privacy request",
+        "description": "A data or privacy request that does not fit another sub-category."
+      }
+    },
+    "description": "Customer contacts support about personal data: access requests, correction, deletion, opt-outs, or data security concerns."
+  },
+  "CR8": {
+    "label": "Returns & exchanges",
+    "children": {
+      "CR8.1": {
+        "label": "Initiate a return",
+        "description": "Customer wants to start a return of a product they no longer want or that was faulty."
+      },
+      "CR8.2": {
+        "label": "Return status enquiry",
+        "description": "Customer is following up on a return already initiated, checking refund status or receipt of returned item."
+      },
+      "CR8.3": {
+        "label": "Exchange request",
+        "description": "Customer wants to swap a product for a different size, colour, or model."
+      },
+      "CR8.4": {
+        "label": "Return policy question",
+        "description": "Customer is asking about the terms of the returns policy before initiating a return."
+      },
+      "CR8.5": {
+        "label": "Other returns issue",
+        "description": "A returns or exchange issue that does not fit another sub-category."
+      }
+    },
+    "description": "Customer wants to return a product, request an exchange, or enquire about the returns process."
+  },
+  "CR9": {
+    "label": "General enquiry",
+    "children": {
+      "CR9.1": {
+        "label": "General product or company question",
+        "description": "Customer asks a broad question about the company, product range, or service offering."
+      },
+      "CR9.2": {
+        "label": "Feedback or suggestion",
+        "description": "Customer proactively shares feedback, an idea, or a suggestion without reporting an issue."
+      },
+      "CR9.3": {
+        "label": "Other general enquiry",
+        "description": "A general contact that does not fit any other category."
+      }
+    },
+    "description": "Customer has a general question or comment that does not require resolution of a specific issue."
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "CE1": {
+    "label": "Resolution Outcome Problems",
+    "children": {
+      "CE1.1": {
+        "label": "Unresolved or Incomplete Resolution",
+        "description": "The issue is still open, only partly fixed, or the customer reports that the problem was not fully solved. Use this when the primary failure is lack of a complete solution, rather than delay alone."
+      },
+      "CE1.2": {
+        "label": "Premature Closure or Incorrect Resolution",
+        "description": "The case was marked resolved, closed, or handled incorrectly even though the underlying issue remained. Distinguish this from CE1.1 by the presence of an improper closure or wrong final action."
+      },
+      "CE1.3": {
+        "label": "Repeat Contact for Same Issue",
+        "description": "The customer had to return multiple times because the same issue persisted or prior handling was not retained. Use this when repeated contact is the main symptom of an unresolved or poorly handled case."
+      },
+      "CE1.4": {
+        "label": "Escalation or Handoff Failure",
+        "description": "The issue was passed between agents, teams, or channels without effective ownership transfer or progress. Distinguish this from CE1.1 by the emphasis on failed transfer or escalation rather than the final resolution itself."
+      },
+      "CE1.5": {
+        "label": "Other Resolution Outcome Problems",
+        "description": "Any other case in which the main problem is an unsuccessful, incomplete, or improperly closed resolution outcome, but it does not fit the specific leaves above."
+      }
+    },
+    "description": "Cases where the core issue remains unresolved, only partially resolved, or is closed without a real fix. Use this category when the main problem is the quality or completeness of the final outcome, not the speed or communication around it."
+  },
+  "CE2": {
+    "label": "Delay and Processing Slowness",
+    "children": {
+      "CE2.1": {
+        "label": "Response Delay or No Timely Reply",
+        "description": "The customer waited too long for an answer, acknowledgement, or support reply. Distinguish this from CE2.2 when the delay is specifically in communication rather than in completing the underlying work."
+      },
+      "CE2.2": {
+        "label": "Processing or Fulfillment Delay",
+        "description": "The underlying task, correction, service delivery, or internal handling took too long. Use this for long turnaround time, slow processing, or delayed fulfillment rather than delayed messaging."
+      },
+      "CE2.3": {
+        "label": "Resolution Delay",
+        "description": "The case was actively being handled but took too long to reach a fix or decision. Distinguish this from CE2.2 when the delay is framed specifically as slow issue resolution rather than general processing."
+      },
+      "CE2.4": {
+        "label": "Follow-up or Status Delay",
+        "description": "The customer had to wait for updates, tracking, or follow-up progress that should have been provided sooner. Use this when the main complaint is lack of timely progress visibility."
+      },
+      "CE2.5": {
+        "label": "Other Delay or Slowness",
+        "description": "Any other complaint centered on slow handling, waiting, or prolonged turnaround that does not fit the specific delay leaves above."
+      }
+    },
+    "description": "Cases where the main issue is slow handling, long turnaround, or delayed response/fulfillment. Use this category when the work may eventually be completed, but timing is the central complaint."
+  },
+  "CE3": {
+    "label": "Support Communication Quality",
+    "children": {
+      "CE3.1": {
+        "label": "Incomplete or Unanswered Response",
+        "description": "The customer did not receive a full answer, received no response, or the request was only partially addressed. Distinguish this from CE1.1 by focusing on the response quality rather than whether the issue was ultimately fixed."
+      },
+      "CE3.2": {
+        "label": "Inaccurate or Irrelevant Response",
+        "description": "The reply was wrong, off-topic, or did not address the customer's question. Use this when the main problem is mismatch or incorrect information rather than absence of a response."
+      },
+      "CE3.3": {
+        "label": "Unclear Guidance or Status Communication",
+        "description": "The customer received vague, confusing, or insufficient instructions or updates. Distinguish this from CE3.1 by the presence of communication, but not enough clarity or usefulness."
+      },
+      "CE3.4": {
+        "label": "Low-Quality or Unprofessional Interaction",
+        "description": "The interaction was rude, unprofessional, or otherwise poor in tone or conduct. Use this for interpersonal quality issues rather than informational gaps."
+      },
+      "CE3.5": {
+        "label": "Other Support Communication Issues",
+        "description": "Any other problem with the support interaction itself that does not fit the specific communication leaves above."
+      }
+    },
+    "description": "Cases where the support interaction itself is poor, unclear, incomplete, or unhelpful. Use this category when the issue is the quality of the response or communication, not the final resolution outcome or timing."
+  },
+  "CE4": {
+    "label": "Access and Findability Friction",
+    "children": {
+      "CE4.1": {
+        "label": "Content or Record Findability",
+        "description": "The user cannot locate information, documents, records, or status details that should be available. Distinguish this from CE4.2 when the problem is finding the item itself rather than reaching the right channel."
+      },
+      "CE4.2": {
+        "label": "Channel or Contact Discovery",
+        "description": "The user has trouble finding the correct support channel, contact path, or place to submit the request. Use this when the friction is about locating where to go, not what information to retrieve."
+      },
+      "CE4.3": {
+        "label": "Navigation or Visibility Friction",
+        "description": "The interface, site structure, or indexing makes it hard to discover the needed option, page, or content. Distinguish this from CE4.1 by emphasizing navigation or visibility rather than missing records."
+      },
+      "CE4.4": {
+        "label": "Other Access or Findability Issues",
+        "description": "Any other case involving difficulty finding or accessing information, content, records, or contact paths that does not fit the specific leaves above."
+      }
+    },
+    "description": "Cases where the user cannot easily find, access, or locate the needed information, content, records, or contact path. Use this category when the main issue is discoverability or access rather than support handling."
+  },
+  "CE5": {
+    "label": "Self-Service and Workflow Friction",
+    "children": {
+      "CE5.1": {
+        "label": "Submission or Self-Service Difficulty",
+        "description": "The user struggles to complete a form, request, or self-service action. Distinguish this from CE5.2 when the problem is the act of submitting or automating the task rather than the number of steps."
+      },
+      "CE5.2": {
+        "label": "Complex or Non-Obvious Workflow",
+        "description": "The process requires too many steps, is hard to follow, or is not intuitive. Use this when the friction is procedural complexity rather than a specific tool failure."
+      },
+      "CE5.3": {
+        "label": "Manual Workaround or Excessive Effort",
+        "description": "The customer must repeatedly provide information, perform extra actions, or work around missing automation. Distinguish this from CE5.1 by the emphasis on manual burden after the process has started."
+      },
+      "CE5.4": {
+        "label": "Other Workflow or Self-Service Friction",
+        "description": "Any other case where the main issue is process burden, self-service difficulty, or workflow complexity that does not fit the specific leaves above."
+      }
+    },
+    "description": "Cases where the user must do too much manual work, navigate complex steps, or use self-service tools that are hard to complete. Use this category when the main issue is process burden rather than support response quality."
+  },
+  "CE6": {
+    "label": "Information and Requirement Burden",
+    "children": {
+      "CE6.1": {
+        "label": "Insufficient or Missing Information",
+        "description": "The customer did not receive enough information, guidance, or required details to proceed. Distinguish this from CE3.3 when the issue is not just unclear communication but a substantive information gap."
+      },
+      "CE6.2": {
+        "label": "Excessive Information or Credential Requirements",
+        "description": "Too much information, documentation, or verification is requested before progress can continue. Use this when the burden is on the customer to provide more than reasonably needed."
+      },
+      "CE6.3": {
+        "label": "Information Gathering Burden",
+        "description": "The customer is repeatedly asked for the same or additional details, creating back-and-forth effort. Distinguish this from CE6.2 when the issue is repeated collection rather than the amount of required information."
+      },
+      "CE6.4": {
+        "label": "Other Information Requirement Issues",
+        "description": "Any other problem involving missing, excessive, or burdensome information requirements that does not fit the specific leaves above."
+      }
+    },
+    "description": "Cases where the customer is blocked or slowed by excessive, unclear, or missing information requirements. Use this category when the main issue is what information is requested or provided, not the support outcome."
+  },
+  "CE7": {
+    "label": "Language and Accessibility Barriers",
+    "children": {
+      "CE7.1": {
+        "label": "Language or Localization Friction",
+        "description": "The customer is hindered by translation, localization, or language mismatch. Distinguish this from CE7.2 when the issue is specifically language rather than general accessibility."
+      },
+      "CE7.2": {
+        "label": "Human Support Unavailable",
+        "description": "The customer cannot reach a human agent or receives only automated handling when human help is needed. Use this when lack of human access is the main barrier."
+      },
+      "CE7.3": {
+        "label": "Other Accessibility or Language Issues",
+        "description": "Any other barrier to effective use or communication that does not fit the specific language or human-support leaves above."
+      }
+    },
+    "description": "Cases where the customer cannot effectively use the service because of language, comprehension, or access-format barriers. Use this category when the main issue is accessibility of communication rather than content quality or process speed."
+  }
+}

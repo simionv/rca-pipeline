@@ -1,0 +1,19 @@
+{
+  "_comment": "Tags every CSD 2026 ticket with a validation rule (from the triangulation matrix) and a rejection reason (discovered from the tickets). Both modules share this profile so they also share one checkpoint, with a per-module sentinel. Input is written by notebooks/08_csd_2026_validation_rules.ipynb - stubs removed, conversations capped at 16000 chars, ticket id and conversation only - not the raw ticket file.",
+  "input": "runs/intermediate/csd_sample_12000.csv",
+  "output": "runs/output/csd_2026_rules_and_reasons.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "csd_validation_rule",
+    "csd_rejection_reason"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

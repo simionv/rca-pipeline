@@ -1,0 +1,56 @@
+{
+  "SCAC1": {
+    "label": "Access / Scopus AI Access",
+    "children": {
+      "SCAC1.1": {
+        "label": "No institutional entitlement",
+        "description": "Definition: The customer's institution or account has no working Scopus entitlement: the organisation does not subscribe or the subscription has expired, a trial or complimentary access was not applied, or the account is not linked to the institution's subscription, so the user sees only Scopus Preview / 'Check access'. Also covers Scopus AI not activated and IPW / admin or user add-remove requests needed to grant access. SME scenarios: Customer's institution does not have any active Scopus subscription; Customer's institution would like to get full access to Scopus; Customer's institution's subscription has expired For Scopus AI Access: Same as Access, applied to Scopus AI: Scopus AI is not in the institution's subscription, has not been activated, or has stopped working for the user."
+      },
+      "SCAC1.2": {
+        "label": "Institutional sign-in not working",
+        "description": "Definition: The customer should have institutional access but the institutional route fails: SSO / Shibboleth error ('There is a problem with your account'), organisation not recognised or not listed, IP range not registered or changed, proxy / VPN / off-campus access failing, or a browser, cache or session error at sign-in. SME scenarios: Cache and cookies issues; Customer did not log in to SSO (federated access, Shibboleth) using a private browser / incognito mode, WAYFless link or other authentication methods (email domain, IP address) For Scopus AI Access: Same as Access: the institutional sign-in route fails for a user trying to reach Scopus AI."
+      },
+      "SCAC1.3": {
+        "label": "Wrong account / unexpected account switching",
+        "description": "Definition: Sign-in succeeds but opens another person's profile or account, selects the wrong organisation automatically, or the account is linked to the wrong profile or identity. SME scenarios: Customer reported that their credential (user profile) is linked to the wrong author profile; Customer asked for clarification as multiple accounts appear to have been created For Scopus AI Access: Same as Access: sign-in lands on the wrong account or organisation when opening Scopus AI."
+      },
+      "SCAC1.4": {
+        "label": "Institution changed (moving universities)",
+        "description": "Definition: The customer has moved to a new university or employer, or left one, and the old affiliation or email no longer works, so access must be re-established under the new institution. SME scenarios: Customer moved to another organization and could not access the previous account For Scopus AI Access: Same as Access: the user moved institution and lost Scopus AI access under the old affiliation."
+      },
+      "SCAC1.5": {
+        "label": "Merge/transfer accounts",
+        "description": "Definition: The customer has duplicate or multiple accounts, or needs a profile, subscription or entitlement merged or moved from one account or email to another, so sign-in or access lands in the wrong place. SME scenarios: Customer requested to merge one account linked to another account : Also, revised taxonomy: duplicate or multiple accounts that the customer wants merged or tidied, even when they can sign in."
+      },
+      "SCAC1.6": {
+        "label": "Account recovery",
+        "description": "Definition: The customer cannot get back into an existing account and needs it restored or unlocked: lost access to email or phone, verification code or one-time link not received or expired, account locked out, or a deleted / deactivated account that must be restored. SME scenarios: Customer requested account recovery; Customer requested password recovery; Customer reported that they did not receive any recovery email (despite having checked inbox, spam and all folders) : Also, revised taxonomy: the customer does not know which email is registered, or asks what the account status is."
+      },
+      "SCAC1.7": {
+        "label": "Access blocked by security/network controls",
+        "description": "Definition: The account, IP address or session is blocked or suspended by a security or network control, such as a suspicious-activity block, Cloudflare / captcha check, firewall, crawling restriction or malware-scan requirement. SME scenarios: Customer encountered a \"suspicious activity\" message concerning their profile; Customer could not access the Scopus website because the IP address was blocked"
+      },
+      "SCAC1.8": {
+        "label": "Update email address",
+        "description": "Definition: The email linked to the account is wrong, mistyped, discontinued or inaccessible and must be changed or corrected before the customer can sign in (not caused by moving institution). SME scenarios: Customer would like to update the email address in the Scopus account : Also, revised taxonomy: the customer can sign in but wants the account email changed or corrected, or other account name or details updated."
+      },
+      "SCAC1.9": {
+        "label": "Registration failed",
+        "description": "Definition: The customer cannot create or register an account: the registration flow errors or loops, or the email is already in use during sign-up. SME scenarios: Customer reported an error upon registration; Customer asked how to register : Also, revised taxonomy: how-to or guidance questions about registering or setting up an account, with no blocker."
+      },
+      "SCAC1.10": {
+        "label": "Password",
+        "description": "Definition: The customer has forgotten the password, the reset link or email fails or expires, or the password is rejected, so sign-in cannot be completed. SME scenarios: Customer reported that the \"Reset Password\" link did not work; Customer reported that the password reset email was not received; Customer reported that the \"Forgot Password\" link expired very quickly : Also, revised taxonomy: questions about password or security settings."
+      },
+      "SCAC1.11": {
+        "label": "Close / delete account",
+        "description": "Definition: The customer asks for the account to be closed or deleted, including deleting it because of recurring sign-in problems. SME scenarios: Request from the Elsevier account settings page for the account to be permanently deleted : Also, revised taxonomy: a request to delete the account from a customer who can sign in."
+      },
+      "SCAC1.12": {
+        "label": "Unknown rootcause",
+        "description": "Definition: No cause is stated anywhere in the conversation (chat transcript only, empty body, or the customer never replied to the agent's request for details). The ticket stays Access because the subject or agent text points to a sign-in or access problem. This value is outside the 11 SME root causes and is reported separately; it is the only non-list value allowed on an Access ticket. SME scenarios: No SME scenario (no cause stated)"
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Access' or 'Scopus AI Access'. Choose the Level 2 value from this group only. 'Access' means: Definition: Login failure or lockout; forgotten password or reset not working; no verification code; institutional/SSO error ('problem with your account'); organisation not recognised at sign-in; stuck on Scopus Preview / 'Check access' / limited access; expired or cut-off subscription; institution not subscribed; IP not recognised; remote/off-campus failure; blocked or suspended account; failed registration; requests to grant or remove user access. Revised taxonomy: Revised taxonomy: Account Management is no longer a separate category. Account changes are Access even when the customer can already sign in: changing or correcting the account email, account name or details, duplicate or multiple accounts and merging them, closing or deleting the account, how to register or set up an account, which email is registered or what the account status is, and password or security-settings questions. 'Scopus AI Access' means: Definition: A conversation about Scopus AI access (not activated, not in the subscription, tab missing, access lost) is tagged Scopus AI Access instead of Access. How-to questions about using Scopus AI go to Search / Feature Question. Scopus AI Access uses the same 11 root causes as Access."
+  }
+}

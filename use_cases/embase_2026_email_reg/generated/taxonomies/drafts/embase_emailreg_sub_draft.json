@@ -1,0 +1,82 @@
+{
+  "EES1": {
+    "label": "Account Management",
+    "children": {
+      "EES1.1": {
+        "label": "Account Creation Requests",
+        "description": "Requests for creating new user accounts or registration IDs, including new user account setup and registration ID requests."
+      },
+      "EES1.2": {
+        "label": "Account Modification Requests",
+        "description": "Requests to change account details such as email address updates or author email changes."
+      },
+      "EES1.3": {
+        "label": "Account Deletion and Transfer Requests",
+        "description": "Requests for account deletion or transfer, including user deactivation and account transfer requests."
+      },
+      "EES1.4": {
+        "label": "Access Issues",
+        "description": "Problems related to accessing accounts, including login issues and access due to unverified emails."
+      },
+      "EES1.5": {
+        "label": "Other Account Management Issues",
+        "description": "Cases that fall within account management but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers issues related to user accounts, including creation, modification, and deletion requests."
+  },
+  "EES2": {
+    "label": "Email Verification and Access",
+    "children": {
+      "EES2.1": {
+        "label": "Email Verification Issues",
+        "description": "Problems related to email verification, including not receiving verification emails and access issues due to unverified emails."
+      },
+      "EES2.2": {
+        "label": "Institutional Email Access",
+        "description": "Requests and issues regarding access to services using institutional emails, including registration and access requirements."
+      },
+      "EES2.3": {
+        "label": "Access Code Registration Issues",
+        "description": "Concerns related to the registration of access codes, including missing registration emails and alerts management."
+      },
+      "EES2.4": {
+        "label": "Other Email Verification and Access Issues",
+        "description": "Cases that fall within email verification and access but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category encompasses issues related to email verification, access codes, and institutional email concerns."
+  },
+  "EES3": {
+    "label": "User Access Management",
+    "children": {
+      "EES3.1": {
+        "label": "User Access Requests",
+        "description": "Requests for new user access or registration, including remote access registration and user access inquiries."
+      },
+      "EES3.2": {
+        "label": "User Access Revocation",
+        "description": "Issues related to the revocation of user access, including inquiries about access management."
+      },
+      "EES3.3": {
+        "label": "Other User Access Management Issues",
+        "description": "Cases that fall within user access management but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category includes issues related to user access rights, revocations, and inquiries about user access."
+  },
+  "EES4": {
+    "label": "General Inquiries",
+    "children": {
+      "EES4.1": {
+        "label": "General Account Inquiries",
+        "description": "Inquiries related to account management that do not specify a particular issue."
+      },
+      "EES4.2": {
+        "label": "Other General Inquiries",
+        "description": "Cases that fall within general inquiries but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers general inquiries that do not fit into specific operational issues."
+  }
+}

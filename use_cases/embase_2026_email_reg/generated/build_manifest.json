@@ -1,0 +1,24 @@
+{
+  "modules": {
+    "embase_emailreg": {
+      "taxonomy_hash": "4c1513df81a23cc7af54eb8e17575c9976f6c999608a543c0452659f4ac2478d",
+      "taxonomy_written_at": "2026-11-12T14:03:58.360585+00:00",
+      "py_hash": "4c1513df81a23cc7af54eb8e17575c9976f6c999608a543c0452659f4ac2478d",
+      "py_generated_at": "2026-11-12T13:58:22.363133+00:00"
+    },
+    "embase_emailreg_sub": {
+      "taxonomy_hash": "9fc19811aa267930461c1b3db2184863f11ee1771e191fc68dd13b368391bc58",
+      "taxonomy_written_at": "2026-11-12T14:03:58.361894+00:00",
+      "py_hash": "9fc19811aa267930461c1b3db2184863f11ee1771e191fc68dd13b368391bc58",
+      "py_generated_at": "2026-11-12T13:58:22.364668+00:00"
+    },
+    "embase_contact_reason": {
+      "taxonomy_hash": "c7bc85f8918374119d690e708d8166b824564f1c0bba7da3bb96b6abcb12a465",
+      "taxonomy_written_at": "2026-11-12T14:03:58.363356+00:00",
+      "py_hash": "c7bc85f8918374119d690e708d8166b824564f1c0bba7da3bb96b6abcb12a465",
+      "py_generated_at": "2026-11-12T13:58:22.366625+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:58.364406+00:00",
+  "generator_version": "1.7.0"
+}

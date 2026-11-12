@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "c4dc31762d744f7e33fd3eccababc04b0a6c383d93597b835d67a01ad29246b1",
+      "taxonomy_written_at": "2026-11-12T14:03:57.707317+00:00",
+      "py_hash": "c4dc31762d744f7e33fd3eccababc04b0a6c383d93597b835d67a01ad29246b1",
+      "py_generated_at": "2026-11-12T13:58:21.658173+00:00"
+    },
+    "root_cause": {
+      "taxonomy_hash": "0a768b3c03e661ce53a8a1c87a5d2f7e2364d6e89a1f092d90d018173b243e76",
+      "taxonomy_written_at": "2026-11-12T14:03:57.708518+00:00",
+      "py_hash": "0a768b3c03e661ce53a8a1c87a5d2f7e2364d6e89a1f092d90d018173b243e76",
+      "py_generated_at": "2026-11-12T13:58:21.659673+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:57.709352+00:00",
+  "generator_version": "1.7.0"
+}

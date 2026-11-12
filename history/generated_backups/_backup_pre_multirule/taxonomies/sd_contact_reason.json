@@ -1,0 +1,119 @@
+{
+  "SDCR1": {
+    "label": "Access blocked by security/network controls",
+    "children": {
+      "SDCR1.1": {
+        "label": "Access blocked by security/network controls",
+        "description": "Definition: Use when access is explicitly denied by a security or network control, with signals such as “access denied”, IP blocked, Cloudflare, firewall, unusual downloading or crawling, and do not use for subscription, entitlement or sign-in problems."
+      }
+    }
+  },
+  "SDCR2": {
+    "label": "Access reports",
+    "children": {
+      "SDCR2.1": {
+        "label": "Access reports",
+        "description": "Definition: Use when the customer needs, cannot retrieve or questions usage or access reporting data, with signals such as COUNTER reports, usage statistics, report exports or the Admin Tool, and not when they cannot access articles."
+      }
+    }
+  },
+  "SDCR3": {
+    "label": "Institutional sign in not working",
+    "children": {
+      "SDCR3.1": {
+        "label": "Institutional sign in not working",
+        "description": "Definition: Use when access through an institution fails, with signals such as SSO, SAML, Shibboleth, institution not found, institution not recognised or remote institutional access, and not for personal subscription"
+      }
+    }
+  },
+  "SDCR4": {
+    "label": "Close delete account",
+    "children": {
+      "SDCR4.1": {
+        "label": "Close delete account",
+        "description": "Definition: Use when the primary request is to close or permanently delete a user account, or when account deletion cannot be completed, and not for unsubscribing, changing details or removing a specific item of personal data."
+      }
+    }
+  },
+  "SDCR5": {
+    "label": "Login issues",
+    "children": {
+      "SDCR5.1": {
+        "label": "Login issues",
+        "description": "Definition: Use when an individual user cannot sign in to or activate their Elsevier account, with signals such as password, reset email, verification or activation link, one-time link, wrong account, account switching, cookies or browser issues, and not for institutional SSO failures."
+      }
+    }
+  },
+  "SDCR6": {
+    "label": "Bulk account issue",
+    "children": {
+      "SDCR6.1": {
+        "label": "Bulk account issue",
+        "description": "Definition: Use when the request affects multiple user accounts or codes at once, with signals such as bulk registration, spreadsheets of users, multiple registration IDs, bulk updates or bulk code redemption, and not for creating organisational teams or departments."
+      }
+    }
+  },
+  "SDCR7": {
+    "label": "Set up teams or departments",
+    "children": {
+      "SDCR7.1": {
+        "label": "Set up teams or departments",
+        "description": "Definition: Use when the customer asks to create, modify or manage organisational teams, departments or user groups, including their members or permissions, and IP range, and not for a generic bulk account upload."
+      }
+    }
+  },
+  "SDCR8": {
+    "label": "Update email address",
+    "children": {
+      "SDCR8.1": {
+        "label": "Update email address",
+        "description": "Definition: Use when the primary request is to replace the email address linked to an existing account, with signals such as old and new email addresses, email domain changes or institutional mergers, and not when the email is only mentioned as part of a login problem."
+      }
+    }
+  },
+  "SDCR9": {
+    "label": "Account configuration for download articles",
+    "children": {
+      "SDCR9.1": {
+        "label": "Account configuration for download articles",
+        "description": "Definition: Use when the customer asks to configure account-level rules that control article downloads or transactional access, with signals such as download permissions, department access, download limits or pay-per-view settings, and not for failure to open one specific article."
+      }
+    }
+  },
+  "SDCR10": {
+    "label": "Accessing content",
+    "children": {
+      "SDCR10.1": {
+        "label": "Accessing content",
+        "description": "Definition: Use when the customer cannot open, download or obtain a specific article, journal, book, issue or subscribed content, with signals such as paywall, missing coverage, purchase not recognised, outside subscription or entitlement, and not when the failure is caused by login or an explicit security block."
+      }
+    }
+  },
+  "SDCR11": {
+    "label": "Other - not access related",
+    "children": {
+      "SDCR11.1": {
+        "label": "Other - not access related",
+        "description": "Definition: Use when the request is unrelated to accessing or managing access to ScienceDirect, with signals such as publishing, manuscript submission, scientific questions, content corrections, invoices, sales, or author contact."
+      }
+    }
+  },
+  "SDCR12": {
+    "label": "Other - access related",
+    "children": {
+      "SDCR12.1": {
+        "label": "Other - access related",
+        "description": "Definition: Use when the ticket clearly concerns access to ScienceDirect, an account or content but does not match any of the specific access categories above, and only when there is enough information to confirm that the issue is access-related."
+      }
+    }
+  },
+  "SDCR13": {
+    "label": "Not enough info",
+    "children": {
+      "SDCR13.1": {
+        "label": "Not enough info",
+        "description": "Definition: Use when the ticket does not contain enough information to determine the customer’s intent or whether the issue is access-related, with signals such as an empty request, an abandoned chat, a title or link without a question, or an unclear fragment."
+      }
+    }
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "domain": "csd_rejection_reason",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "content too recently published to be indexed yet",
+      "frequency": 79
+    },
+    {
+      "item": "source never selected for scopus coverage",
+      "frequency": 54
+    },
+    {
+      "item": "no reason stated in the ticket",
+      "frequency": 28
+    },
+    {
+      "item": "record already matches the publisher version of record",
+      "frequency": 14
+    },
+    {
+      "item": "record already matches the publisher version of record.",
+      "frequency": 10
+    },
+    {
+      "item": "source never selected for scopus coverage.",
+      "frequency": 9
+    },
+    {
+      "item": "content too recently published to be indexed yet.",
+      "frequency": 8
+    },
+    {
+      "item": "request routed to another team for further assistance",
+      "frequency": 4
+    },
+    {
+      "item": "no reason stated in the ticket.",
+      "frequency": 4
+    },
+    {
+      "item": "content already indexed in scopus",
+      "frequency": 4
+    },
+    {
+      "item": "content already available in scopus",
+      "frequency": 3
+    },
+    {
+      "item": "content not yet published or indexed",
+      "frequency": 3
+    },
+    {
+      "item": "source discontinued for scopus coverage.",
+      "frequency": 3
+    },
+    {
+      "item": "journal under re-evaluation by scopus content selection and advisory board",
+      "frequency": 3
+    },
+    {
+      "item": "content not found on publisher authenticated site",
+      "frequency": 3
+    },
+    {
+      "item": "current journal status confirmed, but future indexing not guaranteed",
+      "frequency": 3
+    },
+    {
+      "item": "source no longer selected for scopus coverage",
+      "frequency": 3
+    },
+    {
+      "item": "journal currently undergoing re-evaluation, no new content added until decision is made",
+      "frequency": 2
+    },
+    {
+      "item": "source currently undergoing re-evaluation, no new content added during this period",
+      "frequency": 2
+    },
+    {
+      "item": "content under review and not yet available for indexing",
+      "frequency": 2
+    },
+    {
+      "item": "citation correction request for an article not yet fully published",
+      "frequency": 2
+    },
+    {
+      "item": "source under re-evaluation, articles published may not be added",
+      "frequency": 2
+    },
+    {
+      "item": "current journal status confirmed, future coverage not guaranteed",
+      "frequency": 2
+    },
+    {
+      "item": "status enquiry; no actionable request.",
+      "frequency": 2
+    },
+    {
+      "item": "journal currently undergoing re-evaluation",
+      "frequency": 2
+    },
+    {
+      "item": "citing article not yet indexed in scopus",
+      "frequency": 2
+    },
+    {
+      "item": "non-serial conference material cannot be indexed",
+      "frequency": 2
+    },
+    {
+      "item": "content not displayed as a full article, indexing issue",
+      "frequency": 2
+    },
+    {
+      "item": "no back filling for previous years is carried out.",
+      "frequency": 2
+    },
+    {
+      "item": "article not yet fully published.",
+      "frequency": 2
+    },
+    {
+      "item": "source under re-evaluation, no new content will be added until review is complete",
+      "frequency": 2
+    },
+    {
+      "item": "no actionable request provided",
+      "frequency": 2
+    },
+    {
+      "item": "citing articles not indexed in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "duplicate ticket",
+      "frequency": 1
+    },
+    {
+      "item": "publisher selection is one of the selection criteria, contact us after 3 months if not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "article in press, will be added once fully published and assigned a volume, issue, and page range",
+      "frequency": 1
+    },
+    {
+      "item": "journal has been discontinued for scopus coverage, no additional content can be added",
+      "frequency": 1
+    },
+    {
+      "item": "article yet to be fully published, corrections can only be made once published",
+      "frequency": 1
+    },
+    {
+      "item": "article expected to reflect in scopus within 3 weeks",
+      "frequency": 1
+    },
+    {
+      "item": "journal is no longer covered in scopus, no backfilling of content",
+      "frequency": 1
+    },
+    {
+      "item": "details not found on the registered official journal site, recommend contacting publisher",
+      "frequency": 1
+    },
+    {
+      "item": "content under re-evaluation, no new content added until review is complete",
+      "frequency": 1
+    },
+    {
+      "item": "source currently indexed in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "content not available on publisher authenticated site",
+      "frequency": 1
+    },
+    {
+      "item": "customer asked about status only so there was no actionable request",
+      "frequency": 1
+    },
+    {
+      "item": "source no longer covered in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "source discontinued for scopus coverage",
+      "frequency": 1
+    },
+    {
+      "item": "content type not covered by scopus",
+      "frequency": 1
+    },
+    {
+      "item": "source under re-evaluation, no new content will be added until review is completed",
+      "frequency": 1
+    },
+    {
+      "item": "cited work not indexed in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "request for confirmation of conference proceedings indexing status",
+      "frequency": 1
+    },
+    {
+      "item": "journal/book series/book not indexed in scopus.",
+      "frequency": 1
+    },
+    {
+      "item": "article published outside the coverage years for indexing.",
+      "frequency": 1
+    },
+    {
+      "item": "indexing process for books takes several months.",
+      "frequency": 1
+    },
+    {
+      "item": "journal no longer covered in scopus.",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently under re-evaluation or discontinued for scopus coverage",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently under re-evaluation, no new content will be indexed until review is completed",
+      "frequency": 1
+    },
+    {
+      "item": "article published outside the coverage years for indexing in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "journal has been discontinued for scopus coverage",
+      "frequency": 1
+    },
+    {
+      "item": "conference material not eligible for indexing",
+      "frequency": 1
+    },
+    {
+      "item": "content currently under review and not yet indexed",
+      "frequency": 1
+    },
+    {
+      "item": "content not published on a scopus selected preprint site.",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently under re-evaluation, no new content will be added until review is completed.",
+      "frequency": 1
+    },
+    {
+      "item": "request routed to another team for processing.",
+      "frequency": 1
+    },
+    {
+      "item": "content not yet indexed, evaluation process takes 2-3 months.",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently active, but may be subject to re-evaluation.",
+      "frequency": 1
+    },
+    {
+      "item": "source currently active but subject to re-evaluation",
+      "frequency": 1
+    },
+    {
+      "item": "content out of coverage year for the journal",
+      "frequency": 1
+    },
+    {
+      "item": "content selection policy does not cover main titles of book series",
+      "frequency": 1
+    },
+    {
+      "item": "content under re-evaluation, no updates until review is complete",
+      "frequency": 1
+    },
+    {
+      "item": "content type not covered for scopus indexation",
+      "frequency": 1
+    },
+    {
+      "item": "publisher version of record is correct; no changes made in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "citation already available in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "content captured from publisher's official site; corrections must be made at the source first.",
+      "frequency": 1
+    },
+    {
+      "item": "current journal status confirmed; no guarantees on future indexing.",
+      "frequency": 1
+    },
+    {
+      "item": "correction process initiated; may take time to reflect in database.",
+      "frequency": 1
+    },
+    {
+      "item": "content under re-evaluation; no new content added until review is complete.",
+      "frequency": 1
+    },
+    {
+      "item": "request routed to another team for further assistance.",
+      "frequency": 1
+    },
+    {
+      "item": "request under review; specific indexing process for conference proceedings.",
+      "frequency": 1
+    },
+    {
+      "item": "source currently undergoing re-evaluation by scopus.",
+      "frequency": 1
+    },
+    {
+      "item": "conference material suggestions not considered for inclusion.",
+      "frequency": 1
+    },
+    {
+      "item": "content currently under re-evaluation, no new content will be added until review is completed",
+      "frequency": 1
+    },
+    {
+      "item": "scopus only captures data available on publisher official sites",
+      "frequency": 1
+    },
+    {
+      "item": "one paper is now available in scopus, the other will reflect in 3 weeks",
+      "frequency": 1
+    },
+    {
+      "item": "requested article is now available in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "content published before journal was indexed, no back filling for previous years",
+      "frequency": 1
+    },
+    {
+      "item": "content processed and expected to reflect in scopus within 3 weeks",
+      "frequency": 1
+    },
+    {
+      "item": "content not yet fully published, cannot update affiliation",
+      "frequency": 1
+    },
+    {
+      "item": "book reviews not covered by scopus",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently indexed, but future indexing not guaranteed",
+      "frequency": 1
+    },
+    {
+      "item": "content already available in scopus, request for author profile update",
+      "frequency": 1
+    },
+    {
+      "item": "content already indexed in scopus, request for author profile update",
+      "frequency": 1
+    },
+    {
+      "item": "journal under re-evaluation, no new content added during this period.",
+      "frequency": 1
+    },
+    {
+      "item": "preprints are not integrated into any metrics in scopus.",
+      "frequency": 1
+    },
+    {
+      "item": "content available on publisher site, cannot remove",
+      "frequency": 1
+    },
+    {
+      "item": "non-serial conference material not eligible for indexing",
+      "frequency": 1
+    },
+    {
+      "item": "content not available on publisher site",
+      "frequency": 1
+    },
+    {
+      "item": "source no longer covered by scopus",
+      "frequency": 1
+    },
+    {
+      "item": "references already added in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "journal under re-evaluation for scopus coverage",
+      "frequency": 1
+    },
+    {
+      "item": "journal currently undergoing re-evaluation, no new content added",
+      "frequency": 1
+    },
+    {
+      "item": "article already available in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "current journal status confirmed, future indexing not guaranteed",
+      "frequency": 1
+    },
+    {
+      "item": "contact the journal publisher for specifics",
+      "frequency": 1
+    },
+    {
+      "item": "journal no longer covered in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "article in press, not yet indexed",
+      "frequency": 1
+    },
+    {
+      "item": "request routed to another team",
+      "frequency": 1
+    },
+    {
+      "item": "source under re-evaluation, no new content will be added",
+      "frequency": 1
+    },
+    {
+      "item": "h-index calculation explanation provided.",
+      "frequency": 1
+    },
+    {
+      "item": "article in press, not yet indexed.",
+      "frequency": 1
+    },
+    {
+      "item": "content available in scopus.",
+      "frequency": 1
+    },
+    {
+      "item": "source undergoing re-evaluation by scopus",
+      "frequency": 1
+    },
+    {
+      "item": "content already processed, expected to reflect in scopus soon",
+      "frequency": 1
+    },
+    {
+      "item": "paper type not covered for scopus indexation",
+      "frequency": 1
+    },
+    {
+      "item": "preprint not published on a selected preprint site",
+      "frequency": 1
+    },
+    {
+      "item": "content not indexed for the year of publication",
+      "frequency": 1
+    },
+    {
+      "item": "content not considered for indexing due to non-serial conference status",
+      "frequency": 1
+    },
+    {
+      "item": "content not found in publisher authenticated site",
+      "frequency": 1
+    },
+    {
+      "item": "content under re-evaluation by scopus",
+      "frequency": 1
+    },
+    {
+      "item": "content currently under review and not yet available for indexing.",
+      "frequency": 1
+    }
+  ]
+}

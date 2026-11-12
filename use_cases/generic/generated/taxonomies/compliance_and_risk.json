@@ -1,0 +1,122 @@
+{
+  "RISK1": {
+    "label": "Regulatory and legal risk",
+    "children": {
+      "RISK1.1": {
+        "label": "GDPR or data protection regulation referenced",
+        "description": "Customer explicitly mentions GDPR, data protection rights, the right to be forgotten, a Subject Access Request, or data privacy law."
+      },
+      "RISK1.2": {
+        "label": "Legal threat or solicitor involvement",
+        "description": "Customer mentions involving a solicitor, attorney, or legal representative, or threatens legal action."
+      },
+      "RISK1.3": {
+        "label": "Regulatory escalation threatened",
+        "description": "Customer threatens to contact a regulator, ombudsman, trading standards, or equivalent authority."
+      },
+      "RISK1.4": {
+        "label": "Consumer rights or statutory rights invoked",
+        "description": "Customer explicitly invokes statutory rights (e.g. Consumer Rights Act, right to repair, cooling-off period)."
+      },
+      "RISK1.5": {
+        "label": "Contract dispute or breach of contract claimed",
+        "description": "Customer claims the company has breached a contract, SLA, or binding agreement."
+      }
+    },
+    "description": "The transcript contains signals of legal, regulatory, or statutory risk that may require escalation to legal or compliance teams."
+  },
+  "RISK2": {
+    "label": "Customer vulnerability",
+    "children": {
+      "RISK2.1": {
+        "label": "Financial hardship mentioned",
+        "description": "Customer explicitly mentions financial difficulty: cannot afford payment, in debt, relying on this refund, or facing financial pressure."
+      },
+      "RISK2.2": {
+        "label": "Mental health or wellbeing concern",
+        "description": "Customer mentions mental health, emotional distress beyond normal frustration, or signals that suggest significant personal difficulty."
+      },
+      "RISK2.3": {
+        "label": "Bereavement or significant life event",
+        "description": "Customer mentions a bereavement, serious illness, divorce, or other major life event that explains or contextualises their contact."
+      },
+      "RISK2.4": {
+        "label": "Elderly, disability, or accessibility need",
+        "description": "Customer mentions or implies a disability, age-related need, or accessibility requirement that should be accommodated in how they are supported."
+      }
+    },
+    "description": "Signals that the customer may be in a vulnerable situation requiring additional care, sensitivity, or specialist support - per FCA Consumer Duty and similar frameworks."
+  },
+  "RISK3": {
+    "label": "Fraud and security risk",
+    "children": {
+      "RISK3.1": {
+        "label": "Suspected account takeover or unauthorised access",
+        "description": "Customer reports unexpected activity on their account suggesting it has been accessed by an unauthorised party."
+      },
+      "RISK3.2": {
+        "label": "Fraudulent charge or transaction reported",
+        "description": "Customer reports a charge they did not authorise, indicating potential payment fraud."
+      },
+      "RISK3.3": {
+        "label": "Social engineering or phishing attempt suspected",
+        "description": "The interaction contains signals suggesting the caller may be attempting to manipulate the agent into granting unauthorised access or taking unauthorised actions."
+      },
+      "RISK3.4": {
+        "label": "Identity theft concern raised",
+        "description": "Customer reports or suspects their personal identity has been stolen or misused."
+      }
+    },
+    "description": "Signals of potential fraud, account compromise, or security threat involving the customer's account."
+  },
+  "RISK4": {
+    "label": "Reputational risk",
+    "children": {
+      "RISK4.1": {
+        "label": "Threat to post publicly on social media or review sites",
+        "description": "Customer explicitly threatens to post about their experience on social media, review platforms, or public forums."
+      },
+      "RISK4.2": {
+        "label": "Media or press involvement mentioned",
+        "description": "Customer mentions working with or intending to contact media, journalists, or bloggers."
+      },
+      "RISK4.3": {
+        "label": "Group complaint or class action signal",
+        "description": "Customer mentions that others are affected or that they are acting on behalf of a group."
+      },
+      "RISK4.4": {
+        "label": "High-profile customer at risk",
+        "description": "Customer reveals they are a prominent individual, business, or organisation whose experience could have outsized reputational impact."
+      }
+    },
+    "description": "Signals that the interaction or its outcome could result in reputational damage to the company if not handled correctly."
+  },
+  "RISK5": {
+    "label": "Product safety risk",
+    "children": {
+      "RISK5.1": {
+        "label": "Physical safety hazard reported",
+        "description": "Customer reports a physical safety risk associated with the product or service."
+      },
+      "RISK5.2": {
+        "label": "Injury or property damage reported",
+        "description": "Customer reports personal injury or property damage caused by the product or service."
+      },
+      "RISK5.3": {
+        "label": "Product recall or safety alert related",
+        "description": "The customer's issue is connected to a known product recall, safety alert, or regulatory notice."
+      }
+    },
+    "description": "The interaction involves a physical safety concern, product hazard, or personal injury report."
+  },
+  "RISK6": {
+    "label": "No risk identified",
+    "children": {
+      "RISK6.1": {
+        "label": "Standard interaction - no risk signals detected",
+        "description": "The interaction is routine. No flags are required."
+      }
+    },
+    "description": "The interaction was reviewed and no compliance, legal, fraud, vulnerability, or reputational risk signals were detected."
+  }
+}

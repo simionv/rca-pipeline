@@ -1,0 +1,17 @@
+{
+  "input": "data/Scopus_Content_Collapsed.xlsx",
+  "output": "runs/output/Scopus_Content_PolicyRules_enriched.xlsx",
+  "text_col": "Conversation",
+  "id_col": "Integration Id",
+  "taxonomy_dir": "generated/taxonomies",
+  "modules": [
+    "policy_rules"
+  ],
+  "batch_size": 2,
+  "concurrency": 3,
+  "retries": 4,
+  "max_tokens": 8000,
+  "run_name": "Scopus Policy Rules - Full Corpus",
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

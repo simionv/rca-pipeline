@@ -1,0 +1,132 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "2be782cad70564d8b90bef81214807298a230e14bba2997214c387c6830a087c",
+      "taxonomy_written_at": "2026-07-15T10:38:28.361801+00:00",
+      "py_hash": "2be782cad70564d8b90bef81214807298a230e14bba2997214c387c6830a087c",
+      "py_generated_at": "2026-07-15T10:38:28.366792+00:00",
+      "taxonomy_source": "promoted_from_draft"
+    },
+    "customer_effort": {
+      "taxonomy_hash": "d5cc2c85cf97899369003735cfd3d5f2350aee7fa088392c86a7fa6707578fc3",
+      "taxonomy_written_at": "2026-07-03T13:23:46.875691+00:00",
+      "py_hash": "a2bb8b68a8268dbfc37fdb1b4660f0dca7f269529dcc1a1aea8e9929d0783ffa",
+      "py_generated_at": "2026-06-23T14:05:29.770038+00:00",
+      "taxonomy_source": "promoted_from_draft"
+    },
+    "root_cause": {
+      "taxonomy_hash": "45a203926c36c0165fc78b0de9916c8b015a7bb642c5a8025a2b3c7340a9444f",
+      "taxonomy_written_at": "2026-06-03T12:57:54.206315+00:00",
+      "py_hash": "45a203926c36c0165fc78b0de9916c8b015a7bb642c5a8025a2b3c7340a9444f",
+      "py_generated_at": "2026-06-03T12:57:54.209312+00:00"
+    },
+    "customer_sentiment": {
+      "py_hash": "85a0be64e3da9160ff8b00b5b74c7615b51cd95fb1816ba2c10790722688132a",
+      "py_generated_at": "2026-05-19T19:51:59.876086+00:00"
+    },
+    "agent_performance": {
+      "taxonomy_hash": "21e6f5b9ce44d39a2ad4def689b6cdf2a6d2dda8ae36d29534029b063a3bdf4f",
+      "taxonomy_written_at": "2026-05-19T20:20:38.165723+00:00",
+      "py_hash": "21e6f5b9ce44d39a2ad4def689b6cdf2a6d2dda8ae36d29534029b063a3bdf4f",
+      "py_generated_at": "2026-05-19T19:51:59.912603+00:00"
+    },
+    "communication_effectiveness": {
+      "py_hash": "4c258f5db2a5e7d59f7fdb3bbdfabe30d99f95b69cb732ddb3b489bd2ceb1263",
+      "py_generated_at": "2026-05-19T19:51:59.932113+00:00"
+    },
+    "voice_of_customer": {
+      "taxonomy_hash": "755a34d2f446cc0251b13330b0ec478e8672daed97849cce52637ffac0c81c03",
+      "taxonomy_written_at": "2026-05-19T20:20:38.224276+00:00",
+      "py_hash": "755a34d2f446cc0251b13330b0ec478e8672daed97849cce52637ffac0c81c03",
+      "py_generated_at": "2026-05-19T19:51:59.965469+00:00"
+    },
+    "escalation": {
+      "py_hash": "820881e0247538b1e965698b0e2d996d2680f5840fb86084a14e8737ec75a6ba",
+      "py_generated_at": "2026-05-19T19:51:59.988591+00:00"
+    },
+    "resolution_quality": {
+      "py_hash": "23562da1a1a8e7a3a263a0c7aca427dc85d9085916a81e83281192b62025f6d6",
+      "py_generated_at": "2026-05-19T19:52:00.007472+00:00"
+    },
+    "resolution_actions": {
+      "taxonomy_hash": "b57bc24d6178de8c00876451d8d104802d61e6f1d3d7da18fa13635f735c6392",
+      "taxonomy_written_at": "2026-05-19T20:20:38.295365+00:00",
+      "py_hash": "b57bc24d6178de8c00876451d8d104802d61e6f1d3d7da18fa13635f735c6392",
+      "py_generated_at": "2026-05-19T20:06:50.777154+00:00"
+    },
+    "follow_up": {
+      "taxonomy_hash": "abae21e69be2faf0a703804e0eb2a83cd3ea7b9ea9875b4b1789d798fc013d58",
+      "taxonomy_written_at": "2026-05-19T20:20:38.328298+00:00",
+      "py_hash": "abae21e69be2faf0a703804e0eb2a83cd3ea7b9ea9875b4b1789d798fc013d58",
+      "py_generated_at": "2026-05-19T20:06:50.812896+00:00"
+    },
+    "compliance_and_risk": {
+      "taxonomy_hash": "e61ca65c0fba3aa0c2cab5e175450b8e4dd880af0216c2115954eb5b43f030cd",
+      "taxonomy_written_at": "2026-05-19T20:20:38.365506+00:00",
+      "py_hash": "e61ca65c0fba3aa0c2cab5e175450b8e4dd880af0216c2115954eb5b43f030cd",
+      "py_generated_at": "2026-05-19T20:06:50.849451+00:00"
+    },
+    "insights_and_opportunities": {
+      "py_hash": "1ce7acf747b00e2dd65ee534dceb5d403ca8fd6c21ce0666b77dbc98ea375cd9",
+      "py_generated_at": "2026-05-19T20:06:50.866485+00:00"
+    },
+    "customer_profile": {
+      "py_hash": "1cde562e64ba481040fc49681862e6059c18707d4500fd30dd42b03a650f330f",
+      "py_generated_at": "2026-05-19T20:06:50.890515+00:00"
+    },
+    "knowledge_management": {
+      "taxonomy_hash": "c5575f18a03d306034c9ae985f518ea61af815763b14e93400d3575b1982056b",
+      "taxonomy_written_at": "2026-05-19T20:20:38.435477+00:00",
+      "py_hash": "c5575f18a03d306034c9ae985f518ea61af815763b14e93400d3575b1982056b",
+      "py_generated_at": "2026-05-19T20:06:50.918066+00:00"
+    },
+    "interaction_classification": {
+      "py_hash": "05658052087f5582b104ae87e4e4cd2b6dd1d67f2b6486b182e7fabf166d1859",
+      "py_generated_at": "2026-05-19T20:12:34.858015+00:00"
+    },
+    "containment_and_deflection": {
+      "py_hash": "1c2837f86d607b4f4521b506a78129edd180ee36ed968e6f35bab69fe09a47f0",
+      "py_generated_at": "2026-05-19T20:12:34.879949+00:00"
+    },
+    "customer_journey": {
+      "py_hash": "1c3c2c3d67804955976f71c814cdf37d951bdcb7a4a5db70b01d271fa56035bd",
+      "py_generated_at": "2026-05-19T20:20:38.507766+00:00"
+    },
+    "policy_understanding": {
+      "taxonomy_hash": "4844d9cfed9fcdcb0bb82e22bdc0e39979715949aa357c13e45bda12518eefbe",
+      "taxonomy_written_at": "2026-06-23T14:05:29.781869+00:00",
+      "py_hash": "4844d9cfed9fcdcb0bb82e22bdc0e39979715949aa357c13e45bda12518eefbe",
+      "py_generated_at": "2026-06-23T14:05:29.789841+00:00"
+    },
+    "policy_compliance": {
+      "taxonomy_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "taxonomy_written_at": "2026-07-03T13:23:46.917630+00:00",
+      "py_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "py_generated_at": "2026-07-03T13:17:08.081782+00:00"
+    },
+    "resolution": {
+      "taxonomy_hash": "01e9eb528b7ebc65a3a0782bc9751826362cccc8075ad80f692d3c6f66829f99",
+      "taxonomy_written_at": "2026-07-15T10:38:28.372792+00:00",
+      "py_hash": "01e9eb528b7ebc65a3a0782bc9751826362cccc8075ad80f692d3c6f66829f99",
+      "py_generated_at": "2026-07-02T15:02:00.416079+00:00"
+    },
+    "troubleshooting": {
+      "taxonomy_hash": "4b0ba6abf6e88fa049dba99ae57687932990d63144c5d79cf4d0e24d0832fea1",
+      "taxonomy_written_at": "2026-07-15T10:38:28.380799+00:00",
+      "py_hash": "4b0ba6abf6e88fa049dba99ae57687932990d63144c5d79cf4d0e24d0832fea1",
+      "py_generated_at": "2026-07-02T15:02:00.436080+00:00"
+    },
+    "metadata": {
+      "py_hash": "cae13226b661416d178d1de885563beafaa0529435fcdc979e3328b953ee5074",
+      "py_generated_at": "2026-07-02T15:02:00.449079+00:00"
+    },
+    "policy_rules": {
+      "taxonomy_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "taxonomy_written_at": "2026-07-03T13:23:46.969883+00:00",
+      "py_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "py_generated_at": "2026-07-03T13:23:46.982907+00:00"
+    }
+  },
+  "generated_at": "2026-07-15T10:38:28.389789+00:00",
+  "generator_version": "1.6.0"
+}

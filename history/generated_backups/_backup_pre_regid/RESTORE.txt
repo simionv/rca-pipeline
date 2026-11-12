@@ -1,0 +1,9 @@
+The modules that were live in generated/pipeline_config.json before this notebook ran:
+    sd_ac_primary, sd_ac_subreason
+
+To put them back:
+
+    python build_pipeline.py build --input definitions/sd_2026_accessing_content_definition.xlsx --force-all
+
+Their outputs are already saved under runs/output/.
+The config holds one product at a time; restoring them drops the regid_* modules.

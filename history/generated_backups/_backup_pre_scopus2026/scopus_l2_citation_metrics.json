@@ -1,0 +1,40 @@
+{
+  "SCCM1": {
+    "label": "Citation / Metrics",
+    "children": {
+      "SCCM1.1": {
+        "label": "Citation Count Discrepancy",
+        "description": "Definition: Citation counts differ from what the customer expects."
+      },
+      "SCCM1.2": {
+        "label": "h-index Discrepancy",
+        "description": "Definition: The h-index differs from what the customer expects."
+      },
+      "SCCM1.3": {
+        "label": "CiteScore / Journal Metric Query",
+        "description": "Definition: The customer asks about CiteScore or other journal metrics."
+      },
+      "SCCM1.4": {
+        "label": "Missing Citations",
+        "description": "Definition: Citations are not showing for a document."
+      },
+      "SCCM1.5": {
+        "label": "CiteScore Data File Request",
+        "description": "Definition: The customer asks for the CiteScore data file (Excel download of journal metrics)."
+      },
+      "SCCM1.6": {
+        "label": "Journal Metric Update Request",
+        "description": "Definition: The customer asks for a journal's metric or source details to be updated."
+      },
+      "SCCM1.7": {
+        "label": "Self-Citation Exclusion Issue",
+        "description": "Definition: A question or problem about excluding self-citations from citation counts or the h-index."
+      },
+      "SCCM1.8": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The metrics issue is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Citation / Metrics'. Choose the Level 2 value from this group only. 'Citation / Metrics' means: Definition: Missing documents/journals/issues, incorrect document data, missing titles/metadata, duplicates, retractions (Content / Indexing); citation count, h-index, CiteScore/metric discrepancies and the CiteScore data file request (Citation / Metrics)."
+  }
+}

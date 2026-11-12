@@ -1,0 +1,18 @@
+{
+  "_comment": "Stage 1 of 2 - classify every 2026 ScienceDirect ticket into one of 13 contact reasons. Taxonomy from the Alejandro gold workbook via sd_2026_pipeline_definition.xlsx. Input is written by notebooks/07_sd_2026_two_stage.ipynb (2026-filtered, short tickets removed, conversations capped at 16000 chars) - not the raw ticket file.",
+  "input": "data/sd_stage1_input_2026.csv",
+  "output": "runs/output/sd_2026_step1_contact_reason.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "sd_contact_reason"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

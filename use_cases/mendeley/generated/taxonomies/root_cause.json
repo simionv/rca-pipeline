@@ -1,0 +1,96 @@
+{
+  "RC1": {
+    "label": "Credential & password issues",
+    "children": {
+      "RC1.1": {
+        "label": "Forgotten password",
+        "description": "User forgot their password and cannot sign in."
+      },
+      "RC1.2": {
+        "label": "Reset email not received",
+        "description": "Password reset email did not reach the user."
+      },
+      "RC1.3": {
+        "label": "Incorrect credentials stored",
+        "description": "Browser or password manager saved wrong credentials."
+      },
+      "RC1.4": {
+        "label": "Other credential issue",
+        "description": "Credential issues not covered above."
+      }
+    },
+    "description": "Root causes related to forgotten, expired, or incorrect user credentials and password recovery failures."
+  },
+  "RC2": {
+    "label": "Institutional & entitlement issues",
+    "children": {
+      "RC2.1": {
+        "label": "Institution not entitled",
+        "description": "User institution does not have a subscription to the requested content."
+      },
+      "RC2.2": {
+        "label": "Affiliation not recognised",
+        "description": "System cannot match the user to their institution."
+      },
+      "RC2.3": {
+        "label": "Entitlement configuration error",
+        "description": "Entitlement exists but is misconfigured on the platform side."
+      },
+      "RC2.4": {
+        "label": "Other entitlement issue",
+        "description": "Entitlement issues not covered above."
+      }
+    },
+    "description": "Root causes where institutional configuration, entitlement, or SSO setup prevents access."
+  },
+  "RC3": {
+    "label": "Security & network issues",
+    "children": {
+      "RC3.1": {
+        "label": "IP address blocked",
+        "description": "User IP address is blocked by Cloudflare or platform firewall."
+      },
+      "RC3.2": {
+        "label": "Firewall or proxy interference",
+        "description": "Corporate or institutional firewall blocking access."
+      },
+      "RC3.3": {
+        "label": "Other security or network issue",
+        "description": "Security or network issues not covered above."
+      }
+    },
+    "description": "Root causes involving network blocks, firewall rules, CDN interference, or IP restrictions."
+  },
+  "RC4": {
+    "label": "System & platform issues",
+    "children": {
+      "RC4.1": {
+        "label": "Link expired",
+        "description": "A verification or reset link has passed its expiry time."
+      },
+      "RC4.2": {
+        "label": "Account inactive",
+        "description": "Account was deactivated due to inactivity or policy."
+      },
+      "RC4.3": {
+        "label": "Platform bug or outage",
+        "description": "Issue caused by a known or unknown platform defect."
+      },
+      "RC4.4": {
+        "label": "Other platform issue",
+        "description": "Platform issues not covered above."
+      }
+    },
+    "description": "Root causes related to software bugs, browser incompatibility, sync failures, or registration errors."
+  },
+  "RC5": {
+    "label": "Other root cause",
+    "children": {
+      "RC5.1": {
+        "label": "Other / Uncategorised",
+        "description": "Root cause not covered by any specific category."
+      }
+    },
+    "description": "Root causes not fitting any category above."
+  }
+}

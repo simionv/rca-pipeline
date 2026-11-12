@@ -1,0 +1,28 @@
+{
+  "SDSB1": {
+    "label": "Access blocked by security/network controls",
+    "children": {
+      "SDSB1.1": {
+        "label": "Content Protection - Cloudflare Firewall rules",
+        "description": "Definition: Use when Elsevier or Cloudflare explicitly blocks traffic, an IP address or suspicious activity."
+      },
+      "SDSB1.2": {
+        "label": "Browser compatibility issues",
+        "description": "Definition: Use when the apparent security block occurs only with a specific browser or device."
+      },
+      "SDSB1.3": {
+        "label": "Not enough info",
+        "description": "Definition: Use when a security or network block is reported but its cause is unclear."
+      },
+      "SDSB1.4": {
+        "label": "Raven email blocklist",
+        "description": "Definition: Use when Raven blocks the user’s email address or email domain."
+      },
+      "SDSB1.5": {
+        "label": "Other",
+        "description": "Definition: Use for another confirmed security or network restriction not listed above."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Access blocked by security/network controls'. Choose the root cause from this group only. That contact reason means: Use when access is explicitly denied by a security or network control, with signals such as “access denied”, IP blocked, Cloudflare, firewall, unusual downloading or crawling, and do not use for subscription, entitlement or sign-in problems."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "SDAS1": {
+    "label": "PA - Request an article through Patient Access",
+    "children": {
+      "SDAS1.1": {
+        "label": "PA - Request an article through Patient Access",
+        "description": "Definition and required markers: The customer explicitly mentions Patient Access, identifies as a patient or non-professional caregiver, or the agent explicitly confirms that the request is handled through Patient Access. Do not use for healthcare professionals, researchers, pharmacists, or veterinarians unless Patient Access is explicit."
+      }
+    }
+  },
+  "SDAS2": {
+    "label": "INST_INFO - Check whether an institution subscribes to a specific title, year or package",
+    "children": {
+      "SDAS2.1": {
+        "label": "INST_INFO - Check whether an institution subscribes to a specific title, year or package",
+        "description": "Definition and required markers: A named institution is asking whether it has access to specific content. Markers include: “our institution”, “our library”, subscription, licence, entitlement, holdings, coverage, KBART, title inclusion, package, or coverage years. Use this only where the customer is seeking clarification, rather than reporting a confirmed entitlement failure."
+      }
+    }
+  },
+  "SDAS3": {
+    "label": "INST_ISSUE - Access content that the institution is entitled to, but which is not available to the user",
+    "children": {
+      "SDAS3.1": {
+        "label": "INST_ISSUE - Access content that the institution is entitled to, but which is not available to the user",
+        "description": "Definition and required markers: A named institution is involved and the ticket shows that access is expected but not delivered. Markers include: “we are subscribed”, “we have paid”, “we should have access”, invoice, agreement, entitlement, ECR, account mapping, institutional token, provisioned title, or agent confirmation of entitlement."
+      }
+    }
+  },
+  "SDAS4": {
+    "label": "PURCHASED - Access an article or subscription purchased directly from ScienceDirect",
+    "children": {
+      "SDAS4.1": {
+        "label": "PURCHASED - Access an article or subscription purchased directly from ScienceDirect",
+        "description": "Definition and required markers: The customer refers to a personal purchase, order number, receipt, payment, pay-per-view purchase, personal subscription, or order history, and cannot access the purchased content. Do not assume a purchase without an explicit commercial marker."
+      }
+    }
+  },
+  "SDAS5": {
+    "label": "AVAILABILITY - Request a missing article, archive item or supplementary material",
+    "children": {
+      "SDAS5.1": {
+        "label": "AVAILABILITY - Request a missing article, archive item or supplementary material",
+        "description": "Definition and required markers: The requested content cannot be supplied because it is unavailable, missing, not digitised, or lacks a supplementary/companion file, appendix, dataset, or other supporting material."
+      }
+    }
+  },
+  "SDAS6": {
+    "label": "OTHER - Other",
+    "children": {
+      "SDAS6.1": {
+        "label": "OTHER - Other",
+        "description": "Definition and required markers: When the ticket lacks the required markers for a sub-contact reason, classify it as « other »."
+      }
+    }
+  }
+}

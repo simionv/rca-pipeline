@@ -1,0 +1,284 @@
+{
+  "CR1": {
+    "label": "Access / QR code",
+    "children": {
+      "CR1.1": {
+        "label": "Already redeemed",
+        "description": "The code was already redeemed, and the customer is trying to redeem it again."
+      },
+      "CR1.2": {
+        "label": "Invalid",
+        "description": "The code does not work as entered, there is uncertainty around format, dashes, copied code, or where to redeem it. It could be set up wrong."
+      },
+      "CR1.3": {
+        "label": "Missing",
+        "description": "The customer expected a code but cannot find it, including a second reveal/resource code linked to an eBook or resources. It is usually seen for an ebook purchase outside of evolve (eg. kindle / amazon)"
+      },
+      "CR1.4": {
+        "label": "Lack of user guidance",
+        "description": "The customer does not understand where to find the access code, where to redeem the code, what the code unlocks, or why it does not give access to the expected content. Additionnaly, the product might not be included in a bundle."
+      },
+      "CR1.5": {
+        "label": "Book entitlement misunderstanding",
+        "description": "The customer has a code from a physical book and expects it to unlock more than it actually does, such as a full eBook instead of complementary resources. Sometimes, the customer expects to receive ebook access"
+      },
+      "CR1.6": {
+        "label": "Damaged",
+        "description": "The customer code on a physical resource is damaged and/or unusable. Code would be described as scratched off, unreadable, torn, not clear, illegible, defective"
+      },
+      "CR1.7": {
+        "label": "Not enough info",
+        "description": "The ticket mentions an access code, but the transcript or extract does not show enough resolution to identify the cause."
+      },
+      "CR1.8": {
+        "label": "Other",
+        "description": "Use only when the issue is clearly code-related but none of the transcript-supported root causes fit."
+      }
+    },
+    "description": "Use when the customer reaches out because an access code or QR/access code seems to be the issue: redeeming it, entering it, reusing it, missing it, etc. The agent would confirm that this is an access code issue."
+  },
+  "CR2": {
+    "label": "Login / password",
+    "children": {
+      "CR2.1": {
+        "label": "Email or passcode not received",
+        "description": "The customer did not receive a reset or verification email or code, one-time login passcode, or magic link, often because the email is wrong or no longer accessible. Sometimes they didn't checked their spams."
+      },
+      "CR2.2": {
+        "label": "Wrong email",
+        "description": "The customer was using an email that is not the one associated with the account."
+      },
+      "CR2.3": {
+        "label": "Password reset needed",
+        "description": "The password is incorrect and the likely resolution is a password reset."
+      },
+      "CR2.4": {
+        "label": "Not enough info",
+        "description": "The login issue is visible, but the transcript does not confirm whether the cause is wrong email, missing passcode, reset needed, or something else."
+      },
+      "CR2.5": {
+        "label": "Other",
+        "description": "Use only for a confirmed login/password issue that does not fit the transcript-supported root causes."
+      }
+    },
+    "description": "Use when the customer cannot log in because of password, reset email, passcode, magic link, wrong email, verification email issue, etc."
+  },
+  "CR3": {
+    "label": "Account",
+    "children": {
+      "CR3.1": {
+        "label": "Duplicate accounts",
+        "description": "The customer has multiple accounts, causing missing access, mismatched content, or confusion."
+      },
+      "CR3.2": {
+        "label": "Update email / Account update",
+        "description": "The customer needs their account email or account details updated, often because the old email is wrong or no longer accessible. They could also need their account settings updated"
+      },
+      "CR3.3": {
+        "label": "Not enough info",
+        "description": "There is likely an account issue, but the resolution is missing or unclear."
+      },
+      "CR3.4": {
+        "label": "Wrong user role setup",
+        "description": "The customer is usually a faculty member who claims to have registered as a student or vice versa (and want their account changed to faculty)"
+      },
+      "CR3.5": {
+        "label": "Email / phone already in use",
+        "description": "The customer is trying to access Evolve but are told that their email / phone is already in use."
+      },
+      "CR3.6": {
+        "label": "No institution associated",
+        "description": "The customer is not able to see the institution that they are in listed in the options, institution is missing, they can't complete the process.\nThere are cases where the customer is not affiliated with institution so they wouldn't need it"
+      },
+      "CR3.7": {
+        "label": "Other",
+        "description": "Use only for a confirmed account issue that does not fit the transcript-supported root causes."
+      }
+    },
+    "description": "Use when the issue is driven by account identity or account setup: old vs new account, account merge, duplicate accounts, or email/account mismatch across systems."
+  },
+  "CR4": {
+    "label": "Course Access",
+    "children": {
+      "CR4.1": {
+        "label": "Lack of user guidance",
+        "description": "The customer is confused about what course, product, package, edition, or material they should access. The customer could aso be confused about the difference between an access code, a course ID, and what each one gives access to."
+      },
+      "CR4.2": {
+        "label": "Not enough info",
+        "description": "The customer says they cannot access something in a course, but the conversation stops before the cause is confirmed."
+      },
+      "CR4.3": {
+        "label": "Browser / Device",
+        "description": "The customer cannot access a course due to a browser or device configuration issue."
+      },
+      "CR4.4": {
+        "label": "Invalid course ID",
+        "description": "The customer entered their cours ID wrong, ot it doesn't exist, or it's incomplete"
+      },
+      "CR4.5": {
+        "label": "Faculty enrollment",
+        "description": "Request from a faculty trying to enroll their co-faculty to a course"
+      },
+      "CR4.6": {
+        "label": "Other",
+        "description": "Use for a confirmed course access issue that does not fit the more specific course root causes."
+      }
+    },
+    "description": "Use only when the customer cannot access, enter, enroll in, or reach a course or course content. This doesn't cover an issue related to a course feature."
+  },
+  "CR5": {
+    "label": "eBook & other stores",
+    "children": {
+      "CR5.1": {
+        "label": "Ebook entitlement misunderstanding",
+        "description": "The customer thinks an eBook, EAQ, or other digital item is included, but the checked package/access code inclusion shows it is not. Could be an eBook entitlement misunderstanding or an ebook resource confusion, such as expecting the full eBook when they only have resources, or expecting resources with an eBook"
+      },
+      "CR5.2": {
+        "label": "No VST account setup",
+        "description": "The customer cannot access the eBook because the VitalSource account is not set up or they are not using the correct VST flow. The customer was prompted to verify their email and they can't vierfy (mispelled email / wrong email). Sometimes, the agent would confirm they needed to merge customers bookshelf vital source account, agent refered to contact vitalsource support to merge account"
+      },
+      "CR5.3": {
+        "label": "Information request",
+        "description": "The customer is asking for information about eBook access, such as duration or expiration, and nothing is actually broken."
+      },
+      "CR5.4": {
+        "label": "Lack of user guidance",
+        "description": "The customer needs guidance on where or how to access the eBook, or navigation guidance on where to find the ebook"
+      },
+      "CR5.5": {
+        "label": "Not enough info",
+        "description": "The eBook issue is visible, but the transcript does not confirm whether it is entitlement, VST setup, information request, or guidance."
+      },
+      "CR5.6": {
+        "label": "Other",
+        "description": "Use for a confirmed eBook/VST/other-store issue that does not fit the specific root causes."
+      }
+    },
+    "description": "Use when the issue is about eBook access, VitalSource, other-store/bookstore purchase, eBook access duration, or confusion between eBook and resources. Customer can also be trying to download vitalsource bookshelf app"
+  },
+  "CR6": {
+    "label": "Resources",
+    "children": {
+      "CR6.1": {
+        "label": "Lack of user guidance",
+        "description": "The resources exist, but the customer is looking in the wrong place, selecting the wrong edition, or misunderstanding what resources they have."
+      },
+      "CR6.2": {
+        "label": "Browser / Device",
+        "description": "The customer cannot access a resource due to a browser or device configuration issue."
+      },
+      "CR6.3": {
+        "label": "Resource-product association issue",
+        "description": "The customer is facing a set-up issue (e.g missing, wrong edition, etc.)"
+      },
+      "CR6.4": {
+        "label": "Other",
+        "description": "Use for a confirmed resource access issue that does not fit guidance, browser/device, or proven product association."
+      },
+      "CR6.5": {
+        "label": "Not enough info",
+        "description": "The customer reports a resources issue but the transcript lacks enough resolution to identify the cause."
+      }
+    },
+    "description": "Use when the customer cannot find or access resources they believe they bought or should have with a product/book/course."
+  },
+  "CR7": {
+    "label": "Product request",
+    "children": {
+      "CR7.1": {
+        "label": "Other",
+        "description": "Use for a simple product/book information request when no more specific product-request root cause exists."
+      },
+      "CR7.2": {
+        "label": "Faculty ebook request follow-up",
+        "description": "customer already placed an order previsouly for ebook / print and is following up on the status of the request. It could be an adoption request, complementary or desk copy request."
+      },
+      "CR7.3": {
+        "label": "Ebook access request",
+        "description": "didn't request the ebook yet but not sure they've already placed a request, would ask to add the ebook on their account / place the request on their behalf - want a digital version of the book"
+      },
+      "CR7.4": {
+        "label": "Faculty resources request follow-up",
+        "description": "customer already placed an order previsouly for resources and is following up on the status of the request"
+      },
+      "CR7.5": {
+        "label": "Author request",
+        "description": "Elsevier's employees requesting access for digital products or requesting digital product access for an author / for SME / for a reviewer"
+      },
+      "CR7.6": {
+        "label": "Lack of user guidance",
+        "description": "Users are not not onboarded really well / training.\nInstructors redeemed the access code from their book instead of requesting access to resources"
+      }
+    },
+    "description": "Use when the customer is asking about a product or book, without an actual access failure."
+  },
+  "CR8": {
+    "label": "Other access related",
+    "children": {
+      "CR8.1": {
+        "label": "Other",
+        "description": "Use when the issue is access-related, the root cause is identifiable but not provided in the list."
+      },
+      "CR8.2": {
+        "label": "Not enough info",
+        "description": "The issue is access-related, but the transcript does not provide enough detail to identify a more specific root cause."
+      }
+    },
+    "description": "Use when there is a real access issue, but it does not fit the more specific access categories."
+  },
+  "CR9": {
+    "label": "Other not access related",
+    "children": {
+      "CR9.1": {
+        "label": "Other",
+        "description": "Use for a non-access feature, content, workflow, or functionality issue when no more specific root cause exists."
+      },
+      "CR9.2": {
+        "label": "Content in a product",
+        "description": "The customer is reporting a content error. For example, answer to a question is incorrect / content shows incorrect info / mispelling or miscalculation / content shows \"coming soon\""
+      },
+      "CR9.3": {
+        "label": "No root cause",
+        "description": "Acceptable when the group decides the case is not access related and no root cause needs to be forced."
+      }
+    },
+    "description": "Use when the customer already has access and the problem is about feature behavior, content, notifications, submissions, video playback, or another non-access workflow."
+  },
+  "CR10": {
+    "label": "Non Evolve",
+    "children": {
+      "CR10.1": {
+        "label": "Non Evolve",
+        "description": "The customer contacted Evolve support, but the actual issue belongs to another product or support path."
+      }
+    },
+    "description": "Use when the issue belongs to another product or support flow, such as HESI, Shadow Health, Adaptive Quizzing, or SurePath."
+  },
+  "CR11": {
+    "label": "Trial",
+    "children": {
+      "CR11.1": {
+        "label": "Trial expired / expiring",
+        "description": "The customer's trial has expired"
+      },
+      "CR11.2": {
+        "label": "Trial extension request",
+        "description": "The customer is asking extension with their trials / can't pay for full access yet, need a day or two to complete the assignement"
+      },
+      "CR11.3": {
+        "label": "Trial setup / availability issue",
+        "description": "The customer is trying to get multiple trials / can't see a trial options for 14 days free trials"
+      },
+      "CR11.4": {
+        "label": "Other",
+        "description": "Use when the issue is trial-related, the root cause is identifiable but not provided in the list."
+      },
+      "CR11.5": {
+        "label": "Not enough info",
+        "description": "The issue is access-related, but the transcript does not provide enough detail to identify a more specific root cause."
+      }
+    },
+    "description": "Use only when the issue is genuinely trial-specific."
+  }
+}

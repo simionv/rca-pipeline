@@ -1,0 +1,28 @@
+{
+  "SDAC1": {
+    "label": "Accessing content",
+    "children": {
+      "SDAC1.1": {
+        "label": "Outside subscription content",
+        "description": "Definition: Use when the requested content is not included in the customer’s subscription."
+      },
+      "SDAC1.2": {
+        "label": "Institutional IP range issues or request",
+        "description": "Definition: Use when content access depends on adding, updating or recognising an institutional IP range."
+      },
+      "SDAC1.3": {
+        "label": "Not enough info",
+        "description": "Definition: Use when content cannot be accessed but the cause is unclear."
+      },
+      "SDAC1.4": {
+        "label": "Other",
+        "description": "Definition: Use for another content-access issue not listed above."
+      },
+      "SDAC1.5": {
+        "label": "Issue with content entitlement",
+        "description": "Definition: Use when subscribed or purchased content is not correctly recognised as entitled, or the user just doesn't have a subscription"
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Accessing content'. Choose the root cause from this group only. That contact reason means: Use when the customer cannot open, download or obtain a specific article, journal, book, issue or subscribed content, with signals such as paywall, missing coverage, purchase not recognised, outside subscription or entitlement, and not when the failure is caused by login or an explicit security block."
+  }
+}

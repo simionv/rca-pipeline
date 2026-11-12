@@ -1,0 +1,48 @@
+{
+  "SDNA1": {
+    "label": "Other - not access related",
+    "children": {
+      "SDNA1.1": {
+        "label": "Product and/or sales inquiry",
+        "description": "Definition: Use for product availability, pricing, purchasing or general commercial questions."
+      },
+      "SDNA1.2": {
+        "label": "autorenewal for D2R subscripton",
+        "description": "Definition: Use for requests concerning automatic renewal of a D2R subscription."
+      },
+      "SDNA1.3": {
+        "label": "Not for SD",
+        "description": "Definition: Use when the request belongs to another Elsevier product, service or support team."
+      },
+      "SDNA1.4": {
+        "label": "Not enough info",
+        "description": "Definition: Use when the request is clearly non-access-related but its precise topic is unclear."
+      },
+      "SDNA1.5": {
+        "label": "Other",
+        "description": "Definition: Use for another non-access request not listed below."
+      },
+      "SDNA1.6": {
+        "label": "Content issue",
+        "description": "Definition: Use for questions, errors or corrections concerning the scientific or editorial content itself."
+      },
+      "SDNA1.7": {
+        "label": "Billing / invoice",
+        "description": "Definition: Use for invoices, receipts, payments, refunds or other billing matters."
+      },
+      "SDNA1.8": {
+        "label": "Request to remove personal information",
+        "description": "Definition: Use when the customer asks to remove specific personal data without deleting the whole account."
+      },
+      "SDNA1.9": {
+        "label": "Sales request COA",
+        "description": "Definition: Use for a COA request that must be handled by Sales rather than access support."
+      },
+      "SDNA1.10": {
+        "label": "Request for information",
+        "description": "Definition: Use when the customer asks how to find, obtain or access content without reporting a failure."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Other - not access related'. Choose the root cause from this group only. That contact reason means: Use when the request is unrelated to accessing or managing access to ScienceDirect, with signals such as publishing, manuscript submission, scientific questions, content corrections, invoices, sales, or author contact."
+  }
+}

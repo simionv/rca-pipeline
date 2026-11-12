@@ -1,0 +1,120 @@
+{
+  "AP1": {
+    "label": "Communication quality",
+    "children": {
+      "AP1.1": {
+        "label": "Clear and accurate information delivery",
+        "description": "Agent provided clear, complete, and correct information — a positive performance signal in this dimension."
+      },
+      "AP1.2": {
+        "label": "Active listening and comprehension",
+        "description": "Agent demonstrated understanding of the customer's issue by reflecting back accurately, asking relevant questions, and not asking for information already provided."
+      },
+      "AP1.3": {
+        "label": "Appropriate tone and language",
+        "description": "Agent's tone matched the context and customer's emotional state appropriately throughout."
+      },
+      "AP1.4": {
+        "label": "Proactive communication of next steps",
+        "description": "Agent proactively communicated timelines, next steps, and expectations without being asked."
+      },
+      "AP1.5": {
+        "label": "Communication gap or confusion introduced",
+        "description": "Agent's communication was unclear, confusing, or introduced ambiguity — a negative signal."
+      }
+    },
+    "description": "How clearly, accurately, and appropriately the agent communicated throughout the interaction."
+  },
+  "AP2": {
+    "label": "Problem-solving effectiveness",
+    "children": {
+      "AP2.1": {
+        "label": "Correctly diagnosed the root issue",
+        "description": "Agent accurately identified the underlying cause of the customer's problem."
+      },
+      "AP2.2": {
+        "label": "Applied correct and effective resolution",
+        "description": "Agent used the right tool, process, or action to resolve the issue."
+      },
+      "AP2.3": {
+        "label": "Offered alternatives when primary solution unavailable",
+        "description": "When the ideal resolution was not possible, agent proactively offered the next best option."
+      },
+      "AP2.4": {
+        "label": "Escalated appropriately when required",
+        "description": "Agent recognised when the issue exceeded their authority or capability and escalated correctly."
+      },
+      "AP2.5": {
+        "label": "Missed diagnosis or applied wrong solution",
+        "description": "Agent misidentified the issue or applied a resolution that did not address the root cause."
+      }
+    },
+    "description": "How effectively the agent diagnosed and resolved the customer's issue."
+  },
+  "AP3": {
+    "label": "Empathy and rapport",
+    "children": {
+      "AP3.1": {
+        "label": "Proactively acknowledged customer frustration",
+        "description": "Agent noticed and explicitly acknowledged the customer's emotional state before being asked."
+      },
+      "AP3.2": {
+        "label": "Personalised the interaction",
+        "description": "Agent adapted to the individual customer rather than delivering a scripted or generic response."
+      },
+      "AP3.3": {
+        "label": "Appropriate apology when warranted",
+        "description": "Agent apologised sincerely and appropriately when an error or inconvenience occurred."
+      },
+      "AP3.4": {
+        "label": "Failed to acknowledge customer emotion",
+        "description": "Agent did not acknowledge the customer's expressed frustration, distress, or dissatisfaction."
+      }
+    },
+    "description": "Whether the agent acknowledged the customer's emotional state and made them feel heard and valued."
+  },
+  "AP4": {
+    "label": "Technical knowledge and accuracy",
+    "children": {
+      "AP4.1": {
+        "label": "Demonstrated strong product or service knowledge",
+        "description": "Agent showed depth of knowledge about the product, feature, or process relevant to the issue."
+      },
+      "AP4.2": {
+        "label": "Used tools and systems effectively",
+        "description": "Agent used the available systems, lookup tools, or internal resources correctly and efficiently."
+      },
+      "AP4.3": {
+        "label": "Provided inaccurate or misleading information",
+        "description": "Agent gave incorrect information about the product, policy, or process — a negative signal."
+      },
+      "AP4.4": {
+        "label": "Lacked knowledge and could not assist",
+        "description": "Agent was unable to answer the customer's question and did not know how to find the answer."
+      }
+    },
+    "description": "The depth and accuracy of the agent's product knowledge and technical understanding."
+  },
+  "AP5": {
+    "label": "Process adherence",
+    "children": {
+      "AP5.1": {
+        "label": "Followed standard procedures correctly",
+        "description": "Agent completed all required steps in the correct order per company process."
+      },
+      "AP5.2": {
+        "label": "Documented the case correctly",
+        "description": "Agent captured case notes, resolution steps, and relevant details accurately."
+      },
+      "AP5.3": {
+        "label": "Deviated from required process",
+        "description": "Agent skipped steps, applied shortcuts, or deviated from required procedure — a negative signal."
+      },
+      "AP5.4": {
+        "label": "Failed to obtain required authorisation",
+        "description": "Agent took an action that required manager or policy approval without obtaining it."
+      }
+    },
+    "description": "Whether the agent followed required procedures, policies, and quality standards."
+  }
+}

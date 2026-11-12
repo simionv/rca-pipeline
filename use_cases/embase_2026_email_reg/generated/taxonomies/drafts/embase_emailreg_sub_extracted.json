@@ -1,0 +1,134 @@
+{
+  "domain": "embase_emailreg_sub",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "verification email not received",
+      "frequency": 4
+    },
+    {
+      "item": "request for new registration id",
+      "frequency": 3
+    },
+    {
+      "item": "author email change request",
+      "frequency": 2
+    },
+    {
+      "item": "remote access registration with institutional email",
+      "frequency": 2
+    },
+    {
+      "item": "login access issue",
+      "frequency": 2
+    },
+    {
+      "item": "access code registration issue",
+      "frequency": 1
+    },
+    {
+      "item": "request for additional registration ids",
+      "frequency": 1
+    },
+    {
+      "item": "user access revocation and new user registration request",
+      "frequency": 1
+    },
+    {
+      "item": "request for new user account creation",
+      "frequency": 1
+    },
+    {
+      "item": "request to update email for published paper",
+      "frequency": 1
+    },
+    {
+      "item": "institutional email access issue",
+      "frequency": 1
+    },
+    {
+      "item": "institutional access linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "institutional email not associated with embase",
+      "frequency": 1
+    },
+    {
+      "item": "email address update request",
+      "frequency": 1
+    },
+    {
+      "item": "access issue due to unverified email",
+      "frequency": 1
+    },
+    {
+      "item": "account transfer request",
+      "frequency": 1
+    },
+    {
+      "item": "new registration id request",
+      "frequency": 1
+    },
+    {
+      "item": "new user account setup request",
+      "frequency": 1
+    },
+    {
+      "item": "new registration id request and user deactivation",
+      "frequency": 1
+    },
+    {
+      "item": "institutional access required for embase",
+      "frequency": 1
+    },
+    {
+      "item": "account deletion request",
+      "frequency": 1
+    },
+    {
+      "item": "login error with provided credentials",
+      "frequency": 1
+    },
+    {
+      "item": "email verification required for access",
+      "frequency": 1
+    },
+    {
+      "item": "email alerts management issue",
+      "frequency": 1
+    },
+    {
+      "item": "unable to delete email alert due to access issues",
+      "frequency": 1
+    },
+    {
+      "item": "missing registration email for access",
+      "frequency": 1
+    },
+    {
+      "item": "email domain access transition request",
+      "frequency": 1
+    },
+    {
+      "item": "email address not registered",
+      "frequency": 1
+    },
+    {
+      "item": "registration credentials provided",
+      "frequency": 1
+    },
+    {
+      "item": "inquiry about account management and user access",
+      "frequency": 1
+    },
+    {
+      "item": "user account deletion request",
+      "frequency": 1
+    },
+    {
+      "item": "remote access registration request",
+      "frequency": 1
+    }
+  ]
+}

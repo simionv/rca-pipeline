@@ -1,0 +1,12 @@
+{
+  "modules": {
+    "root_cause": {
+      "taxonomy_hash": "d4fb43f1e97ce0ebd0cde7e474a965dc3c6b75a3306b599f45d3a33dfb67a7d6",
+      "taxonomy_written_at": "2026-11-12T14:03:57.365670+00:00",
+      "py_hash": "d4fb43f1e97ce0ebd0cde7e474a965dc3c6b75a3306b599f45d3a33dfb67a7d6",
+      "py_generated_at": "2026-11-12T13:58:21.302153+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:57.366386+00:00",
+  "generator_version": "1.7.0"
+}

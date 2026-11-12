@@ -1,0 +1,218 @@
+{
+  "CR1": {
+    "label": "Content coverage & indexing",
+    "children": {
+      "CR1.1": {
+        "label": "Journal not found in Scopus",
+        "description": "Customer reports that a specific journal title does not appear in Scopus search results or is not indexed. Includes questions about why a journal is missing and when/if it will be added."
+      },
+      "CR1.2": {
+        "label": "Journal indexing application or status",
+        "description": "Enquiries about the process of applying for Scopus indexing, the status of a pending application, or the criteria for journal evaluation by the Content Selection and Advisory Board (CSAB)."
+      },
+      "CR1.3": {
+        "label": "Journal discontinued or under re-evaluation",
+        "description": "Customer asks about a journal that was previously indexed but has been discontinued, flagged, or placed under re-evaluation. Includes questions about content suppression or title warnings."
+      },
+      "CR1.4": {
+        "label": "Missing articles or issues",
+        "description": "Specific articles, issues, or volumes that should be in Scopus (journal is indexed) but are not appearing. Includes delays in content loading after publication."
+      },
+      "CR1.5": {
+        "label": "Conference proceedings coverage",
+        "description": "Questions about coverage of specific conference proceedings, conference series indexing, or missing conference papers in Scopus."
+      },
+      "CR1.6": {
+        "label": "Book or book series coverage",
+        "description": "Enquiries about book series, edited volumes, or book chapters in Scopus — whether they're covered, how to get them indexed, or why they're missing."
+      },
+      "CR1.7": {
+        "label": "Other content coverage issue",
+        "description": "Content coverage enquiries not fitting the categories above, including trade publications, preprints, or non-standard content types."
+      },
+      "CR1.8": {
+        "label": "Article-in-Press (AiP) visibility or missing",
+        "description": "Customer reports their AiP has not appeared in Scopus within the expected 4-day FTP delivery window. Use when customer specifically references AiP, pre-publication, or accepted manuscript status. Links to policy PA10."
+      }
+    },
+    "description": "Enquiries about whether specific journals, articles, conference proceedings, or book series are covered in Scopus, requests about new content indexing, and questions about content discontinuation or re-evaluation."
+  },
+  "CR2": {
+    "label": "Citations & references",
+    "children": {
+      "CR2.1": {
+        "label": "Incorrect citation count",
+        "description": "Customer reports that the citation count for a specific article or author is wrong — either too high (counting duplicates or erroneous citations) or too low (missing legitimate citations)."
+      },
+      "CR2.2": {
+        "label": "Missing citations or cited-by links",
+        "description": "Specific citations that should appear in Scopus but are missing. The citing article exists in Scopus but the citation link to the cited article is broken or absent."
+      },
+      "CR2.3": {
+        "label": "Incorrect reference linking",
+        "description": "References in an article's reference list are linked to the wrong Scopus record, or reference links are broken. Includes DOI mismatch issues."
+      },
+      "CR2.4": {
+        "label": "Citation data discrepancy with other sources",
+        "description": "Customer compares Scopus citation data with Google Scholar, Web of Science, CrossRef, or publisher data and finds discrepancies. Requests for explanation or correction."
+      },
+      "CR2.5": {
+        "label": "Other citation issue",
+        "description": "Citation or reference issues not fitting the categories above."
+      }
+    },
+    "description": "Issues related to citation counts, citation links, reference lists, cited-by data, and discrepancies between Scopus citation data and other sources."
+  },
+  "CR3": {
+    "label": "Author profiles & identification",
+    "children": {
+      "CR3.1": {
+        "label": "Author profile merge request",
+        "description": "Customer has multiple Scopus Author IDs that need to be merged into one profile. The same person appears as different authors in Scopus due to name variations, affiliation changes, or system errors."
+      },
+      "CR3.2": {
+        "label": "Author profile split request",
+        "description": "Customer's Scopus Author ID incorrectly contains publications from a different author with a similar name. The profile needs to be split to remove misattributed publications."
+      },
+      "CR3.3": {
+        "label": "Wrong affiliation on author profile",
+        "description": "The author's current or historical affiliation is displayed incorrectly on their Scopus profile. Includes outdated affiliations and missing affiliation history."
+      },
+      "CR3.4": {
+        "label": "ORCID linking or synchronisation issue",
+        "description": "Problems connecting ORCID iD to Scopus profile, synchronisation failures between ORCID and Scopus, or discrepancies between ORCID and Scopus publication lists."
+      },
+      "CR3.5": {
+        "label": "Missing publications on author profile",
+        "description": "Publications that exist in Scopus but are not attributed to the correct author profile. Includes articles missing from an author's publication list despite being indexed."
+      },
+      "CR3.6": {
+        "label": "Other author profile issue",
+        "description": "Author profile issues not fitting the categories above, including h-index disputes at the author level, name format changes, or deceased author profile management."
+      }
+    },
+    "description": "Issues related to Scopus Author IDs, author profiles, name disambiguation, profile merging or splitting, ORCID linking, and author-level data accuracy."
+  },
+  "CR4": {
+    "label": "Metrics, rankings & evaluations",
+    "children": {
+      "CR4.1": {
+        "label": "CiteScore calculation or value dispute",
+        "description": "Customer questions or disputes the CiteScore value for a specific journal. Includes requests to understand the calculation methodology, source year ranges, or why the score changed."
+      },
+      "CR4.2": {
+        "label": "SJR or SNIP metric query",
+        "description": "Questions about SCImago Journal Rank (SJR) or Source Normalized Impact per Paper (SNIP) values, methodology, or discrepancies."
+      },
+      "CR4.3": {
+        "label": "h-index or author-level metric issue",
+        "description": "Questions about h-index calculation, discrepancies between Scopus and other sources, or requests to understand how author-level metrics are derived."
+      },
+      "CR4.4": {
+        "label": "Journal ranking or quartile classification",
+        "description": "Questions about journal subject area classifications, quartile assignments (Q1–Q4), or requests to change a journal's subject area mapping."
+      },
+      "CR4.5": {
+        "label": "Other metrics or evaluation issue",
+        "description": "Metrics questions not fitting above, including institutional-level analytics, benchmarking queries, or Scopus data use in national evaluation frameworks."
+      }
+    },
+    "description": "Questions or disputes about Scopus-derived metrics including CiteScore, SJR, SNIP, h-index, journal rankings, and how these metrics are calculated or used for research evaluation."
+  },
+  "CR5": {
+    "label": "Data accuracy & corrections",
+    "children": {
+      "CR5.1": {
+        "label": "Incorrect article metadata",
+        "description": "Article record has wrong title, abstract, DOI, publication date, page numbers, volume/issue, or document type. Customer requests a correction to the bibliographic record."
+      },
+      "CR5.2": {
+        "label": "Retracted or corrected article not updated",
+        "description": "A retracted article still appears without a retraction notice, or an erratum/corrigendum has been published but the original Scopus record hasn't been updated."
+      },
+      "CR5.3": {
+        "label": "Duplicate records",
+        "description": "The same article appears multiple times in Scopus with different EIDs or record identifiers. Customer requests deduplication."
+      },
+      "CR5.4": {
+        "label": "Wrong document type classification",
+        "description": "An article is classified as the wrong document type (e.g. 'Article' instead of 'Review', 'Letter' instead of 'Editorial'). Affects metrics calculations."
+      },
+      "CR5.5": {
+        "label": "Other data accuracy issue",
+        "description": "Data accuracy issues not fitting above, including ISSN/ISBN errors, publisher name errors, or language classification issues."
+      }
+    },
+    "description": "Reports of incorrect metadata in Scopus records — wrong titles, abstracts, DOIs, publication dates, page numbers, volume/issue numbers, or other bibliographic data errors."
+  },
+  "CR6": {
+    "label": "Search & platform functionality",
+    "children": {
+      "CR6.1": {
+        "label": "Search returns incorrect or incomplete results",
+        "description": "Customer's search query returns unexpected results — missing known articles, irrelevant results, or inconsistent results with different search strategies."
+      },
+      "CR6.2": {
+        "label": "Alert or saved search not working",
+        "description": "Search alerts not sending notifications, saved searches not updating, or alert frequency/content issues."
+      },
+      "CR6.3": {
+        "label": "Export or download issue",
+        "description": "Problems exporting search results, downloading citations (RIS, BibTeX, CSV), or exporting to reference managers. Includes API export issues."
+      },
+      "CR6.4": {
+        "label": "API access or Scopus API query issue",
+        "description": "Questions about Scopus APIs (Search, Author, Abstract), API keys, rate limits, query syntax, or API data discrepancies vs the web interface."
+      },
+      "CR6.5": {
+        "label": "Other platform functionality issue",
+        "description": "Platform issues not fitting above, including browser compatibility, mobile access, accessibility, or UI/UX problems."
+      }
+    },
+    "description": "Issues with Scopus search functionality, API access, alerts, saved searches, export features, and general platform usability. NOT access/authentication issues (see CR7)."
+  },
+  "CR7": {
+    "label": "Access & subscription",
+    "children": {
+      "CR7.1": {
+        "label": "Cannot access Scopus or access denied",
+        "description": "Customer cannot access Scopus at all — login fails, access denied message, or paywall appears despite having a subscription."
+      },
+      "CR7.2": {
+        "label": "Institutional subscription or entitlement query",
+        "description": "Questions about what's included in the institution's Scopus subscription, how to activate access, or entitlement configuration in the admin portal."
+      },
+      "CR7.3": {
+        "label": "Remote or off-campus access issue",
+        "description": "Customer can access Scopus on campus but not remotely. Includes VPN, proxy, and federated authentication (Shibboleth/SAML) issues."
+      },
+      "CR7.4": {
+        "label": "Other access issue",
+        "description": "Access issues not fitting above, including personal Scopus accounts, trial access, and transitional access during subscription renewals."
+      }
+    },
+    "description": "Issues related to accessing Scopus content, institutional subscriptions, authentication, IP-based access, remote access, and entitlement configuration."
+  },
+  "CR8": {
+    "label": "General enquiry & other",
+    "children": {
+      "CR8.1": {
+        "label": "General product question or how-to",
+        "description": "Customer asks about Scopus features, capabilities, or how to perform a specific task. Not a problem report — just seeking information."
+      },
+      "CR8.2": {
+        "label": "Training or documentation request",
+        "description": "Requests for Scopus training sessions, user guides, webinars, or documentation for institutional users."
+      },
+      "CR8.3": {
+        "label": "Feedback or complaint about Scopus",
+        "description": "Customer provides feedback, suggestions, or formal complaints about Scopus product quality, service, or policies."
+      },
+      "CR8.4": {
+        "label": "Other general enquiry",
+        "description": "General enquiries not fitting any category above."
+      }
+    },
+    "description": "General questions about Scopus that don't fit specific categories above, including product capabilities, training requests, feedback, and complaints."
+  }
+}

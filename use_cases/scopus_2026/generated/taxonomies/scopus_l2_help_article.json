@@ -1,0 +1,28 @@
+{
+  "SCHA1": {
+    "label": "Help Article Feedback",
+    "children": {
+      "SCHA1.1": {
+        "label": "Positive – Article Helpful",
+        "description": "Definition: Auto-generated rating form: the customer marked the help article as helpful."
+      },
+      "SCHA1.2": {
+        "label": "Negative – Did Not Answer Question",
+        "description": "Definition: Auto-generated rating form: the article did not answer the customer's question."
+      },
+      "SCHA1.3": {
+        "label": "Negative – Hard to Understand / Follow",
+        "description": "Definition: Auto-generated rating form: the article was hard to understand or follow."
+      },
+      "SCHA1.4": {
+        "label": "Negative – Mistake in Answer",
+        "description": "Definition: Auto-generated rating form: the customer reports a mistake in the article."
+      },
+      "SCHA1.5": {
+        "label": "Negative – Other / Reason Not Stated",
+        "description": "Definition: Auto-generated rating form: negative rating with no stated reason or another reason."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Help Article Feedback'. Choose the Level 2 value from this group only. 'Help Article Feedback' means: Definition: Auto-generated help-article rating forms (helpful / not helpful, with any stated reason). They carry no customer request."
+  }
+}

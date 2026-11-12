@@ -1,0 +1,142 @@
+{
+  "CE1": {
+    "label": "Indexing and Visibility Delays",
+    "children": {
+      "CE1.1": {
+        "label": "New Content Not Yet Visible",
+        "description": "Recently published content is missing or not visible because indexing or publication propagation has not completed. Use when the item is expected to appear later and the issue is primarily a delay."
+      },
+      "CE1.2": {
+        "label": "Processing Queue or Update Lag",
+        "description": "The record is pending internal processing, database update, or indexing queue completion. Use when the delay is described as waiting, pending, or processing rather than a specific publication visibility problem."
+      },
+      "CE1.3": {
+        "label": "Indexing Status or Visibility Verification",
+        "description": "Requests to confirm whether indexing has occurred or whether a publication should already be visible. Use when the main need is status checking rather than reporting a missing item."
+      },
+      "CE1.4": {
+        "label": "Other Indexing and Visibility Delays",
+        "description": "Indexing or visibility problems that clearly belong in this category but do not fit the more specific leaves above."
+      }
+    },
+    "description": "Issues where content, publications, or records exist but are not yet visible due to indexing, processing, or publication-to-database lag. Use this category when the core problem is timing or propagation, not eligibility, metadata correctness, or profile linkage."
+  },
+  "CE2": {
+    "label": "Coverage and Eligibility",
+    "children": {
+      "CE2.1": {
+        "label": "Source Not Covered",
+        "description": "The journal, database, or source is not included in coverage. Use when the issue is a permanent or policy-based exclusion rather than a delay in indexing."
+      },
+      "CE2.2": {
+        "label": "Coverage Status Unclear",
+        "description": "The user is asking whether a source or journal is covered and the answer is not yet known. Use when the issue is verification of coverage eligibility rather than a confirmed exclusion."
+      },
+      "CE2.3": {
+        "label": "Eligibility or Policy Explanation",
+        "description": "Requests for explanation of why content is or is not eligible for inclusion. Use when the issue is understanding rules or policy, not correcting a record."
+      },
+      "CE2.4": {
+        "label": "Coverage Loss from Source Change",
+        "description": "Content disappeared or is excluded because a source was discontinued, changed status, or otherwise lost coverage. Use when the cause is source lifecycle rather than indexing delay."
+      },
+      "CE2.5": {
+        "label": "Other Coverage and Eligibility Issues",
+        "description": "Coverage or eligibility cases that belong in this category but do not fit the specific leaves above."
+      }
+    },
+    "description": "Issues about whether a source, journal, or item is eligible to be included at all. Use this category when the main question is coverage policy, source inclusion, or exclusion due to source status rather than a temporary delay."
+  },
+  "CE3": {
+    "label": "Profile and Authorship Records",
+    "children": {
+      "CE3.1": {
+        "label": "Profile Linkage or Assignment Error",
+        "description": "A publication or record is attached to the wrong author profile or account, or is missing from the correct one. Use when the core issue is association between content and identity."
+      },
+      "CE3.2": {
+        "label": "Profile Merge or Identity Disambiguation",
+        "description": "Duplicate or split author identities need to be merged or separated correctly. Use when the issue is resolving who the author is, not updating publication metadata."
+      },
+      "CE3.3": {
+        "label": "Author Profile or Affiliation Update",
+        "description": "Requests to correct author details such as affiliation, profile information, or author record fields. Use when the profile itself needs updating rather than re-linking a publication."
+      },
+      "CE3.4": {
+        "label": "Other Profile and Authorship Record Issues",
+        "description": "Profile, authorship, or identity cases that belong in this category but do not fit the specific leaves above."
+      }
+    },
+    "description": "Issues involving author profiles, identity matching, affiliation updates, merges, and linking publications to the correct person or account. Use this category when the main problem is record association rather than content indexing or metadata correction."
+  },
+  "CE4": {
+    "label": "Metadata and Record Correction",
+    "children": {
+      "CE4.1": {
+        "label": "Metadata Correction Request",
+        "description": "Corrections to title, source, bibliographic fields, or other record metadata. Use when the record exists but its descriptive data is inaccurate."
+      },
+      "CE4.2": {
+        "label": "Publisher Metadata Mismatch",
+        "description": "The system record conflicts with publisher or source-of-truth data. Use when the issue is a discrepancy between authoritative sources rather than a generic correction request."
+      },
+      "CE4.3": {
+        "label": "Technical Review for Record Correction",
+        "description": "Cases escalated for specialist review because the correction requires investigation or validation. Use when the main issue is review handling rather than the correction itself."
+      },
+      "CE4.4": {
+        "label": "Other Metadata and Record Correction Issues",
+        "description": "Metadata correction cases that belong in this category but do not fit the specific leaves above."
+      }
+    },
+    "description": "Issues where an existing record is present but its bibliographic or descriptive data is wrong or needs correction. Use this category when the main task is fixing metadata rather than adding missing content or changing author linkage."
+  },
+  "CE5": {
+    "label": "Support Channel and Escalation Friction",
+    "children": {
+      "CE5.1": {
+        "label": "Self-Service or Bot Failure",
+        "description": "The virtual assistant or self-service flow fails, misunderstands intent, or cannot complete the request. Use when the primary issue is tool failure rather than transfer to a human."
+      },
+      "CE5.2": {
+        "label": "Bot-to-Agent Transfer Friction",
+        "description": "Difficulty moving from automated support to a human agent, including repeated handoffs or transfer delays. Use when the issue is the transition between channels."
+      },
+      "CE5.3": {
+        "label": "Escalation or Specialist Routing",
+        "description": "Requests or cases routed to a specialist team or human agent for handling. Use when the main issue is escalation path or routing, not the content problem itself."
+      },
+      "CE5.4": {
+        "label": "Follow-up or Status Update Delay",
+        "description": "The user is waiting for a response, update, or resolution after escalation. Use when the friction is lack of progress or communication rather than the initial transfer."
+      },
+      "CE5.5": {
+        "label": "Other Support Channel and Escalation Issues",
+        "description": "Support-channel cases that belong in this category but do not fit the specific leaves above."
+      }
+    },
+    "description": "Problems with self-service tools, virtual assistants, transfers, routing, or escalation handling. Use this category when the main issue is how the user is being routed or assisted, not the underlying content problem."
+  },
+  "CE6": {
+    "label": "Request Handling and Resolution Timing",
+    "children": {
+      "CE6.1": {
+        "label": "Pending Request Processing",
+        "description": "A submitted request is still being processed or queued. Use when the issue is the status of an open request rather than the underlying content problem."
+      },
+      "CE6.2": {
+        "label": "Long Resolution Time",
+        "description": "The user is experiencing an unusually long wait for completion or closure. Use when the emphasis is on slow resolution rather than a specific processing stage."
+      },
+      "CE6.3": {
+        "label": "Waiting for Correction or Update",
+        "description": "The case is awaiting a correction, update, or action from support or operations. Use when the request is acknowledged but not yet completed."
+      },
+      "CE6.4": {
+        "label": "Other Request Handling and Resolution Timing Issues",
+        "description": "Timing or processing cases that belong in this category but do not fit the specific leaves above."
+      }
+    },
+    "description": "Issues centered on waiting, pending processing, or delayed resolution of a submitted request. Use this category when the main concern is turnaround time for a correction, inclusion request, or other action already in progress."
+  }
+}

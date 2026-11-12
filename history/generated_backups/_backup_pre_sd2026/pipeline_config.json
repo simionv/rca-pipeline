@@ -1,0 +1,64 @@
+{
+  "modules": {
+    "leapspace_contact_reason": {
+      "taxonomy_prefix": "LCR",
+      "taxonomy_file": "leapspace_contact_reason.json",
+      "taxonomy_key": "leapspace_contact_reason",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "Classify the reason someone contacted support about LeapSpace into exactly one of eight categories. Each category carries a Use when definition, the Strong signals to look for, and signals that must not be treated as evidence on their own. Assign the single best-fitting LEAF code (e.g. LCR3.1). Decide WHO is asking before WHAT they are asking about. If the requester is an Elsevier employee or an internal team — including when they are asking on behalf of a customer, institution or account — classify the ticket as 'Internal staff access' whatever the underlying access problem turns out to be. Only classify into one of the access categories when the person who cannot get in is the one contacting support.",
+      "classify_fn": "classify_leapspace_contact_reason",
+      "code_field": "lcr_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "leapspace_rc_institutional": {
+      "taxonomy_prefix": "RCI",
+      "taxonomy_file": "leapspace_rc_institutional.json",
+      "taxonomy_key": "leapspace_rc_institutional",
+      "reorder_group": "B",
+      "reorder_order": 2,
+      "description": "Identify the root cause for LeapSpace tickets already classified as 'Institutional user cannot access'. Each root cause carries a Definition and the Ticket signals / evidence used for classification -- use these to separate root causes that look similar. Assign the single best-fitting LEAF code (e.g. RCI1.4).",
+      "classify_fn": "classify_leapspace_rc_institutional",
+      "code_field": "rci_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "leapspace_rc_individual": {
+      "taxonomy_prefix": "RCU",
+      "taxonomy_file": "leapspace_rc_individual.json",
+      "taxonomy_key": "leapspace_rc_individual",
+      "reorder_group": "B",
+      "reorder_order": 3,
+      "description": "Identify the root cause for LeapSpace tickets already classified as 'User not able to access' -- an individual or personal subscription. Each root cause carries a Definition and the Ticket signals / evidence used for classification -- use these to separate root causes that look similar. Assign the single best-fitting LEAF code (e.g. RCU1.5).",
+      "classify_fn": "classify_leapspace_rc_individual",
+      "code_field": "rcu_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "lcr_code",
+    "lcr_justification",
+    "lcr_evidence",
+    "rci_code",
+    "rci_justification",
+    "rci_evidence",
+    "rcu_code",
+    "rcu_justification",
+    "rcu_evidence"
+  ],
+  "reorder_groups": {
+    "A": 1,
+    "B": 3
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "lcr_code",
+    "rci_code",
+    "rcu_code"
+  ],
+  "output_exclude": []
+}

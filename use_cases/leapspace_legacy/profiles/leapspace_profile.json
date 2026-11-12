@@ -1,0 +1,18 @@
+{
+  "taxonomy_dir":          "data/leapspace_taxonomies",
+  "input":                 "data/leapspace_collapsed.csv",
+  "output":                "runs/output/leapspace_enriched.xlsx",
+  "text_col":              "Conversation",
+  "id_col":                "Reference #",
+  "modules":               ["contact_reason"],
+  "batch_size":            6,
+  "concurrency":           4,
+  "retries":               3,
+  "max_tokens":            4096,
+  "feedback_dir":          "feedback/leapspace",
+  "feedback_strategy":     "smart",
+  "feedback_max_examples": 5,
+  "track_costs":           true,
+  "cost_report_dir":       "runs/cost_reports",
+  "eval_gold_test":        "data/leapspace_gold_test.csv"
+}

@@ -1,0 +1,65 @@
+{
+  "modules": {
+    "embase_emailreg": {
+      "taxonomy_prefix": "EER",
+      "taxonomy_file": "embase_emailreg.json",
+      "taxonomy_key": "embase_emailreg",
+      "reorder_group": "G",
+      "reorder_order": 0,
+      "description": "Decide whether this Embase support ticket is about email registration or an email-account issue. Read the whole conversation before deciding. Each message is labelled CUSTOMER, AGENT, or CUSTOMER (logged by agent) - the last is a note an agent typed on behalf of the customer, such as the subject of a phone call, and counts as the customer speaking. The request is often restated or corrected further down the thread. Decide on what the CUSTOMER is asking for or reporting, not on what the agent writes. Agents routinely tell customers to sign in or register with their email address, ask which email address was used, or quote the email address on file. None of that makes a ticket about email registration unless the problem the customer raises is the email address or the account registration itself. The person writing as CUSTOMER is sometimes an Elsevier colleague, or a librarian or administrator, writing on behalf of users. Judge the request they are passing on. Exactly one code. If two seem to fit, pick the one the customer would name themselves. Assign the single best-fitting LEAF code (e.g. EER1.1). Never return an empty code - if the ticket does not show an email-account problem, for any reason including that it shows nothing at all, the answer is Not email registration.",
+      "classify_fn": "classify_embase_emailreg",
+      "code_field": "eer_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "embase_emailreg_sub": {
+      "taxonomy_prefix": "EES",
+      "taxonomy_file": "embase_emailreg_sub.json",
+      "taxonomy_key": "embase_emailreg_sub",
+      "reorder_group": "embase_emailreg_sub",
+      "reorder_order": 2,
+      "description": "Classify the email-account problem in this Embase support ticket into exactly one sub-category. The ticket is already known to be about email registration or an email address on an account. Read the whole conversation before deciding. Each message is labelled CUSTOMER, AGENT, or CUSTOMER (logged by agent) - the last is a note an agent typed on behalf of the customer, such as the subject of a phone call, and counts as the customer speaking. The request is often restated or corrected further down the thread. Decide on what the CUSTOMER is asking for or reporting, not on what the agent writes. Agents routinely tell customers to sign in or register with their email address, ask which email address was used, or quote the email address on file. None of that makes a ticket about email registration unless the problem the customer raises is the email address or the account registration itself. The person writing as CUSTOMER is sometimes an Elsevier colleague, or a librarian or administrator, writing on behalf of users. Judge the request they are passing on. Exactly one code. If two seem to fit, pick the one the customer would name themselves. Assign the single best-fitting LEAF code (e.g. EES1.1). Never return an empty code - if nothing else fits, use Other email-account issue.",
+      "classify_fn": "classify_embase_emailreg_sub",
+      "code_field": "ees_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "embase_contact_reason": {
+      "taxonomy_prefix": "ECR",
+      "taxonomy_file": "embase_contact_reason.json",
+      "taxonomy_key": "embase_contact_reason",
+      "reorder_group": "embase_contact_reason",
+      "reorder_order": 3,
+      "description": "Classify why the customer contacted Embase support into exactly one contact reason. Read the whole conversation before deciding. Each message is labelled CUSTOMER, AGENT, or CUSTOMER (logged by agent) - the last is a note an agent typed on behalf of the customer, such as the subject of a phone call, and counts as the customer speaking. The request is often restated or corrected further down the thread. Decide on what the CUSTOMER is asking for or reporting, not on what the agent writes. The person writing as CUSTOMER is sometimes an Elsevier colleague, or a librarian or administrator, writing on behalf of users. Judge the request they are passing on. Exactly one code. If two seem to fit, pick the one the customer would name themselves. Assign the single best-fitting LEAF code (e.g. ECR1.1). Never return an empty code - if nothing else fits, or the ticket says too little, use Other / not enough information.",
+      "classify_fn": "classify_embase_contact_reason",
+      "code_field": "ecr_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "eer_code",
+    "eer_justification",
+    "eer_evidence",
+    "ees_code",
+    "ees_justification",
+    "ees_evidence",
+    "ecr_code",
+    "ecr_justification",
+    "ecr_evidence"
+  ],
+  "reorder_groups": {
+    "G": 0,
+    "embase_emailreg_sub": 2,
+    "embase_contact_reason": 3
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "eer_code",
+    "ees_code",
+    "ecr_code"
+  ],
+  "output_exclude": []
+}

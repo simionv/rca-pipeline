@@ -1,0 +1,24 @@
+{
+  "SDIS1": {
+    "label": "Institutional sign in not working",
+    "children": {
+      "SDIS1.1": {
+        "label": "Admin/User management issue",
+        "description": "Definition: Use when institutional authentication fails because of an administrator, role or user configuration, or when an admin wants to add a user"
+      },
+      "SDIS1.2": {
+        "label": "Institution not entitled",
+        "description": "Definition: Use when the institution is recognised but has no valid entitlement."
+      },
+      "SDIS1.3": {
+        "label": "Not enough info",
+        "description": "Definition: Use when institutional sign-in fails but the cause is not described."
+      },
+      "SDIS1.4": {
+        "label": "Other",
+        "description": "Definition: Use for another institutional authentication issue not listed above."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Institutional sign in not working'. Choose the root cause from this group only. That contact reason means: Use when access through an institution fails, with signals such as SSO, SAML, Shibboleth, institution not found, institution not recognised or remote institutional access, and not for personal subscription"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "SDCD1": {
+    "label": "Close delete account",
+    "children": {
+      "SDCD1.1": {
+        "label": "Request to close/delete account",
+        "description": "Definition: Use when the customer explicitly asks to close or permanently delete an account."
+      },
+      "SDCD1.2": {
+        "label": "Not enough info",
+        "description": "Definition: Use when account closure is mentioned but the requested action is unclear."
+      },
+      "SDCD1.3": {
+        "label": "Other",
+        "description": "Definition: Use for another issue preventing or affecting account deletion."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Close delete account'. Choose the root cause from this group only. That contact reason means: Use when the primary request is to close or permanently delete a user account, or when account deletion cannot be completed, and not for unsubscribing, changing details or removing a specific item of personal data."
+  }
+}

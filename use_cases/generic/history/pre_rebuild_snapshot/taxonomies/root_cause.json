@@ -1,0 +1,202 @@
+{
+  "RC1": {
+    "label": "Product or software defect",
+    "children": {
+      "RC1.1": {
+        "label": "Known bug or open defect",
+        "description": "The issue matches a known defect already logged by the engineering team."
+      },
+      "RC1.2": {
+        "label": "Regression from a recent release",
+        "description": "A previously working feature broke following a software update or deployment."
+      },
+      "RC1.3": {
+        "label": "Edge case or untested scenario",
+        "description": "The system behaves incorrectly in a specific configuration or use case that was not covered in testing."
+      },
+      "RC1.4": {
+        "label": "Missing feature causing workaround failure",
+        "description": "An absent feature forces the customer into a workaround that itself fails or is unsustainable."
+      },
+      "RC1.5": {
+        "label": "Other product defect",
+        "description": "A product or software defect that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by a bug, regression, or design flaw in the product or software itself. The system did not behave as designed."
+  },
+  "RC2": {
+    "label": "Process or policy failure",
+    "children": {
+      "RC2.1": {
+        "label": "Incorrect procedure applied",
+        "description": "The correct process exists but was applied incorrectly in this instance."
+      },
+      "RC2.2": {
+        "label": "Policy gap or ambiguity",
+        "description": "The existing policy does not clearly cover this scenario, leading to inconsistent handling."
+      },
+      "RC2.3": {
+        "label": "Process handoff breakdown",
+        "description": "The issue occurred at the boundary between teams, systems, or process steps where a handoff was required."
+      },
+      "RC2.4": {
+        "label": "Missing verification or approval step",
+        "description": "A required verification, review, or approval was not performed as part of the process."
+      },
+      "RC2.5": {
+        "label": "Other process or policy failure",
+        "description": "A process or policy issue that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by an incorrect, unclear, or missing internal process or policy, rather than a product defect or individual error."
+  },
+  "RC3": {
+    "label": "Agent or human error",
+    "children": {
+      "RC3.1": {
+        "label": "Incorrect information provided",
+        "description": "Agent gave the customer wrong information about the product, policy, or process."
+      },
+      "RC3.2": {
+        "label": "Wrong action taken on account or system",
+        "description": "Agent performed an incorrect action (e.g. wrong setting changed, incorrect refund amount, case closed prematurely)."
+      },
+      "RC3.3": {
+        "label": "Insufficient investigation before resolution",
+        "description": "Agent resolved the issue without fully diagnosing the root cause, leading to recurrence."
+      },
+      "RC3.4": {
+        "label": "Failure to follow up as committed",
+        "description": "Agent committed to a follow-up action but did not complete it within the agreed timeframe."
+      },
+      "RC3.5": {
+        "label": "Other agent error",
+        "description": "An agent or human error that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused or worsened by an error made by a support agent or other employee, including incorrect information, wrong actions, or omissions."
+  },
+  "RC4": {
+    "label": "Customer error or misunderstanding",
+    "children": {
+      "RC4.1": {
+        "label": "Incorrect product usage",
+        "description": "Customer was not using the product or feature as designed or documented."
+      },
+      "RC4.2": {
+        "label": "Misunderstood product terms or policy",
+        "description": "Customer had a misunderstanding about what the product offers, the terms of service, or the returns or billing policy."
+      },
+      "RC4.3": {
+        "label": "Incorrect expectation set at purchase",
+        "description": "Customer's expectation of what the product would do does not match reality, possibly due to misleading marketing or sales communication."
+      },
+      "RC4.4": {
+        "label": "Failed to follow provided instructions",
+        "description": "Customer was given correct instructions but did not follow them, leading to the issue."
+      },
+      "RC4.5": {
+        "label": "Other customer error",
+        "description": "A customer error or misunderstanding that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by the customer using the product incorrectly, misunderstanding instructions, or having incorrect expectations."
+  },
+  "RC5": {
+    "label": "Infrastructure or system failure",
+    "children": {
+      "RC5.1": {
+        "label": "Service outage or downtime",
+        "description": "The product or a dependent service was completely unavailable due to an infrastructure failure."
+      },
+      "RC5.2": {
+        "label": "Performance degradation due to infrastructure",
+        "description": "Slow response times, timeouts, or instability caused by infrastructure capacity or health issues."
+      },
+      "RC5.3": {
+        "label": "Data integrity or synchronisation issue",
+        "description": "Data was lost, duplicated, or became inconsistent across systems due to a pipeline or synchronisation failure."
+      },
+      "RC5.4": {
+        "label": "Security or access control infrastructure issue",
+        "description": "Authentication, authorisation, or security systems failed, causing access problems."
+      },
+      "RC5.5": {
+        "label": "Other infrastructure failure",
+        "description": "An infrastructure issue that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by an outage, degradation, or failure in the underlying infrastructure, platform, or data systems — outside of the product codebase itself."
+  },
+  "RC6": {
+    "label": "Third-party dependency failure",
+    "children": {
+      "RC6.1": {
+        "label": "Payment processor or financial third party",
+        "description": "A payment gateway, bank, or financial service provider caused the issue."
+      },
+      "RC6.2": {
+        "label": "Logistics or carrier partner",
+        "description": "A shipping carrier, courier, or logistics provider caused the delivery issue."
+      },
+      "RC6.3": {
+        "label": "Identity or SSO provider",
+        "description": "An SSO provider, identity platform, or federated login system caused the authentication issue."
+      },
+      "RC6.4": {
+        "label": "Cloud or infrastructure provider",
+        "description": "A cloud platform provider (e.g. AWS, Azure, GCP) experienced an issue that affected service."
+      },
+      "RC6.5": {
+        "label": "Other third-party failure",
+        "description": "A third-party failure that does not fit another sub-category."
+      }
+    },
+    "description": "The issue originated in a third-party service, partner system, or external provider that the company depends on."
+  },
+  "RC7": {
+    "label": "Configuration or setup issue",
+    "children": {
+      "RC7.1": {
+        "label": "Incorrect account or product settings",
+        "description": "Account-level or product-level settings were configured incorrectly by the customer or during onboarding."
+      },
+      "RC7.2": {
+        "label": "Permission or role misconfiguration",
+        "description": "User permissions, roles, or access controls were set up incorrectly."
+      },
+      "RC7.3": {
+        "label": "Integration or connector misconfiguration",
+        "description": "A third-party integration, webhook, or API connector was not configured correctly."
+      },
+      "RC7.4": {
+        "label": "Other configuration issue",
+        "description": "A configuration or setup issue that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by incorrect configuration of the product, account settings, or integration — not a product bug, but a setup error."
+  },
+  "RC8": {
+    "label": "Communication or notification failure",
+    "children": {
+      "RC8.1": {
+        "label": "Expected notification not sent",
+        "description": "A system notification, confirmation email, alert, or reminder that should have been triggered was not sent."
+      },
+      "RC8.2": {
+        "label": "Incorrect or misleading notification content",
+        "description": "A notification was sent but contained incorrect information, wrong details, or misleading instructions."
+      },
+      "RC8.3": {
+        "label": "Documentation gap or inaccuracy",
+        "description": "The product documentation, help articles, or FAQs did not cover the scenario or contained incorrect information."
+      },
+      "RC8.4": {
+        "label": "Other communication failure",
+        "description": "A communication or notification failure that does not fit another sub-category."
+      }
+    },
+    "description": "The issue was caused by a failure in how information was communicated to the customer: missing notifications, incorrect communications, or unclear documentation."
+  }
+}

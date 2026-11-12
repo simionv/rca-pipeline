@@ -1,0 +1,155 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_prefix": "CR",
+      "taxonomy_file": "contact_reason.json",
+      "taxonomy_key": "contact_reason",
+      "reorder_group": "contact_reason",
+      "reorder_order": 1,
+      "description": "Classify the primary reason the customer contacted Scopus support. Focus on the customer's stated problem or question, not the resolution. Assign the most specific leaf-level code. If the interaction covers multiple issues, classify the primary one that drove the contact.",
+      "classify_fn": "classify_contact_reason",
+      "code_field": "contact_reason_primary_code",
+      "discovery_mode": "full",
+      "extract_prompt": ""
+    },
+    "customer_effort": {
+      "taxonomy_prefix": "CE",
+      "taxonomy_file": "customer_effort.json",
+      "taxonomy_key": "customer_effort",
+      "reorder_group": "customer_effort",
+      "reorder_order": 2,
+      "description": "Assess the overall customer effort required to resolve the issue. Consider: how many steps the customer had to take, whether they were transferred or needed repeat contacts, how complex the process was, whether self-service options failed, and how much friction the customer experienced. Score the effort level and identify specific friction points.",
+      "classify_fn": "classify_customer_effort",
+      "code_field": "effort_primary_code",
+      "discovery_mode": "full",
+      "extract_prompt": "You are an expert at identifying customer friction patterns in support interactions.\n\nGiven support transcripts, identify the ABSTRACT friction point categories — the high-level types of difficulty, confusion, or extra effort the customer experienced.\n\nCRITICAL RULES:\n- Merge similar friction patterns. \"Had to repeat issue after transfer\", \"explained problem to three agents\" → \"Repeated issue explanation / transfer friction\"\n- Think in terms of FRICTION CATEGORIES, not individual complaints.\n- Each transcript should produce 0-3 friction categories (0 if frictionless).\n- Use categories that would recur across many tickets.\n\nGood: \"Channel redirection friction\", \"Wait time / response delay\", \"Self-service failure\", \"Escalation opacity\", \"Repeat contact for same issue\"\nBad: \"Customer was frustrated\", \"Agent didn't know\" (too vague or outcome-focused)\n\nReturn a JSON array — one object per record:\n[{\"uid\": \"<uid>\", \"extracted_items\": [{\"item\": \"<abstract friction category>\", \"count\": 1}]}]\nReturn ONLY valid JSON."
+    },
+    "policy_compliance": {
+      "taxonomy_prefix": "PC",
+      "taxonomy_file": "policy_compliance.json",
+      "taxonomy_key": "policy_compliance",
+      "reorder_group": "policy_compliance",
+      "reorder_order": 4,
+      "description": "Assess whether each Scopus support ticket was handled in accordance with the official Scopus Content Coverage Policy (PA1-PA9; Content Coverage Guide) and CAR Creation Manual rules (PA10 AiP, PA11 excluded item types, PA16 errata, PA18 missing-content eligibility);\nand further Content Coverage Guide areas PA12-PA15 and PA17. For each ticket: identify which policies apply; assess whether the agent correctly communicated the policy (agent compliance dimension); assess whether the customer demonstrated difficulty understanding or accepting the applicable policy (customer understanding dimension, merged from policy_understanding). Both dimensions use the same PA code as anchor. Use the policy reference below to make your assessment.\n\nSCOPUS CONTENT COVERAGE POLICY REFERENCE\n\nPA1 — TITLE SELECTION: MINIMUM CRITERIA\nAll journal titles must meet all four criteria to be considered:\n(1) Peer-reviewed content with a publicly available description of the peer review process.\n(2) Published on a regular basis with an ISSN as registered with the ISSN International Centre.\n(3) Content relevant for an international audience: English language abstracts and titles required.\n(4) Publicly available publication ethics and publication malpractice statement.\n\nPA1 — CSAB EVALUATION CRITERIA (five categories):\n- Journal Policy: convincing editorial policy; type of peer review; geographical diversity of editors and authors.\n- Content: academic contribution to the field; clarity of abstracts; conformity to stated aims and scope; readability of articles.\n- Journal Standing: citedness of journal articles in Scopus; editor standing.\n- Publishing Regularity: no delays or interruptions to the publication schedule.\n- Online Availability: full journal content available online; English language journal homepage available; quality of journal homepage.\nApproximately 51% of suggestions meet minimum criteria; ~48% of those pass CSAB review.\n\nPA2 — RE-EVALUATION AND DISCONTINUATION\nA journal is flagged for re-evaluation if it fails ALL THREE metrics vs peer journals in its subject area for TWO CONSECUTIVE YEARS:\n- Substantially higher self-citation rate than peers.\n- Substantially lower total citation rate than peers.\n- Substantially lower CiteScore than peers.\nAdditional triggers: formal publication concern complaints; RADAR outlier tool (quarterly — flags rapid unexplainable changes in articles published, geographical diversity, or self-citation); continuous CSAB curation feedback.\nUpon re-evaluation, CSAB decides to continue or discontinue. DISCONTINUED TITLES cannot be re-considered for 5 years.\n\nPA3 — DOCUMENT TYPE POLICY\nNOT covered: (a) Book reviews — not primary literature; cause title confusion; rarely cited. (b) Conference meeting abstracts — not peer-reviewed; incomplete research records; risk of duplication.\nTrade journal items require: minimum 1 page AND minimum 1 named author.\nCovered types: article, article-in-press, book, chapter, conference paper, data paper, editorial, erratum, letter, note, retracted article, review, short survey.\n\nPA4 — CONFERENCE PROCEEDINGS\nOnly proceedings publishing full-text papers are covered. Abstract-only conferences are NOT covered. Subject focus: engineering, computer science, physics.\n\nPA5 — PROCESSING TIMELINES\nElectronic delivery (e-feeds): 2-3 weeks from publication date.\nPaper format delivery: 4-5 weeks from publication date.\nArticles-in-Press: within 4 days of FTP delivery to Scopus.\nDelays beyond these timelines are outside normal policy and should be escalated.\n\nPA6 — COVERAGE PERIOD (from 2023)\nFor titles selected from 2023 onwards: coverage begins from year of selection minus 4. Example: selected in 2023 -> coverage starts from 2019. Exceptions for journals with previous evaluation history.\nPre-1996 discontinued titles are not in the public title list but content remains searchable.\n\nPA7 — METRICS METHODOLOGY\nCiteScore: (citations in year X to documents published in years X-3 through X) / (documents published in years X-3 through X). Recalculated annually.\nSJR and SNIP are third-party metrics from SCImago and CWTS — Scopus does not control their calculation.\n\nPA8 — BOOK SELECTION\nPublisher-based: the publisher's complete books list is evaluated, not individual titles. Individual book suggestions are not accepted outside the publisher review process.\n\nPA9 — PREPRINTS\nOnly these preprint servers are indexed: arXiv, ChemRxiv (Physical Sciences); bioRxiv, MedRxiv (Biomedical Sciences); SSRN (Social Sciences); TechRxiv (Engineering/CS); Research Square (Multidisciplinary). Preprints do not affect publication or citation metrics.\n\nPA10 -- ARTICLE-IN-PRESS (AiP) ELIGIBILITY AND PROCESSING\nAiP items require a mandatory DOI and are available in Scopus within 4 days of FTP delivery from the publisher. Records carry unit type ARTICLE-IN-PRESS and status stage S200. No volume, issue, or page data required. Grant information NOT captured. Violations: agent quotes the 2-3 week standard timeline for an AiP query; agent states DOI is optional. Source: CAR Creation Manual S5.\n\nPA11 -- EXCLUDED ITEM TYPES (CAR Manual S1)\nThese item types are NOT indexed: book reviews, obituaries, advertisements, society news, conference/event notices, reprints published elsewhere, personal reports, indexes, addendums, product/video/audio reviews, award notifications, interviews, Instructions to Authors, \"In this issue\" / TOC items. Violation: agent promises to index one of these items, or fails to cite this exclusion when declining a request. Source: CAR Creation Manual S1.\n\nPA12 — PATENT INDEXING AND COVERAGE\nScopus indexes 49.2M+ patent records from five offices: WIPO, EPO, USPTO, JPO, UK IPO. Patents are a distinct content vertical, searchable separately from journal literature. Violation: agent misstates which offices are covered; agent gives wrong guidance on patent search availability. Source: Content Coverage Guide S2.3.\n\nPA13 — AUTHOR IDENTITY AND PROFILE MANAGEMENT\nScopus assigns a unique Author Identifier using algorithmic matching; 17.6M+ profiles; ORCID synced monthly. Profile corrections via Author Feedback Wizard within 5 working days. Violation: agent misstates correction timeline; agent claims merge/demerge is impossible; agent gives wrong Author Feedback Wizard guidance. Source: Content Coverage Guide S3.3.\n\nPA14 — AFFILIATION PROFILE CURATION\nScopus maintains 94,800+ affiliation profiles using algorithmic processing and a curated organisation database. Authorized representatives can request corrections via Institution Profile Wizard. Violation: agent claims corrections cannot be made; agent directs customer to wrong process; agent misstates the responsible team. Source: Content Coverage Guide S3.4.\n\nPA15 — OPEN ACCESS CLASSIFICATION\nScopus classifies articles via Unpaywall: Gold (fully OA journal), Hybrid Gold (OA in subscription journal), Bronze (free on publisher site without explicit licence), Green (accepted manuscript in repository). Applies at document and journal level. Violation: agent confuses OA categories; agent claims OA status cannot be corrected; agent misstates how classification is determined. Source: Content Coverage Guide S3.1.\n\nPA16 — ERRATA AND RECORD CORRECTIONS\nErratum notices are indexed as a distinct document type and linked bidirectionally to the original article. Bibliographic metadata corrections follow the errata capture workflow. A data correction request is processed only when Scopus content differs from the original publisher PDF/source. If Scopus already matches the publisher-supplied PDF, the correction is rejected: the error is between the author and publisher, not in Scopus metadata. Violation: agent claims corrections cannot be processed; agent misstates the processing timeline; agent fails to explain the bidirectional link between erratum and original. Source: Content Coverage Guide S3.1; CAR Manual S6.\n\nPA17 — CITED REFERENCES COVERAGE AND LINKAGE\nScopus indexes cited references for documents from 1970 onward (expanded from 1996 in 2014); pre-1996 data sourced from 60 major publisher archives. References are linked when the cited source is itself indexed; unlinked references appear as plain text. Violation: agent misstates the cutoff year; agent claims older references should be linked when outside coverage; agent fails to explain why some references are not clickable. Source: Content Coverage Guide S3.2, S4.5.\n\nPA18 — MISSING CONTENT PROCESSING ELIGIBILITY\nA missing content report is eligible for investigation only when all six criteria are met: (1) the source journal is selected in Scopus; (2) the journal is actively indexed (including ceased and newly-accepted titles); (3) the article publication date falls within the journal's Scopus coverage period; (4) the article can be found at the publisher's authentic online sourcing URL (print and electronic PDFs excluded); (5) the article was published at least 6 weeks before the support request is raised -- content published more recently will not be processed; (6) the document type is Gen-CAR (a Scopus-covered type -- excludes obituaries, reprints, etc.). AiP records bypass criteria 4-5 and follow the PA10 4-day SLA path. Preprints follow PA9 rules. Violation: agent promises to investigate content published less than 6 weeks ago; agent does not verify authentic sourcing URL before escalating; agent quotes a timeline without first checking journal indexing status. Source: CAR Creation Manual (missing content triage).",
+      "classify_fn": "classify_policy_compliance",
+      "code_field": "violation_type_code",
+      "discovery_mode": "full",
+      "extract_prompt": ""
+    },
+    "policy_rules": {
+      "taxonomy_prefix": "PA",
+      "taxonomy_file": "policy_rules.json",
+      "taxonomy_key": "policy_rules",
+      "reorder_group": "policy_rules",
+      "reorder_order": 5,
+      "description": "You are an expert classifier for Elsevier support tickets. Your task: identify which SPECIFIC Scopus content policy rules (not just broad policy areas) applied to this ticket, and whether the agent's handling complied with each one individually. Each leaf code in the taxonomy below (e.g. PA5.1, PA10.2) is one atomic, checkable rule drawn from the Scopus Content Coverage Guide and CAR Creation Manual. A ticket may touch multiple rules across one or more policy areas, or none at all. Use the taxonomy below to make your assessment.",
+      "classify_fn": "classify_policy_rules",
+      "code_field": null,
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "contact_reason_primary_code",
+    "contact_reason_primary_description",
+    "contact_reason_type",
+    "content_domain",
+    "secondary_contact_reasons",
+    "effort_score",
+    "effort_primary_code",
+    "effort_primary_description",
+    "friction_points",
+    "effort_themes",
+    "effort_evidence",
+    "channel_switches",
+    "repeat_contact",
+    "resolution_transparency",
+    "applicable_policy_codes",
+    "agent_response_compliance",
+    "violation_type_code",
+    "policy_too_strict",
+    "policy_gap",
+    "compliance_evidence",
+    "customer_understanding_issue",
+    "customer_root_cause_code",
+    "matched_rules"
+  ],
+  "reorder_groups": {
+    "contact_reason": 1,
+    "customer_effort": 2,
+    "policy_compliance": 4,
+    "policy_rules": 5
+  },
+  "enum_validators": {
+    "contact_reason_type": [
+      "content_query",
+      "data_correction",
+      "access_issue",
+      "feature_request",
+      "complaint",
+      "general_enquiry"
+    ],
+    "content_domain": [
+      "journals",
+      "articles",
+      "conferences",
+      "books",
+      "author_profiles",
+      "citations",
+      "metrics",
+      "search",
+      "institutional",
+      "other"
+    ],
+    "effort_score": [
+      "very_low",
+      "low",
+      "medium",
+      "high",
+      "very_high"
+    ],
+    "resolution_transparency": [
+      "transparent",
+      "partial",
+      "opaque",
+      "na"
+    ],
+    "agent_response_compliance": [
+      "compliant",
+      "non_compliant",
+      "partial",
+      "no_policy_applies"
+    ],
+    "policy_too_strict": [
+      "yes",
+      "no",
+      "not_applicable"
+    ],
+    "policy_gap": [
+      "yes",
+      "no",
+      "not_applicable"
+    ]
+  },
+  "list_fields": [
+    "secondary_contact_reasons",
+    "friction_points",
+    "effort_themes",
+    "applicable_policy_codes",
+    "compliance_evidence"
+  ],
+  "object_list_fields": {
+    "matched_rules": [
+      "code",
+      "verdict",
+      "evidence"
+    ]
+  },
+  "code_fields": [
+    "contact_reason_primary_code",
+    "effort_primary_code",
+    "violation_type_code",
+    "customer_root_cause_code"
+  ],
+  "output_exclude": []
+}

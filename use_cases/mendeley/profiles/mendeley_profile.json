@@ -1,0 +1,42 @@
+{
+  "input":        "data/Mendeley_processed_conversations.csv",
+  "output":       "runs/output/Mendeley_processed_conversations_enriched.xlsx",
+  "text_col":     "conversation",
+  "id_col":       "Reference #",
+  "taxonomy_dir": "generated/taxonomies",
+  "batch_size":   12,
+  "max_chars":    80000,
+  "concurrency":  3,
+  "retries":      4,
+  "max_tokens":   4096,
+  "backend":      "litellm",
+  "model":        "azure/dsaic-llm-general",
+  "modules":      ["contact_reason", "root_cause"],
+  "run_name":     "Mendeley Tickets",
+  "log_file":     "runs/mendeley_run.log",
+  "checkpoint":   "runs/checkpoints/mendeley_checkpoint.jsonl",
+  "bad_uids":     "runs/checkpoints/mendeley_bad_uids.txt",
+
+  "enable_confidence":    true,
+  "confidence_threshold": 0.70,
+  "export_review_queue":  true,
+
+  "feedback_dir":          "runs/feedback",
+  "feedback_max_examples": 5,
+  "feedback_strategy":     "diverse",
+
+  "hierarchical_modules": [],
+
+  "incremental":            false,
+  "incremental_state_file": "runs/mendeley_state.jsonl",
+
+  "track_costs":      true,
+  "cost_report_dir":  "runs/cost_reports",
+
+  "detect_language":    false,
+  "language_strategy":  "translate",
+
+  "run_quality_check":       true,
+  "quality_report_dir":      "runs/output",
+  "previous_quality_report": null
+}

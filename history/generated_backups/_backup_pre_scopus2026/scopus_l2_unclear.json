@@ -1,0 +1,36 @@
+{
+  "SCUQ1": {
+    "label": "Unclear / No Query",
+    "children": {
+      "SCUQ1.1": {
+        "label": "Empty Chat / No Content",
+        "description": "Definition: The chat contains no customer message or stated issue."
+      },
+      "SCUQ1.2": {
+        "label": "Auto-reply / Bounce Email",
+        "description": "Definition: The ticket is an automatic reply or delivery-failure message, not a real query."
+      },
+      "SCUQ1.3": {
+        "label": "Feedback / Survey Form",
+        "description": "Definition: The ticket is a feedback or survey submission."
+      },
+      "SCUQ1.4": {
+        "label": "Resolved / Thank-you Only",
+        "description": "Definition: The customer only confirms resolution or says thanks."
+      },
+      "SCUQ1.5": {
+        "label": "Spam / Irrelevant",
+        "description": "Definition: The message is spam or unrelated to Scopus."
+      },
+      "SCUQ1.6": {
+        "label": "Awaiting Customer Information",
+        "description": "Definition: Support asked for details or screenshots and the customer did not supply them, so the issue stayed undefined."
+      },
+      "SCUQ1.7": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: No discernible issue is present in the conversation."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Unclear / No Query'. Choose the Level 2 value from this group only. 'Unclear / No Query' means: Definition: Empty chats, bounce/auto-reply emails, survey/feedback forms, spam, thank-you or 'resolved' only, with no discernible issue even after reading the agent text and subject."
+  }
+}

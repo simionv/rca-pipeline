@@ -1,0 +1,90 @@
+{
+  "CE1": {
+    "label": "Quick resolution — minimal effort",
+    "children": {
+      "CE1.1": {
+        "label": "Immediate answer provided",
+        "description": "Agent answered the customer's question directly and immediately. No investigation, escalation, or follow-up needed. Typically how-to questions or policy clarifications."
+      },
+      "CE1.2": {
+        "label": "Simple lookup or verification",
+        "description": "Agent performed a quick system lookup and resolved the issue (e.g. checked indexing status, verified citation data, confirmed coverage). Customer waited briefly but resolution was straightforward."
+      },
+      "CE1.3": {
+        "label": "Self-service guidance successful",
+        "description": "Agent pointed the customer to a self-service tool or process (e.g. Author Feedback Wizard, Scopus Source page) and the customer was able to resolve their issue independently."
+      }
+    },
+    "description": "Interactions resolved quickly with minimal customer effort. The customer's question or issue was addressed in a single contact with clear communication and no friction."
+  },
+  "CE2": {
+    "label": "Process complexity & multi-step resolution",
+    "children": {
+      "CE2.1": {
+        "label": "Customer required to provide extensive documentation",
+        "description": "Customer had to gather and submit multiple pieces of information (DOIs, ISBNs, screenshots, spreadsheets of corrections) to get their issue resolved. The data collection burden fell on the customer."
+      },
+      "CE2.2": {
+        "label": "Multi-step correction or verification process",
+        "description": "Resolution required multiple sequential steps (e.g. verify article → submit correction → wait for editorial review → confirm fix). Each step added elapsed time and cognitive load."
+      },
+      "CE2.3": {
+        "label": "Complex form or submission required",
+        "description": "Customer had to navigate a complex form, application process, or structured submission (e.g. journal suggestion form, Author Feedback Wizard with many fields, CSAB application)."
+      },
+      "CE2.4": {
+        "label": "Policy or criteria explanation needed",
+        "description": "Agent had to explain complex policies, evaluation criteria, or methodologies (e.g. CiteScore methodology, CSAB selection criteria, content policy). Customer effort came from understanding the complexity."
+      }
+    },
+    "description": "Effort driven by the inherent complexity of the resolution process — multiple steps required, detailed information needed from the customer, or complex verification procedures."
+  },
+  "CE3": {
+    "label": "Wait time, delays & follow-up friction",
+    "children": {
+      "CE3.1": {
+        "label": "Escalation to specialist team required",
+        "description": "Issue needed to be escalated to a specialist team (editorial, content, technical) with a wait time. Customer had to wait for an internal process they couldn't see or influence."
+      },
+      "CE3.2": {
+        "label": "Long wait for content update or correction",
+        "description": "The resolution depends on a content update cycle (e.g. next CiteScore recalculation, monthly content load, quarterly re-evaluation). Customer has to wait for a scheduled batch process."
+      },
+      "CE3.3": {
+        "label": "Follow-up required by customer",
+        "description": "Customer had to proactively follow up to check status, remind the team, or ask for updates. Resolution was not proactively communicated."
+      },
+      "CE3.4": {
+        "label": "Repeat contact about same issue",
+        "description": "Customer is contacting support again about an issue they've raised before. Previous contact did not resolve it, or the resolution was incomplete or reverted."
+      }
+    },
+    "description": "Effort driven by waiting — for responses, escalation outcomes, content updates, or scheduled processes. The customer's issue was acknowledged but resolution was delayed."
+  },
+  "CE4": {
+    "label": "Communication, transparency & handoff friction",
+    "children": {
+      "CE4.1": {
+        "label": "Transferred between teams or agents",
+        "description": "Customer was transferred to a different team, department, or agent during the interaction. Had to re-explain the issue or wait for a new agent to review the case."
+      },
+      "CE4.2": {
+        "label": "Had to repeat issue or re-provide information",
+        "description": "Customer had to explain their issue more than once — either because of a transfer, or because the agent didn't capture the details correctly the first time."
+      },
+      "CE4.3": {
+        "label": "Unclear next steps or timeline",
+        "description": "Agent did not clearly communicate what would happen next, when the customer could expect resolution, or what the customer needed to do. Left the customer in uncertainty."
+      },
+      "CE4.4": {
+        "label": "Self-service option failed or was inadequate",
+        "description": "Customer tried a self-service option (Author Feedback Wizard, Source suggestion form, FAQ) but it didn't work, was confusing, or didn't cover their case — forcing them to contact support."
+      },
+      "CE4.5": {
+        "label": "Other communication or handoff friction",
+        "description": "Communication issues not fitting above, including language barriers, inconsistent information from different agents, or lack of case history awareness."
+      }
+    },
+    "description": "Effort driven by poor communication — unclear explanations, being transferred between teams, having to repeat the issue, or lack of visibility into resolution progress."
+  }
+}

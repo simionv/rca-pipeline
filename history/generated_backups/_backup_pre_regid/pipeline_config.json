@@ -1,0 +1,48 @@
+{
+  "modules": {
+    "sd_ac_primary": {
+      "taxonomy_prefix": "SDAP",
+      "taxonomy_file": "sd_ac_primary.json",
+      "taxonomy_key": "sd_ac_primary",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "Classify each ScienceDirect support ticket into exactly one of two primary classifications: Accessing content or Anything else. Analyse each ScienceDirect ticket using the full conversation thread. Classify based on the customer’s actual need. Agent messages can confirm context, but do not infer information that is not explicit in the ticket. Assign the single best-fitting LEAF code (e.g. SDAP1.1). Decide on what the customer actually needs, not on the vocabulary they use. The word access on its own is never enough. Apply these tests in order. First, if what blocks the customer is a credential or a sign-in - a password, a login, ID+, account activation, account switching, or SSO - the answer is Anything else, even when a specific article is named. Second, if what blocks them is the machine or the network - cache, cookies, a browser, a device, a VPN or a proxy - or an explicit block such as an IP restriction, a Content Protection block, a security control or a high-download block, the answer is Anything else. Third, if the request is administrative or commercial - a profile change, billing, an invoice, a refund, a cancellation - or concerns ScienceDirect AI, the answer is Anything else. Only when none of those apply, ask whether the customer is trying to obtain, read, download or receive specific content, to confirm whether they or their institution can reach specific content, to resolve a failure to reach content they expect to be entitled to, or to reach content they bought themselves. If so, the answer is Accessing content. If the ticket does not say enough to place it either way, answer Anything else rather than assuming a content request.",
+      "classify_fn": "classify_sd_ac_primary",
+      "code_field": "sdap_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "sd_ac_subreason": {
+      "taxonomy_prefix": "SDAS",
+      "taxonomy_file": "sd_ac_subreason.json",
+      "taxonomy_key": "sd_ac_subreason",
+      "reorder_group": "B",
+      "reorder_order": 2,
+      "description": "This ticket has already been classified as Accessing content. Assign exactly one sub-contact reason from the taxonomy below, each of which carries its definition and the markers that must be present for it to apply. Analyse each ScienceDirect ticket using the full conversation thread. Classify based on the customer’s actual need. Agent messages can confirm context, but do not infer information that is not explicit in the ticket. Assign only one sub-contact reason to each Accessing content ticket. Use the most specific category supported by explicit evidence. Do not infer whether a customer is institutional or individual from their email address or organisation name alone. When the ticket lacks the required markers for a sub-contact reason, classify it as « other ». Assign the single best-fitting LEAF code (e.g. SDAS1.1). Each of the five specific sub-contact reasons lists the markers that must be present. Choose one of them only when at least one of its markers is explicit in the ticket, and quote that marker as the evidence. Do not infer an institution from an email domain or an organisation name, do not infer a purchase without an explicit commercial marker, and do not infer Patient Access from the fact that the writer may be unwell or is asking about a medical topic. When the required markers are absent, answer OTHER. OTHER is the correct answer for a genuine Accessing content ticket that simply does not carry the markers - it is not a failure code, and it is what the specification asks for.",
+      "classify_fn": "classify_sd_ac_subreason",
+      "code_field": "sdas_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "sdap_code",
+    "sdap_justification",
+    "sdap_evidence",
+    "sdas_code",
+    "sdas_justification",
+    "sdas_evidence"
+  ],
+  "reorder_groups": {
+    "A": 1,
+    "B": 2
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "sdap_code",
+    "sdas_code"
+  ],
+  "output_exclude": []
+}

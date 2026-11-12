@@ -1,0 +1,48 @@
+{
+  "SCAP1": {
+    "label": "Author Profile Correction",
+    "children": {
+      "SCAP1.1": {
+        "label": "Documents Missing from Profile",
+        "description": "Definition: Documents authored by the user have not been assigned to their author profile (e.g. indexed under a different profile or name variant)."
+      },
+      "SCAP1.2": {
+        "label": "Profile Not Found / Not Created",
+        "description": "Definition: No author profile exists or it cannot be found, e.g. no indexed documents, a name variation, or a profile not yet created."
+      },
+      "SCAP1.3": {
+        "label": "Profile Linked to Wrong Account",
+        "description": "Definition: The Elsevier/Scopus account is associated with the wrong author profile."
+      },
+      "SCAP1.4": {
+        "label": "Affiliation Incorrect / Outdated",
+        "description": "Definition: The profile shows an incorrect or outdated affiliation because the affiliation data has not been updated."
+      },
+      "SCAP1.5": {
+        "label": "Duplicate Profiles (Merge Needed)",
+        "description": "Definition: The author's documents are split across multiple profiles that need to be merged."
+      },
+      "SCAP1.6": {
+        "label": "Author Name Variant / Name Change",
+        "description": "Definition: The author's name changed or appears in different forms, so documents or profile details do not match."
+      },
+      "SCAP1.7": {
+        "label": "Profile Data / Metrics Incorrect",
+        "description": "Definition: Profile details or metrics (e.g. h-index, document counts) show incorrect values."
+      },
+      "SCAP1.8": {
+        "label": "Another Author's Documents in Profile",
+        "description": "Definition: Documents by a different author have been wrongly attributed to the profile."
+      },
+      "SCAP1.9": {
+        "label": "Profile Deletion / Opt-out",
+        "description": "Definition: The author wants their profile removed or opted out."
+      },
+      "SCAP1.10": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The conversation does not make clear what caused the profile problem."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Author Profile Correction'. Choose the Level 2 value from this group only. 'Author Profile Correction' means: Definition: Merge/split profiles, missing or wrong documents, name or affiliation fixes, profile not found/created, wrong profile linked — for a customer who can use Scopus. Rule 1 applies."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "SCCI1": {
+    "label": "Content / Indexing",
+    "children": {
+      "SCCI1.1": {
+        "label": "Document Missing from Scopus",
+        "description": "Definition: A document is not found in Scopus, e.g. not indexed or delayed."
+      },
+      "SCCI1.2": {
+        "label": "Journal / Source Not Indexed",
+        "description": "Definition: The journal or source is not covered by Scopus."
+      },
+      "SCCI1.3": {
+        "label": "Issue / Volume Missing",
+        "description": "Definition: Some issues or volumes of an indexed source are missing."
+      },
+      "SCCI1.4": {
+        "label": "Incorrect Document Data",
+        "description": "Definition: A document record has incorrect details."
+      },
+      "SCCI1.5": {
+        "label": "Duplicate Records",
+        "description": "Definition: The same document appears more than once."
+      },
+      "SCCI1.6": {
+        "label": "Awarded Grant Add Request",
+        "description": "Definition: A request to add an awarded grant to Scopus."
+      },
+      "SCCI1.7": {
+        "label": "Retraction / Withdrawal",
+        "description": "Definition: A document is retracted or withdrawn and the record needs attention."
+      },
+      "SCCI1.8": {
+        "label": "Missing Title / Metadata (\"No title available\")",
+        "description": "Definition: A document record shows 'No title available' or lacks metadata such as title, abstract or references."
+      },
+      "SCCI1.9": {
+        "label": "Title Re-evaluation / Discontinued Source",
+        "description": "Definition: The customer asks about re-evaluation of a source, or about a source discontinued from Scopus coverage."
+      },
+      "SCCI1.10": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The content issue is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Content / Indexing'. Choose the Level 2 value from this group only. 'Content / Indexing' means: Definition: Missing documents/journals/issues, incorrect document data, missing titles/metadata, duplicates, retractions (Content / Indexing); citation count, h-index, CiteScore/metric discrepancies and the CiteScore data file request (Citation / Metrics)."
+  }
+}

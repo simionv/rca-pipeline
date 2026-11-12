@@ -1,0 +1,5 @@
+To put the LeapSpace modules back in generated/pipeline_config.json:
+
+    python build_pipeline.py build --input definitions/leapspace_2026_pipeline_definition.xlsx --force-all
+
+Its outputs are already saved under runs/output/leapspace_2026_*.

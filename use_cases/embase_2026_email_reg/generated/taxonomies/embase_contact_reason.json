@@ -1,0 +1,110 @@
+{
+  "ECR1": {
+    "label": "Correction to a published record",
+    "children": {
+      "ECR1.1": {
+        "label": "Correction to a published record",
+        "description": "Definition: A publisher, author or editor asks for the metadata of a specific existing record to be updated to match the published version: author names, affiliations or emails, the title including a RETRACTED prefix, the abstract, the DOI, the publication date or source details."
+      }
+    }
+  },
+  "ECR2": {
+    "label": "Indexing error or data quality problem",
+    "children": {
+      "ECR2.1": {
+        "label": "Indexing error or data quality problem",
+        "description": "Definition: A user or colleague reports that records are indexed or rendered wrongly: missing or wrong Emtree, drug, device or brand-name terms, wrong keyword headings, garbled abstracts, typographical errors, duplicate records, or a suggestion for a new Emtree term."
+      }
+    }
+  },
+  "ECR3": {
+    "label": "Missing article or record not yet indexed",
+    "children": {
+      "ECR3.1": {
+        "label": "Missing article or record not yet indexed",
+        "description": "Definition: A specific article, issue or conference paper is not in Embase or not fully loaded yet, and the customer asks for it to be added or when it will appear."
+      }
+    }
+  },
+  "ECR4": {
+    "label": "Journal coverage, evaluation or indexing status",
+    "children": {
+      "ECR4.1": {
+        "label": "Journal coverage, evaluation or indexing status",
+        "description": "Definition: Questions about a JOURNAL rather than a record: applying or suggesting a journal for inclusion, the evaluation or indexing status of a journal, discontinued or cancelled titles, complaints about the quality or integrity of an indexed journal, or journal lists."
+      }
+    }
+  },
+  "ECR5": {
+    "label": "Organisation access set-up or entitlement",
+    "children": {
+      "ECR5.1": {
+        "label": "Organisation access set-up or entitlement",
+        "description": "Definition: An administrator, librarian or account manager asks about access for an organisation: activating a subscription, trial or Embase AI for an account, IP ranges, SSO, OpenAthens or Shibboleth configuration, API or developer credentials, consolidating accounts, or whether an institution subscribes."
+      }
+    }
+  },
+  "ECR6": {
+    "label": "User cannot access Embase",
+    "children": {
+      "ECR6.1": {
+        "label": "User cannot access Embase",
+        "description": "Definition: An individual cannot get into Embase through their institution or subscription: access via IP, VPN, OpenAthens or campus network fails, access is blocked with an error code, or a trial or paid access does not open."
+      }
+    }
+  },
+  "ECR7": {
+    "label": "Error message or technical fault",
+    "children": {
+      "ECR7.1": {
+        "label": "Error message or technical fault",
+        "description": "Definition: Embase or Embase AI misbehaves: search errors, pages or record details that will not load, error codes, a cookie banner that cannot be accepted, or browser-specific failures."
+      }
+    }
+  },
+  "ECR8": {
+    "label": "Search, export or product feature question",
+    "children": {
+      "ECR8.1": {
+        "label": "Search, export or product feature question",
+        "description": "Definition: How to do something in Embase: building searches and search strategies, sources and filters, exporting or emailing records, alerts, linking to full text, or how a feature works."
+      }
+    }
+  },
+  "ECR9": {
+    "label": "Feedback or feature request",
+    "children": {
+      "ECR9.1": {
+        "label": "Feedback or feature request",
+        "description": "Definition: The customer comments on the interface or asks for a change: complaints about the new results page or search bar behaviour, or requests for new options such as a citation style."
+      }
+    }
+  },
+  "ECR10": {
+    "label": "Usage report or usage data request",
+    "children": {
+      "ECR10.1": {
+        "label": "Usage report or usage data request",
+        "description": "Definition: A request for Embase usage statistics or reports for an account, or questions about usage figures."
+      }
+    }
+  },
+  "ECR11": {
+    "label": "Order, purchase, renewal or invoice",
+    "children": {
+      "ECR11.1": {
+        "label": "Order, purchase, renewal or invoice",
+        "description": "Definition: Buying Embase or asking about prices and plans, orders and payment problems, invoices, renewals, subscription dates, terms, or cancelling a subscription."
+      }
+    }
+  },
+  "ECR12": {
+    "label": "Other / not enough information",
+    "children": {
+      "ECR12.1": {
+        "label": "Other / not enough information",
+        "description": "Definition: The ticket carries no request that fits the categories above: a duplicate pointing to another incident, a thank-you, an auto-reply or spam, an agent-only note, or too little text to tell."
+      }
+    }
+  }
+}

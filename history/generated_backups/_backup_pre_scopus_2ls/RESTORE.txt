@@ -1,0 +1,6 @@
+Modules live in generated/pipeline_config.json before notebook 17 ran:
+    regid_adjudicate, regid_taxonomy
+
+To put them back:
+
+    python build_pipeline.py build --input definitions/reg_id_2026_pipeline_definition.xlsx --force-all

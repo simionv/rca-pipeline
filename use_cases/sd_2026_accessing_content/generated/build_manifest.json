@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "sd_ac_primary": {
+      "taxonomy_hash": "567bfe360f2616d926c6311c5f5abb13b124cf634511de6ceb6f7372f199d738",
+      "taxonomy_written_at": "2026-11-12T14:04:02.423234+00:00",
+      "py_hash": "567bfe360f2616d926c6311c5f5abb13b124cf634511de6ceb6f7372f199d738",
+      "py_generated_at": "2026-11-12T13:58:26.710194+00:00"
+    },
+    "sd_ac_subreason": {
+      "taxonomy_hash": "e4b1da88c97c5b12fadf5b7301ef1e7b8df5303b79957d505dd63a7bd7a39e2a",
+      "taxonomy_written_at": "2026-11-12T14:04:02.424520+00:00",
+      "py_hash": "e4b1da88c97c5b12fadf5b7301ef1e7b8df5303b79957d505dd63a7bd7a39e2a",
+      "py_generated_at": "2026-11-12T13:58:26.711957+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:02.425304+00:00",
+  "generator_version": "1.7.0"
+}

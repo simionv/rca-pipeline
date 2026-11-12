@@ -1,0 +1,308 @@
+{
+  "RIDT1": {
+    "label": "BulkIDs / Registration IDs",
+    "children": {
+      "RIDT1.1": {
+        "label": "BulkIDs / Registration IDs",
+        "description": "Definition: The customer is asking for Registration IDs, RegIDs, BulkIDs or remote credentials - to be created, added, deleted, exchanged, extended or explained. Also covers questions about whether an organisation has them and how many are left. The defining feature is that the CUSTOMER is requesting or asking about the IDs themselves. Tagger's own note: BulkIDs (also known as Registration IDs or RegIDs). Admin users who request to add bulkIDs, create bulkIDs, delete them or exchange them, also if they request information on whether they have been used or redeemed already). In some products this is called: Remote user credetials, or remote credentials Phrasings seen in real tickets: ID and PW, Registration IDs, ID and password, complimentary access, trial/s, set of credentials, credentials' set, remote IDs, Reg IDs, login codes Previously tagged as: BulkIDs; BulkIDs issue; BulkIDs steps; Registration mandatory management."
+      }
+    }
+  },
+  "RIDT2": {
+    "label": "IP management",
+    "children": {
+      "RIDT2.1": {
+        "label": "IP management",
+        "description": "Definition: An admin asking to add, delete, update, remove, whitelist or check IP addresses or IP ranges on their account, or reporting that access fails because they are outside the registered IP range, or asking who added an IP. Includes reports of abnormal use from an IP and blocked IPs. Tagger's own note: IP management for those admin users requesting to add, delete, update, remove, whitelist or check IP/s. Phrasings seen in real tickets: IP update request; add (these/those/an/the following) IP; confirm that the above IPs are assigned to your organization; we have linked the IP address to all the ID departments under your account; number IP request, IP request; change the name of the affiliation related to the mentioned IP; the IP address in question is managed by Amazon Web Services (AWS) and is not exclusively assigned to a specific institution; The IP address could potentially be used by multiple organizations within AWS's infrastructure; delist all other IP from the account; IPs have been removed; whitelisting an IP; IP address is correctly configured for access; Confirm that the IP is exclusively owned by your institution; the IPs provided are not exclusively associated with their institution, We require confirmation of exclusivity from the Admin or Librarian, find attached the most up-to-date IP, change IP,eplace the registered IP, check that the IP addresses have been whitelisted;your VPN is using IPs that are not registered in our system;ensure that the VPN is properly routing traffic to the registered IP range;which IP address they are connected so that we can add it on our end;general info request (from admins) on how IP works, find attached the list of IP addresses currently set up in your account;share list of IPs;how IP works,IP not accepted, Previously tagged as: IP blocked; IP information request; IP management / Domain management; IP management-abnormal use; Not within IP; Not within IP address; Not within IP range."
+      }
+    }
+  },
+  "RIDT3": {
+    "label": "Account deletion / remove users",
+    "children": {
+      "RIDT3.1": {
+        "label": "Account deletion / remove users",
+        "description": "Definition: A request to delete a user account or to remove, unlink or replace a user on an account - normally because the person has left the organisation, or because of content theft. Covers a person asking for their own account to be deleted and an admin asking on behalf of somebody else, plus removing a user association to an organisation or department. Tagger's own note: Admin person requesting a user account to be deleted, normally because the person left the company or because of content theft. This person asks the account to be deleted for somebody else Phrasings seen in real tickets: Profile deletion request (for a 3rd party); remove or delete a user from the account,Remove user from list, replace user, remove user association to an organization or a department,disable account in CHIEF C0000***** Previously tagged as: Account deletion; Account deletion - admin; Delete account in WAYF; Handle users; Remove institutional association; Remove user; Remove users; Remove uses; Removing users; Update users in account; unlink wrong users account."
+      }
+    }
+  },
+  "RIDT4": {
+    "label": "SSO / Shibboleth configuration",
+    "children": {
+      "RIDT4.1": {
+        "label": "SSO / Shibboleth configuration",
+        "description": "Definition: An admin asking for federated access to be set up, changed or disabled for their organisation: SSO, Shibboleth (Shib), adding an IdP or Identity Provider, OpenAthens, SAML attributes, metadata, certificate renewal. Use this for configuration requests AND for a user reporting that SSO or Shibboleth sign-in is not working. Tagger's own note: SSO/Shiboleth (Shib) when an admin requests for this access method to be set up for their organization. Add it for whenever someone is asking to add an IdP or Identity Provider, or asking to add/change/update OpenAthens. Do not add this category if the user is having an issue with SSO/Shiboleth. This category should gather only the admin requests for Federate access. Whenever a user is asking to disable (or do some changes) the federated access/sso for an institute or organization Phrasings seen in real tickets: setup SSO access, Shibboleth access, add IdP (Identity Provider), SSO/Shiboleth (Shib), SSO certificate renewal,SAML Attribute, metadata, OpenAthens, disable Shib,federation, update certificate, federated access Previously tagged as: Issue with SSO; No password (SSO); SSO login; SSO/Shibboleth; SSO/Shibboleth request of new link."
+      }
+    }
+  },
+  "RIDT5": {
+    "label": "Domain management",
+    "children": {
+      "RIDT5.1": {
+        "label": "Domain management",
+        "description": "Definition: Adding, removing, deleting or setting up an email domain or subdomain on an account. Includes Email Domain Confirmation, Email Institutional Association (EIA), Self Manage Remote Access (SelfManRA), and the case where a user cannot be associated because their email address does not match the registered domain. Tagger's own note: Domain management. include strictly only those that explicitly say remove/delete domain OR for those requesting to add or set up a domain. Phrasings seen in real tickets: remove domain, delete domain, Email Domain Confirmation, Email Institutional Association, SelfManRA, Self Manage Remote Access, EIA, Subdomain, remote access through a link, add domain to CHIEF, activate domain/s,update institutional domain;, add domain to account ECR, activate domain Previously tagged as: Domain management issue; Domain management: info provided; Domain steps; Email doesn't match domain; Email domain management; Email domain setup; Email domain steps; email doesn't match domain."
+      }
+    }
+  },
+  "RIDT6": {
+    "label": "Change or add email address",
+    "children": {
+      "RIDT6.1": {
+        "label": "Change or add email address",
+        "description": "Definition: A request to change or add the email address on somebody else's account - moving users from one account to another, or updating the email a user is registered under. The request is made FOR A THIRD PERSON, not for the person contacting. Tagger's own note: The request of changing email must be for a 3rd person. It cannot be for the person contacting. Phrasings seen in real tickets: move users from one account to another; update users under/in account Previously tagged as: Changing emails."
+      }
+    }
+  },
+  "RIDT7": {
+    "label": "Admin access",
+    "children": {
+      "RIDT7.1": {
+        "label": "Admin access",
+        "description": "Definition: Granting, removing or asking about administrative rights: Admin Tool access, Admin Console access, admin privileges, setting somebody up as an admin, removing admin rights. About the ADMIN ROLE itself, not about what an admin is trying to do. Phrasings seen in real tickets: Admin Tool access, Admin Console access, Removed admin access, remove administrative access, admin privilege, set up admin, remove admin rights, administrative rights,grant admin access Previously tagged as: Add admin; Admin Tool access request; Admin support; Remove admin access."
+      }
+    }
+  },
+  "RIDT8": {
+    "label": "Merge accounts",
+    "children": {
+      "RIDT8.1": {
+        "label": "Merge accounts",
+        "description": "Definition: A user asking to merge two email addresses, profiles or accounts into one, to add an old email to a current account, or to transfer saved data from one account to another. Also covers a user who has ended up with two accounts and does not know why. Tagger's own note: Merge accounts or profiles. User request to merge 2 email addresses, profiles or accounts. Phrasings seen in real tickets: merge user profiles, merge my accounts, join profiles;add a new email address to the old account/email;transfering data from this email/account to this other email/account Previously tagged as: 2 acccounts (not known)."
+      }
+    }
+  },
+  "RIDT9": {
+    "label": "Create customer account or organisation",
+    "children": {
+      "RIDT9.1": {
+        "label": "Create customer account or organisation",
+        "description": "Definition: Creating an end-user account on behalf of somebody, or creating/adding an organisation record in the internal systems (CHIEF / Phoenix): create ECR, set up a super account. Raised internally or by an admin, not a self-service registration. Tagger's own note: This can be create an end user acccount (for an organization, for example) or to create / add an organization in our system (CHIEF/Phoenix) Phrasings seen in real tickets: Create ECR Previously tagged as: Create account - admin; Super account request."
+      }
+    }
+  },
+  "RIDT10": {
+    "label": "Create department",
+    "children": {
+      "RIDT10.1": {
+        "label": "Create department",
+        "description": "Definition: Creating a department under an existing account in Account Center or Phoenix."
+      }
+    }
+  },
+  "RIDT11": {
+    "label": "Correct organisation record (CHIEF/Phoenix)",
+    "children": {
+      "RIDT11.1": {
+        "label": "Correct organisation record (CHIEF/Phoenix)",
+        "description": "Definition: Correcting an existing organisation record: change the account or super-account name, update the legal name for an ECR, clean up an ECR or its departments, or an admin reporting their institution name is displayed wrongly. Tagger's own note: New organization change. Whenever and admin request to change their organization or institution name in our database/system. Phrasings seen in real tickets: Chage account name, change superaccount name,update legal name for ECR,cleanup ECR, cleanup departments Previously tagged as: Change account name; New organization change/setup; Update legal name."
+      }
+    }
+  },
+  "RIDT12": {
+    "label": "Usage reporting",
+    "children": {
+      "RIDT12.1": {
+        "label": "Usage reporting",
+        "description": "Definition: Requests about usage reports: generating or downloading a usage report, SUSHI, COUNTER, reporting on which users consumed what. Phrasings seen in real tickets: Usage report, SUSHI, generate report, download usage report Previously tagged as: User reporting."
+      }
+    }
+  },
+  "RIDT13": {
+    "label": "Change logo",
+    "children": {
+      "RIDT13.1": {
+        "label": "Change logo",
+        "description": "Definition: A request to add, change or remove the organisation logo shown in the product. Previously tagged as: Changing logo."
+      }
+    }
+  },
+  "RIDT14": {
+    "label": "Block user",
+    "children": {
+      "RIDT14.1": {
+        "label": "Block user",
+        "description": "Definition: A request to block or bar a specific user from access - typically an unauthorised user or one suspected of misuse. Distinct from deletion: the account stays, access stops. Previously tagged as: Block unathorized user."
+      }
+    }
+  },
+  "RIDT15": {
+    "label": "Course access / enrolment",
+    "children": {
+      "RIDT15.1": {
+        "label": "Course access / enrolment",
+        "description": "Definition: A student or instructor unable to access, join or enrol on a course, or asking for enrolment to be changed."
+      }
+    }
+  },
+  "RIDT16": {
+    "label": "Access or activation codes",
+    "children": {
+      "RIDT16.1": {
+        "label": "Access or activation codes",
+        "description": "Definition: Anything about a redemption, access or activation code supplied to a customer: a code that will not redeem, a request for a code, or a question about what a code covers. NOT the same as BulkIDs - a BulkID is a set of credentials issued to an organisation, an activation code unlocks a single product or title. Previously tagged as: Access codes."
+      }
+    }
+  },
+  "RIDT17": {
+    "label": "Delete data",
+    "children": {
+      "RIDT17.1": {
+        "label": "Delete data",
+        "description": "Definition: A request to delete personal data or account history rather than the account itself - typically framed as a privacy or GDPR request."
+      }
+    }
+  },
+  "RIDT18": {
+    "label": "Access or reset link expired",
+    "children": {
+      "RIDT18.1": {
+        "label": "Access or reset link expired",
+        "description": "Definition: A link the customer was sent has expired or stopped working before they could use it: an institutional access link, a WAYFless link, an email confirmation link or a password reset link. The complaint is about the LINK, not about the password itself. Previously tagged as: Link expired; link expired."
+      }
+    }
+  },
+  "RIDT19": {
+    "label": "Password reset",
+    "children": {
+      "RIDT19.1": {
+        "label": "Password reset",
+        "description": "Definition: The user cannot sign in because of their password and needs it reset or changed: forgotten password, a reset request, a password that will not be accepted. If the complaint is that the reset LINK expired, use the link category instead. Previously tagged as: Forgot password; Pw reset; Pw reset link expiring."
+      }
+    }
+  },
+  "RIDT20": {
+    "label": "Other account settings",
+    "children": {
+      "RIDT20.1": {
+        "label": "Other account settings",
+        "description": "Definition: Changing other details on a profile or account that no other category covers: name, salutation, address, notification or communication preferences, display settings. The tagger used this as a catch-all for account changes, so prefer a specific category whenever one fits."
+      }
+    }
+  },
+  "RIDT21": {
+    "label": "Complimentary access request",
+    "children": {
+      "RIDT21.1": {
+        "label": "Complimentary access request",
+        "description": "Definition: A request for free, trial, courtesy or goodwill access to content or a product - for an individual, a group or a country programme. The ASK is for access to be granted at no charge. If the agent happens to fulfil it by issuing registration IDs, that does NOT make it a BulkIDs request; classify on what the customer asked for. Previously tagged as: Ukraine access."
+      }
+    }
+  },
+  "RIDT22": {
+    "label": "Add affiliation",
+    "children": {
+      "RIDT22.1": {
+        "label": "Add affiliation",
+        "description": "Definition: A user asking to be linked or affiliated to their institution or organisation, or reporting that they are not associated with it and therefore cannot get access. Previously tagged as: Not associated to institution; Not instituonal linked; Unable to login. No institutional association; not institutional association."
+      }
+    }
+  },
+  "RIDT23": {
+    "label": "Private email access",
+    "children": {
+      "RIDT23.1": {
+        "label": "Private email access",
+        "description": "Definition: A user trying to reach organisational content while signed in with a personal or private email address (gmail, hotmail, a non-institutional domain), or asking whether they may use one. Previously tagged as: Using private email to access org content."
+      }
+    }
+  },
+  "RIDT24": {
+    "label": "Not registered or signed in",
+    "children": {
+      "RIDT24.1": {
+        "label": "Not registered or signed in",
+        "description": "Definition: The user has access available to them but is not registered, or is not signed in, and so sees paywalled or limited content. The fix is to register or sign in, not a configuration change. Previously tagged as: Not registered / signed in to access org content; Not registered / signed in to access org content (EIA)."
+      }
+    }
+  },
+  "RIDT25": {
+    "label": "Registering an account",
+    "children": {
+      "RIDT25.1": {
+        "label": "Registering an account",
+        "description": "Definition: A user asking how to register, unable to complete registration, or asking for an individual account to be set up. About the ACT of registering, not about affiliation once registered. Previously tagged as: Cannot register other account (cookies); Help with registering an account; Individual account setup; No account created; Registering account."
+      }
+    }
+  },
+  "RIDT26": {
+    "label": "Sign-in or browser issue",
+    "children": {
+      "RIDT26.1": {
+        "label": "Sign-in or browser issue",
+        "description": "Definition: Sign-in failing for a technical reason rather than a password or entitlement one: cookies, cache, browser compatibility, a login loop, a session that will not hold. Also the case where the user reports the problem resolved itself. Previously tagged as: Clear cache and cookies; Login issue solved on its own; Unable to login; Unable to sign in [cookies]; Unabled to login."
+      }
+    }
+  },
+  "RIDT27": {
+    "label": "HTTP or platform error",
+    "children": {
+      "RIDT27.1": {
+        "label": "HTTP or platform error",
+        "description": "Definition: The user reports a numbered or named platform error - Error 710, Error 702, a 403, a 404, a server error page - rather than describing a functional request. Previously tagged as: Error 702; Error 710; HTTP errors."
+      }
+    }
+  },
+  "RIDT28": {
+    "label": "WAYFless URL request",
+    "children": {
+      "RIDT28.1": {
+        "label": "WAYFless URL request",
+        "description": "Definition: A request for a WAYFless URL, or for an existing WAYFless link to be reissued, corrected or explained."
+      }
+    }
+  },
+  "RIDT29": {
+    "label": "Organisation not subscribed / not entitled",
+    "children": {
+      "RIDT29.1": {
+        "label": "Organisation not subscribed / not entitled",
+        "description": "Definition: Access fails because the organisation does not hold a subscription or entitlement to the content requested, or holds only a limited one. Nothing is misconfigured; the entitlement is simply absent. Previously tagged as: Limited view of author profiles; No entitled; Not entitled; Not org subscription; Org does not subscribe to content; Org no subscription."
+      }
+    }
+  },
+  "RIDT30": {
+    "label": "Agreement or entitlement info request",
+    "children": {
+      "RIDT30.1": {
+        "label": "Agreement or entitlement info request",
+        "description": "Definition: A question ABOUT an agreement or entitlement rather than a fault: what is covered, when it runs to, which titles are included, what an organisation is entitled to. Previously tagged as: Agreement info request; Agreement info request. Not entitled; Entitlement info request."
+      }
+    }
+  },
+  "RIDT31": {
+    "label": "Royalty link info request",
+    "children": {
+      "RIDT31.1": {
+        "label": "Royalty link info request",
+        "description": "Definition: A question about royalty links, royalty statements or the royalty portal."
+      }
+    }
+  },
+  "RIDT32": {
+    "label": "Billing or invoicing",
+    "children": {
+      "RIDT32.1": {
+        "label": "Billing or invoicing",
+        "description": "Definition: A question or problem about an invoice, a payment, a purchase order, a refund or a renewal charge. Previously tagged as: Billing or invoicing inquiries."
+      }
+    }
+  },
+  "RIDT33": {
+    "label": "General information request",
+    "children": {
+      "RIDT33.1": {
+        "label": "General information request",
+        "description": "Definition: A general question about how something works or where to find it, that no more specific category covers, and that is not a fault or a change request. Previously tagged as: Info on how to access; Scopus."
+      }
+    }
+  },
+  "RIDT34": {
+    "label": "Not enough info",
+    "children": {
+      "RIDT34.1": {
+        "label": "Not enough info",
+        "description": "Definition: The ticket does not say enough to classify it: an empty or near-empty body, an auto-reply, a bare acknowledgement, an attachment with no text, or a thread whose substance is missing. Use this rather than guessing."
+      }
+    }
+  }
+}

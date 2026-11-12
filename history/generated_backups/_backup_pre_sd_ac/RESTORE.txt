@@ -1,0 +1,9 @@
+The modules that were live in generated/pipeline_config.json before this notebook ran:
+    (none)
+
+To put the ClinicalKey/CSD ones back:
+
+    python build_pipeline.py build --input definitions/csd_2026_pipeline_definition.xlsx --force-all
+
+Their outputs are already saved under runs/output/csd_2026_*.
+The config holds one product at a time; restoring CSD drops the sd_ac_* modules.

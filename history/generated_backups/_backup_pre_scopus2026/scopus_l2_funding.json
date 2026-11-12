@@ -1,0 +1,28 @@
+{
+  "SCFG1": {
+    "label": "Funding / Awarded Grants Data",
+    "children": {
+      "SCFG1.1": {
+        "label": "Funding Text Correction",
+        "description": "Definition: The funding text on a document record is missing, wrong or needs updating."
+      },
+      "SCFG1.2": {
+        "label": "Funding Number Correction",
+        "description": "Definition: The grant or funding number on a record is missing or wrong."
+      },
+      "SCFG1.3": {
+        "label": "Funding Sponsor Correction",
+        "description": "Definition: The funding sponsor name on a record is missing, wrong or needs standardising."
+      },
+      "SCFG1.4": {
+        "label": "Missing Awarded Grant",
+        "description": "Definition: An awarded grant is not shown in Scopus and the customer asks for it to be added."
+      },
+      "SCFG1.5": {
+        "label": "Awarded Grant Correction / Removal",
+        "description": "Definition: An existing awarded grant record needs correcting or removing."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Funding / Awarded Grants Data'. Choose the Level 2 value from this group only. 'Funding / Awarded Grants Data' means: Definition: Corrections to funding text, funding numbers or sponsors on document records, and requests to add, correct or remove awarded grants."
+  }
+}

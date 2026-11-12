@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv*/
+.Rproj.user
+
+# Secrets — never commit
+.env
+
+# Customer data — lives in the local data archive, linked in by tools/link_archive.py
+use_cases/*/data
+use_cases/*/runs
+use_cases/*/output
+use_cases/*/feedback
+!use_cases/_template/data/
+/runs/
+/output/
+*.log
+
+# Excel lock files, OS files
+~$*
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

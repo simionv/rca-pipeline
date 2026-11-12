@@ -1,0 +1,138 @@
+{
+  "CR1": {
+    "label": "Journal Coverage and Indexing Status",
+    "children": {
+      "CR1.1": {
+        "label": "Coverage / Inclusion Status Inquiry",
+        "description": "Questions asking whether a journal or source is indexed, covered, or eligible for inclusion. Use when the main issue is source coverage rather than a specific missing article or author record."
+      },
+      "CR1.2": {
+        "label": "Coverage Discontinuation / Removal",
+        "description": "Cases where a journal or source was discontinued, removed, or is no longer indexed. Distinguish from CR1.1 by the presence of a stop/removal/discontinued status."
+      },
+      "CR1.3": {
+        "label": "Coverage Re-evaluation / Eligibility Review",
+        "description": "Requests to review, reconsider, or explain coverage decisions, including publication-type eligibility and source coverage reassessment. Use when the user is asking for a decision review rather than a simple status check."
+      },
+      "CR1.4": {
+        "label": "Other Coverage / Indexing Status",
+        "description": "Source-level coverage or indexing questions that do not fit the specific status, discontinuation, or re-evaluation cases above."
+      }
+    },
+    "description": "Use for questions about whether a journal, source, or publication type is covered by the database, including inclusion, discontinuation, re-evaluation, and eligibility. This category is about source-level or coverage-level status, not individual author profile or record corrections."
+  },
+  "CR2": {
+    "label": "Publication Indexing and Database Inclusion",
+    "children": {
+      "CR2.1": {
+        "label": "Missing Publication / Document in Database",
+        "description": "A publication, article, or document is absent from the database and the user wants it added or located. Distinguish from CR2.2 by the emphasis on a missing record rather than a delay."
+      },
+      "CR2.2": {
+        "label": "Indexing Request / Addition",
+        "description": "Requests to index, add, or include a publication, including conference papers and articles in press. Use when the user is explicitly asking for indexing rather than reporting absence."
+      },
+      "CR2.3": {
+        "label": "Indexing Delay / Status Inquiry",
+        "description": "Questions about why indexing is taking time, whether a record is pending, or when it will appear. Distinguish from CR2.1 by the focus on timing rather than a confirmed missing item."
+      },
+      "CR2.4": {
+        "label": "Other Publication Indexing Issue",
+        "description": "Publication-level indexing or inclusion issues that do not fit missing, request, or delay cases above."
+      }
+    },
+    "description": "Use for missing, delayed, or requested indexing of articles, documents, conference papers, or other publications in the database. This category is about item-level inclusion in the database, not author profile assignment or metadata correction."
+  },
+  "CR3": {
+    "label": "Author Profile and Identifier Management",
+    "children": {
+      "CR3.1": {
+        "label": "Profile Creation / Linking / Assignment",
+        "description": "Requests to create an author profile, link a publication to a profile, or assign a document to the correct author record. Distinguish from CR3.2 by the focus on connecting records rather than correcting profile details."
+      },
+      "CR3.2": {
+        "label": "Profile Correction / Update",
+        "description": "Corrections or updates to an existing author profile, including name, affiliation, metadata, and general record edits. Use when the profile exists and needs modification rather than creation or linking."
+      },
+      "CR3.3": {
+        "label": "Author Identifier / ID Issue",
+        "description": "Problems involving author IDs, profile IDs, lookup, or identifier correction. Distinguish from CR3.1 and CR3.2 by the explicit focus on the identifier itself."
+      },
+      "CR3.4": {
+        "label": "Other Author Profile Issue",
+        "description": "Author record, profile, or identifier issues that do not fit the specific creation, correction, or ID cases above."
+      }
+    },
+    "description": "Use for author profile creation, linking, correction, and identifier management such as Scopus author ID issues. This category covers the author record itself, not the publications attached to it unless the main issue is profile linkage."
+  },
+  "CR4": {
+    "label": "Publication Metadata and Attribution Correction",
+    "children": {
+      "CR4.1": {
+        "label": "Metadata / Bibliographic Correction",
+        "description": "Corrections to publication metadata such as title, document metadata, or other bibliographic fields. Use when the record exists but its descriptive data is wrong or incomplete."
+      },
+      "CR4.2": {
+        "label": "Authorship / Attribution Correction",
+        "description": "Corrections involving author names, authorship order, or incorrect publication attribution. Distinguish from CR3.2 by the focus on the publication record rather than the author profile."
+      },
+      "CR4.3": {
+        "label": "Citation / Metrics Correction",
+        "description": "Issues involving citation counts, citation links, or metrics discrepancies. Use when the problem is about citation data rather than the publication record or author profile."
+      },
+      "CR4.4": {
+        "label": "Content Removal / Quality Complaint",
+        "description": "Requests to retract, remove, or complain about content quality. Distinguish from metadata or attribution corrections because the issue is with the content itself or its removal."
+      },
+      "CR4.5": {
+        "label": "Other Publication Record Correction",
+        "description": "Publication record corrections that do not fit metadata, authorship, citation, or removal cases above."
+      }
+    },
+    "description": "Use for corrections to publication-level metadata, authorship, citation data, attribution, or content quality/removal. This category is for fixing the record content itself, not indexing or author profile assignment."
+  },
+  "CR5": {
+    "label": "Access, Account, and Technical Support",
+    "children": {
+      "CR5.1": {
+        "label": "Login / Account Access Issue",
+        "description": "Problems signing in, authenticating, or accessing an account or profile. Distinguish from CR5.2 by the presence of account access failure rather than general site access."
+      },
+      "CR5.2": {
+        "label": "Subscription / Site Access Issue",
+        "description": "Access problems related to subscription, paywall, or general site availability. Use when the issue is about reaching content or services rather than account credentials."
+      },
+      "CR5.3": {
+        "label": "Case / Ticket Status Inquiry",
+        "description": "Requests for updates on a support case, ticket, or unresolved chat. Distinguish from content or indexing status questions because the subject is the support process itself."
+      },
+      "CR5.4": {
+        "label": "Other Access / Technical Issue",
+        "description": "Technical or support issues that do not fit login, subscription, or case-status categories."
+      }
+    },
+    "description": "Use for login, access, account, site, and support-process issues. This category is for operational support rather than indexing, profile, or content corrections."
+  },
+  "CR6": {
+    "label": "Information Request and General Assistance",
+    "children": {
+      "CR6.1": {
+        "label": "General Information / Explanation Request",
+        "description": "Requests for explanations, verification, or general information such as journal title verification or status explanation. Use when the user is seeking clarification rather than a correction or action."
+      },
+      "CR6.2": {
+        "label": "Search / Research Assistance",
+        "description": "Requests for help finding literature or similar research-support tasks. Distinguish from indexing or database inclusion because the user is asking for assistance in locating information."
+      },
+      "CR6.3": {
+        "label": "Administrative / Document Request",
+        "description": "Requests for transcripts, document copies, or other administrative documents. Use when the main need is a service document rather than a publication or profile change."
+      },
+      "CR6.4": {
+        "label": "Other General Assistance",
+        "description": "General or miscellaneous requests that do not fit the other operational categories."
+      }
+    },
+    "description": "Use for general informational or service requests that are not primarily about indexing, profile management, metadata correction, or access problems. This category captures miscellaneous assistance and administrative inquiries."
+  }
+}

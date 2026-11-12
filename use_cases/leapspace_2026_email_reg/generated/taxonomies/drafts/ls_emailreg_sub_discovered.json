@@ -1,0 +1,46 @@
+{
+  "LES1": {
+    "label": "Access Issues",
+    "children": {
+      "LES1.1": {
+        "label": "Email Address Issues",
+        "description": "Problems arising from incorrect or unrecognized email addresses used for registration or subscriptions."
+      },
+      "LES1.2": {
+        "label": "Subscription Access Problems",
+        "description": "Issues related to accessing services due to subscription status, including confusion over trial periods and active subscriptions."
+      },
+      "LES1.3": {
+        "label": "Activation and Verification Issues",
+        "description": "Concerns regarding activation links, verification emails, and related errors that prevent access."
+      },
+      "LES1.4": {
+        "label": "General Access Issues",
+        "description": "Cases that fall within access problems but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers problems related to accessing accounts, subscriptions, or services. It includes issues with email addresses, subscriptions, and activation links."
+  },
+  "LES2": {
+    "label": "Account Management",
+    "children": {
+      "LES2.1": {
+        "label": "Registration Issues",
+        "description": "Problems encountered during the registration process, including missing pages and errors in account creation."
+      },
+      "LES2.2": {
+        "label": "Account Activation Problems",
+        "description": "Issues related to activating accounts, including missing activation links and prompts."
+      },
+      "LES2.3": {
+        "label": "Password Issues",
+        "description": "Concerns regarding password acceptance, resets, and related errors that hinder account access."
+      },
+      "LES2.4": {
+        "label": "General Account Management Issues",
+        "description": "Cases that fall within account management but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category encompasses issues related to account setup, registration, and management. It includes problems with user activation and account levels."
+  }
+}

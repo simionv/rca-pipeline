@@ -1,0 +1,74 @@
+{
+  "LCR1": {
+    "label": "User not able to access",
+    "children": {
+      "LCR1.1": {
+        "label": "User not able to access",
+        "description": "Use when: The person is trying to access LeapSpace through an individual subscription or personal account, purchased or held in their own name. Strong signals in the ticket: “I subscribed”, “I purchased”, “I paid”, “my credit card”, “my individual/personal/premium subscription”, “no individual subscription”, access through the user’s own email and password. Do not use as evidence on its own: An institutional email address, being employed by a university, or having an account associated with an institution. A person can buy an individual subscription using a university email address."
+      }
+    }
+  },
+  "LCR2": {
+    "label": "Institutional user cannot access",
+    "children": {
+      "LCR2.1": {
+        "label": "Institutional user cannot access",
+        "description": "Use when: The person expects access because their institution has a LeapSpace entitlement, trial or institutional access method. Strong signals in the ticket: “My institution/university/library has access”, institutional subscription or trial, IP range, campus network, proxy, SSO/federated access, bulk ID, “sign in through your organization”, institution entitlement, or institutional access-method configuration. Do not use as evidence on its own: The customer saying “I cannot access” or using an institutional email. The use of “I” does not make the subscription individual."
+      }
+    }
+  },
+  "LCR3": {
+    "label": "Internal staff access",
+    "children": {
+      "LCR3.1": {
+        "label": "Internal staff access",
+        "description": "Use when: The request comes from an Elsevier employee or internal team asking for a demo/test account, RegID, entitlement check, customer-access verification or other internal provisioning support. Strong signals in the ticket: A sender on an @elsevier.com or @relx.com address; someone asking on behalf of a named customer, institution or account rather than about their own access; a forwarded or internal thread between colleagues; a request for a demo or test account, a RegID, an entitlement check, customer-access verification, or sign-in instructions to pass on to a customer."
+      }
+    }
+  },
+  "LCR4": {
+    "label": "Subscription cancellation and/or refund",
+    "children": {
+      "LCR4.1": {
+        "label": "Subscription cancellation and/or refund",
+        "description": "Use when: The customer explicitly asks to cancel a subscription or trial, stop renewal, receive a refund, or resolve a charge linked to a cancellation. Do not use when the customer only says they paid as part of an access complaint."
+      }
+    }
+  },
+  "LCR5": {
+    "label": "Subscription request — including resubscription and trial",
+    "children": {
+      "LCR5.1": {
+        "label": "Subscription request — including resubscription and trial",
+        "description": "Use when: The customer asks to purchase, start, activate, renew, resubscribe to, or obtain a trial of LeapSpace. Use when access has not yet been purchased or activated; do not use when the customer already has a subscription but cannot access it."
+      }
+    }
+  },
+  "LCR6": {
+    "label": "Not enough info",
+    "children": {
+      "LCR6.1": {
+        "label": "Not enough info",
+        "description": "Use when: The ticket does not contain enough reliable information to determine the customer’s request—for example, it only contains email headers, delivery messages, generic support text, fragmented content or contradictory information. Do not use merely because the root cause is unknown when the contact reason itself is clear."
+      }
+    }
+  },
+  "LCR7": {
+    "label": "Billing",
+    "children": {
+      "LCR7.1": {
+        "label": "Billing",
+        "description": "Use when: Invoice request, Payment issues, Payment method update"
+      }
+    }
+  },
+  "LCR8": {
+    "label": "Other / not covered",
+    "children": {
+      "LCR8.1": {
+        "label": "Other / not covered",
+        "description": "Use when: none of the other categories applies after considering each one — for example general product questions, feature or how-to questions, comparisons with other Elsevier products, security or policy queries, or product feedback. Do not use as evidence on its own: do not use this as a first resort; only choose it when no other category genuinely fits."
+      }
+    }
+  }
+}

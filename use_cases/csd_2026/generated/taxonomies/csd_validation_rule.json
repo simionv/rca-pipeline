@@ -1,0 +1,126 @@
+{
+  "CSDVR1": {
+    "label": "Missing Content",
+    "children": {
+      "CSDVR1.1": {
+        "label": "01 Journal not covered ( refers to the source has never been suggested/selected for Scopus, o",
+        "description": "Rule: Journal not covered ( refers to the source has never been suggested/selected for Scopus, or refused/rejected multiple years ago. ) Guideline: CCG 2.1-2.2 Agent reply wording: (Query from Author) Journal not indexed / Title not indexed-covered; (Query from Editor/Publisher) Journal not indexed -> Title Suggestion Form; Notes: Title not indexed -> 'Title not covered'; Do NOT use: Not this rule when the agent confirms the source IS currently indexed and the customer was only asking about its status. Not this rule either when the agent says the source WAS covered and has since been discontinued or ceased - a title that was indexed and no longer is belongs to the coverage-mismatch rule, not to never-covered."
+      },
+      "CSDVR1.2": {
+        "label": "02 Journal under re-evaluation (refers to the source has been selected before but is having o",
+        "description": "Rule: Journal under re-evaluation (refers to the source has been selected before but is having outlier behavior or no longer meet the criteria so that is currently put on hold for decision) Guideline: CCG 2.1-2.2 Agent reply wording: Re-evaluation title – Missing Content Request Notes: under re-evaluation -> 'reevaluation'; Do NOT use: The sentence any journal may be subject to re-evaluation at any point in time is a standing disclaimer that closes most coverage-status replies. It is NEVER on its own sufficient for this rule. If that sentence, or a general remark that coverage is kept under continuous review, is the only mention of re-evaluation in the ticket, this rule does not apply - pick the rule that matches what the agent actually refused, or the no-applicable-rule code if the agent refused nothing. Discontinued is also not re-evaluation: a title the agent describes as discontinued, ceased or no longer covered has had a decision taken, so it belongs to the coverage-mismatch rule, not here. Use this rule ONLY when the agent says THIS source is currently under re-evaluation, is on hold pending a decision, or has been referred to the Content Selection and Advisory Board."
+      },
+      "CSDVR1.3": {
+        "label": "03 Journal published on an unauthentic publisher site (Not authentic refers to the journal/so",
+        "description": "Rule: Journal published on an unauthentic publisher site (Not authentic refers to the journal/source is selected but the requested article from the query is not from an authentic publisher site, i.e. the article published in a fake/clone publisher site. This is very sensitive situation and related to integrity and ethics.) Guideline: CCG 2.1-2.2 Agent reply wording: Article not found published in authenticated site (unauthentic publisher site) Notes: content on an unauthentic/non-authenticated publisher site -> 'not authentic'."
+      },
+      "CSDVR1.4": {
+        "label": "04 Significant journal change -> re-evaluated as new title",
+        "description": "Rule: Significant journal change -> re-evaluated as new title Guideline: CCG 2.2 Agent reply wording: Discontinued titles / Re-open (title re-evaluated as a new source) Notes: Journal treated as a new title pending re-evaluation; prior coverage no longer applies."
+      },
+      "CSDVR1.5": {
+        "label": "05 Published less than 4 weeks ago - too recent Volume/Issue not completed",
+        "description": "Rule: Published less than 4 weeks ago - too recent Volume/Issue not completed Guideline: CCG 6 Agent reply wording: Premature claim; In progress/Under review/Ongoing Volume and Issue (premature); Premature claims - Volume/Issue not yet published Premature claim NOTE: For Elsevier journals, please update the timeline to 4 weeks. Notes: Standard 4-week window (Elsevier journals: update timeline to 4 weeks per template note). Do NOT use: This IS the rule whenever the agent explains the standard indexing timeline in general terms - for example that customers should allow 6 weeks after the publication date, or that the indexation process generally takes several weeks for an article to become visible. That wording is the premature-claim template. It describes how long indexing normally takes; it does not say anything has been delivered."
+      },
+      "CSDVR1.6": {
+        "label": "06 Paper already available in Scopus (on search)",
+        "description": "Rule: Paper already available in Scopus (on search) Guideline: - Agent reply wording: Advise the customer that the article is in Scopus / Not-Missing scenario Notes: Content already indexed; provide the Scopus link to the article."
+      },
+      "CSDVR1.7": {
+        "label": "07 Already in the pipeline - appears within ~4 days",
+        "description": "Rule: Already in the pipeline - appears within ~4 days Guideline: CCG 6 Agent reply wording: Recently Delivered to Opsbank Notes: Content is in the delivery pipeline (OBII/Opsbank) and will surface shortly. Do NOT use: Not this rule when the agent only explains the general indexing timeline - allow 6 weeks after publication, the indexation process generally takes several weeks, the article should appear in due course. That is the premature rule, not this one. A phrase like the indexing process is under way describes the normal queue, not a specific delivery. Use this rule ONLY when the agent states that THIS article has already been captured, received, delivered or sent for loading and will appear within a few days. If the agent gives no delivery statement specific to this article, prefer the premature rule."
+      },
+      "CSDVR1.8": {
+        "label": "08 Coverage mismatch - pre-dates coverage start, or falls after the last covered year",
+        "description": "Rule: Coverage mismatch - pre-dates coverage start, or falls after the last covered year Guideline: CCG 2.5 Agent reply wording: Article Published year not covered (Source title active and covered); Out of coverage & Title ceased in OBII Notes: Publication year falls outside the source's covered range - either before coverage start or after the last covered year (e.g., title ceased/discontinued). Do NOT use: This IS the rule when the agent says the title has been discontinued, has ceased, was removed from Scopus, or is no longer covered, and the requested article falls after the last covered year. Discontinued coverage is a coverage mismatch: a decision has already been taken. Do not route those tickets to the never-covered rule (the title WAS covered) or to the re-evaluation rule (the decision is not pending)."
+      },
+      "CSDVR1.9": {
+        "label": "09 Document type out of scope (meeting abstract, book review...)",
+        "description": "Rule: Document type out of scope (meeting abstract, book review...) Guideline: CCG 5.1 Agent reply wording: Not-covered / out-of-scope response (adapt 'Title not indexed/covered' wording to the document type) Meeting abstract Book review article Notes: No dedicated scenario for doc-type exclusion; adapt the out-of-scope response. Confirm doc type against CCG 5.1."
+      },
+      "CSDVR1.10": {
+        "label": "10 Trade-journal item below threshold (<1 page / no author)",
+        "description": "Rule: Trade-journal item below threshold (<1 page / no author) Guideline: CAR 3.4 Agent reply wording: Not-covered / out-of-scope response Notes: No dedicated template scenario; adapt out-of-scope wording. Threshold per CAR 3.4."
+      },
+      "CSDVR1.11": {
+        "label": "11 Preprint from a not-selected source, or a secondary (cited-only) document",
+        "description": "Rule: Preprint from a not-selected source, or a secondary (cited-only) document Guideline: CCG 4.3 Agent reply wording: Missing Content: out-of-scope (preprint from a non-approved server not covered). Citation Correction: 'Preprint Version in citation'; 'Force linking - Secondary Document' Notes: Preprints covered only from the 8 approved servers (arXiv, ChemRxiv, bioRxiv, MedRxiv, eLife, SSRN, TechRxiv, Research Square); those from a not-selected source and cited-only docs are out of scope."
+      },
+      "CSDVR1.12": {
+        "label": "12 Non-Western-alphabet item with no English title",
+        "description": "Rule: Non-Western-alphabet item with no English title Guideline: CAR 3.3 Agent reply wording: Article not found published in authenticated site; (related) 'Capturing of special characters' in Citation Correction Template Notes: No English title / non-Western script prevents authentic capture per CAR 3.3."
+      },
+      "CSDVR1.13": {
+        "label": "13 Erratum / note on a non-selected citation type",
+        "description": "Rule: Erratum / note on a non-selected citation type Guideline: CAR 3.1 Agent reply wording: Out-of-scope response; (related) Erratum scenarios in Data Correction Template Notes: Erratum/note tied to a citation type not selected for indexing per CAR 3.1."
+      },
+      "CSDVR1.14": {
+        "label": "14 AiP requested for a MEDLINE-sourced title, or from a publisher not on the approved list",
+        "description": "Rule: AiP requested for a MEDLINE-sourced title, or from a publisher not on the approved list Guideline: CCG 6, 2.6 Agent reply wording: The article is accepted in Medline but missing in Scopus; Article in press (Scopus does not cover AiP...); Medline scenarios Notes: No AiP/early-view layer from MEDLINE/PubMed; AiP is also not accepted from publishers not on the approved AiP list."
+      }
+    },
+    "description": "Rules for requests to add content that is missing from Scopus."
+  },
+  "CSDVR2": {
+    "label": "Document Correction",
+    "children": {
+      "CSDVR2.1": {
+        "label": "15 Scopus already matches the publisher version of record",
+        "description": "Rule: Scopus already matches the publisher version of record Guideline: CCG 5.1, 6 Agent reply wording: Data correction (invalid) Notes: Record already matches the Version of Record; no correction needed."
+      },
+      "CSDVR2.2": {
+        "label": "16 Change would make the record differ from published",
+        "description": "Rule: Change would make the record differ from published Guideline: CCG 6 Agent reply wording: Data correction (invalid) Notes: Requested change conflicts with the published source; Scopus mirrors the source."
+      },
+      "CSDVR2.3": {
+        "label": "17 Needs a publisher erratum / retraction first",
+        "description": "Rule: Needs a publisher erratum / retraction first Guideline: CCG 5.1 Agent reply wording: Erratum - References added but not in original paper; Erratum - Author name; Author name cannot be added when Erratum abstract omits it Notes: Correction requires a formal publisher erratum/retraction before Scopus can act."
+      },
+      "CSDVR2.4": {
+        "label": "18 Add abstract / reference / funding not in source or out of coverage period",
+        "description": "Rule: Add abstract / reference / funding not in source or out of coverage period Guideline: CCG 5.2 Agent reply wording: Data Correction: 'Data correction (invalid)'. Citation Correction: 'Citation linking is NOT possible in below cases' Notes: Element absent from the source or outside the coverage period cannot be added."
+      },
+      "CSDVR2.5": {
+        "label": "19 Document type already matches Scopus definitions",
+        "description": "Rule: Document type already matches Scopus definitions Guideline: CCG 5.1 Agent reply wording: Data correction (invalid) Notes: Document type already correct per Scopus definitions."
+      },
+      "CSDVR2.6": {
+        "label": "20 Concerns citation counts / metrics - computed, not editable",
+        "description": "Rule: Concerns citation counts / metrics - computed, not editable Guideline: CCG 5.2 Agent reply wording: Different platform (customer compares citation count vs Google Scholar / Web of Science / ResearchGate) Notes: Counts/metrics are computed, not directly editable; explain methodology differences."
+      },
+      "CSDVR2.7": {
+        "label": "21 Target is a secondary (cited-only) document",
+        "description": "Rule: Target is a secondary (cited-only) document Guideline: CCG 4.3 Agent reply wording: Force linking - Secondary Document Notes: Secondary/cited-only record cannot receive standard corrections; handle via citation-link path."
+      },
+      "CSDVR2.8": {
+        "label": "22 Missing vol / issue / page on an AiP - not an error",
+        "description": "Rule: Missing vol / issue / page on an AiP - not an error Guideline: CAR 2.5.4 Agent reply wording: Data correction cannot be done for 'Articles in Press' Notes: AiP records legitimately lack vol/issue/page until final publication."
+      },
+      "CSDVR2.9": {
+        "label": "23 Change already reflected, or duplicate open request",
+        "description": "Rule: Change already reflected, or duplicate open request Guideline: QRG p.2 Agent reply wording: Final Response (change already reflecting); Data correction (invalid) for duplicate request Notes: Change is already live or an open duplicate request exists."
+      }
+    },
+    "description": "Rules for requests to correct an existing Scopus record."
+  },
+  "CSDVR3": {
+    "label": "Document Correction Missing Content",
+    "children": {
+      "CSDVR3.1": {
+        "label": "24 OA change not verifiable / no publisher evidence, or content cannot be sourced from the pu",
+        "description": "Rule: OA change not verifiable / no publisher evidence, or content cannot be sourced from the publisher Guideline: CCG 5.2 Agent reply wording: Response to Author or Researcher (only publisher can initiate source-level changes); Response to Publisher or Editorial Board member; (content cannot be sourced) BL / Unable to source content Notes: OA/source-level change needs verifiable publisher evidence; where content cannot be sourced from the publisher, use the Unable-to-source-content path."
+      }
+    },
+    "description": "Rules that apply to either a correction request or a missing-content request."
+  },
+  "CSDVR4": {
+    "label": "No applicable validation rule",
+    "children": {
+      "CSDVR4.1": {
+        "label": "No applicable validation rule",
+        "description": "Use this code when none of the numbered validation rules applies. This includes: the ticket is a status or coverage enquiry rather than a request to add or correct content, for example asking whether a journal is currently indexed, when a title was discontinued, or what the current status of a source is; the request concerns a book or a conference proceeding awaiting evaluation; the ticket was routed to another team or is an internal or duplicate ticket; or the agent gives a ground for refusal that none of the numbered rules describes. The most common case by far: the agent confirms the current coverage status of a journal, perhaps adding that any journal may be subject to re-evaluation at any point in time, and nothing was requested or refused. That is a status enquiry and belongs here, not under the re-evaluation rule. Roughly one ticket in six or seven is expected to land here. Do not force a rule that does not fit."
+      }
+    },
+    "description": "The ticket is not covered by any numbered validation rule."
+  }
+}

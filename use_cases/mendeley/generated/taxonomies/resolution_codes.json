@@ -1,0 +1,79 @@
+{
+  "RS1": {
+    "label": "Resolved",
+    "children": {
+      "RS1.1": {
+        "label": "Information provided",
+        "description": "Agent provided information that resolved the issue."
+      },
+      "RS1.2": {
+        "label": "Password or account reset",
+        "description": "Agent reset password or account on behalf of the user."
+      },
+      "RS1.3": {
+        "label": "Access granted",
+        "description": "Agent manually granted or restored access."
+      },
+      "RS1.4": {
+        "label": "Configuration corrected",
+        "description": "Agent corrected a configuration error on the platform side."
+      }
+    }
+  },
+  "RS2": {
+    "label": "Workaround",
+    "children": {
+      "RS2.1": {
+        "label": "Temporary workaround provided",
+        "description": "Issue not fully resolved but a workaround was given."
+      },
+      "RS2.2": {
+        "label": "Referred to self-service",
+        "description": "Agent directed user to a self-service tool or documentation."
+      }
+    }
+  },
+  "RS3": {
+    "label": "Escalated",
+    "children": {
+      "RS3.1": {
+        "label": "Escalated to L2 support",
+        "description": "Issue escalated to second-line support."
+      },
+      "RS3.2": {
+        "label": "Escalated to engineering",
+        "description": "Issue escalated to engineering or platform team."
+      },
+      "RS3.3": {
+        "label": "Escalated to third party",
+        "description": "Issue escalated to an external vendor or institution IT."
+      }
+    }
+  },
+  "RS4": {
+    "label": "Pending",
+    "children": {
+      "RS4.1": {
+        "label": "Awaiting customer response",
+        "description": "Resolution pending — waiting for customer to reply."
+      },
+      "RS4.2": {
+        "label": "Awaiting internal action",
+        "description": "Resolution pending — waiting for internal team action."
+      }
+    }
+  },
+  "RS5": {
+    "label": "No action",
+    "children": {
+      "RS5.1": {
+        "label": "Duplicate contact",
+        "description": "Contact identified as a duplicate of an existing case."
+      },
+      "RS5.2": {
+        "label": "No action required",
+        "description": "Review concluded no action was needed."
+      }
+    }
+  }
+}

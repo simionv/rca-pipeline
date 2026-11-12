@@ -1,0 +1,28 @@
+{
+  "SDBA1": {
+    "label": "Bulk account issue",
+    "children": {
+      "SDBA1.1": {
+        "label": "Not enough info",
+        "description": "Definition: Use when multiple accounts are affected but the specific bulk action is unclear."
+      },
+      "SDBA1.2": {
+        "label": "Other",
+        "description": "Definition: Use for another multi-account issue not listed below."
+      },
+      "SDBA1.3": {
+        "label": "update account bulk ids",
+        "description": "Definition: Use when multiple account or registration IDs must be created, replaced or updated."
+      },
+      "SDBA1.4": {
+        "label": "Confusion around registration and registration IDs",
+        "description": "Definition: Use when users or administrators do not understand how registration IDs should be used."
+      },
+      "SDBA1.5": {
+        "label": "Redeem bulk code",
+        "description": "Definition: Use when users cannot redeem or need help redeeming bulk codes."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Bulk account issue'. Choose the root cause from this group only. That contact reason means: Use when the request affects multiple user accounts or codes at once, with signals such as bulk registration, spreadsheets of users, multiple registration IDs, bulk updates or bulk code redemption, and not for creating organisational teams or departments."
+  }
+}

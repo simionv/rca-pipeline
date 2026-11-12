@@ -1,0 +1,124 @@
+{
+  "RC1": {
+    "label": "Account Registration and Creation",
+    "children": {
+      "RC1.1": {
+        "label": "Registration or sign-up flow failure"
+      },
+      "RC1.2": {
+        "label": "Account creation or onboarding request"
+      },
+      "RC1.3": {
+        "label": "Registration guidance or setup assistance"
+      },
+      "RC1.4": {
+        "label": "Other account registration and creation issues"
+      }
+    }
+  },
+  "RC2": {
+    "label": "Account Identity and Email Management",
+    "children": {
+      "RC2.1": {
+        "label": "Email change or update request"
+      },
+      "RC2.2": {
+        "label": "Identity, email, or profile mismatch"
+      },
+      "RC2.3": {
+        "label": "Duplicate, merge, or consolidation request"
+      },
+      "RC2.4": {
+        "label": "Email reuse or association conflict"
+      },
+      "RC2.5": {
+        "label": "Other account identity and email management issues"
+      }
+    }
+  },
+  "RC3": {
+    "label": "Authentication and Account Access",
+    "children": {
+      "RC3.1": {
+        "label": "Login, sign-in, or credential failure"
+      },
+      "RC3.2": {
+        "label": "Password reset or account recovery failure"
+      },
+      "RC3.3": {
+        "label": "Account lookup or access routing failure"
+      },
+      "RC3.4": {
+        "label": "Other authentication and account access issues"
+      }
+    }
+  },
+  "RC4": {
+    "label": "Institutional and Organization Access",
+    "children": {
+      "RC4.1": {
+        "label": "Institutional login or SSO configuration issue"
+      },
+      "RC4.2": {
+        "label": "Entitlement, subscription, or provisioning issue"
+      },
+      "RC4.3": {
+        "label": "Organization-based registration or access restriction"
+      },
+      "RC4.4": {
+        "label": "Other institutional and organization access issues"
+      }
+    }
+  },
+  "RC5": {
+    "label": "Subscription, Billing, and Refunds",
+    "children": {
+      "RC5.1": {
+        "label": "Cancellation or refund request"
+      },
+      "RC5.2": {
+        "label": "Payment processing or charge issue"
+      },
+      "RC5.3": {
+        "label": "Pricing, quota, or billing inquiry"
+      },
+      "RC5.4": {
+        "label": "Other subscription, billing, and refund issues"
+      }
+    }
+  },
+  "RC6": {
+    "label": "Data, Library, and Migration",
+    "children": {
+      "RC6.1": {
+        "label": "Missing, lost, or not appearing account data"
+      },
+      "RC6.2": {
+        "label": "Library, sync, or migration issue"
+      },
+      "RC6.3": {
+        "label": "Account linking or cross-product synchronization issue"
+      },
+      "RC6.4": {
+        "label": "Other data, library, and migration issues"
+      }
+    }
+  },
+  "RC7": {
+    "label": "Support and Case Handling",
+    "children": {
+      "RC7.1": {
+        "label": "Incorrect support routing or team assignment"
+      },
+      "RC7.2": {
+        "label": "Duplicate case or ticket management issue"
+      },
+      "RC7.3": {
+        "label": "Live support or language assistance request"
+      },
+      "RC7.4": {
+        "label": "Other support and case handling issues"
+      }
+    }
+  }
+}

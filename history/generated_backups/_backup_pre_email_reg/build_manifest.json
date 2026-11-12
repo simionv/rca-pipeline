@@ -1,0 +1,290 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "68560b0007c55623faea901d0a4515303e1ee60659b16b39cd0721dc730796ce",
+      "taxonomy_written_at": "2026-08-03T12:30:42.318001+00:00",
+      "py_hash": "68560b0007c55623faea901d0a4515303e1ee60659b16b39cd0721dc730796ce",
+      "py_generated_at": "2026-08-03T12:30:42.322930+00:00",
+      "taxonomy_source": "promoted_from_draft"
+    },
+    "customer_effort": {
+      "taxonomy_hash": "d5cc2c85cf97899369003735cfd3d5f2350aee7fa088392c86a7fa6707578fc3",
+      "taxonomy_written_at": "2026-08-03T12:30:42.333924+00:00",
+      "py_hash": "d5cc2c85cf97899369003735cfd3d5f2350aee7fa088392c86a7fa6707578fc3",
+      "py_generated_at": "2026-08-03T12:30:42.338925+00:00",
+      "taxonomy_source": "promoted_from_draft"
+    },
+    "root_cause": {
+      "taxonomy_hash": "778126f9750653fe76bfea9c5404739d7df043da767c94636c2ac3c23eb5595c",
+      "taxonomy_written_at": "2026-08-03T12:30:34.220759+00:00",
+      "py_hash": "778126f9750653fe76bfea9c5404739d7df043da767c94636c2ac3c23eb5595c",
+      "py_generated_at": "2026-08-03T12:30:34.235645+00:00"
+    },
+    "customer_sentiment": {
+      "py_hash": "b3ff0ceb04331e755a2c7b1367a557763414d00f127f4286eda1c673b707badb",
+      "py_generated_at": "2026-08-03T12:30:22.435851+00:00"
+    },
+    "agent_performance": {
+      "taxonomy_hash": "e370fb0a17e5ca42b5bad6189126e6f8effaeecc88046d7baa36a53b735a71b8",
+      "taxonomy_written_at": "2026-08-03T12:30:22.444973+00:00",
+      "py_hash": "e370fb0a17e5ca42b5bad6189126e6f8effaeecc88046d7baa36a53b735a71b8",
+      "py_generated_at": "2026-08-03T12:30:22.448919+00:00"
+    },
+    "communication_effectiveness": {
+      "py_hash": "04b1314ccbf63023b41a4fb65dc07f87cd5d57bc6fcded8bc1a16fa6d177b1fb",
+      "py_generated_at": "2026-08-03T12:30:22.456430+00:00"
+    },
+    "voice_of_customer": {
+      "taxonomy_hash": "550ec82e26ff0be8057c4dd10e1c3b675a9ee5bfc17d4dac5c76370edd9c20c4",
+      "taxonomy_written_at": "2026-08-03T12:30:22.465565+00:00",
+      "py_hash": "550ec82e26ff0be8057c4dd10e1c3b675a9ee5bfc17d4dac5c76370edd9c20c4",
+      "py_generated_at": "2026-08-03T12:30:22.469680+00:00"
+    },
+    "escalation": {
+      "py_hash": "1ca422ac1ce40fed4ec4f3b0716ec958a6041a7d658faa61af94ec1505141fca",
+      "py_generated_at": "2026-08-03T12:30:34.284604+00:00"
+    },
+    "resolution_quality": {
+      "py_hash": "2da990de1f9041beb40e4bb3a3ed78a27e91f3b411ef0357fae12e49c09c7fed",
+      "py_generated_at": "2026-08-03T12:30:22.483951+00:00"
+    },
+    "resolution_actions": {
+      "taxonomy_hash": "9297aa89c42c75ac441e1b163af46d4317db4e40d852c54abb8494f898c2e1d1",
+      "taxonomy_written_at": "2026-08-03T12:30:22.494026+00:00",
+      "py_hash": "9297aa89c42c75ac441e1b163af46d4317db4e40d852c54abb8494f898c2e1d1",
+      "py_generated_at": "2026-08-03T12:30:22.498100+00:00"
+    },
+    "follow_up": {
+      "taxonomy_hash": "57d9b1e46990289f44c5066238201b749e92e833387ad24df40540a0fef1094d",
+      "taxonomy_written_at": "2026-08-03T12:30:22.506945+00:00",
+      "py_hash": "57d9b1e46990289f44c5066238201b749e92e833387ad24df40540a0fef1094d",
+      "py_generated_at": "2026-08-03T12:30:22.510946+00:00"
+    },
+    "compliance_and_risk": {
+      "taxonomy_hash": "bf0975f770b633a36f5f8b9dc01703232f56a206e33a913d14d7678be59a3bcc",
+      "taxonomy_written_at": "2026-08-03T12:30:22.519949+00:00",
+      "py_hash": "bf0975f770b633a36f5f8b9dc01703232f56a206e33a913d14d7678be59a3bcc",
+      "py_generated_at": "2026-08-03T12:30:22.524050+00:00"
+    },
+    "insights_and_opportunities": {
+      "py_hash": "2fc0b6ad1b7cddaf4733ad555c50b66879d119c535b9af073b9ddc9d94e5fb72",
+      "py_generated_at": "2026-08-03T12:30:22.531114+00:00"
+    },
+    "customer_profile": {
+      "py_hash": "9755cace69c6e83d2455546f222fabb4fd98299b522baa515167c50ae3e8310e",
+      "py_generated_at": "2026-08-03T12:30:22.538747+00:00"
+    },
+    "knowledge_management": {
+      "taxonomy_hash": "eaf903b3c7ef1714cd5bd11d8818b939efd4506212f7e441419f87eff544a1b6",
+      "taxonomy_written_at": "2026-08-03T12:30:22.546913+00:00",
+      "py_hash": "eaf903b3c7ef1714cd5bd11d8818b939efd4506212f7e441419f87eff544a1b6",
+      "py_generated_at": "2026-08-03T12:30:22.550792+00:00"
+    },
+    "interaction_classification": {
+      "py_hash": "ab2426785e9059b15922f655552aa867c54d72103226dd537e22cb0ee1da70de",
+      "py_generated_at": "2026-08-03T12:30:22.558895+00:00"
+    },
+    "containment_and_deflection": {
+      "py_hash": "d74b86b0286e39b62a8b2f22a1f1f78d039a611eaae4342c3524cb1a0ee47deb",
+      "py_generated_at": "2026-08-03T12:30:22.564900+00:00"
+    },
+    "customer_journey": {
+      "py_hash": "6444dc6dd107619a7c36f0826c3e514e238262b48af80009675dcd8ba97452c6",
+      "py_generated_at": "2026-08-03T12:30:22.572987+00:00"
+    },
+    "policy_understanding": {
+      "taxonomy_hash": "4844d9cfed9fcdcb0bb82e22bdc0e39979715949aa357c13e45bda12518eefbe",
+      "taxonomy_written_at": "2026-06-23T14:05:29.781869+00:00",
+      "py_hash": "4844d9cfed9fcdcb0bb82e22bdc0e39979715949aa357c13e45bda12518eefbe",
+      "py_generated_at": "2026-06-23T14:05:29.789841+00:00"
+    },
+    "policy_compliance": {
+      "taxonomy_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "taxonomy_written_at": "2026-08-03T12:30:42.352199+00:00",
+      "py_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "py_generated_at": "2026-08-03T12:30:42.357167+00:00"
+    },
+    "resolution": {
+      "taxonomy_hash": "ba0139bb32b78f97ba152130a1ce7c0d2fb577a3ec5142e56e85c39e44ec6d31",
+      "taxonomy_written_at": "2026-08-03T12:30:34.257643+00:00",
+      "py_hash": "ba0139bb32b78f97ba152130a1ce7c0d2fb577a3ec5142e56e85c39e44ec6d31",
+      "py_generated_at": "2026-08-03T12:30:34.269432+00:00"
+    },
+    "troubleshooting": {
+      "taxonomy_hash": "7d03234ef62b8ec6c0002f0a523cc4ecee8effea8a919dcad4420ef7d5fc5d17",
+      "taxonomy_written_at": "2026-08-03T12:30:34.300187+00:00",
+      "py_hash": "7d03234ef62b8ec6c0002f0a523cc4ecee8effea8a919dcad4420ef7d5fc5d17",
+      "py_generated_at": "2026-08-03T12:30:34.311186+00:00"
+    },
+    "metadata": {
+      "py_hash": "6cb0caf1b604806a55f238462879c427eeee343e2e6465593a7d294c21965b3e",
+      "py_generated_at": "2026-08-03T12:30:34.335205+00:00"
+    },
+    "policy_rules": {
+      "taxonomy_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "taxonomy_written_at": "2026-08-03T12:30:42.371721+00:00",
+      "py_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "py_generated_at": "2026-08-03T12:30:42.376721+00:00"
+    },
+    "leapspace_contact_reason": {
+      "taxonomy_hash": "de18e7907f7964aa7ef335b2871e7ba0dfc00c42704f85833366453c4a2b2d68",
+      "taxonomy_written_at": "2026-08-03T13:26:10.532355+00:00",
+      "py_hash": "de18e7907f7964aa7ef335b2871e7ba0dfc00c42704f85833366453c4a2b2d68",
+      "py_generated_at": "2026-08-03T13:26:10.537841+00:00"
+    },
+    "leapspace_rc_institutional": {
+      "taxonomy_hash": "7bb08ec5e48a8eed7147070b0a2317e12bbadcc6621038325e6117e4554da522",
+      "taxonomy_written_at": "2026-08-03T13:26:10.547862+00:00",
+      "py_hash": "7bb08ec5e48a8eed7147070b0a2317e12bbadcc6621038325e6117e4554da522",
+      "py_generated_at": "2026-08-03T13:26:10.552954+00:00"
+    },
+    "leapspace_rc_individual": {
+      "taxonomy_hash": "fa30ebc62461d7a572dd3dafdbdc1c67b4a80266b693ca97a63d42b36cc2e3f4",
+      "taxonomy_written_at": "2026-08-03T13:26:10.562918+00:00",
+      "py_hash": "fa30ebc62461d7a572dd3dafdbdc1c67b4a80266b693ca97a63d42b36cc2e3f4",
+      "py_generated_at": "2026-08-03T13:26:10.567915+00:00"
+    },
+    "customer_intent": {
+      "taxonomy_hash": "f6282a9186de1e547e23f84aecb23b3b64353362db154946af32a23f804069f6",
+      "taxonomy_written_at": "2026-08-03T12:30:22.583662+00:00",
+      "py_hash": "f6282a9186de1e547e23f84aecb23b3b64353362db154946af32a23f804069f6",
+      "py_generated_at": "2026-08-03T12:30:22.587700+00:00"
+    },
+    "sd_contact_reason": {
+      "taxonomy_hash": "a0f65c68527fb0acc01196110f4bfe86c390f5466e1cee972136ec4740e6d9d7",
+      "taxonomy_written_at": "2026-08-03T20:46:09.931585+00:00",
+      "py_hash": "a0f65c68527fb0acc01196110f4bfe86c390f5466e1cee972136ec4740e6d9d7",
+      "py_generated_at": "2026-08-03T20:46:09.936570+00:00"
+    },
+    "sd_rc_security_block": {
+      "taxonomy_hash": "1cb04781bee37a4edc1615afc08b2af8a8fdfc3623b4d234196cf1a6857f868c",
+      "taxonomy_written_at": "2026-08-03T20:46:09.945122+00:00",
+      "py_hash": "1cb04781bee37a4edc1615afc08b2af8a8fdfc3623b4d234196cf1a6857f868c",
+      "py_generated_at": "2026-08-03T20:46:09.949061+00:00"
+    },
+    "sd_rc_access_reports": {
+      "taxonomy_hash": "89d4505152f5b9ba9501918a4cb39002389bff2c284b27550b72dd0e3ad0d309",
+      "taxonomy_written_at": "2026-08-03T20:46:09.956108+00:00",
+      "py_hash": "89d4505152f5b9ba9501918a4cb39002389bff2c284b27550b72dd0e3ad0d309",
+      "py_generated_at": "2026-08-03T20:46:09.961052+00:00"
+    },
+    "sd_rc_institutional_signin": {
+      "taxonomy_hash": "e8b66b6ee66dc847ff3fdaaac7be4d852d6a678cd0c758a7d3d7a9fbbbb470da",
+      "taxonomy_written_at": "2026-08-03T20:46:09.967884+00:00",
+      "py_hash": "e8b66b6ee66dc847ff3fdaaac7be4d852d6a678cd0c758a7d3d7a9fbbbb470da",
+      "py_generated_at": "2026-08-03T20:46:09.972889+00:00"
+    },
+    "sd_rc_close_delete": {
+      "taxonomy_hash": "b0910b157475897b3902b059f3c66ac34fbdc54b1f7d9b95b6ca98e26e53b820",
+      "taxonomy_written_at": "2026-08-03T20:46:09.978889+00:00",
+      "py_hash": "b0910b157475897b3902b059f3c66ac34fbdc54b1f7d9b95b6ca98e26e53b820",
+      "py_generated_at": "2026-08-03T20:46:09.982938+00:00"
+    },
+    "sd_rc_login": {
+      "taxonomy_hash": "ccfbce0262c7793a8146f688e6bb59b1ff591fa91f36525a734b52b558df0d0c",
+      "taxonomy_written_at": "2026-08-03T20:46:09.989967+00:00",
+      "py_hash": "ccfbce0262c7793a8146f688e6bb59b1ff591fa91f36525a734b52b558df0d0c",
+      "py_generated_at": "2026-08-03T20:46:09.993945+00:00"
+    },
+    "sd_rc_bulk_account": {
+      "taxonomy_hash": "0b4563b11513ca43cd454cbfc66ff0470fa07f18dc1d574f490eab65832570fe",
+      "taxonomy_written_at": "2026-08-03T20:46:10.000951+00:00",
+      "py_hash": "0b4563b11513ca43cd454cbfc66ff0470fa07f18dc1d574f490eab65832570fe",
+      "py_generated_at": "2026-08-03T20:46:10.004888+00:00"
+    },
+    "sd_rc_teams_departments": {
+      "taxonomy_hash": "35d127b11bdf6013f82b133f6f0b57af71e249285fea05b4f76291e17153515d",
+      "taxonomy_written_at": "2026-08-03T20:46:10.010887+00:00",
+      "py_hash": "35d127b11bdf6013f82b133f6f0b57af71e249285fea05b4f76291e17153515d",
+      "py_generated_at": "2026-08-03T20:46:10.014937+00:00"
+    },
+    "sd_rc_update_email": {
+      "taxonomy_hash": "e58aaad99452b0cd9b543225974f209344535a1e272f3f1f9b78971dd181f3af",
+      "taxonomy_written_at": "2026-08-03T20:46:10.020889+00:00",
+      "py_hash": "e58aaad99452b0cd9b543225974f209344535a1e272f3f1f9b78971dd181f3af",
+      "py_generated_at": "2026-08-03T20:46:10.024906+00:00"
+    },
+    "sd_rc_download_config": {
+      "taxonomy_hash": "54fd8d16a580f22e23caeca9be1709d70c75ac10299d2b55960c9bd1e04b30d3",
+      "taxonomy_written_at": "2026-08-03T20:46:10.031960+00:00",
+      "py_hash": "54fd8d16a580f22e23caeca9be1709d70c75ac10299d2b55960c9bd1e04b30d3",
+      "py_generated_at": "2026-08-03T20:46:10.035997+00:00"
+    },
+    "sd_rc_accessing_content": {
+      "taxonomy_hash": "6266589435c9b6aad390373f22074841f4437d7b4c0943caeed98420e2bce944",
+      "taxonomy_written_at": "2026-08-03T20:46:10.042589+00:00",
+      "py_hash": "6266589435c9b6aad390373f22074841f4437d7b4c0943caeed98420e2bce944",
+      "py_generated_at": "2026-08-03T20:46:10.047679+00:00"
+    },
+    "sd_rc_other_not_access": {
+      "taxonomy_hash": "e90bf429ede5ab4911d6e645ed687f00bb8480971a4c9834786b17e231d0ba0e",
+      "taxonomy_written_at": "2026-08-03T20:46:10.054688+00:00",
+      "py_hash": "e90bf429ede5ab4911d6e645ed687f00bb8480971a4c9834786b17e231d0ba0e",
+      "py_generated_at": "2026-08-03T20:46:10.059585+00:00"
+    },
+    "csd_validation_rule": {
+      "taxonomy_hash": "b4ee83a0a63cf43d9fb977f9aaf217e3dfcb947d8caa3a946194e1cf7eccbdb4",
+      "taxonomy_written_at": "2026-09-09T08:42:55.372478+00:00",
+      "py_hash": "24cdf2330db52bf90a5b176834641cee2d5aad08760c3e5386cb53adbad44b49",
+      "py_generated_at": "2026-08-07T20:40:45.635887+00:00"
+    },
+    "csd_rejection_reason": {
+      "taxonomy_hash": "91d1712302632cc804adef2c47b26f3b87a8731fc45cdd5f2a1c04348961821e",
+      "taxonomy_written_at": "2026-09-09T08:42:55.386057+00:00",
+      "py_hash": "b7ac5197d1549e7ef1203055a58fd64aac6ed8b8ca458aeeafca43cb2337d10b",
+      "py_generated_at": "2026-08-07T20:40:45.652027+00:00"
+    },
+    "csd_rule_proposal": {
+      "py_hash": "91ff0421c6dfa297d21bef3ecb9936b8dd608491efac13670337a28a8e4b2a41",
+      "py_generated_at": "2026-08-07T20:40:45.659905+00:00"
+    },
+    "csd_customer_effort": {
+      "taxonomy_hash": "2d7a8e301949c388bcd05d36b877f4cdd07e39669ec6847be01f02fee4ee2ff4",
+      "taxonomy_written_at": "2026-09-09T08:42:55.401827+00:00",
+      "py_hash": "27051a78568aaa6a29c929d03c22be66f4094bac503f4b154ee84f1cfd07bab8",
+      "py_generated_at": "2026-08-07T20:40:45.672798+00:00"
+    },
+    "sd_ac_primary": {
+      "taxonomy_hash": "567bfe360f2616d926c6311c5f5abb13b124cf634511de6ceb6f7372f199d738",
+      "taxonomy_written_at": "2026-09-02T09:05:53.626275+00:00",
+      "py_hash": "567bfe360f2616d926c6311c5f5abb13b124cf634511de6ceb6f7372f199d738",
+      "py_generated_at": "2026-09-02T09:05:53.630874+00:00"
+    },
+    "sd_ac_subreason": {
+      "taxonomy_hash": "e4b1da88c97c5b12fadf5b7301ef1e7b8df5303b79957d505dd63a7bd7a39e2a",
+      "taxonomy_written_at": "2026-09-02T09:05:53.639455+00:00",
+      "py_hash": "e4b1da88c97c5b12fadf5b7301ef1e7b8df5303b79957d505dd63a7bd7a39e2a",
+      "py_generated_at": "2026-09-02T09:05:53.643721+00:00"
+    },
+    "csd_multi_rule": {
+      "taxonomy_hash": "d5f089a62645db6478f6a7a343e8a015e3c49da27fdefd92e07086c0dbb0bd35",
+      "taxonomy_written_at": "2026-09-09T08:42:55.401827+00:00",
+      "py_hash": "d5f089a62645db6478f6a7a343e8a015e3c49da27fdefd92e07086c0dbb0bd35",
+      "py_generated_at": "2026-09-04T09:17:46.225994+00:00"
+    },
+    "csd_dsat_review": {
+      "py_hash": "2994a6d2bd632a31aae5d255e0e6bec50d7c152afd745d2655d36597df2c2cce",
+      "py_generated_at": "2026-09-07T09:16:25.150097+00:00"
+    },
+    "regid_adjudicate": {
+      "taxonomy_hash": "a3e2b2ebc566f8e7f1e9040f434f50da54a2829d6e4368a70111adfdcd5d6af5",
+      "taxonomy_written_at": "2026-09-21T11:24:39.740040+00:00",
+      "py_hash": "a3e2b2ebc566f8e7f1e9040f434f50da54a2829d6e4368a70111adfdcd5d6af5",
+      "py_generated_at": "2026-09-21T11:24:39.744125+00:00"
+    },
+    "regid_taxonomy": {
+      "taxonomy_hash": "e06b928baa53453016833a4927401c0c107c1ca04ed3294849760cb940459709",
+      "taxonomy_written_at": "2026-09-21T11:24:39.758123+00:00",
+      "py_hash": "e06b928baa53453016833a4927401c0c107c1ca04ed3294849760cb940459709",
+      "py_generated_at": "2026-09-21T11:24:39.763036+00:00"
+    },
+    "s2ls_escalation_effort": {
+      "taxonomy_hash": "2d60d523ff58da67673ff5e3342414a46ab6496d27adbf7d9b9fd3693fb48b2b",
+      "taxonomy_written_at": "2026-09-28T15:34:50.186984+00:00",
+      "py_hash": "2d60d523ff58da67673ff5e3342414a46ab6496d27adbf7d9b9fd3693fb48b2b",
+      "py_generated_at": "2026-09-28T15:34:50.199992+00:00"
+    }
+  },
+  "generated_at": "2026-09-28T15:34:50.207625+00:00",
+  "generator_version": "1.7.0"
+}

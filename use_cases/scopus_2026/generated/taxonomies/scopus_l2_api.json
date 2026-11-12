@@ -1,0 +1,24 @@
+{
+  "SCAI1": {
+    "label": "API / Integration",
+    "children": {
+      "SCAI1.1": {
+        "label": "API Key / Token Request",
+        "description": "Definition: The customer needs an API key or institutional token."
+      },
+      "SCAI1.2": {
+        "label": "Integration Setup / Error",
+        "description": "Definition: An integration (e.g. Pure, SciVal) needs setup or shows an error."
+      },
+      "SCAI1.3": {
+        "label": "SUSHI / COUNTER Reports",
+        "description": "Definition: The customer needs SUSHI/COUNTER usage reporting set up or fixed."
+      },
+      "SCAI1.4": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The integration need is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'API / Integration'. Choose the Level 2 value from this group only. 'API / Integration' means: Definition: API keys, institutional tokens, SUSHI/COUNTER, Pure/SciVal integrations."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "SCNS1": {
+    "label": "Non-Scopus / Wrong Product",
+    "children": {
+      "SCNS1.1": {
+        "label": "Web of Science",
+        "description": "Definition: The customer contacted Scopus support about Web of Science."
+      },
+      "SCNS1.2": {
+        "label": "ScienceDirect",
+        "description": "Definition: The customer contacted Scopus support about ScienceDirect."
+      },
+      "SCNS1.3": {
+        "label": "Other Elsevier Product",
+        "description": "Definition: The query concerns another Elsevier product."
+      },
+      "SCNS1.4": {
+        "label": "Journal Submission / Publishing",
+        "description": "Definition: The query concerns submitting or publishing an article."
+      },
+      "SCNS1.5": {
+        "label": "Other Product / Company",
+        "description": "Definition: The query concerns another product or company."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Non-Scopus / Wrong Product'. Choose the Level 2 value from this group only. 'Non-Scopus / Wrong Product' means: Definition: Tickets about Web of Science, ScienceDirect, ClinicalKey/other Elsevier products, journal submission or publishing, or other companies."
+  }
+}

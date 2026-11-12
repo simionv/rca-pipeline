@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "regid_adjudicate": {
+      "taxonomy_hash": "a3e2b2ebc566f8e7f1e9040f434f50da54a2829d6e4368a70111adfdcd5d6af5",
+      "taxonomy_written_at": "2026-11-12T14:04:00.709323+00:00",
+      "py_hash": "a3e2b2ebc566f8e7f1e9040f434f50da54a2829d6e4368a70111adfdcd5d6af5",
+      "py_generated_at": "2026-11-12T13:58:24.891708+00:00"
+    },
+    "regid_taxonomy": {
+      "taxonomy_hash": "e06b928baa53453016833a4927401c0c107c1ca04ed3294849760cb940459709",
+      "taxonomy_written_at": "2026-11-12T14:04:00.711512+00:00",
+      "py_hash": "e06b928baa53453016833a4927401c0c107c1ca04ed3294849760cb940459709",
+      "py_generated_at": "2026-11-12T13:58:24.894405+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:00.712324+00:00",
+  "generator_version": "1.7.0"
+}

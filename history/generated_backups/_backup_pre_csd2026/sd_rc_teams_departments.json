@@ -1,0 +1,20 @@
+{
+  "SDTD1": {
+    "label": "Set up teams or departments",
+    "children": {
+      "SDTD1.1": {
+        "label": "Request to set up teams or departments (incl IP)",
+        "description": "Definition: Use when the customer asks to create or configure teams, departments, groups or their IP access."
+      },
+      "SDTD1.2": {
+        "label": "Not enough info",
+        "description": "Definition: Use when organisational setup is requested but the required configuration is unclear."
+      },
+      "SDTD1.3": {
+        "label": "Other",
+        "description": "Definition: Use for another team or department management request."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Set up teams or departments'. Choose the root cause from this group only. That contact reason means: Use when the customer asks to create, modify or manage organisational teams, departments or user groups, including their members or permissions, and IP range, and not for a generic bulk account upload."
+  }
+}

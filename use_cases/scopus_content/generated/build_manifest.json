@@ -1,0 +1,30 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "68560b0007c55623faea901d0a4515303e1ee60659b16b39cd0721dc730796ce",
+      "taxonomy_written_at": "2026-11-12T14:04:01.734300+00:00",
+      "py_hash": "68560b0007c55623faea901d0a4515303e1ee60659b16b39cd0721dc730796ce",
+      "py_generated_at": "2026-11-12T13:58:25.973446+00:00"
+    },
+    "customer_effort": {
+      "taxonomy_hash": "d5cc2c85cf97899369003735cfd3d5f2350aee7fa088392c86a7fa6707578fc3",
+      "taxonomy_written_at": "2026-11-12T14:04:01.735875+00:00",
+      "py_hash": "d5cc2c85cf97899369003735cfd3d5f2350aee7fa088392c86a7fa6707578fc3",
+      "py_generated_at": "2026-11-12T13:58:25.975375+00:00"
+    },
+    "policy_compliance": {
+      "taxonomy_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "taxonomy_written_at": "2026-11-12T14:04:01.737586+00:00",
+      "py_hash": "118fec8a77f34e2d7e45a7b77863f80b82321a4d6798dd1da8cb51e642828620",
+      "py_generated_at": "2026-11-12T13:58:25.977447+00:00"
+    },
+    "policy_rules": {
+      "taxonomy_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "taxonomy_written_at": "2026-11-12T14:04:01.739706+00:00",
+      "py_hash": "48a382120dc005ffa8513e9f8c42959973f1a4f780ef551afae95da0ff2100f2",
+      "py_generated_at": "2026-11-12T13:58:25.980078+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:01.741164+00:00",
+  "generator_version": "1.7.0"
+}

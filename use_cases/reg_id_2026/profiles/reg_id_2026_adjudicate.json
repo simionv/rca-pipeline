@@ -1,0 +1,19 @@
+{
+  "_comment": "Adjudicates the tickets whose CUSTOMER turns match the Tableau Registration/Bulk ID regex: is the customer really asking for the IDs, or did the phrase arrive some other way? The Conversation column of this input holds the CUSTOMER TURNS ONLY, with the agent reply deliberately withheld, because measuring the regex against the manually tagged corpus showed 356 of 607 false positives were complimentary-access tickets the agent answered by issuing registration IDs. The exception is tickets that contain no customer turn at all (agent-logged notes, phone summaries), which are sent whole - about 11% of this input, flagged in the deliverable as rid_no_customer_turn. Input is written by notebooks/16_reg_id_2026_bulkid_taxonomy.ipynb, not the raw file.",
+  "input": "runs/intermediate/regid_adjudicate_input.csv",
+  "output": "runs/output/reg_id_2026_adjudicate.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "regid_adjudicate"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports",
+  "temperature": 0.0
+}

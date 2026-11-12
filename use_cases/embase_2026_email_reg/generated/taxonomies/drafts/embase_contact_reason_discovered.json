@@ -1,0 +1,104 @@
+{
+  "ECR1": {
+    "label": "Content and Record Issues",
+    "children": {
+      "ECR1.1": {
+        "label": "Correction to a Record",
+        "description": "Requests for changes or updates to existing records to ensure accuracy."
+      },
+      "ECR1.2": {
+        "label": "Missing or Incomplete Indexed Content",
+        "description": "Inquiries regarding content that is not present or is incomplete in the index."
+      },
+      "ECR1.3": {
+        "label": "Concerns Regarding Indexed Content Quality",
+        "description": "Feedback or complaints about the quality of indexed content."
+      },
+      "ECR1.4": {
+        "label": "Other Content and Record Issues",
+        "description": "Cases that fall within this category but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers issues related to the accuracy and completeness of indexed content and records."
+  },
+  "ECR2": {
+    "label": "Access and Technical Issues",
+    "children": {
+      "ECR2.1": {
+        "label": "Access Issues",
+        "description": "Requests related to difficulties in accessing content or services."
+      },
+      "ECR2.2": {
+        "label": "Technical Issues",
+        "description": "General inquiries about technical problems, including integration and alerts."
+      },
+      "ECR2.3": {
+        "label": "Institutional Access Set-Up",
+        "description": "Requests for assistance in setting up access for institutions."
+      },
+      "ECR2.4": {
+        "label": "Other Access and Technical Issues",
+        "description": "Cases that fall within this category but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category encompasses problems related to access and technical functionalities."
+  },
+  "ECR3": {
+    "label": "Usage and Reporting Requests",
+    "children": {
+      "ECR3.1": {
+        "label": "Usage Report Request",
+        "description": "Requests for detailed reports on usage statistics."
+      },
+      "ECR3.2": {
+        "label": "Usage Data Inquiry",
+        "description": "Inquiries about specific usage data or analytics."
+      },
+      "ECR3.3": {
+        "label": "Usage Statistics Request",
+        "description": "Requests for general statistics regarding usage."
+      },
+      "ECR3.4": {
+        "label": "Other Usage and Reporting Requests",
+        "description": "Cases that fall within this category but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category includes requests for usage data and reports."
+  },
+  "ECR4": {
+    "label": "General Inquiries and Support",
+    "children": {
+      "ECR4.1": {
+        "label": "General Inquiry",
+        "description": "Broad questions or requests for information that do not fit other categories."
+      },
+      "ECR4.2": {
+        "label": "Feedback or Product Improvement Suggestion",
+        "description": "Suggestions for enhancing the product or service based on user experience."
+      },
+      "ECR4.3": {
+        "label": "Request for Documentation or Guides",
+        "description": "Requests for help documents, guides, or other instructional materials."
+      },
+      "ECR4.4": {
+        "label": "Other General Inquiries and Support",
+        "description": "Cases that fall within this category but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers general questions and requests for assistance."
+  },
+  "ECR5": {
+    "label": "Order and Billing Issues",
+    "children": {
+      "ECR5.1": {
+        "label": "Order, Renewal or Invoice",
+        "description": "Requests related to the status or issues with orders, renewals, or invoices."
+      },
+      "ECR5.2": {
+        "label": "Other Order and Billing Issues",
+        "description": "Cases that fall within this category but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category includes inquiries related to orders, renewals, and invoices."
+  }
+}

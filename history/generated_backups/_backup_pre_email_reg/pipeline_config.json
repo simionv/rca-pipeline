@@ -1,0 +1,127 @@
+{
+  "modules": {
+    "s2ls_escalation_effort": {
+      "taxonomy_prefix": "SLJ",
+      "taxonomy_file": "s2ls_escalation_effort.json",
+      "taxonomy_key": "s2ls_escalation_effort",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "From one Scopus Content support transcript decide whether it was really escalated 1LS -> 2LS, how often it went back and forth, whether internal notes exist, and the customer effort - with evidence for each. Scopus Content support: 1LS agents talk to the customer; 2LS is the team behind them (agents say \"technical team\", \"second-line\", \"Content team\", \"relevant team\"), and beyond it the content suppliers. Each turn starts [T<n> | date | +days since previous turn | speaker]. Speakers: Customer; Customer (auto-reply) = auto-responder, never effort; Agent A1, A2... = human 1LS agents (new number = new person); System (automated) = template acknowledgements/\"still open\" reminders. Escalation = a human agent turn saying the case was passed on or is waiting on 2LS/another internal team/the supplier (raised, forwarded, sent, contacted, escalated...), OR \"I have initiated the process to add/amend/correct...\" (this template means it was sent for processing), OR an agent relaying what the team said or did (\"as per the technical team...\", \"they informed me...\"). Agent raised it and later reports it done = resolved by 2LS, not by 1LS. NOT escalation: System turns alone; \"under review\" with nothing else; offering to escalate; redirecting the customer to the publisher or another service. Journey code, escalated, events and counts must agree. Internal note = a staff turn written for colleagues, not the customer (to a team/colleague, mentions 1LS/2LS/L1/L2, handling instructions, internal task numbers, \"special handling procedure\") - even when it opens \"Dear <customer name>\", e.g. \"This should be tracked closely... a dedicated group looking into this on both 1LS and 2LS\" or \"a task has been assigned to 2LS, Task: 251016-008451\". Also an agent telling the customer they left a private/internal note for 2LS. Every *_evidence = VERBATIM quote from the transcript, max 30 words, no [T..] header; empty string if the value is negative and there is nothing to quote. Every *_justification = max 25 words, names the turns (e.g. \"T4, T9\") and explains the judgement. Both refer to the field just before them. Read the whole transcript first.",
+      "classify_fn": "classify_s2ls_escalation_effort",
+      "code_field": "s2_journey_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "s2_journey_code",
+    "s2_journey_justification",
+    "s2_escalated",
+    "s2_escalated_evidence",
+    "s2_escalated_justification",
+    "s2_escalation_target",
+    "s2_handoff_events",
+    "s2_escalation_count",
+    "s2_return_count",
+    "s2_handoff_justification",
+    "s2_not_escalated_reason",
+    "s2_internal_note_type",
+    "s2_internal_note_evidence",
+    "s2_internal_note_justification",
+    "s2_internal_note_summary",
+    "s2_effort_score",
+    "s2_effort_evidence",
+    "s2_effort_justification",
+    "s2_friction_points",
+    "s2_customer_chase_count",
+    "s2_customer_chase_evidence",
+    "s2_customer_chase_justification",
+    "s2_customer_repeat_info",
+    "s2_customer_repeat_info_evidence",
+    "s2_customer_repeat_info_justification",
+    "s2_resolution_outcome",
+    "s2_resolution_outcome_evidence",
+    "s2_resolution_outcome_justification",
+    "s2_resolution_transparency",
+    "s2_resolution_transparency_evidence",
+    "s2_resolution_transparency_justification",
+    "s2_customer_sentiment_end",
+    "s2_customer_sentiment_end_evidence",
+    "s2_customer_sentiment_end_justification",
+    "s2_deadline_pressure",
+    "s2_deadline_pressure_evidence",
+    "s2_deadline_pressure_justification"
+  ],
+  "reorder_groups": {
+    "A": 1
+  },
+  "enum_validators": {
+    "s2_escalated": [
+      "yes",
+      "no",
+      "unclear"
+    ],
+    "s2_escalation_target": [
+      "technical_team_2ls",
+      "content_supplier",
+      "other_internal_team",
+      "none"
+    ],
+    "s2_not_escalated_reason": [
+      "resolved_at_1ls",
+      "rejected_at_1ls",
+      "customer_no_response",
+      "redirected_elsewhere",
+      "na"
+    ],
+    "s2_internal_note_type": [
+      "none",
+      "note_in_thread",
+      "note_referenced",
+      "both"
+    ],
+    "s2_effort_score": [
+      "very_low",
+      "low",
+      "medium",
+      "high",
+      "very_high"
+    ],
+    "s2_resolution_outcome": [
+      "resolved",
+      "partially_resolved",
+      "rejected",
+      "unresolved",
+      "unclear"
+    ],
+    "s2_resolution_transparency": [
+      "transparent",
+      "partial",
+      "opaque"
+    ],
+    "s2_customer_sentiment_end": [
+      "positive",
+      "neutral",
+      "negative",
+      "no_reply"
+    ]
+  },
+  "list_fields": [],
+  "object_list_fields": {
+    "s2_handoff_events": [
+      "turn",
+      "direction",
+      "event",
+      "evidence"
+    ],
+    "s2_friction_points": [
+      "category",
+      "evidence",
+      "justification"
+    ]
+  },
+  "code_fields": [
+    "s2_journey_code"
+  ],
+  "output_exclude": []
+}

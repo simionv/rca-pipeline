@@ -1,0 +1,10 @@
+# Install once:  pip install pre-commit && pre-commit install
+# Blocks commits that contain notebook outputs, e-mail addresses, passwords or large data files.
+repos:
+  - repo: local
+    hooks:
+      - id: check-repo
+        name: no customer data, secrets or notebook outputs
+        entry: python tools/check_repo.py
+        language: system
+        pass_filenames: true

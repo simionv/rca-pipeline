@@ -1,0 +1,46 @@
+# Use-case catalog
+
+Every analysis done with this pipeline, one row each. Click a name for its page (question, data, approach, results, lessons, how to re-run).
+To add one: copy `use_cases/_template`, fill in its README, then run `rca catalog`.
+
+| use case | product | question | tags | status | period |
+|---|---|---|---|---|---|
+| [Generic module library — the starter definition for new analyses](use_cases/generic/README.md) | Any (product-neutral) | Which ready-made, product-neutral modules can I copy to start a new ticket-classification request quickly? | single-stage | active | n/a |
+| [Scopus 2026 — two-stage Level 1 / Level 2 ticket classification](use_cases/scopus_2026/README.md) | Scopus | Why did customers contact Scopus support in 2026, at Level 1 (16 revised categories) and at Level 2 (the specific reason within each category)? | two-stage, hierarchical | active | 2026-01 to 2026-09 |
+| [Registration ID / BulkID requests and a cleaned account-support taxonomy](use_cases/reg_id_2026/README.md) | Elsevier account and access support | Which account-support tickets are genuine requests for Registration IDs or BulkIDs, and what is every other ticket about? | single-stage, gold-set | complete | 2025-09 to 2026-09 |
+| [Embase 2026 email-registration tickets, with a discovered contact reason for the rest](use_cases/embase_2026_email_reg/README.md) | Embase | How many Embase support tickets are about email registration or an email-account problem, what kinds are they, and why did everyone else contact support? | gate-then-subreason, email-registration, discovery | complete | 2025-12 to 2026-09 |
+| [Evolve 2026 — contact reason and root cause with an SME gold set](use_cases/evolve/README.md) | Evolve | Why do Evolve customers contact support in 2026, and what is the root cause within each contact reason? | hierarchical, gold-set, k-fold, feedback-examples | complete | 2026-01 to 2026-02 |
+| [LeapSpace 2026, two-step contact reason then root cause by access type](use_cases/leapspace_2026/README.md) | LeapSpace | Why do customers contact LeapSpace support, and for access problems, what is the root cause for individual and for institutional users? | two-stage, gold-set | complete | 2025-10 to 2026-07 |
+| [LeapSpace 2026 email-registration tickets, with contact reason for the rest](use_cases/leapspace_2026_email_reg/README.md) | LeapSpace | How many LeapSpace support tickets are about email registration or an email-account problem, what kinds are they, and why did everyone else contact support? | gate-then-subreason, email-registration, discovery | complete | 2026-03 to 2026-09 |
+| [Mendeley Account Already Exists — email in use vs email change](use_cases/account_already_exists/README.md) | Mendeley | Are Mendeley "account already exists / email already in use" tickets really blocked sign-ups, or customers trying to change their email? | single-stage, discovery | complete | 2024-08 to 2026-02 |
+| [Mendeley Account Recovery — accidental vs deliberate deletion deep dive](use_cases/account_recovery/README.md) | Mendeley | Among Mendeley account-recovery tickets, how many are really accidental deletion, deliberate deletion, or an email already in use? | single-stage | complete | 2024-08 to 2026-02 |
+| [Mendeley Login Blocked — other credential issues deep dive](use_cases/login_blocked/README.md) | Mendeley | What is really behind Mendeley "login blocked" tickets that the broad run could only label "other credential issues"? | single-stage, discovery | complete | 2024-08 to 2026-02 |
+| [Mendeley support — ID and access contact reasons and root causes](use_cases/mendeley/README.md) | Mendeley | Why do Mendeley customers contact support about sign-in, accounts and institutional access, and what causes those problems? | single-stage, escalation | complete | 2024-08 to 2026-02 |
+| [ScienceDirect 2026 — contact reason and root cause (two-stage)](use_cases/sd_2026/README.md) | ScienceDirect | Why do ScienceDirect customers contact support in 2026, and what is the root cause behind each contact reason? | two-stage, hierarchical, gold-set, feedback-examples | complete | 2026-01 to 2026-07 |
+| [ScienceDirect 2026 — "Accessing content" and its sub-contact reasons](use_cases/sd_2026_accessing_content/README.md) | ScienceDirect | How many 2026 ScienceDirect tickets are about accessing specific content, and what kind of content-access need is behind each one? | two-stage, gate-then-subreason | complete | 2026-01 to 2026-07 |
+| [Scopus Content 2LS — escalation check, back-and-forth and customer effort](use_cases/scopus_2ls_2026/README.md) | Scopus | Were Scopus Content tickets really escalated from first-line (1LS) to second-line (2LS) support, how often did they bounce back and forth, and how much extra effort did that cost the customer? | single-stage, escalation, customer-effort, regression-model, deck | complete | 2024-11 to 2026-09 |
+| [Scopus Content — customer effort, policy compliance and policy rules](use_cases/scopus_content/README.md) | Scopus | What drives customer effort on Scopus Content tickets, and how much of it comes from content policies being misapplied or misunderstood? | single-stage, customer-effort, policy-compliance, survey-linked, discovery, regression-model, deck | complete | 2024-11 to 2026-03 |
+| [Scopus Content Service Desk 2026 — validation rules, rejection reasons and customer effort](use_cases/csd_2026/README.md) | Scopus (Content Service Desk) | Why are Scopus content requests rejected, does the policy matrix explain the rejections agents log, and which rejections cost customers the most effort? | validation-rules, policy-compliance, discovery, customer-effort, dsat, survey-linked, regression-model, deck | complete | 2026-01 to 2026-07 |
+| [LeapSpace contact reason and root cause, gold-set version (first LeapSpace study)](use_cases/leapspace_legacy/README.md) | LeapSpace | Why do customers contact LeapSpace support, and what is the root cause behind each contact? | hierarchical, gold-set, k-fold, feedback-examples | superseded | 2025-10 to 2026-05 |
+
+## By technique
+
+- **customer-effort**: [scopus_2ls_2026](use_cases/scopus_2ls_2026/README.md), [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **deck**: [scopus_2ls_2026](use_cases/scopus_2ls_2026/README.md), [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **discovery**: [embase_2026_email_reg](use_cases/embase_2026_email_reg/README.md), [leapspace_2026_email_reg](use_cases/leapspace_2026_email_reg/README.md), [account_already_exists](use_cases/account_already_exists/README.md), [login_blocked](use_cases/login_blocked/README.md), [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **dsat**: [csd_2026](use_cases/csd_2026/README.md)
+- **email-registration**: [embase_2026_email_reg](use_cases/embase_2026_email_reg/README.md), [leapspace_2026_email_reg](use_cases/leapspace_2026_email_reg/README.md)
+- **escalation**: [mendeley](use_cases/mendeley/README.md), [scopus_2ls_2026](use_cases/scopus_2ls_2026/README.md)
+- **feedback-examples**: [evolve](use_cases/evolve/README.md), [sd_2026](use_cases/sd_2026/README.md), [leapspace_legacy](use_cases/leapspace_legacy/README.md)
+- **gate-then-subreason**: [embase_2026_email_reg](use_cases/embase_2026_email_reg/README.md), [leapspace_2026_email_reg](use_cases/leapspace_2026_email_reg/README.md), [sd_2026_accessing_content](use_cases/sd_2026_accessing_content/README.md)
+- **gold-set**: [reg_id_2026](use_cases/reg_id_2026/README.md), [evolve](use_cases/evolve/README.md), [leapspace_2026](use_cases/leapspace_2026/README.md), [sd_2026](use_cases/sd_2026/README.md), [leapspace_legacy](use_cases/leapspace_legacy/README.md)
+- **hierarchical**: [scopus_2026](use_cases/scopus_2026/README.md), [evolve](use_cases/evolve/README.md), [sd_2026](use_cases/sd_2026/README.md), [leapspace_legacy](use_cases/leapspace_legacy/README.md)
+- **k-fold**: [evolve](use_cases/evolve/README.md), [leapspace_legacy](use_cases/leapspace_legacy/README.md)
+- **policy-compliance**: [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **regression-model**: [scopus_2ls_2026](use_cases/scopus_2ls_2026/README.md), [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **single-stage**: [generic](use_cases/generic/README.md), [reg_id_2026](use_cases/reg_id_2026/README.md), [account_already_exists](use_cases/account_already_exists/README.md), [account_recovery](use_cases/account_recovery/README.md), [login_blocked](use_cases/login_blocked/README.md), [mendeley](use_cases/mendeley/README.md), [scopus_2ls_2026](use_cases/scopus_2ls_2026/README.md), [scopus_content](use_cases/scopus_content/README.md)
+- **survey-linked**: [scopus_content](use_cases/scopus_content/README.md), [csd_2026](use_cases/csd_2026/README.md)
+- **two-stage**: [scopus_2026](use_cases/scopus_2026/README.md), [leapspace_2026](use_cases/leapspace_2026/README.md), [sd_2026](use_cases/sd_2026/README.md), [sd_2026_accessing_content](use_cases/sd_2026_accessing_content/README.md)
+- **validation-rules**: [csd_2026](use_cases/csd_2026/README.md)
+
+_Generated by `rca catalog` — edit the use-case READMEs, not this file._

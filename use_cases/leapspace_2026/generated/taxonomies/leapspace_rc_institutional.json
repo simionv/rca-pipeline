@@ -1,0 +1,56 @@
+{
+  "RCI1": {
+    "label": "Institutional user cannot access",
+    "children": {
+      "RCI1.1": {
+        "label": "Technical issue – downtime",
+        "description": "Definition: A temporary LeapSpace-side technical incident made the service unavailable or prevented access for a defined period. The precise underlying technical cause is not documented in the ticket. Ticket signals / evidence: The agent or product team explicitly mentions an intermittent issue, downtime, a temporary service disruption or a technical correction; access is expected to work again after the incident, without any change to the user’s account, entitlement or institutional configuration."
+      },
+      "RCI1.2": {
+        "label": "IP confusion",
+        "description": "Definition: The user expects institutional IP recognition to provide access without signing in, the issue is primarily misunderstanding of the new access flow. Ticket signals / evidence: Questions such as “Do we need to register for IP?”, “Why do I need to choose an account?”, “Why do I need to confirm my identity?”, or statements that access should work automatically based on IP."
+      },
+      "RCI1.3": {
+        "label": "Email blocked/blacklisted",
+        "description": "Definition: The user’s email address is on an internal block list Ticket signals / evidence: The agent explicitly says that the email was found on a block list/blacklist"
+      },
+      "RCI1.4": {
+        "label": "Not within IP range",
+        "description": "Definition: The institution provides IP-based access, but the user is trying to connect outside the registered campus or institutional network. Ticket signals / evidence: The customer confirms institutional access but is off campus; the agent asks them to test within the registered IP range; the customer says they will retry on campus."
+      },
+      "RCI1.5": {
+        "label": "SD AI migration gap",
+        "description": "Definition: ScienceDirect AI users were expected to receive LeapSpace access when SDAI was deprecated, but the migration or backend entitlement setup did not always transfer correctly. Ticket signals / evidence: References to SDAI, loss of the SDAI button, previous SDAI access, or the expectation that SDAI access should have become LeapSpace access; agents may give inconsistent entitlement answers."
+      },
+      "RCI1.6": {
+        "label": "Access method not set up (SSO)",
+        "description": "Definition: The institution is entitled, but the required authentication/access method has not been configured or enabled. Ticket signals / evidence: The institution has a valid trial/subscription but cannot access on campus or remotely; the request asks for a federated/SSO access method to be enabled; the agent confirms the access method is not set up."
+      },
+      "RCI1.7": {
+        "label": "Institution not entitled",
+        "description": "Definition: The customer is attempting access through an organization that does not have an active LeapSpace subscription or entitlement. Ticket signals / evidence: The agent explicitly confirms that the institution/organization is not subscribed or entitled; the case must concern organization-based access rather than a self-purchased subscription using an institutional email."
+      },
+      "RCI1.8": {
+        "label": "Technical issue – Cortex",
+        "description": "Definition: A backend entitlement process temporarily failed to collect or process valid entitlements; mentions of Cortex as a possible related system but exact role unclear. Ticket signals / evidence: The ticket says the entitlement process lost access to input queues, describes a defined incident window or correction, or explicitly mentions Cortex."
+      },
+      "RCI1.9": {
+        "label": "Not enough info",
+        "description": "Definition: The ticket does not contain enough reliable evidence to identify a root cause, or contains fragments/contradictory statements without a confirmed resolution. Ticket signals / evidence: Only email headers or partial internal messages, no customer response, conflicting entitlement statements, or several troubleshooting actions with no clear outcome."
+      },
+      "RCI1.10": {
+        "label": "Change org issue",
+        "description": "Definition: A bug in LeapSpace’s Change Organization feature means that selecting a different organization appears to work, but the change is not correctly saved or applied, so the previous organization and its entitlements remain active. Ticket signals / evidence: The ticket explicitly mentions “Change Organization” or “change org”; changing organization in LeapSpace does not take effect, returns the user to the previous organization, or fails to apply the expected entitlement. Agents may instruct the user to change organization in ScienceDirect and then reopen LeapSpace, because this was used as a workaround for the LeapSpace bug."
+      },
+      "RCI1.11": {
+        "label": "Proxy issue",
+        "description": "Definition: Users are unable to access LeapSpace through the institution’s proxy access method, even though the institution may otherwise be entitled to the product. Ticket signals / evidence: The ticket must explicitly mention “proxy” as the access method and state that LeapSpace cannot be accessed through it. Maria found only one case, relating to an issue that remained unresolved until 26 May."
+      },
+      "RCI1.12": {
+        "label": "Error 403",
+        "description": "Definition: The user is prevented from opening LeapSpace and explicitly receives an HTTP 403 error. This is a symptom-level classification: the ticket confirms the error code, but does not necessarily identify the underlying technical cause. Ticket signals / evidence: The customer message, screenshot or agent notes explicitly contain “403,” “403 error” or “LeapSpace error 403.” Use this classification only when the error code is clearly documented; it may overlap with downtime when the product team also confirms an intermittent incident in that case keep as 403"
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Institutional user cannot access'. Choose the root cause from this group only."
+  }
+}

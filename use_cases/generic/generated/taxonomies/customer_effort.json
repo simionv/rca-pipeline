@@ -1,0 +1,172 @@
+{
+  "CE1": {
+    "label": "Resolution difficulty",
+    "children": {
+      "CE1.1": {
+        "label": "Not resolved on first contact",
+        "description": "Customer had to contact support more than once to resolve the same issue."
+      },
+      "CE1.2": {
+        "label": "Multiple steps required for simple issue",
+        "description": "An issue that should have been straightforward required excessive steps or approvals."
+      },
+      "CE1.3": {
+        "label": "Partial or incomplete resolution",
+        "description": "The resolution provided only addressed part of the customer's issue, leaving other aspects unresolved."
+      },
+      "CE1.4": {
+        "label": "Resolution delayed beyond expectation",
+        "description": "Resolution took significantly longer than the customer expected or was promised."
+      },
+      "CE1.5": {
+        "label": "Other resolution difficulty",
+        "description": "A resolution difficulty that does not fit another sub-category."
+      }
+    },
+    "description": "The customer had to work hard to achieve resolution: the issue was complex, required multiple steps, or was not resolved on the first attempt."
+  },
+  "CE2": {
+    "label": "Process burden",
+    "children": {
+      "CE2.1": {
+        "label": "Excessive information or documentation required",
+        "description": "Customer was asked to provide more information, documents, or verification than seemed necessary."
+      },
+      "CE2.2": {
+        "label": "Repetitive identity verification",
+        "description": "Customer had to verify their identity or repeat account details multiple times in the same interaction."
+      },
+      "CE2.3": {
+        "label": "Required to contact multiple departments",
+        "description": "Customer was passed between teams or departments and had to re-explain their issue."
+      },
+      "CE2.4": {
+        "label": "Complex or non-intuitive self-service process",
+        "description": "The self-service option available required too much effort or knowledge to complete."
+      },
+      "CE2.5": {
+        "label": "Other process burden",
+        "description": "A process burden that does not fit another sub-category."
+      }
+    },
+    "description": "The company's processes, policies, or procedures created unnecessary effort for the customer."
+  },
+  "CE3": {
+    "label": "Communication friction",
+    "children": {
+      "CE3.1": {
+        "label": "Unclear or confusing guidance from agent",
+        "description": "Instructions provided by the agent were unclear, ambiguous, or hard to follow."
+      },
+      "CE3.2": {
+        "label": "Inconsistent information across contacts",
+        "description": "Customer received different answers from different agents about the same question."
+      },
+      "CE3.3": {
+        "label": "Use of unexplained technical jargon",
+        "description": "Agent used technical terms or acronyms the customer did not understand, requiring clarification."
+      },
+      "CE3.4": {
+        "label": "Insufficient proactive communication",
+        "description": "Customer had to ask for updates rather than being proactively informed of progress or status."
+      },
+      "CE3.5": {
+        "label": "Other communication friction",
+        "description": "A communication friction point that does not fit another sub-category."
+      }
+    },
+    "description": "Friction caused by how information was communicated: clarity, consistency, or availability of guidance."
+  },
+  "CE4": {
+    "label": "Channel and access friction",
+    "children": {
+      "CE4.1": {
+        "label": "Excessive wait time or hold time",
+        "description": "Customer experienced significant wait times to reach an agent or receive a response."
+      },
+      "CE4.2": {
+        "label": "Forced to use non-preferred channel",
+        "description": "Customer was required to switch to a channel they did not prefer (e.g. phone when email was preferred)."
+      },
+      "CE4.3": {
+        "label": "No adequate self-service option",
+        "description": "Self-service was not available for a task that should be achievable without agent involvement."
+      },
+      "CE4.4": {
+        "label": "Difficult or ineffective IVR or chatbot",
+        "description": "Automated phone system or chatbot could not route or handle the customer's request."
+      },
+      "CE4.5": {
+        "label": "Other channel friction",
+        "description": "A channel or access friction issue that does not fit another sub-category."
+      }
+    },
+    "description": "Friction caused by the support channels available: wait times, forced channel switches, or inability to use the customer's preferred channel."
+  },
+  "CE5": {
+    "label": "Information and knowledge gaps",
+    "children": {
+      "CE5.1": {
+        "label": "Documentation insufficient or missing",
+        "description": "Help articles, FAQs, or user guides did not cover the customer's scenario."
+      },
+      "CE5.2": {
+        "label": "Conflicting information between channels",
+        "description": "Customer found different answers in the help centre vs. what the agent told them, or between different help articles."
+      },
+      "CE5.3": {
+        "label": "Information not available in preferred language",
+        "description": "Documentation or support was not available in the customer's language."
+      },
+      "CE5.4": {
+        "label": "Other information gap",
+        "description": "An information gap that does not fit another sub-category."
+      }
+    },
+    "description": "Customer struggled due to insufficient, hard-to-find, or incorrect product information."
+  },
+  "CE6": {
+    "label": "Repeat contact and follow-up burden",
+    "children": {
+      "CE6.1": {
+        "label": "Had to chase for promised follow-up",
+        "description": "Agent committed to a follow-up action but the customer had to initiate contact again to prompt it."
+      },
+      "CE6.2": {
+        "label": "Case closed prematurely",
+        "description": "Support ticket or case was closed before the issue was resolved, requiring the customer to reopen or create a new contact."
+      },
+      "CE6.3": {
+        "label": "Had to re-explain issue to new agent",
+        "description": "Customer was transferred or had to contact again and repeat the full context to a new agent."
+      },
+      "CE6.4": {
+        "label": "Other repeat contact burden",
+        "description": "A repeat contact or follow-up burden that does not fit another sub-category."
+      }
+    },
+    "description": "Customer had to make multiple contacts, chase for updates, or re-engage because follow-up actions were not completed as promised."
+  },
+  "CE7": {
+    "label": "Emotional labour",
+    "children": {
+      "CE7.1": {
+        "label": "Had to argue or advocate for resolution",
+        "description": "Customer felt they were not believed or had to push back repeatedly before the agent acted on their request."
+      },
+      "CE7.2": {
+        "label": "Felt dismissed or not taken seriously",
+        "description": "Customer expressed that their issue was minimised, dismissed, or not treated as valid."
+      },
+      "CE7.3": {
+        "label": "Emotional distress during interaction",
+        "description": "Customer expressed significant distress, anxiety, or upset during the interaction beyond normal frustration."
+      },
+      "CE7.4": {
+        "label": "Other emotional burden",
+        "description": "An emotional burden that does not fit another sub-category."
+      }
+    },
+    "description": "The customer experienced significant emotional burden during the interaction: had to advocate, argue, or manage their own emotions to achieve resolution."
+  }
+}

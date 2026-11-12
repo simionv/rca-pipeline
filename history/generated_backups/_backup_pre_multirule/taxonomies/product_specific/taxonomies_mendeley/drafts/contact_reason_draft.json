@@ -1,0 +1,90 @@
+{
+  "CR1": {
+    "label": "Account Issues",
+    "children": {
+      "CR1.1": {
+        "label": "Login / Authentication Issue"
+      },
+      "CR1.2": {
+        "label": "Account Recovery Request"
+      },
+      "CR1.3": {
+        "label": "Account Management Request"
+      },
+      "CR1.4": {
+        "label": "Account Deletion Request"
+      },
+      "CR1.5": {
+        "label": "Other Account-Related Issues"
+      }
+    }
+  },
+  "CR2": {
+    "label": "Technical Problems",
+    "children": {
+      "CR2.1": {
+        "label": "Application Loading Issue"
+      },
+      "CR2.2": {
+        "label": "Software Functionality Issue"
+      },
+      "CR2.3": {
+        "label": "Integration Issue with Third-Party Software"
+      },
+      "CR2.4": {
+        "label": "Synchronization Issue"
+      },
+      "CR2.5": {
+        "label": "Other Technical Issues"
+      }
+    }
+  },
+  "CR3": {
+    "label": "Citation Management",
+    "children": {
+      "CR3.1": {
+        "label": "Citation Formatting Issue"
+      },
+      "CR3.2": {
+        "label": "Citation Import/Export Issue"
+      },
+      "CR3.3": {
+        "label": "Missing References Issue"
+      },
+      "CR3.4": {
+        "label": "Other Citation Management Issues"
+      }
+    }
+  },
+  "CR4": {
+    "label": "Subscription and Access",
+    "children": {
+      "CR4.1": {
+        "label": "Subscription Inquiry"
+      },
+      "CR4.2": {
+        "label": "Access Issue"
+      },
+      "CR4.3": {
+        "label": "Feature Access Inquiry"
+      },
+      "CR4.4": {
+        "label": "Other Subscription and Access Issues"
+      }
+    }
+  },
+  "CR5": {
+    "label": "General Inquiries",
+    "children": {
+      "CR5.1": {
+        "label": "Request for Assistance"
+      },
+      "CR5.2": {
+        "label": "Program Inquiry"
+      },
+      "CR5.3": {
+        "label": "Other General Inquiries"
+      }
+    }
+  }
+}

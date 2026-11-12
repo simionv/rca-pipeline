@@ -1,0 +1,16 @@
+{
+  "_comment":     "Step 1 of 2 — classify every 2026 LeapSpace ticket into one of 8 contact reasons. Built from data/copy_leapspace_enriched.xlsx via definitions/leapspace_2026_pipeline_definition.xlsx. feedback_dir is deliberately omitted: feedback/leapspace holds corrections coded CR1.1-CR8.4 from the OLD taxonomy, which do not exist here.",
+  "input":        "data/leapspace_collapsed_2026.csv",
+  "output":       "runs/output/leapspace_2026_step1_contact_reason.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col":     "Conversation",
+  "id_col":       "INCIDENT_REF",
+  "modules":      ["leapspace_contact_reason"],
+  "batch_size":   5,
+  "max_chars":    40000,
+  "concurrency":  2,
+  "retries":      5,
+  "max_tokens":   8192,
+  "track_costs":  true,
+  "cost_report_dir": "runs/cost_reports"
+}

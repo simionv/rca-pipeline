@@ -1,0 +1,230 @@
+{
+  "INT1": {
+    "label": "Cancel or Terminate",
+    "children": {
+      "INT1.1": {
+        "label": "Cancel subscription",
+        "description": "Customer wants to cancel an ongoing subscription or recurring service."
+      },
+      "INT1.2": {
+        "label": "Close account",
+        "description": "Customer wants to permanently close or delete their account."
+      },
+      "INT1.3": {
+        "label": "Cancel order or booking",
+        "description": "Customer wants to cancel a one-time order, booking, or purchase before fulfilment."
+      },
+      "INT1.4": {
+        "label": "Opt out of service or feature",
+        "description": "Customer wants to stop receiving a specific service, feature, or communication they are enrolled in."
+      }
+    },
+    "description": "The customer wants to end a subscription, close an account, cancel an order, or opt out of a service."
+  },
+  "INT2": {
+    "label": "Refund or Financial Reversal",
+    "children": {
+      "INT2.1": {
+        "label": "Request refund",
+        "description": "Customer wants a monetary refund for a charge already paid."
+      },
+      "INT2.2": {
+        "label": "Reverse or dispute charge",
+        "description": "Customer wants a specific charge removed or reversed, particularly one they believe is incorrect."
+      },
+      "INT2.3": {
+        "label": "Waive fee or penalty",
+        "description": "Customer wants a late fee, cancellation fee, or similar penalty waived."
+      },
+      "INT2.4": {
+        "label": "Request account credit",
+        "description": "Customer wants credit applied to their account rather than a cash refund."
+      }
+    },
+    "description": "The customer wants money returned, a charge reversed, a fee waived, or account credit applied."
+  },
+  "INT3": {
+    "label": "Restore Access",
+    "children": {
+      "INT3.1": {
+        "label": "Reset password or credentials",
+        "description": "Customer wants to reset a password, PIN, or security credentials."
+      },
+      "INT3.2": {
+        "label": "Unlock account",
+        "description": "Customer's account has been locked or suspended and they want it restored."
+      },
+      "INT3.3": {
+        "label": "Reactivate subscription",
+        "description": "Customer wants to reinstate a subscription that has lapsed or been cancelled."
+      },
+      "INT3.4": {
+        "label": "Recover account access",
+        "description": "Customer cannot access their account due to lost credentials, changed email, or ownership dispute."
+      }
+    },
+    "description": "The customer wants to regain access to their account, subscription, or a feature they are locked out of."
+  },
+  "INT4": {
+    "label": "Update Account or Profile",
+    "children": {
+      "INT4.1": {
+        "label": "Update payment method",
+        "description": "Customer wants to change or add a payment method or billing details."
+      },
+      "INT4.2": {
+        "label": "Change email or username",
+        "description": "Customer wants to update their primary email address or account username."
+      },
+      "INT4.3": {
+        "label": "Update personal information",
+        "description": "Customer wants to change name, address, phone number, or other personal details."
+      },
+      "INT4.4": {
+        "label": "Change notification or communication preferences",
+        "description": "Customer wants to adjust how and when they receive emails, alerts, or marketing."
+      },
+      "INT4.5": {
+        "label": "Link or unlink account",
+        "description": "Customer wants to connect or disconnect a third-party account, institution, or integration."
+      }
+    },
+    "description": "The customer wants to change information stored on their account or update their preferences."
+  },
+  "INT5": {
+    "label": "Get Information or Check Status",
+    "children": {
+      "INT5.1": {
+        "label": "Check status of request or order",
+        "description": "Customer wants to know where a previous request, order, or case stands."
+      },
+      "INT5.2": {
+        "label": "Understand a charge or invoice",
+        "description": "Customer wants an explanation of a specific charge, fee, or invoice line item."
+      },
+      "INT5.3": {
+        "label": "Clarify policy or terms",
+        "description": "Customer wants to understand a policy, terms of service, or eligibility rule."
+      },
+      "INT5.4": {
+        "label": "Confirm account details",
+        "description": "Customer wants to verify information currently on their account."
+      },
+      "INT5.5": {
+        "label": "Track progress of previous support request",
+        "description": "Customer is following up on an open case or ticket they already submitted."
+      }
+    },
+    "description": "The customer wants information, clarification, or a status update — no account change required."
+  },
+  "INT6": {
+    "label": "Report a Problem",
+    "children": {
+      "INT6.1": {
+        "label": "Report technical bug or error",
+        "description": "Customer has encountered a software error, crash, or unexpected behaviour."
+      },
+      "INT6.2": {
+        "label": "Report missing or incorrect content",
+        "description": "Customer found that content (document, article, data) is missing, wrong, or inaccessible."
+      },
+      "INT6.3": {
+        "label": "Report account discrepancy",
+        "description": "Customer sees incorrect information in their account — wrong balance, wrong record, wrong status."
+      },
+      "INT6.4": {
+        "label": "Report inappropriate or abusive content",
+        "description": "Customer wants to flag content that violates terms of service or community standards."
+      }
+    },
+    "description": "The customer wants to flag an issue, error, or discrepancy they have encountered."
+  },
+  "INT7": {
+    "label": "Dispute or Appeal a Decision",
+    "children": {
+      "INT7.1": {
+        "label": "Dispute charge or invoice",
+        "description": "Customer believes a charge is incorrect and wants it reviewed or reversed."
+      },
+      "INT7.2": {
+        "label": "Appeal account restriction or suspension",
+        "description": "Customer's account has been restricted or suspended and they want the decision reviewed."
+      },
+      "INT7.3": {
+        "label": "Contest content removal or moderation action",
+        "description": "Customer's content was removed or actioned and they want to challenge the decision."
+      },
+      "INT7.4": {
+        "label": "Escalate unresolved complaint",
+        "description": "Customer has already raised an issue and it has not been resolved; they want senior escalation."
+      }
+    },
+    "description": "The customer wants to challenge or overturn a decision made by the service or platform."
+  },
+  "INT8": {
+    "label": "Technical Fix or Workaround",
+    "children": {
+      "INT8.1": {
+        "label": "Fix broken feature or functionality",
+        "description": "A specific feature is not working and the customer wants it restored."
+      },
+      "INT8.2": {
+        "label": "Troubleshoot connectivity or access error",
+        "description": "Customer cannot connect to or load the service and needs help diagnosing the cause."
+      },
+      "INT8.3": {
+        "label": "Request configuration change",
+        "description": "Customer wants a setting or configuration adjusted that they cannot change themselves."
+      },
+      "INT8.4": {
+        "label": "Request workaround or interim solution",
+        "description": "A fix is not immediately available; customer wants an alternative way to accomplish their goal."
+      }
+    },
+    "description": "The customer needs a technical problem diagnosed and fixed, or a workaround put in place."
+  },
+  "INT9": {
+    "label": "Data Export or Document Request",
+    "children": {
+      "INT9.1": {
+        "label": "Export personal or account data",
+        "description": "Customer wants a copy of all data the service holds on them (e.g. GDPR subject access request)."
+      },
+      "INT9.2": {
+        "label": "Download invoice or receipt",
+        "description": "Customer wants a copy of a specific invoice, receipt, or billing document."
+      },
+      "INT9.3": {
+        "label": "Request official confirmation or letter",
+        "description": "Customer wants an official document confirming account status, ownership, or transaction history."
+      }
+    },
+    "description": "The customer wants to obtain a copy of data, a document, or a record associated with their account."
+  },
+  "INT10": {
+    "label": "Change Plan or Subscription Tier",
+    "children": {
+      "INT10.1": {
+        "label": "Upgrade plan",
+        "description": "Customer wants to move to a higher-tier or more feature-rich plan."
+      },
+      "INT10.2": {
+        "label": "Downgrade plan",
+        "description": "Customer wants to move to a lower-tier or lower-cost plan."
+      },
+      "INT10.3": {
+        "label": "Add feature or add-on",
+        "description": "Customer wants to add an optional feature, seat, or add-on product."
+      },
+      "INT10.4": {
+        "label": "Remove feature or add-on",
+        "description": "Customer wants to remove an optional feature or add-on from their subscription."
+      },
+      "INT10.5": {
+        "label": "Switch billing cycle",
+        "description": "Customer wants to change between monthly and annual billing, or adjust their billing date."
+      }
+    },
+    "description": "The customer wants to move to a different plan, tier, or product variant."
+  }
+}

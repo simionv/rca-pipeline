@@ -1,0 +1,30 @@
+{
+  "input":        "data/scopus_conversations.csv",
+  "output":       "runs/output/scopus_conversations_enriched.xlsx",
+  "text_col":     "conversation",
+  "id_col":       "ticket_id",
+  "taxonomy_dir": "generated/taxonomies",
+  "batch_size":   6,
+  "max_chars":    50000,
+  "concurrency":  3,
+  "retries":      4,
+  "max_tokens":   8192,
+  "backend":      "litellm",
+  "model":        "azure/dsaic-llm-general",
+  "modules":      ["contact_reason", "customer_effort"],
+  "run_name":     "Scopus Content Analysis",
+
+  "enable_confidence":    true,
+  "confidence_threshold": 0.70,
+  "export_review_queue":  true,
+
+  "track_costs":      true,
+  "cost_report_dir":  "runs/cost_reports",
+
+  "feedback_dir":          "runs/feedback",
+  "feedback_max_examples": 5,
+  "feedback_strategy":     "diverse",
+
+  "run_quality_check":  true,
+  "quality_report_dir": "runs/output"
+}

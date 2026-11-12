@@ -1,0 +1,20 @@
+{
+  "SDDC1": {
+    "label": "Account configuration for download articles",
+    "children": {
+      "SDDC1.1": {
+        "label": "Account setup issue",
+        "description": "Definition: Use when account permissions or settings prevent the intended article-download process."
+      },
+      "SDDC1.2": {
+        "label": "Other",
+        "description": "Definition: Use for another download or transactional-account configuration request."
+      },
+      "SDDC1.3": {
+        "label": "Not enough info",
+        "description": "Definition: Use when account configuration is suspected but the required setting is unknown."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Account configuration for download articles'. Choose the root cause from this group only. That contact reason means: Use when the customer asks to configure account-level rules that control article downloads or transactional access, with signals such as download permissions, department access, download limits or pay-per-view settings, and not for failure to open one specific article."
+  }
+}

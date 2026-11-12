@@ -1,0 +1,150 @@
+{
+  "VOC1": {
+    "label": "Product quality feedback",
+    "children": {
+      "VOC1.1": {
+        "label": "Positive product quality feedback",
+        "description": "Customer expresses satisfaction or praise specifically about product quality or reliability."
+      },
+      "VOC1.2": {
+        "label": "Negative product quality feedback",
+        "description": "Customer expresses disappointment, frustration, or criticism about product quality or reliability."
+      },
+      "VOC1.3": {
+        "label": "Specific product defect or reliability concern raised",
+        "description": "Customer describes a concrete defect, bug, or reliability problem as part of their feedback."
+      }
+    },
+    "description": "Customer shares explicit feedback about the quality, reliability, or performance of the product."
+  },
+  "VOC2": {
+    "label": "Service experience feedback",
+    "children": {
+      "VOC2.1": {
+        "label": "Positive service experience feedback",
+        "description": "Customer praises the support experience: agent quality, resolution speed, or overall service."
+      },
+      "VOC2.2": {
+        "label": "Negative service experience feedback",
+        "description": "Customer criticises the support experience: slow resolution, poor agent interaction, or frustrating process."
+      },
+      "VOC2.3": {
+        "label": "Channel or accessibility feedback",
+        "description": "Customer gives feedback specifically about the support channel, wait times, or accessibility."
+      }
+    },
+    "description": "Customer shares feedback about their experience with the support or service process, distinct from the product itself."
+  },
+  "VOC3": {
+    "label": "Price and value feedback",
+    "children": {
+      "VOC3.1": {
+        "label": "Price too high or poor value perception",
+        "description": "Customer expresses that the price is too high or does not justify the value received."
+      },
+      "VOC3.2": {
+        "label": "Good value or fair pricing sentiment",
+        "description": "Customer indicates they feel the product is good value or fairly priced."
+      },
+      "VOC3.3": {
+        "label": "Pricing structure confusion or concern",
+        "description": "Customer is confused by the pricing model, tier structure, or add-on charges."
+      }
+    },
+    "description": "Customer shares views about whether the product or service represents good value for money."
+  },
+  "VOC4": {
+    "label": "Competitor comparison",
+    "children": {
+      "VOC4.1": {
+        "label": "Competitor mentioned positively or as superior",
+        "description": "Customer references a competitor as doing something better or as a reason to switch."
+      },
+      "VOC4.2": {
+        "label": "Competitor mentioned neutrally for comparison",
+        "description": "Customer references a competitor for context without expressing clear preference."
+      },
+      "VOC4.3": {
+        "label": "Switching intent expressed",
+        "description": "Customer explicitly states they are considering switching to a competitor or have already decided to leave."
+      }
+    },
+    "description": "Customer mentions a competitor product or service, either positively or negatively."
+  },
+  "VOC5": {
+    "label": "Feature request or improvement suggestion",
+    "children": {
+      "VOC5.1": {
+        "label": "New feature requested",
+        "description": "Customer describes a capability they want that does not currently exist."
+      },
+      "VOC5.2": {
+        "label": "Enhancement to existing feature requested",
+        "description": "Customer wants an existing feature to work differently, be more powerful, or be easier to use."
+      },
+      "VOC5.3": {
+        "label": "Integration or ecosystem request",
+        "description": "Customer requests integration with a specific third-party tool or platform."
+      },
+      "VOC5.4": {
+        "label": "Process or policy improvement suggestion",
+        "description": "Customer suggests an improvement to a company process, policy, or the support experience itself."
+      }
+    },
+    "description": "Customer explicitly or implicitly requests a new feature, enhancement, or change to the product."
+  },
+  "VOC6": {
+    "label": "Unmet need or capability gap",
+    "children": {
+      "VOC6.1": {
+        "label": "Use case not supported by product",
+        "description": "Customer describes a valid use case that the product cannot currently support."
+      },
+      "VOC6.2": {
+        "label": "Workflow or productivity gap",
+        "description": "Customer highlights a gap in their workflow that the product does not address."
+      },
+      "VOC6.3": {
+        "label": "Content or information resource gap",
+        "description": "Customer cannot find documentation, training material, or information they need."
+      }
+    },
+    "description": "Customer reveals a need their current product or service is not meeting, which may represent an opportunity to expand usage or address a gap."
+  },
+  "VOC7": {
+    "label": "Positive endorsement",
+    "children": {
+      "VOC7.1": {
+        "label": "Unprompted praise of agent or team",
+        "description": "Customer explicitly praises a specific agent, team, or member of staff by name or description."
+      },
+      "VOC7.2": {
+        "label": "Would recommend or has already recommended",
+        "description": "Customer states they have recommended or would recommend the product to others."
+      },
+      "VOC7.3": {
+        "label": "General product satisfaction",
+        "description": "Customer expresses broad satisfaction with the product without a specific trigger."
+      }
+    },
+    "description": "Customer proactively expresses praise, recommends the product, or signals strong loyalty."
+  },
+  "VOC8": {
+    "label": "Loyalty and churn signal",
+    "children": {
+      "VOC8.1": {
+        "label": "Intent to renew or expand usage",
+        "description": "Customer mentions plans to renew their subscription, upgrade, or expand usage."
+      },
+      "VOC8.2": {
+        "label": "Churn or cancellation intent",
+        "description": "Customer explicitly or strongly implicitly signals intent to cancel or not renew."
+      },
+      "VOC8.3": {
+        "label": "Long-term loyalty signal",
+        "description": "Customer mentions how long they have been a customer, or expresses a long-term relationship with the brand."
+      }
+    },
+    "description": "Customer reveals signals about their long-term intent to stay or leave."
+  }
+}

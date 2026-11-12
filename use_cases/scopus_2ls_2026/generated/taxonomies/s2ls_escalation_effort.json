@@ -1,0 +1,66 @@
+{
+  "SLJ1": {
+    "label": "Not escalated",
+    "children": {
+      "SLJ1.1": {
+        "label": "Resolved at 1LS",
+        "description": "Definition: 1LS answered or completed it with no other team involved."
+      },
+      "SLJ1.2": {
+        "label": "Rejected or out of scope at 1LS",
+        "description": "Definition: 1LS itself declined it (policy, coverage, invalid, already correct)."
+      },
+      "SLJ1.3": {
+        "label": "Closed for no customer response",
+        "description": "Definition: 1LS asked the customer for information that never came."
+      },
+      "SLJ1.4": {
+        "label": "Redirected outside Scopus support",
+        "description": "Definition: Customer sent to the publisher, another service or a self-service tool."
+      }
+    }
+  },
+  "SLJ2": {
+    "label": "Escalated once, no back-and-forth",
+    "children": {
+      "SLJ2.1": {
+        "label": "Escalated and resolved by 2LS",
+        "description": "Definition: One hand-off; 2LS did the work or answered; relayed to the customer."
+      },
+      "SLJ2.2": {
+        "label": "Escalated and rejected by 2LS",
+        "description": "Definition: One hand-off; 2LS declined or found Scopus already matches the publisher (customer told to ask the publisher)."
+      },
+      "SLJ2.3": {
+        "label": "Escalated, outcome not visible",
+        "description": "Definition: One hand-off; transcript ends without an outcome."
+      }
+    }
+  },
+  "SLJ3": {
+    "label": "Escalated with back-and-forth",
+    "children": {
+      "SLJ3.1": {
+        "label": "2LS needed more information from the customer",
+        "description": "Definition: 2LS asked (via 1LS) for details or proof; customer replied; case went back to 2LS."
+      },
+      "SLJ3.2": {
+        "label": "Re-escalated after customer pushback or reopening",
+        "description": "Definition: Outcome came back, customer disputed or chased, 1LS sent it to 2LS again. Preferred when several patterns apply."
+      },
+      "SLJ3.3": {
+        "label": "Multiple hand-offs between teams",
+        "description": "Definition: Passed across several teams, or repeatedly re-raised with 2LS."
+      }
+    }
+  },
+  "SLJ4": {
+    "label": "Unclear",
+    "children": {
+      "SLJ4.1": {
+        "label": "Cannot tell from the transcript",
+        "description": "Definition: Too short, only automated turns, or ambiguous."
+      }
+    }
+  }
+}

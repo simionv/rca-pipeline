@@ -1,0 +1,686 @@
+{
+  "domain": "contact_reason",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "missing publication in scopus",
+      "frequency": 38
+    },
+    {
+      "item": "author profile correction",
+      "frequency": 36
+    },
+    {
+      "item": "article indexing request",
+      "frequency": 22
+    },
+    {
+      "item": "missing document / article indexing issue",
+      "frequency": 21
+    },
+    {
+      "item": "missing article in database",
+      "frequency": 21
+    },
+    {
+      "item": "journal indexing status inquiry",
+      "frequency": 19
+    },
+    {
+      "item": "article indexing status inquiry",
+      "frequency": 16
+    },
+    {
+      "item": "content indexing status inquiry",
+      "frequency": 14
+    },
+    {
+      "item": "missing article indexing",
+      "frequency": 13
+    },
+    {
+      "item": "missing publication in scopus profile",
+      "frequency": 12
+    },
+    {
+      "item": "author profile update request",
+      "frequency": 10
+    },
+    {
+      "item": "content indexing request",
+      "frequency": 10
+    },
+    {
+      "item": "missing article in author profile",
+      "frequency": 9
+    },
+    {
+      "item": "missing document in scopus",
+      "frequency": 8
+    },
+    {
+      "item": "document indexing / profile update request",
+      "frequency": 8
+    },
+    {
+      "item": "missing publication indexing",
+      "frequency": 7
+    },
+    {
+      "item": "journal coverage / indexing status inquiry",
+      "frequency": 7
+    },
+    {
+      "item": "article indexing / database inclusion issue",
+      "frequency": 7
+    },
+    {
+      "item": "missing document / publication request",
+      "frequency": 7
+    },
+    {
+      "item": "missing document request",
+      "frequency": 7
+    },
+    {
+      "item": "missing publication in database",
+      "frequency": 7
+    },
+    {
+      "item": "journal status / coverage inquiry",
+      "frequency": 6
+    },
+    {
+      "item": "content indexing issue",
+      "frequency": 6
+    },
+    {
+      "item": "article indexing status",
+      "frequency": 5
+    },
+    {
+      "item": "article indexing issue",
+      "frequency": 5
+    },
+    {
+      "item": "indexing status inquiry",
+      "frequency": 5
+    },
+    {
+      "item": "affiliation correction",
+      "frequency": 5
+    },
+    {
+      "item": "missing article / content indexing issue",
+      "frequency": 5
+    },
+    {
+      "item": "missing publication / indexing request",
+      "frequency": 5
+    },
+    {
+      "item": "missing content / indexing issue",
+      "frequency": 5
+    },
+    {
+      "item": "missing publication in author profile",
+      "frequency": 4
+    },
+    {
+      "item": "author name correction",
+      "frequency": 4
+    },
+    {
+      "item": "author profile linking issue",
+      "frequency": 4
+    },
+    {
+      "item": "author affiliation correction",
+      "frequency": 4
+    },
+    {
+      "item": "author profile / scopus id issue",
+      "frequency": 4
+    },
+    {
+      "item": "missing content / article indexing issue",
+      "frequency": 4
+    },
+    {
+      "item": "journal coverage status",
+      "frequency": 3
+    },
+    {
+      "item": "author profile management",
+      "frequency": 3
+    },
+    {
+      "item": "affiliation update request",
+      "frequency": 3
+    },
+    {
+      "item": "scopus author id request",
+      "frequency": 3
+    },
+    {
+      "item": "author profile / document assignment request",
+      "frequency": 3
+    },
+    {
+      "item": "missing document / indexing status inquiry",
+      "frequency": 3
+    },
+    {
+      "item": "citation correction request",
+      "frequency": 3
+    },
+    {
+      "item": "article indexing / profile linking issue",
+      "frequency": 3
+    },
+    {
+      "item": "author profile update",
+      "frequency": 3
+    },
+    {
+      "item": "article indexing delay",
+      "frequency": 3
+    },
+    {
+      "item": "content correction request",
+      "frequency": 3
+    },
+    {
+      "item": "profile publication addition issue",
+      "frequency": 3
+    },
+    {
+      "item": "journal coverage discontinuation",
+      "frequency": 3
+    },
+    {
+      "item": "author profile access issue",
+      "frequency": 2
+    },
+    {
+      "item": "metadata correction request",
+      "frequency": 2
+    },
+    {
+      "item": "journal status / indexing verification",
+      "frequency": 2
+    },
+    {
+      "item": "publication metadata correction",
+      "frequency": 2
+    },
+    {
+      "item": "author profile merge request",
+      "frequency": 2
+    },
+    {
+      "item": "scopus author id lookup",
+      "frequency": 2
+    },
+    {
+      "item": "indexing delay inquiry",
+      "frequency": 2
+    },
+    {
+      "item": "journal re-evaluation / coverage status inquiry",
+      "frequency": 2
+    },
+    {
+      "item": "journal discontinuation / coverage removal",
+      "frequency": 2
+    },
+    {
+      "item": "author profile update issue",
+      "frequency": 2
+    },
+    {
+      "item": "scopus source coverage inquiry",
+      "frequency": 2
+    },
+    {
+      "item": "author profile update / article linking",
+      "frequency": 2
+    },
+    {
+      "item": "authorship correction",
+      "frequency": 2
+    },
+    {
+      "item": "publication indexing status inquiry",
+      "frequency": 2
+    },
+    {
+      "item": "journal status inquiry",
+      "frequency": 2
+    },
+    {
+      "item": "scopus profile / author id issue",
+      "frequency": 2
+    },
+    {
+      "item": "citation correction issue",
+      "frequency": 2
+    },
+    {
+      "item": "publication indexing status",
+      "frequency": 2
+    },
+    {
+      "item": "author profile / author id access issue",
+      "frequency": 1
+    },
+    {
+      "item": "missing publications in author profile",
+      "frequency": 1
+    },
+    {
+      "item": "author profile correction request",
+      "frequency": 1
+    },
+    {
+      "item": "missing citation in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "author affiliation update",
+      "frequency": 1
+    },
+    {
+      "item": "journal title verification",
+      "frequency": 1
+    },
+    {
+      "item": "author metrics update request",
+      "frequency": 1
+    },
+    {
+      "item": "support transfer / unresolved chat",
+      "frequency": 1
+    },
+    {
+      "item": "author metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "citation correction / addition",
+      "frequency": 1
+    },
+    {
+      "item": "login / authentication issue",
+      "frequency": 1
+    },
+    {
+      "item": "authorship metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "request status / case update",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / name indexing issue",
+      "frequency": 1
+    },
+    {
+      "item": "indexing / content availability issue",
+      "frequency": 1
+    },
+    {
+      "item": "technical access / site error",
+      "frequency": 1
+    },
+    {
+      "item": "literature search assistance",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking correction",
+      "frequency": 1
+    },
+    {
+      "item": "conference paper indexing request",
+      "frequency": 1
+    },
+    {
+      "item": "transcript request",
+      "frequency": 1
+    },
+    {
+      "item": "author profile creation / linking request",
+      "frequency": 1
+    },
+    {
+      "item": "content quality complaint",
+      "frequency": 1
+    },
+    {
+      "item": "retraction / content removal request",
+      "frequency": 1
+    },
+    {
+      "item": "missing document / metadata correction request",
+      "frequency": 1
+    },
+    {
+      "item": "author profile correction / linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "author profile correction / affiliation update",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing issue",
+      "frequency": 1
+    },
+    {
+      "item": "scopus account / author id request",
+      "frequency": 1
+    },
+    {
+      "item": "author id lookup",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect publication attribution",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage status inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "access / subscription issue",
+      "frequency": 1
+    },
+    {
+      "item": "citation / metrics discrepancy",
+      "frequency": 1
+    },
+    {
+      "item": "scopus account creation",
+      "frequency": 1
+    },
+    {
+      "item": "article in press indexing",
+      "frequency": 1
+    },
+    {
+      "item": "author record correction",
+      "frequency": 1
+    },
+    {
+      "item": "account/profile access issue",
+      "frequency": 1
+    },
+    {
+      "item": "content removal request",
+      "frequency": 1
+    },
+    {
+      "item": "author affiliation update request",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "indexing delay / content review inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "author identifier correction",
+      "frequency": 1
+    },
+    {
+      "item": "author id / profile assignment issue",
+      "frequency": 1
+    },
+    {
+      "item": "author id / profile lookup issue",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage / publication type eligibility",
+      "frequency": 1
+    },
+    {
+      "item": "journal discontinued from indexing",
+      "frequency": 1
+    },
+    {
+      "item": "conference proceedings indexing",
+      "frequency": 1
+    },
+    {
+      "item": "document metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "ticket status inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "journal status explanation",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / publication assignment issue",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage / discontinued title issue",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / scopus id access issue",
+      "frequency": 1
+    },
+    {
+      "item": "citation / author name merge issue",
+      "frequency": 1
+    },
+    {
+      "item": "citation indexing issue",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing request",
+      "frequency": 1
+    },
+    {
+      "item": "missing document on author profile",
+      "frequency": 1
+    },
+    {
+      "item": "institution not listed / profile setup issue",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / scopus id assistance",
+      "frequency": 1
+    },
+    {
+      "item": "citation / reference linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "article removal / deindexing issue",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing / coverage issue",
+      "frequency": 1
+    },
+    {
+      "item": "article indexing / visibility issue",
+      "frequency": 1
+    },
+    {
+      "item": "article indexing / metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "authorship correction request",
+      "frequency": 1
+    },
+    {
+      "item": "article indexing / author profile linkage issue",
+      "frequency": 1
+    },
+    {
+      "item": "journal metrics / quartile inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "journal classification change request",
+      "frequency": 1
+    },
+    {
+      "item": "author profile lookup request",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "publication list request",
+      "frequency": 1
+    },
+    {
+      "item": "publishing guidance request",
+      "frequency": 1
+    },
+    {
+      "item": "journal metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "support follow-up / response delay",
+      "frequency": 1
+    },
+    {
+      "item": "missing content in author profile",
+      "frequency": 1
+    },
+    {
+      "item": "account access limitation",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage / indexing policy inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "author name correction request",
+      "frequency": 1
+    },
+    {
+      "item": "publication record correction request",
+      "frequency": 1
+    },
+    {
+      "item": "account recovery issue",
+      "frequency": 1
+    },
+    {
+      "item": "missing citation correction",
+      "frequency": 1
+    },
+    {
+      "item": "citation metric inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "publication visibility delay",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction issue",
+      "frequency": 1
+    },
+    {
+      "item": "journal submission / publisher information request",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing status",
+      "frequency": 1
+    },
+    {
+      "item": "scopus id / author profile issue",
+      "frequency": 1
+    },
+    {
+      "item": "publication fee / pricing inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "scopus id lookup",
+      "frequency": 1
+    },
+    {
+      "item": "content integrity / fraud report",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / affiliation claim issue",
+      "frequency": 1
+    },
+    {
+      "item": "citation correction",
+      "frequency": 1
+    },
+    {
+      "item": "journal legitimacy / status inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "affiliation / organization mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "title correction",
+      "frequency": 1
+    },
+    {
+      "item": "citation / reference correction",
+      "frequency": 1
+    },
+    {
+      "item": "scopus id / author profile setup",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing / coverage inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "abstract display / linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "indexing process inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "citation update / alert issue",
+      "frequency": 1
+    },
+    {
+      "item": "book indexing request",
+      "frequency": 1
+    },
+    {
+      "item": "journal issue indexing delay",
+      "frequency": 1
+    }
+  ]
+}

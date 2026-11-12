@@ -1,0 +1,30 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_prefix": "CR",
+      "taxonomy_file": "contact_reason.json",
+      "taxonomy_key": "contact_reason",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "Hierarchical classification of the customer's contact reason AND root cause for LeapSpace support tickets. The L1 level is the Contact Reason category; the L2 level is the specific Root Cause valid within that category. Assign the single best-fitting LEAF code (e.g. CR4.2). Only root causes listed under the chosen contact reason are valid — the taxonomy enforces the valid combinations.",
+      "classify_fn": "classify_contact_reason",
+      "code_field": "contact_reason_primary_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "contact_reason_primary_code",
+    "contact_reason_primary_description"
+  ],
+  "reorder_groups": {
+    "A": 1
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "contact_reason_primary_code"
+  ],
+  "output_exclude": []
+}

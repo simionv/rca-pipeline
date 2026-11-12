@@ -1,0 +1,90 @@
+{
+  "CSDRR1": {
+    "label": "Indexing Status Issues",
+    "children": {
+      "CSDRR1.1": {
+        "label": "Content Not Yet Indexed",
+        "description": "Cases where content is either under review, not yet published, or has not been indexed due to various reasons."
+      },
+      "CSDRR1.2": {
+        "label": "Source Coverage Issues",
+        "description": "Issues related to the source's eligibility for indexing, including discontinued coverage or re-evaluation status."
+      },
+      "CSDRR1.3": {
+        "label": "Content Already Indexed",
+        "description": "Requests or inquiries regarding content that is already indexed in Scopus, including updates or corrections."
+      },
+      "CSDRR1.4": {
+        "label": "Journal Re-evaluation",
+        "description": "Cases where journals are undergoing re-evaluation, affecting their indexing status and future content addition."
+      },
+      "CSDRR1.5": {
+        "label": "Other Indexing Status Issues",
+        "description": "Cases that fall within indexing status but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers issues related to the current status of content indexing in Scopus, including reasons for delays or denials."
+  },
+  "CSDRR2": {
+    "label": "Content Type and Eligibility",
+    "children": {
+      "CSDRR2.1": {
+        "label": "Ineligible Content Types",
+        "description": "Requests regarding content types that are not covered for indexing, such as book reviews or non-serial conference material."
+      },
+      "CSDRR2.2": {
+        "label": "Content Format Issues",
+        "description": "Issues related to the format of the content, such as content not displayed as a full article or not found on the publisher's site."
+      },
+      "CSDRR2.3": {
+        "label": "Publication Timing Issues",
+        "description": "Concerns regarding the timing of publication and its impact on indexing, including content published outside coverage years."
+      },
+      "CSDRR2.4": {
+        "label": "Other Content Type Issues",
+        "description": "Cases that fall within content type and eligibility but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category addresses issues related to the type of content submitted for indexing and its eligibility under Scopus policies."
+  },
+  "CSDRR3": {
+    "label": "Request Processing and Follow-up",
+    "children": {
+      "CSDRR3.1": {
+        "label": "Request Under Review",
+        "description": "Requests that are currently being reviewed, including those awaiting confirmation or further action."
+      },
+      "CSDRR3.2": {
+        "label": "Status Inquiries",
+        "description": "Inquiries where customers ask for the status of their requests without providing actionable requests."
+      },
+      "CSDRR3.3": {
+        "label": "Duplicate Requests",
+        "description": "Cases where duplicate tickets have been submitted for the same issue."
+      },
+      "CSDRR3.4": {
+        "label": "Other Request Processing Issues",
+        "description": "Cases that fall within request processing but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category includes issues related to the processing of requests and follow-up actions taken by Scopus."
+  },
+  "CSDRR4": {
+    "label": "Correction and Update Requests",
+    "children": {
+      "CSDRR4.1": {
+        "label": "Correction Requests",
+        "description": "Requests for corrections to indexed content, including citation corrections and updates to author profiles."
+      },
+      "CSDRR4.2": {
+        "label": "Update Requests",
+        "description": "Requests for updates on content that is already indexed, including status updates on articles in press."
+      },
+      "CSDRR4.3": {
+        "label": "Other Correction and Update Issues",
+        "description": "Cases that fall within correction and update requests but do not fit any specific leaf above."
+      }
+    },
+    "description": "This category covers requests related to corrections or updates needed for indexed content."
+  }
+}

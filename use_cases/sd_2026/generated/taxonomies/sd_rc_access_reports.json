@@ -1,0 +1,24 @@
+{
+  "SDAR1": {
+    "label": "Access reports",
+    "children": {
+      "SDAR1.1": {
+        "label": "View access reports",
+        "description": "Definition: Use when the customer requests or cannot view reports about available access or entitlements."
+      },
+      "SDAR1.2": {
+        "label": "View usage reports",
+        "description": "Definition: Use when the customer requests or cannot view usage statistics or other reports."
+      },
+      "SDAR1.3": {
+        "label": "Not enough info",
+        "description": "Definition: Use when a reporting issue is mentioned without identifying the report type."
+      },
+      "SDAR1.4": {
+        "label": "Other",
+        "description": "Definition: Use for another access-reporting issue not listed above."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Access reports'. Choose the root cause from this group only. That contact reason means: Use when the customer needs, cannot retrieve or questions usage or access reporting data, with signals such as COUNTER reports, usage statistics, report exports or the Admin Tool, and not when they cannot access articles."
+  }
+}

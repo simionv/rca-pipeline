@@ -1,0 +1,56 @@
+{
+  "CR1": {
+    "label": "Account Issues",
+    "children": {
+      "CR1.1": {
+        "label": "Login / Authentication Issue"
+      },
+      "CR1.2": {
+        "label": "Account Access Issue"
+      },
+      "CR1.3": {
+        "label": "Account Deletion Request"
+      },
+      "CR1.4": {
+        "label": "Account Recovery Request"
+      },
+      "CR1.5": {
+        "label": "Other Account-Related Issues"
+      }
+    }
+  },
+  "CR2": {
+    "label": "Technical Problems",
+    "children": {
+      "CR2.1": {
+        "label": "Citation Management Problem"
+      },
+      "CR2.2": {
+        "label": "Import / Export Issue"
+      },
+      "CR2.3": {
+        "label": "Installation / Integration Issue"
+      },
+      "CR2.4": {
+        "label": "Plugin / Integration Issue"
+      },
+      "CR2.5": {
+        "label": "Other Technical Issues"
+      }
+    }
+  },
+  "CR3": {
+    "label": "General Inquiries",
+    "children": {
+      "CR3.1": {
+        "label": "Account Registration Inquiry"
+      },
+      "CR3.2": {
+        "label": "General Inquiry"
+      },
+      "CR3.3": {
+        "label": "Other General Inquiries"
+      }
+    }
+  }
+}

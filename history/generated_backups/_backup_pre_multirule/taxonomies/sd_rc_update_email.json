@@ -1,0 +1,20 @@
+{
+  "SDUE1": {
+    "label": "Update email address",
+    "children": {
+      "SDUE1.1": {
+        "label": "Request to update email address",
+        "description": "Definition: Use when the customer asks to replace the email address linked to an existing account."
+      },
+      "SDUE1.2": {
+        "label": "Not enough info",
+        "description": "Definition: Use when an email change is mentioned but the requested update is unclear."
+      },
+      "SDUE1.3": {
+        "label": "Other",
+        "description": "Definition: Use for another email-address management issue."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Update email address'. Choose the root cause from this group only. That contact reason means: Use when the primary request is to replace the email address linked to an existing account, with signals such as old and new email addresses, email domain changes or institutional mergers, and not when the email is only mentioned as part of a login problem."
+  }
+}

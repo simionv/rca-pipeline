@@ -1,0 +1,1678 @@
+{
+  "domain": "customer_effort",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "missing content / indexing delay",
+      "frequency": 20
+    },
+    {
+      "item": "channel redirection / bot-to-agent transfer friction",
+      "frequency": 18
+    },
+    {
+      "item": "missing content / indexing request",
+      "frequency": 16
+    },
+    {
+      "item": "indexing visibility delay",
+      "frequency": 14
+    },
+    {
+      "item": "indexing delay / publication not yet visible",
+      "frequency": 10
+    },
+    {
+      "item": "missing content visibility / indexing delay",
+      "frequency": 10
+    },
+    {
+      "item": "delayed indexing / publication visibility lag",
+      "frequency": 9
+    },
+    {
+      "item": "missing document / content not yet indexed",
+      "frequency": 9
+    },
+    {
+      "item": "channel redirection friction",
+      "frequency": 9
+    },
+    {
+      "item": "missing content in scopus / delayed indexing",
+      "frequency": 8
+    },
+    {
+      "item": "missing content indexing / profile update request",
+      "frequency": 7
+    },
+    {
+      "item": "channel redirection / self-service handoff friction",
+      "frequency": 6
+    },
+    {
+      "item": "delayed indexing / content processing",
+      "frequency": 6
+    },
+    {
+      "item": "missing content in database / indexing request",
+      "frequency": 6
+    },
+    {
+      "item": "missing article indexing / delayed database inclusion",
+      "frequency": 6
+    },
+    {
+      "item": "missing article indexing / delayed publication visibility",
+      "frequency": 6
+    },
+    {
+      "item": "publication-to-indexing delay",
+      "frequency": 6
+    },
+    {
+      "item": "delayed content correction / indexing processing",
+      "frequency": 6
+    },
+    {
+      "item": "missing article in profile / indexing correction request",
+      "frequency": 5
+    },
+    {
+      "item": "channel redirection / transfer friction",
+      "frequency": 5
+    },
+    {
+      "item": "publication indexing delay",
+      "frequency": 5
+    },
+    {
+      "item": "self-service / virtual assistant failure",
+      "frequency": 5
+    },
+    {
+      "item": "profile linking / author assignment confusion",
+      "frequency": 5
+    },
+    {
+      "item": "indexing delay / processing queue wait",
+      "frequency": 5
+    },
+    {
+      "item": "channel redirection / self-service failure",
+      "frequency": 4
+    },
+    {
+      "item": "delayed content processing / indexing visibility",
+      "frequency": 4
+    },
+    {
+      "item": "content inclusion / indexing request",
+      "frequency": 4
+    },
+    {
+      "item": "wait time / response delay",
+      "frequency": 4
+    },
+    {
+      "item": "missing record / profile update request",
+      "frequency": 4
+    },
+    {
+      "item": "metadata correction request",
+      "frequency": 4
+    },
+    {
+      "item": "indexing delay / processing time expectation",
+      "frequency": 4
+    },
+    {
+      "item": "channel redirection / transfer to agent",
+      "frequency": 4
+    },
+    {
+      "item": "indexing delay / pending database update",
+      "frequency": 4
+    },
+    {
+      "item": "discontinued-source indexing loss / retroactive de-indexing",
+      "frequency": 4
+    },
+    {
+      "item": "self-service failure",
+      "frequency": 4
+    },
+    {
+      "item": "missing publication in author profile",
+      "frequency": 3
+    },
+    {
+      "item": "author profile correction / affiliation update",
+      "frequency": 3
+    },
+    {
+      "item": "author profile correction / profile management friction",
+      "frequency": 3
+    },
+    {
+      "item": "indexing publication delay",
+      "frequency": 3
+    },
+    {
+      "item": "coverage status uncertainty",
+      "frequency": 3
+    },
+    {
+      "item": "journal status uncertainty",
+      "frequency": 3
+    },
+    {
+      "item": "channel escalation from self-service to agent",
+      "frequency": 3
+    },
+    {
+      "item": "indexing visibility delay for newly published content",
+      "frequency": 3
+    },
+    {
+      "item": "repeated issue explanation / transfer friction",
+      "frequency": 3
+    },
+    {
+      "item": "profile / authorship association correction",
+      "frequency": 3
+    },
+    {
+      "item": "indexing latency / publication-to-visibility delay",
+      "frequency": 3
+    },
+    {
+      "item": "virtual assistant misunderstanding / failed intent recognition",
+      "frequency": 3
+    },
+    {
+      "item": "missing or incorrect author profile linkage",
+      "frequency": 3
+    },
+    {
+      "item": "author profile merge / identity disambiguation",
+      "frequency": 3
+    },
+    {
+      "item": "missing article / profile linking correction",
+      "frequency": 3
+    },
+    {
+      "item": "delayed resolution / pending processing",
+      "frequency": 3
+    },
+    {
+      "item": "profile linking / incorrect account association",
+      "frequency": 3
+    },
+    {
+      "item": "self-service bot misunderstanding / failed intent recognition",
+      "frequency": 3
+    },
+    {
+      "item": "indexing delay / publication visibility lag",
+      "frequency": 3
+    },
+    {
+      "item": "escalation opacity / unresolved follow-up friction",
+      "frequency": 3
+    },
+    {
+      "item": "coverage eligibility / content not indexed",
+      "frequency": 3
+    },
+    {
+      "item": "self-service failure / bot-to-agent transfer",
+      "frequency": 3
+    },
+    {
+      "item": "missing content visibility / indexing not reflected in profile",
+      "frequency": 3
+    },
+    {
+      "item": "coverage limitation due to discontinued source title",
+      "frequency": 3
+    },
+    {
+      "item": "journal status / coverage verification",
+      "frequency": 3
+    },
+    {
+      "item": "coverage eligibility / source not indexed",
+      "frequency": 3
+    },
+    {
+      "item": "indexing status verification",
+      "frequency": 3
+    },
+    {
+      "item": "indexing visibility delay after publication",
+      "frequency": 3
+    },
+    {
+      "item": "self-service failure / bot misunderstanding",
+      "frequency": 3
+    },
+    {
+      "item": "request processing delay / waiting for correction",
+      "frequency": 3
+    },
+    {
+      "item": "content coverage limitation / source not indexed",
+      "frequency": 3
+    },
+    {
+      "item": "channel redirection / escalation to agent",
+      "frequency": 3
+    },
+    {
+      "item": "escalation to human agent",
+      "frequency": 3
+    },
+    {
+      "item": "delayed resolution / long processing time",
+      "frequency": 3
+    },
+    {
+      "item": "missing author attribution / profile linking issue",
+      "frequency": 3
+    },
+    {
+      "item": "profile attribution / author record correction",
+      "frequency": 2
+    },
+    {
+      "item": "bot-to-agent transfer friction",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / virtual assistant misunderstanding",
+      "frequency": 2
+    },
+    {
+      "item": "status update delay / follow-up friction",
+      "frequency": 2
+    },
+    {
+      "item": "missing article indexing / metadata correction",
+      "frequency": 2
+    },
+    {
+      "item": "channel redirection / agent transfer friction",
+      "frequency": 2
+    },
+    {
+      "item": "author profile linking / incorrect profile assignment",
+      "frequency": 2
+    },
+    {
+      "item": "publisher metadata mismatch / source-of-truth dispute",
+      "frequency": 2
+    },
+    {
+      "item": "escalation to technical review for content correction",
+      "frequency": 2
+    },
+    {
+      "item": "content exclusion due to source discontinuation / coverage gap",
+      "frequency": 2
+    },
+    {
+      "item": "unclear indexing eligibility explanation",
+      "frequency": 2
+    },
+    {
+      "item": "content indexing request / publication visibility delay",
+      "frequency": 2
+    },
+    {
+      "item": "content indexing status uncertainty",
+      "frequency": 2
+    },
+    {
+      "item": "identity/profile mismatch or incorrect record association",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / virtual assistant comprehension failure",
+      "frequency": 2
+    },
+    {
+      "item": "eligibility / policy misunderstanding",
+      "frequency": 2
+    },
+    {
+      "item": "wrong profile attribution / author identity mismatch",
+      "frequency": 2
+    },
+    {
+      "item": "missing content / record indexing delay",
+      "frequency": 2
+    },
+    {
+      "item": "indexing visibility delay for recently published content",
+      "frequency": 2
+    },
+    {
+      "item": "indexing delay / publication processing lag",
+      "frequency": 2
+    },
+    {
+      "item": "coverage eligibility / journal discontinued friction",
+      "frequency": 2
+    },
+    {
+      "item": "data correction / profile affiliation update",
+      "frequency": 2
+    },
+    {
+      "item": "self-service failure / bot handoff friction",
+      "frequency": 2
+    },
+    {
+      "item": "publisher source not eligible or unavailable for indexing",
+      "frequency": 2
+    },
+    {
+      "item": "transfer to human agent",
+      "frequency": 2
+    },
+    {
+      "item": "journal discontinued / no backfill indexing",
+      "frequency": 2
+    },
+    {
+      "item": "author profile / scopus id access and creation friction",
+      "frequency": 2
+    },
+    {
+      "item": "content review / reassessment delay",
+      "frequency": 2
+    },
+    {
+      "item": "indexing / publication-to-database delay",
+      "frequency": 2
+    },
+    {
+      "item": "delayed resolution / pending technical review",
+      "frequency": 2
+    },
+    {
+      "item": "author profile linkage / missing document",
+      "frequency": 2
+    },
+    {
+      "item": "wait time / no agent available",
+      "frequency": 2
+    },
+    {
+      "item": "repeat contact for same issue",
+      "frequency": 2
+    },
+    {
+      "item": "indexing request / missing article submission",
+      "frequency": 2
+    },
+    {
+      "item": "missing content / incomplete journal coverage",
+      "frequency": 2
+    },
+    {
+      "item": "status uncertainty for review/reassessment",
+      "frequency": 2
+    },
+    {
+      "item": "content removal due to journal discontinuation",
+      "frequency": 2
+    },
+    {
+      "item": "need to contact publisher/content provider for indexing resolution",
+      "frequency": 2
+    },
+    {
+      "item": "status / timeline uncertainty for content correction",
+      "frequency": 2
+    },
+    {
+      "item": "profile association / author profile mismatch",
+      "frequency": 2
+    },
+    {
+      "item": "eligibility / coverage verification request",
+      "frequency": 2
+    },
+    {
+      "item": "content correction request",
+      "frequency": 2
+    },
+    {
+      "item": "uncertainty about journal coverage status",
+      "frequency": 2
+    },
+    {
+      "item": "content removal / de-indexing",
+      "frequency": 2
+    },
+    {
+      "item": "escalation / routing to specialist team",
+      "frequency": 2
+    },
+    {
+      "item": "missing item / record not found in profile",
+      "frequency": 2
+    },
+    {
+      "item": "self-service guidance needed",
+      "frequency": 2
+    },
+    {
+      "item": "record correction / metadata update request",
+      "frequency": 2
+    },
+    {
+      "item": "content processing delay",
+      "frequency": 2
+    },
+    {
+      "item": "missing article visibility / indexing delay",
+      "frequency": 2
+    },
+    {
+      "item": "profile/content correction requires manual review or escalation",
+      "frequency": 2
+    },
+    {
+      "item": "unclear request / insufficient issue details",
+      "frequency": 2
+    },
+    {
+      "item": "content not yet indexed / delayed ingestion",
+      "frequency": 2
+    },
+    {
+      "item": "author profile / affiliation correction",
+      "frequency": 2
+    },
+    {
+      "item": "self-service correction workflow failure",
+      "frequency": 2
+    },
+    {
+      "item": "content eligibility / coverage limitation",
+      "frequency": 2
+    },
+    {
+      "item": "indexing propagation delay",
+      "frequency": 2
+    },
+    {
+      "item": "account/profile access friction",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / escalation friction",
+      "frequency": 1
+    },
+    {
+      "item": "metadata/doi resolution issue affecting indexing",
+      "frequency": 1
+    },
+    {
+      "item": "missing publications in author profile",
+      "frequency": 1
+    },
+    {
+      "item": "duplicate author identity / profile merge friction",
+      "frequency": 1
+    },
+    {
+      "item": "profile linkage / orcid association friction",
+      "frequency": 1
+    },
+    {
+      "item": "coverage limitation / journal not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "citation linkage failure due to source indexing mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "source title ambiguity / duplicate journal record confusion",
+      "frequency": 1
+    },
+    {
+      "item": "missing content / indexing acquisition failure",
+      "frequency": 1
+    },
+    {
+      "item": "unresolved escalation / lack of definitive resolution",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect publication status / metadata lag",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage uncertainty due to journal discontinuation / re-evaluation",
+      "frequency": 1
+    },
+    {
+      "item": "processing delay / content on hold",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "human support access friction",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage / indexing eligibility issue",
+      "frequency": 1
+    },
+    {
+      "item": "publication status / correction timing dependency",
+      "frequency": 1
+    },
+    {
+      "item": "transfer / routing friction",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / session timeout",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete profile / metadata coverage",
+      "frequency": 1
+    },
+    {
+      "item": "repeat issue explanation / transfer friction",
+      "frequency": 1
+    },
+    {
+      "item": "missing author profile / article linkage",
+      "frequency": 1
+    },
+    {
+      "item": "indexing blocked by journal re-evaluation",
+      "frequency": 1
+    },
+    {
+      "item": "indexing timeline uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "conflicting status information",
+      "frequency": 1
+    },
+    {
+      "item": "missing content / record not yet indexed",
+      "frequency": 1
+    },
+    {
+      "item": "profile synchronization / metadata mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction / author attribution update",
+      "frequency": 1
+    },
+    {
+      "item": "author profile merge / duplicate profile management",
+      "frequency": 1
+    },
+    {
+      "item": "citation indexing / missing citation",
+      "frequency": 1
+    },
+    {
+      "item": "case status / escalation follow-up",
+      "frequency": 1
+    },
+    {
+      "item": "account access issue",
+      "frequency": 1
+    },
+    {
+      "item": "publisher source acquisition delay",
+      "frequency": 1
+    },
+    {
+      "item": "access / login friction",
+      "frequency": 1
+    },
+    {
+      "item": "publication in progress / indexing delay",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-side data availability issue",
+      "frequency": 1
+    },
+    {
+      "item": "account access / login credential confusion",
+      "frequency": 1
+    },
+    {
+      "item": "delayed indexing / missing record visibility",
+      "frequency": 1
+    },
+    {
+      "item": "delayed indexing / content under review",
+      "frequency": 1
+    },
+    {
+      "item": "profile metadata update blocked by source-document dependency",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage / discontinued title limitation",
+      "frequency": 1
+    },
+    {
+      "item": "insufficient source-status detail / unclear coverage information",
+      "frequency": 1
+    },
+    {
+      "item": "long-running correction / indexing request with delayed status updates",
+      "frequency": 1
+    },
+    {
+      "item": "resolution opacity / unclear completion status",
+      "frequency": 1
+    },
+    {
+      "item": "technical platform error / service outage",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to another team for out-of-scope profile correction",
+      "frequency": 1
+    },
+    {
+      "item": "content re-evaluation / indexing denial friction",
+      "frequency": 1
+    },
+    {
+      "item": "escalation opacity / limited support ownership",
+      "frequency": 1
+    },
+    {
+      "item": "information required to locate account/profile",
+      "frequency": 1
+    },
+    {
+      "item": "delayed profile update / indexing lag",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking correction request",
+      "frequency": 1
+    },
+    {
+      "item": "status visibility / stale metadata delay",
+      "frequency": 1
+    },
+    {
+      "item": "content metadata correction request",
+      "frequency": 1
+    },
+    {
+      "item": "multi-step submission / evidence collection friction",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / case handling delay",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / escalation to technical team",
+      "frequency": 1
+    },
+    {
+      "item": "scope limitation / unsupported request routing",
+      "frequency": 1
+    },
+    {
+      "item": "missing follow-up artifact / transcript delivery failure",
+      "frequency": 1
+    },
+    {
+      "item": "content under review / pending processing",
+      "frequency": 1
+    },
+    {
+      "item": "missing document / author profile update",
+      "frequency": 1
+    },
+    {
+      "item": "content eligibility / source not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "search result classification / document visibility confusion",
+      "frequency": 1
+    },
+    {
+      "item": "missing author profile / author id creation",
+      "frequency": 1
+    },
+    {
+      "item": "content indexing / record linking delay",
+      "frequency": 1
+    },
+    {
+      "item": "content indexing / record processing delay",
+      "frequency": 1
+    },
+    {
+      "item": "channel input limitation / message length restriction",
+      "frequency": 1
+    },
+    {
+      "item": "content quality / journal integrity concern",
+      "frequency": 1
+    },
+    {
+      "item": "external escalation / review routing",
+      "frequency": 1
+    },
+    {
+      "item": "request handling / content correction routing",
+      "frequency": 1
+    },
+    {
+      "item": "journal status / indexing coverage uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction / record update request",
+      "frequency": 1
+    },
+    {
+      "item": "author profile discovery / identity matching friction",
+      "frequency": 1
+    },
+    {
+      "item": "missing content / prerequisite indexing dependency",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / unresolved issue",
+      "frequency": 1
+    },
+    {
+      "item": "profile affiliation linking friction",
+      "frequency": 1
+    },
+    {
+      "item": "missing metadata / affiliation capture gap",
+      "frequency": 1
+    },
+    {
+      "item": "escalation opacity / prolonged unresolved case",
+      "frequency": 1
+    },
+    {
+      "item": "profile metadata mismatch affecting record visibility",
+      "frequency": 1
+    },
+    {
+      "item": "insufficient transparency about content status or discontinuation details",
+      "frequency": 1
+    },
+    {
+      "item": "missing or incomplete indexing of recent content",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / ownership ambiguity",
+      "frequency": 1
+    },
+    {
+      "item": "citation correction blocked by source-data mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "content not added due to title under review / reassessment",
+      "frequency": 1
+    },
+    {
+      "item": "duplicate author profile / id merge request",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / unresolved ancillary request",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / bot-to-agent handoff friction",
+      "frequency": 1
+    },
+    {
+      "item": "content metadata correction / article type update",
+      "frequency": 1
+    },
+    {
+      "item": "author id lookup / profile identification",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect publication attribution / remove wrong record",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-side indexing dependency",
+      "frequency": 1
+    },
+    {
+      "item": "missing content / discontinued source limitation",
+      "frequency": 1
+    },
+    {
+      "item": "source status / coverage continuity uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / back-office handling delay",
+      "frequency": 1
+    },
+    {
+      "item": "access / entitlement configuration friction",
+      "frequency": 1
+    },
+    {
+      "item": "data discrepancy / citation count inconsistency",
+      "frequency": 1
+    },
+    {
+      "item": "discontinued or on-hold source coverage",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / account setup guidance",
+      "frequency": 1
+    },
+    {
+      "item": "source coverage status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction / author attribution error",
+      "frequency": 1
+    },
+    {
+      "item": "indexing verification / proof of coverage request",
+      "frequency": 1
+    },
+    {
+      "item": "profile linkage / author record mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "article-in-press not yet indexed",
+      "frequency": 1
+    },
+    {
+      "item": "author profile merge / duplicate identity correction",
+      "frequency": 1
+    },
+    {
+      "item": "unindexed publication due to source not covered",
+      "frequency": 1
+    },
+    {
+      "item": "record metadata correction request",
+      "frequency": 1
+    },
+    {
+      "item": "delayed resolution / pending review",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to human agent after bot failure",
+      "frequency": 1
+    },
+    {
+      "item": "third-party dependency / publisher-side limitation",
+      "frequency": 1
+    },
+    {
+      "item": "account/profile access or merge issue",
+      "frequency": 1
+    },
+    {
+      "item": "request routed to specialized team / escalation for manual review",
+      "frequency": 1
+    },
+    {
+      "item": "ambiguous query handling / clarification friction",
+      "frequency": 1
+    },
+    {
+      "item": "repeat follow-up for unresolved content correction",
+      "frequency": 1
+    },
+    {
+      "item": "self-service guidance needed for author profile update",
+      "frequency": 1
+    },
+    {
+      "item": "content correction request requiring manual review",
+      "frequency": 1
+    },
+    {
+      "item": "wrong-profile assignment / duplicate profile management",
+      "frequency": 1
+    },
+    {
+      "item": "indexing status uncertainty / coverage verification",
+      "frequency": 1
+    },
+    {
+      "item": "delayed appearance of article in profile",
+      "frequency": 1
+    },
+    {
+      "item": "profile affiliation update limitation",
+      "frequency": 1
+    },
+    {
+      "item": "author metadata correction request",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage discontinuation / content not eligible for indexing",
+      "frequency": 1
+    },
+    {
+      "item": "disabled or unavailable self-service author merge workflow",
+      "frequency": 1
+    },
+    {
+      "item": "missing author attribution in indexed record",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / unresolved correction request",
+      "frequency": 1
+    },
+    {
+      "item": "self-service triage failure / escalation to agent",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking failure due to metadata mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "author profile disambiguation / publication consolidation friction",
+      "frequency": 1
+    },
+    {
+      "item": "missing content in scopus / publication not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "content eligibility / coverage policy limitation",
+      "frequency": 1
+    },
+    {
+      "item": "metadata update propagation delay",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction / author identity mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "follow-up / status update delay",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / policy clarification friction",
+      "frequency": 1
+    },
+    {
+      "item": "author profile disambiguation / merge correction friction",
+      "frequency": 1
+    },
+    {
+      "item": "missing publication / author profile linking friction",
+      "frequency": 1
+    },
+    {
+      "item": "author id discovery / profile lookup friction",
+      "frequency": 1
+    },
+    {
+      "item": "content acquisition / publisher dependency friction",
+      "frequency": 1
+    },
+    {
+      "item": "coverage / indexing eligibility friction",
+      "frequency": 1
+    },
+    {
+      "item": "metadata correction / affiliation update friction",
+      "frequency": 1
+    },
+    {
+      "item": "author profile merge / duplicate author id friction",
+      "frequency": 1
+    },
+    {
+      "item": "journal coverage status ambiguity",
+      "frequency": 1
+    },
+    {
+      "item": "bulk missing-document submission / manual correction request",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / escalation to another team",
+      "frequency": 1
+    },
+    {
+      "item": "missing conference proceedings indexing / delayed visibility",
+      "frequency": 1
+    },
+    {
+      "item": "indexing process delay / pending review",
+      "frequency": 1
+    },
+    {
+      "item": "publication status dependency for correction",
+      "frequency": 1
+    },
+    {
+      "item": "ticket status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "issue resolution mismatch / premature closure",
+      "frequency": 1
+    },
+    {
+      "item": "future status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "identity disambiguation / profile mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "insufficient explanation / unclear answer",
+      "frequency": 1
+    },
+    {
+      "item": "missing or incorrect metadata in indexed record",
+      "frequency": 1
+    },
+    {
+      "item": "content correction request / record update delay",
+      "frequency": 1
+    },
+    {
+      "item": "content not yet indexed due to source/title review status",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect affiliation or author metadata",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-authenticated source required for correction",
+      "frequency": 1
+    },
+    {
+      "item": "account/profile editing friction",
+      "frequency": 1
+    },
+    {
+      "item": "profile visibility / author id retrieval issue",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / bot understanding failure",
+      "frequency": 1
+    },
+    {
+      "item": "affiliation correction blocked by coverage / document not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "indexing delay / publication-to-visibility lag",
+      "frequency": 1
+    },
+    {
+      "item": "citation / author identity disambiguation issue",
+      "frequency": 1
+    },
+    {
+      "item": "coverage limitation due to source not covered or out-of-scope year",
+      "frequency": 1
+    },
+    {
+      "item": "content correction / metadata update request",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking / citation indexing failure",
+      "frequency": 1
+    },
+    {
+      "item": "indexing status ambiguity / article-in-press visibility",
+      "frequency": 1
+    },
+    {
+      "item": "journal discovery / coverage inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "institution/profile setup or lookup issue",
+      "frequency": 1
+    },
+    {
+      "item": "indexing delay / processing lag",
+      "frequency": 1
+    },
+    {
+      "item": "unclear resolution timeline / status opacity",
+      "frequency": 1
+    },
+    {
+      "item": "self-service update failure",
+      "frequency": 1
+    },
+    {
+      "item": "author profile affiliation correction",
+      "frequency": 1
+    },
+    {
+      "item": "self-service limitation / missing source data",
+      "frequency": 1
+    },
+    {
+      "item": "authorship correction request",
+      "frequency": 1
+    },
+    {
+      "item": "case routing / escalation to specialist team",
+      "frequency": 1
+    },
+    {
+      "item": "profile linkage / author matching issue",
+      "frequency": 1
+    },
+    {
+      "item": "metadata freshness / delayed status updates",
+      "frequency": 1
+    },
+    {
+      "item": "metric availability delay",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact for unresolved correction request",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-source mismatch / external correction dependency",
+      "frequency": 1
+    },
+    {
+      "item": "content re-evaluation / indexing eligibility uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "self-service author profile update needed",
+      "frequency": 1
+    },
+    {
+      "item": "indexing delay / processing latency",
+      "frequency": 1
+    },
+    {
+      "item": "source metadata / classification change request",
+      "frequency": 1
+    },
+    {
+      "item": "author profile / identifier lookup difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "self-service assistant failure / escalation to human agent",
+      "frequency": 1
+    },
+    {
+      "item": "content not covered in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "long evaluation / acquisition timeline",
+      "frequency": 1
+    },
+    {
+      "item": "report generation / data export request",
+      "frequency": 1
+    },
+    {
+      "item": "publishing / submission guidance request",
+      "frequency": 1
+    },
+    {
+      "item": "delayed response / lack of follow-up",
+      "frequency": 1
+    },
+    {
+      "item": "automated reply without resolution",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / out-of-scope handoff",
+      "frequency": 1
+    },
+    {
+      "item": "status uncertainty / need for progress updates",
+      "frequency": 1
+    },
+    {
+      "item": "missing or incorrect metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to technical team for correction",
+      "frequency": 1
+    },
+    {
+      "item": "content not indexed / not eligible for profile addition",
+      "frequency": 1
+    },
+    {
+      "item": "missing document indexing delay",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / handoff to another team",
+      "frequency": 1
+    },
+    {
+      "item": "authorship correction / missing author addition",
+      "frequency": 1
+    },
+    {
+      "item": "authorship metadata inconsistency",
+      "frequency": 1
+    },
+    {
+      "item": "content not eligible for indexing due to source coverage limitations",
+      "frequency": 1
+    },
+    {
+      "item": "coverage mismatch between expected and indexed sources",
+      "frequency": 1
+    },
+    {
+      "item": "partial indexing / inconsistent issue coverage",
+      "frequency": 1
+    },
+    {
+      "item": "scope limitation / unsupported request type",
+      "frequency": 1
+    },
+    {
+      "item": "self-service input recognition failure",
+      "frequency": 1
+    },
+    {
+      "item": "access / entitlement limitation",
+      "frequency": 1
+    },
+    {
+      "item": "profile linking / author record update delay",
+      "frequency": 1
+    },
+    {
+      "item": "long resolution / follow-up delay",
+      "frequency": 1
+    },
+    {
+      "item": "request handling across multiple teams or handoffs",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to back-office or technical team for content inclusion",
+      "frequency": 1
+    },
+    {
+      "item": "indexing status uncertainty / delayed validation",
+      "frequency": 1
+    },
+    {
+      "item": "back-and-forth follow-up on unresolved request",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-dependent content acquisition delay",
+      "frequency": 1
+    },
+    {
+      "item": "request status uncertainty / prolonged processing",
+      "frequency": 1
+    },
+    {
+      "item": "self-service limitation for author id/profile creation before indexing",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete source metadata / missing document attachment",
+      "frequency": 1
+    },
+    {
+      "item": "publication not yet eligible for indexing due to in-press status",
+      "frequency": 1
+    },
+    {
+      "item": "coverage discontinuation / no retroactive indexing policy",
+      "frequency": 1
+    },
+    {
+      "item": "unclear journal coverage status",
+      "frequency": 1
+    },
+    {
+      "item": "missing citation linkage / citation update delay",
+      "frequency": 1
+    },
+    {
+      "item": "author profile misattribution / record merging error",
+      "frequency": 1
+    },
+    {
+      "item": "repeated correction attempts without resolution",
+      "frequency": 1
+    },
+    {
+      "item": "profile access / identity lookup difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "journal issue not indexed despite active coverage",
+      "frequency": 1
+    },
+    {
+      "item": "coverage / indexing eligibility mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect record / wrong item matched",
+      "frequency": 1
+    },
+    {
+      "item": "account/profile reconciliation friction",
+      "frequency": 1
+    },
+    {
+      "item": "support handoff / transfer friction",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / follow-up delay",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage / publication status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "policy-based request denial",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to human support",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / generic response friction",
+      "frequency": 1
+    },
+    {
+      "item": "policy limitation on backfilling / restoring removed content",
+      "frequency": 1
+    },
+    {
+      "item": "indexing delay / promised timeline missed",
+      "frequency": 1
+    },
+    {
+      "item": "case routing / handoff to specialist",
+      "frequency": 1
+    },
+    {
+      "item": "content not yet available in source/publisher feed",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking / metadata correction",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect bibliographic metadata / record correction",
+      "frequency": 1
+    },
+    {
+      "item": "author profile linkage / attribution correction",
+      "frequency": 1
+    },
+    {
+      "item": "author profile self-service / manual correction guidance",
+      "frequency": 1
+    },
+    {
+      "item": "author profile consolidation / name variant management",
+      "frequency": 1
+    },
+    {
+      "item": "affiliation history correction limitation",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete publication status / not fully published yet",
+      "frequency": 1
+    },
+    {
+      "item": "profile metadata correction with processing delay",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection to another department",
+      "frequency": 1
+    },
+    {
+      "item": "profile access/claiming friction",
+      "frequency": 1
+    },
+    {
+      "item": "citation missing due to source/content not yet available in scopus",
+      "frequency": 1
+    },
+    {
+      "item": "multi-item request handling complexity",
+      "frequency": 1
+    },
+    {
+      "item": "content not eligible for indexing",
+      "frequency": 1
+    },
+    {
+      "item": "journal indexing status uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "self-service failure / bot unable to resolve",
+      "frequency": 1
+    },
+    {
+      "item": "scopus id / author profile creation or linking issue",
+      "frequency": 1
+    },
+    {
+      "item": "policy / scope limitation requiring referral to another team or publisher",
+      "frequency": 1
+    },
+    {
+      "item": "missing publication / profile completeness issue",
+      "frequency": 1
+    },
+    {
+      "item": "profile disambiguation / incorrect author record linking",
+      "frequency": 1
+    },
+    {
+      "item": "correction propagation delay / account update lag",
+      "frequency": 1
+    },
+    {
+      "item": "content not indexed because source publication is out of scope",
+      "frequency": 1
+    },
+    {
+      "item": "author metadata error / incorrect attribution",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / transfer friction",
+      "frequency": 1
+    },
+    {
+      "item": "no human response / unresolved contact",
+      "frequency": 1
+    },
+    {
+      "item": "repeat follow-up / prolonged resolution",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage / journal discontinued",
+      "frequency": 1
+    },
+    {
+      "item": "publisher-side data missing / source record issue",
+      "frequency": 1
+    },
+    {
+      "item": "content coverage / content type not indexed",
+      "frequency": 1
+    },
+    {
+      "item": "profile claiming / author id management friction",
+      "frequency": 1
+    },
+    {
+      "item": "author profile merge / name variant correction",
+      "frequency": 1
+    },
+    {
+      "item": "citation correction / metadata update",
+      "frequency": 1
+    },
+    {
+      "item": "affiliation update delay / automatic profile sync",
+      "frequency": 1
+    },
+    {
+      "item": "profile/article association correction",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / delayed resolution",
+      "frequency": 1
+    },
+    {
+      "item": "information access restriction",
+      "frequency": 1
+    },
+    {
+      "item": "metadata source mismatch / publisher-site dependency",
+      "frequency": 1
+    },
+    {
+      "item": "profile data correction delay",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / follow-up friction",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect metadata matching / profile affiliation error",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / ownership handoff friction",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect metadata translation / title correction needed",
+      "frequency": 1
+    },
+    {
+      "item": "coverage discontinuation / missing content due to source re-evaluation",
+      "frequency": 1
+    },
+    {
+      "item": "self-service profile update required",
+      "frequency": 1
+    },
+    {
+      "item": "missing issue / incomplete source coverage",
+      "frequency": 1
+    },
+    {
+      "item": "external publisher follow-up required",
+      "frequency": 1
+    },
+    {
+      "item": "coverage status inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "citation linking / reference metadata error",
+      "frequency": 1
+    },
+    {
+      "item": "correction request denied due to source-record fidelity",
+      "frequency": 1
+    },
+    {
+      "item": "identity / profile setup misunderstanding",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect data display / linking error in saved lists",
+      "frequency": 1
+    },
+    {
+      "item": "misrouted support / repeated clarification needed",
+      "frequency": 1
+    },
+    {
+      "item": "delayed escalation / unresolved follow-up",
+      "frequency": 1
+    },
+    {
+      "item": "content acquisition / inclusion evaluation delay",
+      "frequency": 1
+    }
+  ]
+}

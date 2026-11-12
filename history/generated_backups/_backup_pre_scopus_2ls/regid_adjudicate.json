@@ -1,0 +1,20 @@
+{
+  "RIDA1": {
+    "label": "Registration or Bulk ID request",
+    "children": {
+      "RIDA1.1": {
+        "label": "Registration or Bulk ID request",
+        "description": "Definition: The customer is asking for Registration IDs, RegIDs, Bulk IDs or remote credentials themselves - to create, add, delete, exchange, extend or renew them, to be told how many remain, or to be told how they work. The IDs are the subject of the request."
+      }
+    }
+  },
+  "RIDA2": {
+    "label": "Not a Registration or Bulk ID request",
+    "children": {
+      "RIDA2.1": {
+        "label": "Not a Registration or Bulk ID request",
+        "description": "Definition: The customer wants something else. The matched phrase is incidental: an ID quoted as reference, a request for complimentary or trial access that does not specify credentials, a sign-in or entitlement problem that happens to involve an ID the customer already has, or quoted text from an earlier reply."
+      }
+    }
+  }
+}

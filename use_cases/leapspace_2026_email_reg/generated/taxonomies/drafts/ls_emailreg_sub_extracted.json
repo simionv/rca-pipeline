@@ -1,0 +1,174 @@
+{
+  "domain": "ls_emailreg_sub",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "verification email not received",
+      "frequency": 3
+    },
+    {
+      "item": "complimentary access not activated",
+      "frequency": 2
+    },
+    {
+      "item": "linking existing profile to new institution",
+      "frequency": 1
+    },
+    {
+      "item": "access tied to wrong email address",
+      "frequency": 1
+    },
+    {
+      "item": "trial period confusion and cancellation request",
+      "frequency": 1
+    },
+    {
+      "item": "authentication issues with institutional access",
+      "frequency": 1
+    },
+    {
+      "item": "registration issue with database access",
+      "frequency": 1
+    },
+    {
+      "item": "user activation issue",
+      "frequency": 1
+    },
+    {
+      "item": "cannot access purchased leapspace",
+      "frequency": 1
+    },
+    {
+      "item": "access associated with the wrong email",
+      "frequency": 1
+    },
+    {
+      "item": "access issue with subscription",
+      "frequency": 1
+    },
+    {
+      "item": "verification email link expired",
+      "frequency": 1
+    },
+    {
+      "item": "registration page not appearing",
+      "frequency": 1
+    },
+    {
+      "item": "payment made under the wrong email",
+      "frequency": 1
+    },
+    {
+      "item": "access issue due to no active subscription",
+      "frequency": 1
+    },
+    {
+      "item": "registration issue",
+      "frequency": 1
+    },
+    {
+      "item": "password not accepted",
+      "frequency": 1
+    },
+    {
+      "item": "activation link error",
+      "frequency": 1
+    },
+    {
+      "item": "access showing incorrect duration",
+      "frequency": 1
+    },
+    {
+      "item": "purchase made under the wrong email",
+      "frequency": 1
+    },
+    {
+      "item": "password reset issue",
+      "frequency": 1
+    },
+    {
+      "item": "access not activated",
+      "frequency": 1
+    },
+    {
+      "item": "access method clarification",
+      "frequency": 1
+    },
+    {
+      "item": "access issues for multiple users",
+      "frequency": 1
+    },
+    {
+      "item": "complimentary access not activated correctly",
+      "frequency": 1
+    },
+    {
+      "item": "account access issues despite active subscription",
+      "frequency": 1
+    },
+    {
+      "item": "trial message displayed instead of full access",
+      "frequency": 1
+    },
+    {
+      "item": "subscription status confusion",
+      "frequency": 1
+    },
+    {
+      "item": "email address for subscription inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect account access level",
+      "frequency": 1
+    },
+    {
+      "item": "password reset request",
+      "frequency": 1
+    },
+    {
+      "item": "receipt resend request to new email",
+      "frequency": 1
+    },
+    {
+      "item": "subscription access issue with institutional email",
+      "frequency": 1
+    },
+    {
+      "item": "account not prompting for registration",
+      "frequency": 1
+    },
+    {
+      "item": "subscription not recognized under account",
+      "frequency": 1
+    },
+    {
+      "item": "account activation request",
+      "frequency": 1
+    },
+    {
+      "item": "missing activation link for subscription",
+      "frequency": 1
+    },
+    {
+      "item": "subscription access issue",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect email address used for registration",
+      "frequency": 1
+    },
+    {
+      "item": "activation link error during registration",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect trial access instead of full access",
+      "frequency": 1
+    },
+    {
+      "item": "access feature issue despite subscription payment",
+      "frequency": 1
+    }
+  ]
+}

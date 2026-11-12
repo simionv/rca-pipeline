@@ -1,0 +1,10 @@
+This notebook (08_csd_2026_validation_rules.ipynb) replaced the ScienceDirect 2026
+modules in generated/pipeline_config.json with the CSD 2026 ones.
+
+To put ScienceDirect back:
+
+    python build_pipeline.py build --input definitions/sd_2026_pipeline_definition.xlsx --force-all
+
+The ScienceDirect outputs are already saved under runs/output/sd_2026_*; nothing
+was deleted. To come back to CSD afterwards, rebuild from
+definitions/csd_2026_pipeline_definition.xlsx the same way.

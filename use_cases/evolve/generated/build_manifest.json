@@ -1,0 +1,32 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "2be782cad70564d8b90bef81214807298a230e14bba2997214c387c6830a087c",
+      "taxonomy_written_at": "2026-11-12T14:03:58.679462+00:00",
+      "py_hash": "2be782cad70564d8b90bef81214807298a230e14bba2997214c387c6830a087c",
+      "py_generated_at": "2026-11-12T13:58:22.715805+00:00"
+    },
+    "resolution": {
+      "taxonomy_hash": "01e9eb528b7ebc65a3a0782bc9751826362cccc8075ad80f692d3c6f66829f99",
+      "taxonomy_written_at": "2026-11-12T14:03:58.680372+00:00",
+      "py_hash": "01e9eb528b7ebc65a3a0782bc9751826362cccc8075ad80f692d3c6f66829f99",
+      "py_generated_at": "2026-11-12T13:58:22.716900+00:00"
+    },
+    "escalation": {
+      "py_hash": "a9aca504489496a31164fd222f0dbe34fb020f6f57e2e0a267a57d1adb320476",
+      "py_generated_at": "2026-11-12T13:58:22.717938+00:00"
+    },
+    "troubleshooting": {
+      "taxonomy_hash": "4b0ba6abf6e88fa049dba99ae57687932990d63144c5d79cf4d0e24d0832fea1",
+      "taxonomy_written_at": "2026-11-12T14:03:58.681861+00:00",
+      "py_hash": "4b0ba6abf6e88fa049dba99ae57687932990d63144c5d79cf4d0e24d0832fea1",
+      "py_generated_at": "2026-11-12T13:58:22.718909+00:00"
+    },
+    "metadata": {
+      "py_hash": "cae13226b661416d178d1de885563beafaa0529435fcdc979e3328b953ee5074",
+      "py_generated_at": "2026-11-12T13:58:22.720044+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:58.684095+00:00",
+  "generator_version": "1.7.0"
+}

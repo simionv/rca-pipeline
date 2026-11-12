@@ -1,0 +1,18 @@
+{
+  "_comment": "Stage 2 of 2 - root cause for tickets stage 1 classified as 'Set up teams or departments' (SDCR7.1). Input is the subset CSV written by notebooks/07_sd_2026_two_stage.ipynb, not the full ticket file.",
+  "input": "runs/intermediate/sd_2026_subset_teams_departments.csv",
+  "output": "runs/output/sd_2026_step2_teams_departments.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "sd_rc_teams_departments"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

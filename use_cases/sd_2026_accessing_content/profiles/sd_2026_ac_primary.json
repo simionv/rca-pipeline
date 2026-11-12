@@ -1,0 +1,19 @@
+{
+  "_comment": "Stage 1 of 2 - primary classification (Accessing content vs Anything else) for every 2026 ScienceDirect ticket. Taxonomy transcribed from the Accessing Content specification via sd_2026_accessing_content_definition.xlsx. Input is written by notebooks/10_sd_2026_accessing_content.ipynb (2026-filtered, short tickets removed, conversations capped at 16000 chars) - not the raw file.",
+  "input": "data/sd_ac_stage1_input_2026.csv",
+  "output": "runs/output/sd_2026_ac_step1_primary.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "sd_ac_primary"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports",
+  "temperature": 0.0
+}

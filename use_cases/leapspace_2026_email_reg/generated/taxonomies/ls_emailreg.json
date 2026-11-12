@@ -1,0 +1,20 @@
+{
+  "LER1": {
+    "label": "Email registration / email-account issue",
+    "children": {
+      "LER1.1": {
+        "label": "Email registration / email-account issue",
+        "description": "Definition: The problem or request is about the email address tied to an Elsevier or LeapSpace account, or about registering an account with an email address. This includes: creating or registering an account with an email address; a verification, activation or confirmation email that did not arrive or whose link does not work; an email address reported as already registered, not recognised or not found; which email to use - institutional versus personal - and moving an account, access or subscription from one email address to another; changing, correcting, merging or removing the email address on an account, including a typo in the registered address; a purchase or subscription attached to the wrong email address or account; and being unable to sign in or reset a password because the registered email address is wrong, unreachable or unknown to the customer."
+      }
+    }
+  },
+  "LER2": {
+    "label": "Not email registration",
+    "children": {
+      "LER2.1": {
+        "label": "Not email registration",
+        "description": "Definition: Everything else: payment, invoices and refunds; search or credit limits; cancelling a subscription; access or entitlement problems where the email address itself is not in question; product questions, feedback and internal requests. A ticket is not about email registration just because an email address appears in it, because the agent asks which email address was used, or because the customer is told to sign in with their email address. Bounce-back and out-of-office messages are not evidence either way."
+      }
+    }
+  }
+}

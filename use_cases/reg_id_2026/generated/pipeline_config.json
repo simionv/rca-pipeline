@@ -1,0 +1,48 @@
+{
+  "modules": {
+    "regid_adjudicate": {
+      "taxonomy_prefix": "RIDA",
+      "taxonomy_file": "regid_adjudicate.json",
+      "taxonomy_key": "regid_adjudicate",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "Decide whether this customer is actually requesting Registration IDs, Bulk IDs or remote credentials. Read the whole thread before deciding. The customer opens, the agent replies, and the request is often restated or corrected further down. Classify on what the CUSTOMER is asking for, not on what the agent did about it. An agent who fulfils a request by issuing credentials, sending a link or raising a ticket does not change what was asked. Exactly one code. If two seem to fit, pick the one the customer would name themselves. Assign the single best-fitting LEAF code (e.g. RIDA1.1). You are shown the CUSTOMER side of the conversation, with the agent reply removed. A small number of tickets were logged by an agent and contain no customer turn at all - for those you are shown the whole note, and you should read it for what the customer was asking for. A phrase such as registration ID or bulk ID appearing in the text is not enough on its own. Answer YES only when the customer is asking for the IDs or credentials themselves - to be created, added, removed, exchanged, extended, counted or explained. Answer NO when the customer is asking for something else and merely mentions IDs in passing: quoting an ID they were given earlier, asking for free or trial access without specifying how it should be delivered, reporting that an ID they already hold will not work as part of a different problem, or pasting a previous email that contained one. Never return an empty code - if the text does not show the customer asking for IDs, for any reason including that it shows nothing at all, the answer is Not a Registration or Bulk ID request.",
+      "classify_fn": "classify_regid_adjudicate",
+      "code_field": "rida_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "regid_taxonomy": {
+      "taxonomy_prefix": "RIDT",
+      "taxonomy_file": "regid_taxonomy.json",
+      "taxonomy_key": "regid_taxonomy",
+      "reorder_group": "B",
+      "reorder_order": 2,
+      "description": "Classify this customer support ticket into exactly one category from the taxonomy below. Each category carries its definition and, where the original tagger recorded them, the synonyms and phrasings they used for it. Match on what the definition describes, not on surface keywords. Read the whole thread before deciding. The customer opens, the agent replies, and the request is often restated or corrected further down. Classify on what the CUSTOMER is asking for, not on what the agent did about it. An agent who fulfils a request by issuing credentials, sending a link or raising a ticket does not change what was asked. Exactly one code. If two seem to fit, pick the one the customer would name themselves. Never return an empty code. Every ticket gets one. If the thread does not say enough to classify - an agent-only note with no customer request, an auto-reply, a bare acknowledgement, an attachment with no text - that is not a reason to leave the field blank, it is the reason the catch-all category exists. Use it. The catch-all is Not enough info. Assign the single best-fitting LEAF code (e.g. RIDT1.1).",
+      "classify_fn": "classify_regid_taxonomy",
+      "code_field": "ridt_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "rida_code",
+    "rida_justification",
+    "rida_evidence",
+    "ridt_code",
+    "ridt_justification",
+    "ridt_evidence"
+  ],
+  "reorder_groups": {
+    "A": 1,
+    "B": 2
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "rida_code",
+    "ridt_code"
+  ],
+  "output_exclude": []
+}

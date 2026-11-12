@@ -1,0 +1,145 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_prefix": "CR",
+      "taxonomy_file": "contact_reason.json",
+      "taxonomy_key": "contact_reason",
+      "reorder_group": "contact",
+      "reorder_order": 1,
+      "description": "Hierarchical classification of the customer's Contact Reason (L1) AND Root Cause (L2) for Evolve support tickets. L1 = Contact Reason category (11 groups); L2 = the specific Root Cause valid within that Contact Reason -- the same root-cause label (e.g. 'Other', 'Not enough info') legitimately repeats under multiple different L1 parents with distinct descriptions. Assign the single best-fitting LEAF code (e.g. CR4.2).",
+      "classify_fn": "classify_contact_reason",
+      "code_field": "contact_reason_primary_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "resolution": {
+      "taxonomy_prefix": "RS",
+      "taxonomy_file": "resolution_codes.json",
+      "taxonomy_key": "resolution_codes",
+      "reorder_group": "resolution",
+      "reorder_order": 6,
+      "description": "Classifies how the interaction was resolved.",
+      "classify_fn": "classify_resolution",
+      "code_field": "resolution_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "escalation": {
+      "taxonomy_prefix": "",
+      "taxonomy_file": "",
+      "taxonomy_key": "",
+      "reorder_group": "escalat",
+      "reorder_order": 7,
+      "description": "Detects whether the interaction was escalated to a higher tier or different team.",
+      "classify_fn": "classify_escalation",
+      "code_field": null,
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "troubleshooting": {
+      "taxonomy_prefix": "TS",
+      "taxonomy_file": "troubleshooting_steps.json",
+      "taxonomy_key": "troubleshooting_steps",
+      "reorder_group": "troubleshooting",
+      "reorder_order": 8,
+      "description": "Identifies the troubleshooting steps taken by the agent during the interaction.",
+      "classify_fn": "classify_troubleshooting",
+      "code_field": null,
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "metadata": {
+      "taxonomy_prefix": "",
+      "taxonomy_file": "",
+      "taxonomy_key": "",
+      "reorder_group": "environment",
+      "reorder_order": 9,
+      "description": "Extracts supplementary metadata: products mentioned, error messages, urgency, and a short summary.",
+      "classify_fn": "classify_metadata",
+      "code_field": null,
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "access_classification_contact",
+    "contact_reason_primary_code",
+    "contact_reason_primary_description",
+    "secondary_codes",
+    "contact_reason_type",
+    "contact_reason_justification",
+    "contact_reason_evidence",
+    "contact_reason_evidence_type",
+    "resolution_status",
+    "resolution_code",
+    "resolution_description",
+    "resolution_status_evidence",
+    "escalated",
+    "escalation_targets",
+    "escalation_evidence",
+    "troubleshooting_step_codes",
+    "products_mentioned",
+    "error_messages",
+    "time_criticality",
+    "urgency",
+    "short_summary",
+    "evidence_snippets"
+  ],
+  "reorder_groups": {
+    "contact": 1,
+    "resolution": 6,
+    "escalat": 7,
+    "troubleshooting": 8,
+    "environment": 9
+  },
+  "enum_validators": {
+    "access_classification_contact": [
+      "institutional",
+      "personal"
+    ],
+    "contact_reason_type": [
+      "incident",
+      "service_request",
+      "user_guidance"
+    ],
+    "contact_reason_evidence_type": [
+      "customer_symptom",
+      "agent_action",
+      "system_message"
+    ],
+    "resolution_status": [
+      "resolved",
+      "workaround",
+      "escalated",
+      "pending",
+      "no_action"
+    ],
+    "time_criticality": [
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "urgency": [
+      "routine",
+      "soon",
+      "urgent",
+      "emergency"
+    ]
+  },
+  "list_fields": [
+    "secondary_codes",
+    "escalation_targets",
+    "escalation_evidence",
+    "troubleshooting_step_codes",
+    "products_mentioned",
+    "error_messages",
+    "evidence_snippets"
+  ],
+  "object_list_fields": {},
+  "code_fields": [
+    "contact_reason_primary_code",
+    "resolution_code"
+  ],
+  "output_exclude": []
+}

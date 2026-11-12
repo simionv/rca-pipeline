@@ -1,0 +1,36 @@
+{
+  "SCSS1": {
+    "label": "Subscription / Sales",
+    "children": {
+      "SCSS1.1": {
+        "label": "New Subscription Interest",
+        "description": "Definition: The customer or institution wants to subscribe but does not yet have a subscription."
+      },
+      "SCSS1.2": {
+        "label": "Pricing / Quote Request",
+        "description": "Definition: The customer needs pricing or a quote."
+      },
+      "SCSS1.3": {
+        "label": "Individual / Personal Subscription Query",
+        "description": "Definition: An individual asks whether or how they can subscribe personally."
+      },
+      "SCSS1.4": {
+        "label": "Trial Request",
+        "description": "Definition: The customer asks for a trial."
+      },
+      "SCSS1.5": {
+        "label": "Renewal Query",
+        "description": "Definition: The customer asks about renewing or the status of a subscription."
+      },
+      "SCSS1.6": {
+        "label": "Order / Agreement Processing",
+        "description": "Definition: The customer asks about processing an order, agreement or contract for Scopus."
+      },
+      "SCSS1.7": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The sales-related need is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Subscription / Sales'. Choose the Level 2 value from this group only. 'Subscription / Sales' means: Definition: Pricing, quotes, trials, renewals, order/agreement processing, interest in subscribing. A trial or complimentary access that was granted but is not working is Access; a request for a trial is Subscription / Sales."
+  }
+}

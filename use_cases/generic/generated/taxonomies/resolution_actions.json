@@ -1,0 +1,130 @@
+{
+  "RA1": {
+    "label": "Information and guidance provided",
+    "children": {
+      "RA1.1": {
+        "label": "Step-by-step instructions provided",
+        "description": "Agent walked the customer through a process with specific steps to resolve their issue."
+      },
+      "RA1.2": {
+        "label": "Product capability or limitation clarified",
+        "description": "Agent explained what the product can or cannot do, resolving a capability misunderstanding."
+      },
+      "RA1.3": {
+        "label": "Directed to documentation or self-service",
+        "description": "Agent pointed the customer to a help article, FAQ, knowledge base, or self-service tool."
+      },
+      "RA1.4": {
+        "label": "Policy or terms explained",
+        "description": "Agent clarified a company policy, contract term, or service agreement that the customer questioned."
+      }
+    },
+    "description": "The agent resolved the issue by providing information, instructions, or clarification rather than taking a system or account action."
+  },
+  "RA2": {
+    "label": "Account or system action taken",
+    "children": {
+      "RA2.1": {
+        "label": "Credentials reset or access restored",
+        "description": "Agent reset a password, unlocked an account, or restored system access for the customer."
+      },
+      "RA2.2": {
+        "label": "Account settings or configuration modified",
+        "description": "Agent changed a setting, preference, or configuration on the customer's account."
+      },
+      "RA2.3": {
+        "label": "Billing credit or adjustment applied",
+        "description": "Agent applied a credit note, price adjustment, or billing correction to the account."
+      },
+      "RA2.4": {
+        "label": "Refund processed or initiated",
+        "description": "Agent processed or formally initiated a refund for an eligible charge."
+      },
+      "RA2.5": {
+        "label": "Account details or profile updated",
+        "description": "Agent updated personal details, contact information, or profile data on the account."
+      },
+      "RA2.6": {
+        "label": "Subscription or plan changed",
+        "description": "Agent upgraded, downgraded, paused, or modified the customer's subscription or plan tier."
+      }
+    },
+    "description": "The agent performed a direct action on the customer's account or in the company's systems."
+  },
+  "RA3": {
+    "label": "Escalation or specialist action",
+    "children": {
+      "RA3.1": {
+        "label": "Transferred to specialist or second-line team",
+        "description": "Customer or case was transferred to a specialist team with the relevant expertise."
+      },
+      "RA3.2": {
+        "label": "Engineering or technical ticket raised",
+        "description": "A bug report, technical investigation ticket, or change request was logged for the engineering team."
+      },
+      "RA3.3": {
+        "label": "Escalated to supervisor or manager",
+        "description": "A manager or senior agent took over the case or was brought in to assist."
+      },
+      "RA3.4": {
+        "label": "Formal case or investigation opened",
+        "description": "A formal investigation was opened for a complex issue requiring multi-step review."
+      }
+    },
+    "description": "The issue was beyond the agent's authority or capability and was escalated or referred to a specialist."
+  },
+  "RA4": {
+    "label": "Workaround or alternative solution",
+    "children": {
+      "RA4.1": {
+        "label": "Workaround or manual fix provided",
+        "description": "Agent provided a temporary workaround that allows the customer to proceed without the permanent fix."
+      },
+      "RA4.2": {
+        "label": "Alternative product, feature, or plan offered",
+        "description": "Agent offered an alternative that meets the customer's need, though not the originally requested solution."
+      },
+      "RA4.3": {
+        "label": "Callback or follow-up scheduled as interim",
+        "description": "Agent scheduled a callback or follow-up as a holding action while the main resolution is arranged."
+      }
+    },
+    "description": "The ideal resolution was not available, so the agent provided a workaround or alternative."
+  },
+  "RA5": {
+    "label": "Complaint or goodwill handling",
+    "children": {
+      "RA5.1": {
+        "label": "Formal apology and acknowledgement provided",
+        "description": "Agent offered a sincere, explicit apology for the issue or inconvenience caused."
+      },
+      "RA5.2": {
+        "label": "Goodwill gesture offered",
+        "description": "Agent offered a credit, discount, free upgrade, or other goodwill gesture beyond standard entitlement."
+      },
+      "RA5.3": {
+        "label": "Complaint formally logged",
+        "description": "Agent formally registered the customer's complaint in the company's system for tracking and review."
+      }
+    },
+    "description": "The agent took specific action to acknowledge and address the customer's dissatisfaction beyond the functional issue itself."
+  },
+  "RA6": {
+    "label": "No resolution action taken",
+    "children": {
+      "RA6.1": {
+        "label": "Policy limitation - cannot fulfil request",
+        "description": "The customer's request is outside what company policy allows; the agent explained but could not act."
+      },
+      "RA6.2": {
+        "label": "Outside scope - redirected to correct resource",
+        "description": "The issue is outside this team's scope; the customer was redirected to the appropriate channel."
+      },
+      "RA6.3": {
+        "label": "Customer declined offered resolution",
+        "description": "The agent offered a valid resolution but the customer chose not to accept it."
+      }
+    },
+    "description": "The agent was unable or chose not to take a resolution action. The interaction ended without a concrete resolution step."
+  }
+}

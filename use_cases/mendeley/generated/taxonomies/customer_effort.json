@@ -1,0 +1,58 @@
+{
+  "CE1": {
+    "label": "Low effort",
+    "children": {
+      "CE1.1": {
+        "label": "Quick first-contact resolution",
+        "description": "Issue resolved on the first contact with minimal back-and-forth."
+      },
+      "CE1.2": {
+        "label": "Guided self-service",
+        "description": "Customer was guided to a self-service tool or FAQ that resolved the issue."
+      }
+    },
+    "description": "Issue resolved quickly with minimal customer effort."
+  },
+  "CE2": {
+    "label": "Medium effort",
+    "children": {
+      "CE2.1": {
+        "label": "Multiple troubleshooting steps required",
+        "description": "Several diagnostic steps needed but issue resolved in one session."
+      },
+      "CE2.2": {
+        "label": "Information repeated",
+        "description": "Customer had to repeat their information or issue description more than once."
+      }
+    },
+    "description": "Resolution required several steps but remained within one contact."
+  },
+  "CE3": {
+    "label": "High effort",
+    "children": {
+      "CE3.1": {
+        "label": "Multiple contacts required",
+        "description": "Customer contacted support more than once to resolve the same issue."
+      },
+      "CE3.2": {
+        "label": "Long resolution time",
+        "description": "Issue took a significant amount of time or multiple sessions to resolve."
+      }
+    },
+    "description": "Customer had to expend significant effort across multiple interactions."
+  },
+  "CE4": {
+    "label": "Very high effort",
+    "children": {
+      "CE4.1": {
+        "label": "Issue unresolved after multiple contacts",
+        "description": "Customer made multiple contacts and the issue remains unresolved."
+      },
+      "CE4.2": {
+        "label": "Customer expressed significant frustration",
+        "description": "Customer explicitly expressed frustration, anger, or loss of confidence."
+      }
+    },
+    "description": "Extreme effort required; customer clearly frustrated or issue unresolved."
+  }
+}

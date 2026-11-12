@@ -1,0 +1,66 @@
+{
+  "KM1": {
+    "label": "Customer-facing documentation gap",
+    "children": {
+      "KM1.1": {
+        "label": "Help article missing for this scenario",
+        "description": "No customer-facing documentation exists covering the specific issue or question the customer had."
+      },
+      "KM1.2": {
+        "label": "Existing article inaccurate or outdated",
+        "description": "A help article exists but contains incorrect, outdated, or misleading information that contributed to the customer's confusion or issue."
+      },
+      "KM1.3": {
+        "label": "Article exists but customer could not find it",
+        "description": "The relevant documentation exists but is not discoverable — poor search, navigation, or categorisation prevented the customer from finding it before contacting support."
+      },
+      "KM1.4": {
+        "label": "Step-by-step guide or visual tutorial needed",
+        "description": "The topic requires visual or step-by-step guidance (screenshots, video, annotated images) that is not currently available."
+      }
+    },
+    "description": "This interaction reveals that help articles, FAQs, or guides available to customers are missing, inaccurate, or insufficient for the scenario encountered."
+  },
+  "KM2": {
+    "label": "FAQ opportunity",
+    "children": {
+      "KM2.1": {
+        "label": "Common question not in FAQ",
+        "description": "The customer's question is likely common but is not addressed in the existing FAQ."
+      },
+      "KM2.2": {
+        "label": "FAQ answer insufficient or confusing",
+        "description": "An FAQ entry exists for this question but the answer is incomplete, jargon-heavy, or otherwise unhelpful."
+      }
+    },
+    "description": "The customer's question or issue represents a frequently asked question that should be added to or improved in the FAQ section."
+  },
+  "KM3": {
+    "label": "Internal knowledge or training gap",
+    "children": {
+      "KM3.1": {
+        "label": "Agent lacked information not in knowledge base",
+        "description": "The agent could not answer a question because the relevant information is not documented in the internal knowledge base."
+      },
+      "KM3.2": {
+        "label": "Internal process documentation unclear",
+        "description": "The agent was uncertain about internal procedure, suggesting the process documentation is ambiguous, missing, or not accessible in the knowledge base."
+      },
+      "KM3.3": {
+        "label": "Agent training gap for this scenario",
+        "description": "The agent's response suggests they have not been trained on how to handle this type of request."
+      }
+    },
+    "description": "This interaction reveals a gap in the internal knowledge base, agent runbooks, or training materials that agents rely on."
+  },
+  "KM4": {
+    "label": "No knowledge gap identified",
+    "children": {
+      "KM4.1": {
+        "label": "Existing documentation adequate — no action needed",
+        "description": "The agent or customer was able to use existing resources effectively. No new or updated content is required."
+      }
+    },
+    "description": "The interaction did not reveal any documentation or knowledge gap. Existing resources are adequate for this type of enquiry."
+  }
+}

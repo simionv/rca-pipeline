@@ -1,0 +1,18 @@
+{
+  "_comment": "Stage 2 of 2 - root cause for tickets stage 1 classified as 'Access blocked by security/network controls' (SDCR1.1). Input is the subset CSV written by notebooks/07_sd_2026_two_stage.ipynb, not the full ticket file.",
+  "input": "runs/intermediate/sd_2026_subset_security_block.csv",
+  "output": "runs/output/sd_2026_step2_security_block.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "sd_rc_security_block"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

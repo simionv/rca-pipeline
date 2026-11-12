@@ -1,0 +1,110 @@
+{
+  "CR1": {
+    "label": "Signing in & authentication",
+    "children": {
+      "CR1.1": {
+        "label": "Login blocked",
+        "description": "Requests where the user cannot sign in to the platform at all (e.g. login error, account locked or blocked, repeated failed login attempts, Cloudflare block, inactive CHIEF account, or login prevented for any reason)."
+      },
+      "CR1.2": {
+        "label": "Password",
+        "description": "Requests about forgotten passwords or password modifications, including cases where the password reset email was not received or went to junk mail."
+      },
+      "CR1.3": {
+        "label": "Wrong account or unexpected account switching",
+        "description": "Requests where the user is signed into the wrong account or is unexpectedly switched or logged into another account (e.g. linked accounts confusion, SSO selecting the wrong profile, multiple profiles)."
+      },
+      "CR1.4": {
+        "label": "Other sign-in issue",
+        "description": "Sign-in issues not covered by the specific leaf codes above."
+      }
+    },
+    "description": "Issues preventing the customer from signing in, accessing their account, or authenticating via any method."
+  },
+  "CR2": {
+    "label": "Account creation & setup",
+    "children": {
+      "CR2.1": {
+        "label": "Registration failed",
+        "description": "Requests where the user cannot create an account or complete registration (e.g. registration errors, being told the account already exists, email already in use with Elsevier, or sign-up not completing)."
+      },
+      "CR2.2": {
+        "label": "Verification link issue",
+        "description": "Requests related to account verification links that have expired or are otherwise not working."
+      },
+      "CR2.3": {
+        "label": "Other account setup issue",
+        "description": "Account setup issues not covered above."
+      }
+    },
+    "description": "Issues encountered when creating a new account or completing initial account setup."
+  },
+  "CR3": {
+    "label": "Account details & personal data",
+    "children": {
+      "CR3.1": {
+        "label": "Update email address",
+        "description": "Requests to update or change the email address associated with the account (e.g. moving institution, no longer having access to the registered address, multiple profiles)."
+      },
+      "CR3.2": {
+        "label": "Switch authentication method",
+        "description": "Requests to convert or reclassify the account's authentication method (e.g. personal to institutional or vice versa, switching from Shibboleth to username/password after leaving an institution), including changes to account ownership or affiliation requiring a back-end update."
+      },
+      "CR3.3": {
+        "label": "Account recovery",
+        "description": "Requests to regain access to an existing account when standard login recovery cannot be completed (e.g. no longer has access to the registered email, account takeover concern, locked out after changes, recovery or verification step cannot be completed, accidental deletion)."
+      },
+      "CR3.4": {
+        "label": "Merge or transfer accounts",
+        "description": "Requests to merge multiple accounts or transfer an account (e.g. after switching institution, expired email address, multiple accounts created over time)."
+      },
+      "CR3.5": {
+        "label": "Other account details & personal data",
+        "description": "Account details & personal data not covered above."
+      }
+    },
+    "description": "Requests to update, recover, or change personal account information, authentication methods, or account ownership."
+  },
+  "CR4": {
+    "label": "Organisation & network access",
+    "children": {
+      "CR4.1": {
+        "label": "Institutional sign-in not working",
+        "description": "Requests related to institutional sign-in failures (e.g. expired link, access blocked by institution, activation email not received, link invalid, verification not completing)."
+      },
+      "CR4.2": {
+        "label": "Access blocked by security or network controls",
+        "description": "Requests where access is blocked by institutional or network-level security controls (e.g. firewall, IP restriction, institutional IT blocking access — customer advised to contact their admin)."
+      },
+      "CR4.3": {
+        "label": "Institution changed",
+        "description": "Requests to update or switch the user's institution or SSO affiliation after moving universities or organisations."
+      },
+      "CR4.4": {
+        "label": "No institutional entitlement",
+        "description": "Requests where the user cannot access via their institution because the institution is not entitled, not subscribed, or not configured or enabled for access (e.g. SHIB not activated in CHIEF, institution not entitled)."
+      },
+      "CR4.5": {
+        "label": "Cannot join institution MIE group",
+        "description": "Requests where the user cannot join or access their institution's MIE group (e.g. institution or group membership not recognised, invitation or entitlement issue, access blocked due to IP or network restrictions)."
+      },
+      "CR4.6": {
+        "label": "Other organisation & network access",
+        "description": "Organisation & network access not covered above."
+      },
+      "CR4.7": {
+        "label": "General enquiry",
+        "description": "General questions not fitting any other category."
+      },
+      "CR4.8": {
+        "label": "Feedback or complaint",
+        "description": "Customer feedback or formal complaint."
+      },
+      "CR4.9": {
+        "label": "Unrelated contact",
+        "description": "Contact that does not relate to any supported category."
+      }
+    },
+    "description": "Issues related to institutional or organisational access, network controls, or institutional configuration."
+  }
+}

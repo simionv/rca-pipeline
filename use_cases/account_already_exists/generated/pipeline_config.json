@@ -1,0 +1,43 @@
+{
+  "modules": {
+    "root_cause": {
+      "taxonomy_prefix": "RC",
+      "taxonomy_file": "root_cause.json",
+      "taxonomy_key": "root_cause",
+      "reorder_group": "root",
+      "reorder_order": 3,
+      "description": "Identifies the root cause of the support issue with justification and evidence from the transcript.",
+      "classify_fn": "classify_root_cause",
+      "code_field": "root_cause_primary_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "root_cause_access_domain",
+    "root_cause_primary_code",
+    "root_cause_primary_description",
+    "root_cause_justification",
+    "root_cause_evidence",
+    "root_cause_evidence_type",
+    "contributing_codes"
+  ],
+  "reorder_groups": {
+    "root": 3
+  },
+  "enum_validators": {
+    "root_cause_evidence_type": [
+      "customer_symptom",
+      "agent_action",
+      "system_message"
+    ]
+  },
+  "list_fields": [
+    "contributing_codes"
+  ],
+  "object_list_fields": {},
+  "code_fields": [
+    "root_cause_primary_code"
+  ],
+  "output_exclude": []
+}

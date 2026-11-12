@@ -1,0 +1,38 @@
+{
+  "modules": {
+    "csd_validation_rule": {
+      "taxonomy_hash": "b4ee83a0a63cf43d9fb977f9aaf217e3dfcb947d8caa3a946194e1cf7eccbdb4",
+      "taxonomy_written_at": "2026-11-12T14:03:58.039047+00:00",
+      "py_hash": "b4ee83a0a63cf43d9fb977f9aaf217e3dfcb947d8caa3a946194e1cf7eccbdb4",
+      "py_generated_at": "2026-11-12T13:58:22.008579+00:00"
+    },
+    "csd_rejection_reason": {
+      "taxonomy_hash": "91d1712302632cc804adef2c47b26f3b87a8731fc45cdd5f2a1c04348961821e",
+      "taxonomy_written_at": "2026-11-12T14:03:58.040638+00:00",
+      "py_hash": "91d1712302632cc804adef2c47b26f3b87a8731fc45cdd5f2a1c04348961821e",
+      "py_generated_at": "2026-11-12T13:58:22.010224+00:00"
+    },
+    "csd_rule_proposal": {
+      "py_hash": "20949c5abc7fc45df95ddf9c131d40c5a648ad5bf5761e7130915a55c4f5b11d",
+      "py_generated_at": "2026-11-12T13:58:22.011199+00:00"
+    },
+    "csd_customer_effort": {
+      "taxonomy_hash": "2d7a8e301949c388bcd05d36b877f4cdd07e39669ec6847be01f02fee4ee2ff4",
+      "taxonomy_written_at": "2026-11-12T14:03:58.043016+00:00",
+      "py_hash": "2d7a8e301949c388bcd05d36b877f4cdd07e39669ec6847be01f02fee4ee2ff4",
+      "py_generated_at": "2026-11-12T13:58:22.012992+00:00"
+    },
+    "csd_multi_rule": {
+      "taxonomy_hash": "d5f089a62645db6478f6a7a343e8a015e3c49da27fdefd92e07086c0dbb0bd35",
+      "taxonomy_written_at": "2026-11-12T14:03:58.043926+00:00",
+      "py_hash": "d5f089a62645db6478f6a7a343e8a015e3c49da27fdefd92e07086c0dbb0bd35",
+      "py_generated_at": "2026-11-12T13:58:22.014076+00:00"
+    },
+    "csd_dsat_review": {
+      "py_hash": "2994a6d2bd632a31aae5d255e0e6bec50d7c152afd745d2655d36597df2c2cce",
+      "py_generated_at": "2026-11-12T13:58:22.015371+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:58.046481+00:00",
+  "generator_version": "1.7.0"
+}

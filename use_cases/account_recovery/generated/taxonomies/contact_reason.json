@@ -1,0 +1,12 @@
+{
+  "CR1": {
+    "label": "Account details & personal data",
+    "children": {
+      "CR1.1": {
+        "label": "Account recovery",
+        "description": "Requests to regain access to an existing account when standard login recovery cannot be completed (e.g. no longer has access to the registered email, account takeover concern, locked out after changes, recovery or verification step cannot be completed, accidental deletion)."
+      }
+    },
+    "description": "Requests to update, recover, or change personal account information, authentication methods, or account ownership."
+  }
+}

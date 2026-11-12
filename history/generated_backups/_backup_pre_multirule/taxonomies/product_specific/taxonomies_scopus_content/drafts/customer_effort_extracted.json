@@ -1,0 +1,1358 @@
+{
+  "domain": "customer_effort",
+  "mode": "extract_only",
+  "items": [
+    {
+      "item": "unresolved issue",
+      "frequency": 23
+    },
+    {
+      "item": "wait time / response delay",
+      "frequency": 22
+    },
+    {
+      "item": "unresolved issue / incomplete resolution",
+      "frequency": 16
+    },
+    {
+      "item": "repeat contact for same issue",
+      "frequency": 9
+    },
+    {
+      "item": "unresolved issue / resolution failure",
+      "frequency": 7
+    },
+    {
+      "item": "response delay",
+      "frequency": 7
+    },
+    {
+      "item": "issue resolution failure",
+      "frequency": 6
+    },
+    {
+      "item": "navigation / findability friction",
+      "frequency": 5
+    },
+    {
+      "item": "channel redirection friction",
+      "frequency": 5
+    },
+    {
+      "item": "issue not resolved / ineffective support",
+      "frequency": 5
+    },
+    {
+      "item": "resolution delay / unresolved issue",
+      "frequency": 5
+    },
+    {
+      "item": "issue not resolved",
+      "frequency": 5
+    },
+    {
+      "item": "resolution delay",
+      "frequency": 4
+    },
+    {
+      "item": "issue unresolved / service not delivered",
+      "frequency": 4
+    },
+    {
+      "item": "issue not resolved / incomplete resolution",
+      "frequency": 4
+    },
+    {
+      "item": "repeat contact / follow-up friction",
+      "frequency": 3
+    },
+    {
+      "item": "information access / findability friction",
+      "frequency": 3
+    },
+    {
+      "item": "issue unresolved after support contact",
+      "frequency": 3
+    },
+    {
+      "item": "repeat contact for unresolved issue",
+      "frequency": 3
+    },
+    {
+      "item": "issue unresolved / no effective resolution",
+      "frequency": 3
+    },
+    {
+      "item": "prolonged unresolved case / lack of resolution",
+      "frequency": 3
+    },
+    {
+      "item": "navigation / discoverability friction",
+      "frequency": 3
+    },
+    {
+      "item": "repeated issue explanation / transfer friction",
+      "frequency": 3
+    },
+    {
+      "item": "unresolved issue / ineffective support resolution",
+      "frequency": 3
+    },
+    {
+      "item": "issue unresolved / resolution failure",
+      "frequency": 3
+    },
+    {
+      "item": "issue unresolved / no resolution",
+      "frequency": 3
+    },
+    {
+      "item": "slow issue resolution / long turnaround time",
+      "frequency": 3
+    },
+    {
+      "item": "response delay / slow support",
+      "frequency": 2
+    },
+    {
+      "item": "unanswered inquiry / incomplete support response",
+      "frequency": 2
+    },
+    {
+      "item": "unresolved issue / problem not solved",
+      "frequency": 2
+    },
+    {
+      "item": "repeat issue explanation / prior contact not retained",
+      "frequency": 2
+    },
+    {
+      "item": "service delay / slow processing",
+      "frequency": 2
+    },
+    {
+      "item": "unresolved issue / pending resolution",
+      "frequency": 2
+    },
+    {
+      "item": "escalation / transfer friction",
+      "frequency": 2
+    },
+    {
+      "item": "unresolved issue after customer effort",
+      "frequency": 2
+    },
+    {
+      "item": "insufficient information provided",
+      "frequency": 2
+    },
+    {
+      "item": "excessive explanation / information-gathering friction",
+      "frequency": 2
+    },
+    {
+      "item": "no response / delayed response",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / manual process burden",
+      "frequency": 2
+    },
+    {
+      "item": "poor communication / unclear status updates",
+      "frequency": 2
+    },
+    {
+      "item": "lack of clear guidance / procedural information",
+      "frequency": 2
+    },
+    {
+      "item": "resolution delay / slow issue handling",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / information discovery failure",
+      "frequency": 2
+    },
+    {
+      "item": "information gathering burden",
+      "frequency": 2
+    },
+    {
+      "item": "slow resolution / prolonged case handling",
+      "frequency": 2
+    },
+    {
+      "item": "processing delay / long turnaround time",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / information discovery difficulty",
+      "frequency": 2
+    },
+    {
+      "item": "post-proof correction / revision friction",
+      "frequency": 2
+    },
+    {
+      "item": "issue unresolved / no resolution yet",
+      "frequency": 2
+    },
+    {
+      "item": "channel redirection / multi-channel contact friction",
+      "frequency": 2
+    },
+    {
+      "item": "resolution delay / prolonged waiting",
+      "frequency": 2
+    },
+    {
+      "item": "slow response / delayed service",
+      "frequency": 2
+    },
+    {
+      "item": "slow process / turnaround delay",
+      "frequency": 2
+    },
+    {
+      "item": "unresolved issue / partial resolution",
+      "frequency": 2
+    },
+    {
+      "item": "process inefficiency / excessive effort",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / submission difficulty",
+      "frequency": 2
+    },
+    {
+      "item": "resolution delay / slow service",
+      "frequency": 2
+    },
+    {
+      "item": "contact discovery / channel finding friction",
+      "frequency": 2
+    },
+    {
+      "item": "unaddressed request / incomplete response",
+      "frequency": 2
+    },
+    {
+      "item": "service/content availability or indexing issue",
+      "frequency": 2
+    },
+    {
+      "item": "repeat follow-up / persistence required",
+      "frequency": 2
+    },
+    {
+      "item": "self-service / automation gap",
+      "frequency": 1
+    },
+    {
+      "item": "repeated information request / back-and-forth support",
+      "frequency": 1
+    },
+    {
+      "item": "discoverability / visibility of content or records",
+      "frequency": 1
+    },
+    {
+      "item": "prioritization / triage friction",
+      "frequency": 1
+    },
+    {
+      "item": "response relevance / question-answer mismatch",
+      "frequency": 1
+    },
+    {
+      "item": "process complexity / multi-step resolution friction",
+      "frequency": 1
+    },
+    {
+      "item": "premature resolution closure / unresolved issue",
+      "frequency": 1
+    },
+    {
+      "item": "resolution delay / slow correction",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / repeat contact friction",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / unanswered inquiry",
+      "frequency": 1
+    },
+    {
+      "item": "communication channel mismatch / language comprehension friction",
+      "frequency": 1
+    },
+    {
+      "item": "document/status access friction",
+      "frequency": 1
+    },
+    {
+      "item": "slow internal processing / fulfillment delay",
+      "frequency": 1
+    },
+    {
+      "item": "complex workflow / non-obvious steps",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete resolution / issue not fully fixed",
+      "frequency": 1
+    },
+    {
+      "item": "long handling time / response delay",
+      "frequency": 1
+    },
+    {
+      "item": "persistent unresolved issue / repeat contact for same issue",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete or inaccurate response",
+      "frequency": 1
+    },
+    {
+      "item": "lack of human support / no human response",
+      "frequency": 1
+    },
+    {
+      "item": "excessive information or credential requirements",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / misunderstanding by support",
+      "frequency": 1
+    },
+    {
+      "item": "excessive form filling / manual data entry burden",
+      "frequency": 1
+    },
+    {
+      "item": "policy or eligibility confusion",
+      "frequency": 1
+    },
+    {
+      "item": "long resolution time / prolonged effort",
+      "frequency": 1
+    },
+    {
+      "item": "repeated contact / multiple attempts required",
+      "frequency": 1
+    },
+    {
+      "item": "general difficulty / high effort",
+      "frequency": 1
+    },
+    {
+      "item": "poor communication / lack of transparency",
+      "frequency": 1
+    },
+    {
+      "item": "repeated contact / repeated issue explanation",
+      "frequency": 1
+    },
+    {
+      "item": "misunderstood request / poor issue comprehension",
+      "frequency": 1
+    },
+    {
+      "item": "self-service navigation / findability friction",
+      "frequency": 1
+    },
+    {
+      "item": "process complexity / too many steps",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / inter-team handoff friction",
+      "frequency": 1
+    },
+    {
+      "item": "manual data entry / form completion friction",
+      "frequency": 1
+    },
+    {
+      "item": "navigation / path-finding friction",
+      "frequency": 1
+    },
+    {
+      "item": "slow resolution / turnaround time",
+      "frequency": 1
+    },
+    {
+      "item": "low-quality automated response / self-service failure",
+      "frequency": 1
+    },
+    {
+      "item": "transfer friction / repeated handoff",
+      "frequency": 1
+    },
+    {
+      "item": "unnecessary redirection / poor routing",
+      "frequency": 1
+    },
+    {
+      "item": "self-service failure / forced agent escalation",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / long wait time",
+      "frequency": 1
+    },
+    {
+      "item": "low-quality or unprofessional support interaction",
+      "frequency": 1
+    },
+    {
+      "item": "information gap / insufficient answer",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / automation failure",
+      "frequency": 1
+    },
+    {
+      "item": "data entry / form persistence failure",
+      "frequency": 1
+    },
+    {
+      "item": "manual workaround / extra effort required",
+      "frequency": 1
+    },
+    {
+      "item": "manual data entry / lack of auto-linking",
+      "frequency": 1
+    },
+    {
+      "item": "self-service information search burden",
+      "frequency": 1
+    },
+    {
+      "item": "unclear instructions / guidance",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / next-step uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "task completion difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "escalation opacity / unclear follow-up timing",
+      "frequency": 1
+    },
+    {
+      "item": "channel navigation / issue submission friction",
+      "frequency": 1
+    },
+    {
+      "item": "choice overload / unclear option selection",
+      "frequency": 1
+    },
+    {
+      "item": "follow-up tracking burden",
+      "frequency": 1
+    },
+    {
+      "item": "high customer effort / repeated follow-up burden",
+      "frequency": 1
+    },
+    {
+      "item": "process discovery / unclear next steps",
+      "frequency": 1
+    },
+    {
+      "item": "data / account information not updated correctly",
+      "frequency": 1
+    },
+    {
+      "item": "request submission / intake friction",
+      "frequency": 1
+    },
+    {
+      "item": "poor support quality / insufficient issue understanding",
+      "frequency": 1
+    },
+    {
+      "item": "communication clarity / confusing correspondence",
+      "frequency": 1
+    },
+    {
+      "item": "complaint escalation not resolved",
+      "frequency": 1
+    },
+    {
+      "item": "self-service gap / process complexity",
+      "frequency": 1
+    },
+    {
+      "item": "self-service gap / missing support information",
+      "frequency": 1
+    },
+    {
+      "item": "unresolved contact / no response",
+      "frequency": 1
+    },
+    {
+      "item": "issue ambiguity / unclear problem definition",
+      "frequency": 1
+    },
+    {
+      "item": "manual workaround / customer self-resolution burden",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / self-service burden",
+      "frequency": 1
+    },
+    {
+      "item": "slow response / lack of responsiveness",
+      "frequency": 1
+    },
+    {
+      "item": "resolution delay / pending case status",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / unclear timeline",
+      "frequency": 1
+    },
+    {
+      "item": "resolution delay / repeated follow-up burden",
+      "frequency": 1
+    },
+    {
+      "item": "slow resolution / excessive handling time",
+      "frequency": 1
+    },
+    {
+      "item": "unprofessional or dismissive support interaction",
+      "frequency": 1
+    },
+    {
+      "item": "information lookup / status clarification burden",
+      "frequency": 1
+    },
+    {
+      "item": "policy inconsistency / process non-adherence",
+      "frequency": 1
+    },
+    {
+      "item": "unsatisfactory resolution / low confidence in response",
+      "frequency": 1
+    },
+    {
+      "item": "repeated submission / resubmission friction",
+      "frequency": 1
+    },
+    {
+      "item": "low-quality standard response / inadequate resolution",
+      "frequency": 1
+    },
+    {
+      "item": "record/profile synchronization issue",
+      "frequency": 1
+    },
+    {
+      "item": "issue complexity / hard-to-diagnose problem",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / referral friction",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / documentation insufficiency",
+      "frequency": 1
+    },
+    {
+      "item": "lack of explanation / unclear resolution",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete support handling",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / repeated follow-up needed",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / delayed response",
+      "frequency": 1
+    },
+    {
+      "item": "communication overload / excessive follow-up messages",
+      "frequency": 1
+    },
+    {
+      "item": "confusing navigation / unclear interface",
+      "frequency": 1
+    },
+    {
+      "item": "lack of communication / status updates",
+      "frequency": 1
+    },
+    {
+      "item": "escalation opacity / unclear escalation path",
+      "frequency": 1
+    },
+    {
+      "item": "inconsistent record/profile matching",
+      "frequency": 1
+    },
+    {
+      "item": "lack of resolution / repeat contact for same issue",
+      "frequency": 1
+    },
+    {
+      "item": "link access / technical failure",
+      "frequency": 1
+    },
+    {
+      "item": "urgency due to business impact",
+      "frequency": 1
+    },
+    {
+      "item": "policy / eligibility clarification needed",
+      "frequency": 1
+    },
+    {
+      "item": "processing delay / slow visibility update",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / missed service-level expectation",
+      "frequency": 1
+    },
+    {
+      "item": "issue not resolved / deflected without resolution",
+      "frequency": 1
+    },
+    {
+      "item": "inconsistent information across channels",
+      "frequency": 1
+    },
+    {
+      "item": "excessive information required to complete request",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / repeated explanation for same issue",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / slow resolution",
+      "frequency": 1
+    },
+    {
+      "item": "need to re-evaluate or restate issue after response",
+      "frequency": 1
+    },
+    {
+      "item": "inaccurate or insufficient information",
+      "frequency": 1
+    },
+    {
+      "item": "customer forced to handle platform issue themselves",
+      "frequency": 1
+    },
+    {
+      "item": "unclear ownership / escalation path",
+      "frequency": 1
+    },
+    {
+      "item": "limited action beyond information transfer",
+      "frequency": 1
+    },
+    {
+      "item": "high-effort contact / cumbersome support intake",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / prior context needed",
+      "frequency": 1
+    },
+    {
+      "item": "lack of actionable guidance",
+      "frequency": 1
+    },
+    {
+      "item": "general service dissatisfaction / frustration",
+      "frequency": 1
+    },
+    {
+      "item": "process complexity / multi-step workflow",
+      "frequency": 1
+    },
+    {
+      "item": "policy / system limitation causing classification or eligibility issue",
+      "frequency": 1
+    },
+    {
+      "item": "delayed system update / item not reflected",
+      "frequency": 1
+    },
+    {
+      "item": "status update / progress tracking friction",
+      "frequency": 1
+    },
+    {
+      "item": "delayed response / wait time",
+      "frequency": 1
+    },
+    {
+      "item": "service not meeting expectations",
+      "frequency": 1
+    },
+    {
+      "item": "help-seeking / support access friction",
+      "frequency": 1
+    },
+    {
+      "item": "policy / rules clarity friction",
+      "frequency": 1
+    },
+    {
+      "item": "channel access / contact availability friction",
+      "frequency": 1
+    },
+    {
+      "item": "process complexity / high effort resolution",
+      "frequency": 1
+    },
+    {
+      "item": "unclear information / explanation friction",
+      "frequency": 1
+    },
+    {
+      "item": "slow resolution / long implementation delay",
+      "frequency": 1
+    },
+    {
+      "item": "manual intervention required instead of automatic processing",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect record matching / misattribution",
+      "frequency": 1
+    },
+    {
+      "item": "iterative back-and-forth resolution process",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete database coverage / missing records",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / search usability difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "complex issue requiring high customer effort",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / navigation difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "excessive manual form-filling / process burden",
+      "frequency": 1
+    },
+    {
+      "item": "data/profile merge or identity correction error",
+      "frequency": 1
+    },
+    {
+      "item": "low-quality or generic automated response",
+      "frequency": 1
+    },
+    {
+      "item": "channel access failure / unreachable support",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / follow-up burden",
+      "frequency": 1
+    },
+    {
+      "item": "repeat information / repeated explanation",
+      "frequency": 1
+    },
+    {
+      "item": "repeat issue explanation / no response",
+      "frequency": 1
+    },
+    {
+      "item": "poor support understanding / empathy",
+      "frequency": 1
+    },
+    {
+      "item": "manual workaround / extra effort",
+      "frequency": 1
+    },
+    {
+      "item": "channel capability mismatch for complex issues",
+      "frequency": 1
+    },
+    {
+      "item": "deflection to self-service / third-party handoff",
+      "frequency": 1
+    },
+    {
+      "item": "lack of accountability / transparency",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / management handoff friction",
+      "frequency": 1
+    },
+    {
+      "item": "follow-up / status tracking burden",
+      "frequency": 1
+    },
+    {
+      "item": "resolution delay / pending interdepartmental handling",
+      "frequency": 1
+    },
+    {
+      "item": "channel navigation / contact discovery friction",
+      "frequency": 1
+    },
+    {
+      "item": "proactive issue visibility / status transparency",
+      "frequency": 1
+    },
+    {
+      "item": "missed promised resolution timeline",
+      "frequency": 1
+    },
+    {
+      "item": "problem unclear / poor issue understanding",
+      "frequency": 1
+    },
+    {
+      "item": "resolution delay / prolonged handling time",
+      "frequency": 1
+    },
+    {
+      "item": "process inconsistency / repeated information request",
+      "frequency": 1
+    },
+    {
+      "item": "high effort / cumbersome process",
+      "frequency": 1
+    },
+    {
+      "item": "interface usability friction",
+      "frequency": 1
+    },
+    {
+      "item": "support navigation / routing friction",
+      "frequency": 1
+    },
+    {
+      "item": "language barrier / localization friction",
+      "frequency": 1
+    },
+    {
+      "item": "unhelpful generic guidance",
+      "frequency": 1
+    },
+    {
+      "item": "unresolved issue / lack of resolution",
+      "frequency": 1
+    },
+    {
+      "item": "escalation / redirection friction",
+      "frequency": 1
+    },
+    {
+      "item": "repeated information / document submission friction",
+      "frequency": 1
+    },
+    {
+      "item": "unclear case explanation / insufficient issue detail",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / delayed resolution",
+      "frequency": 1
+    },
+    {
+      "item": "information findability / website navigation friction",
+      "frequency": 1
+    },
+    {
+      "item": "navigation / contact routing difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / contact routing difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "form / workflow clarity issues",
+      "frequency": 1
+    },
+    {
+      "item": "lack of timeline / status transparency",
+      "frequency": 1
+    },
+    {
+      "item": "complex verification / account access friction",
+      "frequency": 1
+    },
+    {
+      "item": "eligibility / policy uncertainty",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / ownership confusion",
+      "frequency": 1
+    },
+    {
+      "item": "delayed response / lack of follow-up",
+      "frequency": 1
+    },
+    {
+      "item": "attachment handling / document review failure",
+      "frequency": 1
+    },
+    {
+      "item": "overly complex or unclear support guidance",
+      "frequency": 1
+    },
+    {
+      "item": "navigation / usability friction",
+      "frequency": 1
+    },
+    {
+      "item": "policy / decision dependency opacity",
+      "frequency": 1
+    },
+    {
+      "item": "automation overriding human support / poor handoff to agent",
+      "frequency": 1
+    },
+    {
+      "item": "long resolution process",
+      "frequency": 1
+    },
+    {
+      "item": "user input/data quality causing downstream failure",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete or unclear support communication",
+      "frequency": 1
+    },
+    {
+      "item": "insufficient issue investigation",
+      "frequency": 1
+    },
+    {
+      "item": "lack of case status visibility",
+      "frequency": 1
+    },
+    {
+      "item": "recurring issue / repeat contact for same problem",
+      "frequency": 1
+    },
+    {
+      "item": "automation or bot support friction",
+      "frequency": 1
+    },
+    {
+      "item": "data accuracy / content inconsistency",
+      "frequency": 1
+    },
+    {
+      "item": "slow resolution after initial response",
+      "frequency": 1
+    },
+    {
+      "item": "data correction / record update request",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / prior context not retained",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / unresolved issue",
+      "frequency": 1
+    },
+    {
+      "item": "process delay / long turnaround time",
+      "frequency": 1
+    },
+    {
+      "item": "complex form / information-gathering burden",
+      "frequency": 1
+    },
+    {
+      "item": "back-and-forth communication burden",
+      "frequency": 1
+    },
+    {
+      "item": "difficulty describing issue / low issue clarity",
+      "frequency": 1
+    },
+    {
+      "item": "complex process / information clarity friction",
+      "frequency": 1
+    },
+    {
+      "item": "language / localization barrier",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / repeated issue explanation",
+      "frequency": 1
+    },
+    {
+      "item": "incorrect case handling / data validation friction",
+      "frequency": 1
+    },
+    {
+      "item": "time-consuming account/profile changes",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete resolution / no clear answer",
+      "frequency": 1
+    },
+    {
+      "item": "complex or hard-to-understand guidance",
+      "frequency": 1
+    },
+    {
+      "item": "delayed issue resolution / long turnaround time",
+      "frequency": 1
+    },
+    {
+      "item": "delayed monitoring / follow-up",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / troubleshooting friction",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / templated response friction",
+      "frequency": 1
+    },
+    {
+      "item": "process unfamiliarity / guidance gap",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / routing friction",
+      "frequency": 1
+    },
+    {
+      "item": "agent unavailability / no live support",
+      "frequency": 1
+    },
+    {
+      "item": "poor support response quality",
+      "frequency": 1
+    },
+    {
+      "item": "navigation / interface change friction",
+      "frequency": 1
+    },
+    {
+      "item": "process opacity / lack of transparency",
+      "frequency": 1
+    },
+    {
+      "item": "content inclusion / publication indexing request",
+      "frequency": 1
+    },
+    {
+      "item": "unresolved issue / resolution delay",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / fragmented support process",
+      "frequency": 1
+    },
+    {
+      "item": "poor usability / non-intuitive self-service interface",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / resolution delay",
+      "frequency": 1
+    },
+    {
+      "item": "inconsistent information / conflicting answers",
+      "frequency": 1
+    },
+    {
+      "item": "repeat contact / repeated follow-up for same issue",
+      "frequency": 1
+    },
+    {
+      "item": "complex review / assessment effort",
+      "frequency": 1
+    },
+    {
+      "item": "insufficient issue detail / unclear guidance",
+      "frequency": 1
+    },
+    {
+      "item": "channel navigation / unclear contact path",
+      "frequency": 1
+    },
+    {
+      "item": "response validity / communication reliability issues",
+      "frequency": 1
+    },
+    {
+      "item": "outcome dissatisfaction / issue not resolved",
+      "frequency": 1
+    },
+    {
+      "item": "product limitation / system capability constraint",
+      "frequency": 1
+    },
+    {
+      "item": "complex or hard-to-understand rules / policy friction",
+      "frequency": 1
+    },
+    {
+      "item": "eligibility / account access barrier",
+      "frequency": 1
+    },
+    {
+      "item": "multi-party handoff / external dependency friction",
+      "frequency": 1
+    },
+    {
+      "item": "time-sensitive resolution pressure",
+      "frequency": 1
+    },
+    {
+      "item": "channel redirection / being sent to another party",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / guided troubleshooting friction",
+      "frequency": 1
+    },
+    {
+      "item": "knowledge gap / unclear understanding of the issue",
+      "frequency": 1
+    },
+    {
+      "item": "data accuracy / record correction issue",
+      "frequency": 1
+    },
+    {
+      "item": "misrouted support / wrong resolution path",
+      "frequency": 1
+    },
+    {
+      "item": "escalation to specialist team needed",
+      "frequency": 1
+    },
+    {
+      "item": "self-service failure",
+      "frequency": 1
+    },
+    {
+      "item": "issue unresolved after support interaction",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / misunderstanding",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / slow initial response",
+      "frequency": 1
+    },
+    {
+      "item": "policy / process rigidity",
+      "frequency": 1
+    },
+    {
+      "item": "cross-party dependency / third-party action required",
+      "frequency": 1
+    },
+    {
+      "item": "knowledge gap / self-service difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "resolution uncertainty / lack of status explanation",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete or unclear answer",
+      "frequency": 1
+    },
+    {
+      "item": "repeated contact / multi-message effort",
+      "frequency": 1
+    },
+    {
+      "item": "missing or incomplete content / information",
+      "frequency": 1
+    },
+    {
+      "item": "wait time / delay",
+      "frequency": 1
+    },
+    {
+      "item": "technical connectivity issue",
+      "frequency": 1
+    },
+    {
+      "item": "form completion friction",
+      "frequency": 1
+    },
+    {
+      "item": "communication / understanding friction",
+      "frequency": 1
+    },
+    {
+      "item": "process clarity / guidance friction",
+      "frequency": 1
+    },
+    {
+      "item": "excessive information request friction",
+      "frequency": 1
+    },
+    {
+      "item": "issue rejected / not accepted for support",
+      "frequency": 1
+    },
+    {
+      "item": "repetitive / unhelpful canned responses",
+      "frequency": 1
+    },
+    {
+      "item": "channel access / callback limitation",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / slow case handling",
+      "frequency": 1
+    },
+    {
+      "item": "profile update / data correction failure",
+      "frequency": 1
+    },
+    {
+      "item": "limited self-service / profile management",
+      "frequency": 1
+    },
+    {
+      "item": "agent access / visibility limitations",
+      "frequency": 1
+    },
+    {
+      "item": "issue unresolved / failed resolution",
+      "frequency": 1
+    },
+    {
+      "item": "expectation mismatch / service outcome gap",
+      "frequency": 1
+    },
+    {
+      "item": "repeated issue explanation / follow-up friction",
+      "frequency": 1
+    },
+    {
+      "item": "pending / in-progress resolution delay",
+      "frequency": 1
+    },
+    {
+      "item": "incomplete or insufficient support response",
+      "frequency": 1
+    },
+    {
+      "item": "unresolved recurring issue",
+      "frequency": 1
+    },
+    {
+      "item": "lack of follow-up on root-cause resolution",
+      "frequency": 1
+    },
+    {
+      "item": "self-service / website usability friction",
+      "frequency": 1
+    },
+    {
+      "item": "response delay / lack of timely feedback",
+      "frequency": 1
+    },
+    {
+      "item": "unclear ownership / routing of issue",
+      "frequency": 1
+    },
+    {
+      "item": "need for issue understanding before resolution",
+      "frequency": 1
+    },
+    {
+      "item": "content inclusion / indexing request",
+      "frequency": 1
+    },
+    {
+      "item": "unanswered basic question",
+      "frequency": 1
+    },
+    {
+      "item": "contact information / support access difficulty",
+      "frequency": 1
+    },
+    {
+      "item": "missing category / poor issue classification",
+      "frequency": 1
+    },
+    {
+      "item": "perceived lack of improvement / feedback loop failure",
+      "frequency": 1
+    },
+    {
+      "item": "research discovery / search effort friction",
+      "frequency": 1
+    },
+    {
+      "item": "unclear next steps / guidance",
+      "frequency": 1
+    },
+    {
+      "item": "repeated follow-up / status chasing",
+      "frequency": 1
+    },
+    {
+      "item": "lack of response / response delay",
+      "frequency": 1
+    },
+    {
+      "item": "correction / request denial friction",
+      "frequency": 1
+    },
+    {
+      "item": "onboarding / first-time use confusion",
+      "frequency": 1
+    }
+  ]
+}

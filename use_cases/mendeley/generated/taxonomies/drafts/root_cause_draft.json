@@ -1,0 +1,122 @@
+{
+  "RC1": {
+    "label": "Account Issues",
+    "children": {
+      "RC1.1": {
+        "label": "Account Access Issue"
+      },
+      "RC1.2": {
+        "label": "Authentication / Credential Failure"
+      },
+      "RC1.3": {
+        "label": "Account Management Issue"
+      },
+      "RC1.4": {
+        "label": "Account Recovery / Creation Assistance"
+      },
+      "RC1.5": {
+        "label": "Other Account-Related Issues"
+      }
+    }
+  },
+  "RC2": {
+    "label": "Technical Problems",
+    "children": {
+      "RC2.1": {
+        "label": "Application Loading / Access Failure"
+      },
+      "RC2.2": {
+        "label": "Data Sync / Loading Issues"
+      },
+      "RC2.3": {
+        "label": "Software Compatibility / Update Issues"
+      },
+      "RC2.4": {
+        "label": "Application Malfunction / Performance Issues"
+      },
+      "RC2.5": {
+        "label": "Other Technical Issues"
+      }
+    }
+  },
+  "RC3": {
+    "label": "Citation Management Issues",
+    "children": {
+      "RC3.1": {
+        "label": "Citation Formatting / Style Issues"
+      },
+      "RC3.2": {
+        "label": "Citation Insertion / Duplication Issues"
+      },
+      "RC3.3": {
+        "label": "Reference Management Issues"
+      },
+      "RC3.4": {
+        "label": "Integration Issues with Citation Tools"
+      },
+      "RC3.5": {
+        "label": "Other Citation Management Issues"
+      }
+    }
+  },
+  "RC4": {
+    "label": "User Assistance Requests",
+    "children": {
+      "RC4.1": {
+        "label": "User Inquiry about Software Functionality"
+      },
+      "RC4.2": {
+        "label": "User Request for Agent Assistance"
+      },
+      "RC4.3": {
+        "label": "User Inquiry about Discounts/Scholarships"
+      },
+      "RC4.4": {
+        "label": "User Assistance with Issues"
+      },
+      "RC4.5": {
+        "label": "Other User Assistance Requests"
+      }
+    }
+  },
+  "RC5": {
+    "label": "Data Management Issues",
+    "children": {
+      "RC5.1": {
+        "label": "Data Loss or Retrieval Issues"
+      },
+      "RC5.2": {
+        "label": "Data Review and Compliance Issues"
+      },
+      "RC5.3": {
+        "label": "Data Publication Access Issues"
+      },
+      "RC5.4": {
+        "label": "Data Retention and Deletion Process"
+      },
+      "RC5.5": {
+        "label": "Other Data Management Issues"
+      }
+    }
+  },
+  "RC6": {
+    "label": "Communication Issues",
+    "children": {
+      "RC6.1": {
+        "label": "Connection Issues during Support"
+      },
+      "RC6.2": {
+        "label": "Email Delivery / Update Failures"
+      },
+      "RC6.3": {
+        "label": "Network Access Issues"
+      },
+      "RC6.4": {
+        "label": "Third-Party Service Outage"
+      },
+      "RC6.5": {
+        "label": "Other Communication Issues"
+      }
+    }
+  }
+}

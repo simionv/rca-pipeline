@@ -1,0 +1,135 @@
+{
+  "PC1": {
+    "label": "Violation type",
+    "children": {
+      "PC1.1": {
+        "label": "Incorrect policy information given",
+        "description": "Agent stated a specific Scopus policy rule incorrectly — e.g. quoted the wrong processing timeline, wrong re-evaluation criteria, wrong coverage period, or wrong threshold."
+      },
+      "PC1.2": {
+        "label": "Applicable policy not referenced",
+        "description": "A directly relevant Scopus policy rule existed and governed this ticket's situation, but the agent did not mention, apply, or reference it in their response."
+      },
+      "PC1.3": {
+        "label": "Policy misinterpreted",
+        "description": "Agent reached broadly the correct conclusion but explained the reasoning incorrectly — e.g. cited the wrong policy rule, gave the right answer for the wrong reason, or conflated two different policy criteria."
+      },
+      "PC1.4": {
+        "label": "Policy correct but explanation insufficient",
+        "description": "Agent applied the policy correctly and the outcome was right, but the explanation given was too brief, unclear, or jargon-heavy — contributing to the customer's confusion or dissatisfaction even though no factual error was made."
+      },
+      "PC1.5": {
+        "label": "Not applicable",
+        "description": "Use when agent_response_compliance is 'compliant' or 'no_policy_applies'. No violation is present."
+      }
+    },
+    "description": "The type of policy handling error or gap identified in the agent's response."
+  },
+  "PC2": {
+    "label": "Policy area",
+    "children": {
+      "PA0": {
+        "label": "No applicable policy",
+        "description": "The ticket topic is not governed by any Scopus content coverage policy in the reference document."
+      },
+      "PA1": {
+        "label": "Title selection and CSAB evaluation",
+        "description": "Covers minimum criteria for title consideration, CSAB evaluation categories, and the selection process statistics."
+      },
+      "PA2": {
+        "label": "Re-evaluation and discontinuation",
+        "description": "Covers the three-metric flagging system, two-year rule, RADAR tool, formal complaint triggers, and the 5-year re-consideration rule."
+      },
+      "PA3": {
+        "label": "Document type coverage",
+        "description": "Covers which document types are included and excluded (book reviews, meeting abstracts), and trade journal minimums. -- For the full specific exclusion list (obituaries, ads, reprints, interviews, etc.) see PA11."
+      },
+      "PA4": {
+        "label": "Conference proceedings coverage",
+        "description": "Covers the full-text-only rule for conference proceedings and subject area focus."
+      },
+      "PA5": {
+        "label": "Processing timelines",
+        "description": "Covers the 2-3 week (e-feed), 4-5 week (paper), and 4-day (AiP) processing timeline commitments. -- AiP-specific processing rules (mandatory DOI, no volume/page, no grant info) are classified under PA10, not PA5 -- For missing content reports, a minimum 6-week publication maturity threshold applies before investigation is initiated (see PA18 criterion 5)."
+      },
+      "PA6": {
+        "label": "Coverage period and historical content",
+        "description": "Covers the year-of-selection-minus-4 rule (from 2023) and pre-1996 title handling."
+      },
+      "PA7": {
+        "label": "Metrics methodology",
+        "description": "Covers CiteScore calculation method, SJR, SNIP, and the annual recalculation cycle."
+      },
+      "PA8": {
+        "label": "Book and book series selection",
+        "description": "Covers publisher-based book selection policy and how individual book requests are handled."
+      },
+      "PA9": {
+        "label": "Preprint server coverage",
+        "description": "Covers which preprint servers are indexed and that preprints do not affect metrics. -- Server source IDs: arXiv 923623402, bioRxiv 923623403, ChemRxiv 923623404, medRxiv 928910002, SSRN 931193761, TechRxiv 937262106, ResearchSquare 937262107 (CAR Manual S6)."
+      },
+      "PA10": {
+        "label": "Article-in-Press (AiP) eligibility and processing",
+        "description": "AiP items carry unit type ARTICLE-IN-PRESS and status S200. DOI is MANDATORY for all AiP items. No volume, issue, or page data required. Grant info (grantlist) NOT captured. Items appear in Scopus within 4 days of publisher FTP delivery, distinct from PA5 standard 2-3 week e-feed timeline. Violation: agent quotes 2-3 week SLA for an AiP query; agent says DOI optional."
+      },
+      "PA11": {
+        "label": "Excluded item types (CAR Manual S1 list)",
+        "description": "These item types are NOT indexed: book reviews; obituaries (incl. \"In Memoriam\"); advertisements; society news; notices of future conferences/events; reprints published elsewhere; personal reports; indexes; addendums; product/video/audio reviews; award winner notifications; interviews; Instructions to Authors; \"In this issue\" / TOC items. Book reviews and conference meeting abstracts also covered under PA3. Use PA11 when the customer missing item falls into one of these specific excluded categories."
+      },
+      "PA12": {
+        "label": "Patent indexing and coverage",
+        "description": "Scopus indexes 49.2M+ patent records from five offices: WIPO, EPO, USPTO, JPO, UK IPO. Patents are a distinct content vertical, searchable separately from journal literature. Violation: agent misstates which offices are covered; agent gives wrong guidance on patent search availability."
+      },
+      "PA13": {
+        "label": "Author identity and profile management",
+        "description": "Scopus assigns a unique Author Identifier using algorithmic matching; 17.6M+ profiles; ORCID synced monthly. Profile corrections via Author Feedback Wizard within 5 working days. Violation: agent misstates correction timeline; agent claims merge/demerge is impossible; agent gives wrong Author Feedback Wizard guidance."
+      },
+      "PA14": {
+        "label": "Affiliation profile curation",
+        "description": "Scopus maintains 94,800+ affiliation profiles using algorithmic processing and a curated organisation database. Authorized representatives can request corrections via Institution Profile Wizard. Violation: agent claims corrections cannot be made; agent directs customer to wrong process; agent misstates the responsible team."
+      },
+      "PA15": {
+        "label": "Open Access classification",
+        "description": "Scopus classifies articles via Unpaywall: Gold (fully OA journal), Hybrid Gold (OA in subscription journal), Bronze (free on publisher site without explicit licence), Green (accepted manuscript in repository). Applies at document and journal level. Violation: agent confuses OA categories; agent claims OA status cannot be corrected; agent misstates how classification is determined."
+      },
+      "PA16": {
+        "label": "Errata and record corrections",
+        "description": "Erratum notices are indexed as a distinct document type and linked bidirectionally to the original article. Bibliographic metadata corrections follow the errata capture workflow. Violation: agent claims corrections cannot be processed; agent misstates the processing timeline; agent fails to explain the bidirectional link between erratum and original. A data correction request is processed only when Scopus content differs from the original publisher PDF/source. If Scopus already matches the publisher-supplied PDF, the correction is rejected: the error is between the author and publisher, not in Scopus metadata."
+      },
+      "PA17": {
+        "label": "Cited references coverage and linkage",
+        "description": "Scopus indexes cited references for documents from 1970 onward (expanded from 1996 in 2014); pre-1996 data sourced from 60 major publisher archives. References are linked when the cited source is itself indexed; unlinked references appear as plain text. Violation: agent misstates the cutoff year; agent claims older references should be linked when outside coverage; agent fails to explain why some references are not clickable."
+      },
+      "PA18": {
+        "label": "Missing content processing eligibility",
+        "description": "A missing content report is eligible for investigation only when all six criteria are met: (1) the source journal is selected in Scopus; (2) the journal is actively indexed (including ceased and newly-accepted titles); (3) the article publication date falls within the journal Scopus coverage period; (4) the article can be found at the publisher authentic online sourcing URL (print and electronic PDFs excluded); (5) the article was published at least 6 weeks before the support request is raised -- content published more recently will not be processed; (6) the document type is Gen-CAR (a Scopus-covered type -- excludes obituaries, reprints, etc.). AiP records bypass criteria 4-5 and follow the PA10 4-day SLA path. Preprints follow PA9 rules. Violation: agent promises to investigate content published less than 6 weeks ago; agent does not verify authentic sourcing URL before escalating; agent quotes a timeline without first checking journal indexing status."
+      }
+    },
+    "description": "The Scopus content policy area that governs the ticket topic."
+  },
+  "PC3": {
+    "label": "Customer root cause",
+    "children": {
+      "PU2.1": {
+        "label": "Confusing policy wording",
+        "description": "The policy language is unclear, technical, or ambiguous -- customer confusion is a natural consequence of the wording itself"
+      },
+      "PU2.2": {
+        "label": "Lack of policy awareness",
+        "description": "Customer was simply unaware the policy existed before contacting support"
+      },
+      "PU2.3": {
+        "label": "Agent explanation issue",
+        "description": "Customer understood the policy when it was properly explained -- confusion arose from an unclear or incomplete agent explanation"
+      },
+      "PU2.4": {
+        "label": "Policy disagreement",
+        "description": "Customer understands the policy but disputes whether it should apply to their case"
+      },
+      "PU2.5": {
+        "label": "Not applicable -- no customer understanding issue"
+      }
+    },
+    "description": "Why the customer demonstrated difficulty understanding or accepting the applicable policy"
+  }
+}

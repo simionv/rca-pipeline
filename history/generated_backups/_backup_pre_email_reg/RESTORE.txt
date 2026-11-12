@@ -1,0 +1,8 @@
+The modules that were live in generated/pipeline_config.json before this notebook ran:
+    s2ls_escalation_effort
+
+To put them back:
+
+    python build_pipeline.py build --input definitions/scopus_2ls_2026_pipeline_definition.xlsx --force-all
+
+The config holds one product at a time; restoring drops the ls_emailreg* modules.

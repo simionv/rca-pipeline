@@ -1,0 +1,24 @@
+{
+  "modules": {
+    "ls_emailreg": {
+      "taxonomy_hash": "c31a38ad0938e7499941e8faa38d3bae22f76e8c5a67a7f7f073f30350a59fb0",
+      "taxonomy_written_at": "2026-11-12T14:03:59.688578+00:00",
+      "py_hash": "c31a38ad0938e7499941e8faa38d3bae22f76e8c5a67a7f7f073f30350a59fb0",
+      "py_generated_at": "2026-11-12T13:58:23.806854+00:00"
+    },
+    "leapspace_contact_reason": {
+      "taxonomy_hash": "d6a5583e21758a05c1dc49719fca29ca8a7f27b224ac8943bd9625247fb6c338",
+      "taxonomy_written_at": "2026-11-12T14:03:59.690012+00:00",
+      "py_hash": "d6a5583e21758a05c1dc49719fca29ca8a7f27b224ac8943bd9625247fb6c338",
+      "py_generated_at": "2026-11-12T13:58:23.808653+00:00"
+    },
+    "ls_emailreg_sub": {
+      "taxonomy_hash": "0488fc9aef1374a8ce8752af24cdd00ac53db3902fddb83e8b166ce5d05e91d0",
+      "taxonomy_written_at": "2026-11-12T14:03:59.691407+00:00",
+      "py_hash": "0488fc9aef1374a8ce8752af24cdd00ac53db3902fddb83e8b166ce5d05e91d0",
+      "py_generated_at": "2026-11-12T13:58:23.810184+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:03:59.692335+00:00",
+  "generator_version": "1.7.0"
+}

@@ -1,0 +1,36 @@
+{
+  "SCPF1": {
+    "label": "Performance & Functionality Issues",
+    "children": {
+      "SCPF1.1": {
+        "label": "Page / Search Error",
+        "description": "Definition: A page or search returns an error for a user who can access Scopus."
+      },
+      "SCPF1.2": {
+        "label": "Feature Malfunction",
+        "description": "Definition: A Scopus feature does not behave as expected."
+      },
+      "SCPF1.3": {
+        "label": "Export / Download Failure",
+        "description": "Definition: Exporting or downloading fails."
+      },
+      "SCPF1.4": {
+        "label": "Slow / Not Loading",
+        "description": "Definition: Pages load slowly or not at all."
+      },
+      "SCPF1.5": {
+        "label": "Browser Compatibility",
+        "description": "Definition: The problem is tied to a specific browser or device."
+      },
+      "SCPF1.6": {
+        "label": "Export Stuck in Queue",
+        "description": "Definition: An export request stays queued or never completes."
+      },
+      "SCPF1.7": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The technical cause is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Performance & Functionality Issues'. Choose the Level 2 value from this group only. 'Performance & Functionality Issues' means: Definition: Formerly 'Technical Error'. Export or download failures, exports stuck in a queue, feature malfunctions, page or search errors, slow loading and browser problems for a customer who can access Scopus."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "modules": {
+    "csd_validation_rule": {
+      "taxonomy_prefix": "CSDVR",
+      "taxonomy_file": "csd_validation_rule.json",
+      "taxonomy_key": "csd_validation_rule",
+      "reorder_group": "A",
+      "reorder_order": 1,
+      "description": "Decide which Scopus content validation rule makes this rejected support request invalid. There are 24 numbered rules taken from the CSD triangulation matrix, plus one code for when none of them applies. Each rule carries the rule text, its guideline reference, the wording an agent would use when replying under that rule, and mapping notes. Assign the single best-fitting LEAF code (e.g. CSDVR1.5). Decide from the agent reply, not from the customer request. Every ticket in this corpus was rejected: the customer message tells you what kind of request it was, but only the agent reply tells you which rule invalidated it. Where the agent names a specific ground - too recent, already indexed, journal never covered, under re-evaluation, unauthentic publisher site, article in press, record already matches the version of record - match that ground to its rule. Separate rules that look alike by what the agent asserts about the source. A source that was never selected for Scopus is the not-covered rule; a source that was selected but is currently on hold is the re-evaluation rule; a source that was covered and no longer is falls under coverage mismatch. Separate content that is too recent to be indexed yet from content that is already in the delivery pipeline by whether the agent says it has been delivered and will appear shortly. Prefer the no-applicable-rule code over a rule that only half fits.",
+      "classify_fn": "classify_csd_validation_rule",
+      "code_field": "csdvr_code",
+      "discovery_mode": "",
+      "extract_prompt": ""
+    },
+    "csd_rejection_reason": {
+      "taxonomy_prefix": "CSDRR",
+      "taxonomy_file": "csd_rejection_reason.json",
+      "taxonomy_key": "csd_rejection_reason",
+      "reorder_group": "B",
+      "reorder_order": 2,
+      "description": "Identify the reason a Scopus Content Service Desk request was refused, using a taxonomy of rejection reasons discovered from the tickets themselves. The reason is the ground the agent gave for not actioning the request, which is not the same as what the customer asked for. Assign the single best-fitting LEAF code (e.g. CSDRR1.1).",
+      "classify_fn": "classify_csd_rejection_reason",
+      "code_field": "csdrr_code",
+      "discovery_mode": "",
+      "extract_prompt": "You are analysing Scopus Content Service Desk tickets. Every ticket in this corpus was rejected: the customer request was not actioned. Read the agent reply and identify the ABSTRACT REASON THE REQUEST WAS REFUSED - the substantive ground the agent gave, not the customer original request and not the agent tone or process.\nCRITICAL RULES:\n- The reason is almost always in the AGENT message, not the customer message.\n- Merge wording variants into one category. For example too recent, please allow 6 weeks, indexation takes several weeks, and not yet delivered should ALL become one item: Content too recently published to be indexed yet.\n- Name the ground for refusal, not the topic. Good items: Source never selected for Scopus coverage. Record already matches the publisher version of record. Customer asked about status only so there was no actionable request. Bad items: Missing article (that is the request). Agent was polite (that is tone).\n- If the agent gave no substantive reason, because the ticket is a chat transcript stub, a handoff, or boilerplate only, return the single item: No reason stated in the ticket. Do not invent one.\n- Include reasons that are not about content policy at all where you see them: pure status enquiries, book or conference coverage, duplicate tickets, requests routed to another team.\n- Each transcript should produce exactly 1 reason.\nReturn a JSON array - one object per record:\n[{\"uid\": \"<uid>\", \"extracted_items\": [{\"item\": \"<abstract rejection reason>\", \"count\": 1}]}]\nReturn ONLY valid JSON. No markdown fences."
+    },
+    "csd_rule_proposal": {
+      "taxonomy_prefix": "",
+      "taxonomy_file": "",
+      "taxonomy_key": "",
+      "reorder_group": "C",
+      "reorder_order": 3,
+      "description": "You are reviewing Scopus Content Service Desk tickets that were rejected but that none of the existing 24 content validation rules covers. For each ticket, draft the validation rule that WOULD cover it, phrased the way the existing rules are phrased: a short condition describing when a request of this kind is invalid. Base the rule only on what the agent actually said. Do not restate the customer request, and do not propose a rule that merely renames an existing one.",
+      "classify_fn": "classify_csd_rule_proposal",
+      "code_field": null,
+      "discovery_mode": "",
+      "extract_prompt": ""
+    }
+  },
+  "enrichment_prefixes": [
+    "csdvr_code",
+    "csdvr_applies",
+    "csdvr_justification",
+    "csdvr_evidence",
+    "csdrr_code",
+    "csdrr_justification",
+    "csdrr_evidence",
+    "csdprop_request_type",
+    "csdprop_rule_text",
+    "csdprop_expected_code",
+    "csdprop_evidence"
+  ],
+  "reorder_groups": {
+    "A": 1,
+    "B": 2,
+    "C": 3
+  },
+  "enum_validators": {},
+  "list_fields": [],
+  "object_list_fields": {},
+  "code_fields": [
+    "csdvr_code",
+    "csdrr_code"
+  ],
+  "output_exclude": []
+}

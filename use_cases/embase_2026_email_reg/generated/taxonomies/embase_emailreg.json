@@ -1,0 +1,20 @@
+{
+  "EER1": {
+    "label": "Email registration / email-account issue",
+    "children": {
+      "EER1.1": {
+        "label": "Email registration / email-account issue",
+        "description": "Definition: The problem or request is about the email address tied to an Elsevier or Embase user account, or about registering an account with an email address. This includes: creating or registering an Embase or Elsevier account; a verification, activation or confirmation email that did not arrive or whose link does not work; registering or activating remote access with an institutional email address; an email address reported as already registered, not recognised or not found; which email to use - institutional versus personal - and moving an account or its access from one email address to another; changing, correcting, merging or removing the email address on an account; and being unable to sign in or reset a password because the registered email address is wrong, unreachable or unknown to the customer. It also includes an organisation asking for user accounts, registration IDs or passcodes to be created for named people, or for users to be added, removed or deactivated, because each of those registers or de-registers a user account."
+      }
+    }
+  },
+  "EER2": {
+    "label": "Not email registration",
+    "children": {
+      "EER2.1": {
+        "label": "Not email registration",
+        "description": "Definition: Everything else: content and indexing questions or corrections, missing or wrong records, coverage, search and product features, error messages, exports, alerts that are not about the registered email, linking, institutional access set-up by IP or SSO where no user email is in question, orders, renewals and invoices, usage reports, training and feedback. A ticket is not about email registration just because an email address appears in it, because the agent asks which email address was used, or because the customer is told to sign in with their email address. Changing the email address of an AUTHOR on a published paper or record is a content correction, not an account issue. Bounce-back and out-of-office messages are not evidence either way."
+      }
+    }
+  }
+}

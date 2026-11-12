@@ -1,0 +1,65 @@
+{
+  "LES1": {
+    "label": "Verification or activation email problem",
+    "children": {
+      "LES1.1": {
+        "label": "Verification or activation email problem",
+        "description": "Definition: The email that verifies or activates the account is the problem: it never arrived, the link is expired or returns an error, clicking it loops back to check your inbox, a purchase confirmation carried no activation link, or the customer asks how to activate and had not yet clicked the link."
+      }
+    }
+  },
+  "LES2": {
+    "label": "New account registration or which email to register with",
+    "children": {
+      "LES2.1": {
+        "label": "New account registration or which email to register with",
+        "description": "Definition: The customer, or a librarian or account manager on behalf of users, is trying to create an Elsevier or LeapSpace account: how to register or create a profile, the registration page does not appear, registration fails for a reason other than the verification email, or whether a personal, student or Gmail address may be used instead of an institutional one."
+      }
+    }
+  },
+  "LES3": {
+    "label": "Purchase or access sits on a different email or account",
+    "children": {
+      "LES3.1": {
+        "label": "Purchase or access sits on a different email or account",
+        "description": "Definition: A paid subscription or trial exists but is attached to a different email address or account than the one the customer signs in with - a typo or unknown address at purchase, an old university account, a second Elsevier account, or a personal versus work login - so the account in use does not show it. Includes asking to move the purchase to the right account."
+      }
+    }
+  },
+  "LES4": {
+    "label": "Complimentary or editor access not applied to the registered email",
+    "children": {
+      "LES4.1": {
+        "label": "Complimentary or editor access not applied to the registered email",
+        "description": "Definition: The customer registered for a complimentary, editor, editorial board or institutional offer (for example 12 months of access) with their email address, but the account shows only the standard 14-day trial or limited access."
+      }
+    }
+  },
+  "LES5": {
+    "label": "Change, link or consolidate the email on an account",
+    "children": {
+      "LES5.1": {
+        "label": "Change, link or consolidate the email on an account",
+        "description": "Definition: The account works, and the customer asks to change the email address on it, delink it from one address and link it to another, merge two accounts into one address, or have receipts, renewals or communications go to a different email address."
+      }
+    }
+  },
+  "LES6": {
+    "label": "Sign-in or password problem tied to the registered email",
+    "children": {
+      "LES6.1": {
+        "label": "Sign-in or password problem tied to the registered email",
+        "description": "Definition: The customer cannot sign in with their email address and password: the password reset email does not arrive, a reset is requested for a named address, the system says the email is used by another account, or the email is linked to the wrong institution."
+      }
+    }
+  },
+  "LES7": {
+    "label": "Other email-account issue",
+    "children": {
+      "LES7.1": {
+        "label": "Other email-account issue",
+        "description": "Definition: An email-account or registration problem that fits none of the sub-categories above."
+      }
+    }
+  }
+}

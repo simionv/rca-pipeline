@@ -1,0 +1,6 @@
+Snapshot of generated/pipeline_config.json and definitions/csd_2026_pipeline_definition.xlsx
+taken before notebook 09 added the csd_customer_effort module.
+
+To go back:
+    copy the .xlsx here over definitions/csd_2026_pipeline_definition.xlsx
+    python build_pipeline.py build --input definitions/csd_2026_pipeline_definition.xlsx --force-all

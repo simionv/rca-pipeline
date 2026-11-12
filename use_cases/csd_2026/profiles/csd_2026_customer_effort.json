@@ -1,0 +1,18 @@
+{
+  "_comment": "Customer effort for the same 12,000 CSD 2026 tickets notebook 08 tagged with validation rules and rejection reasons. Own input copy and own checkpoint so it cannot disturb that run. Adapted from the customer_effort module in scopus_content_pipeline_definition_v2.xlsx: channel_switches dropped (channel never varies within a ticket in this corpus), ninth friction category added.",
+  "input": "runs/intermediate/csd_effort_input_12000.csv",
+  "output": "runs/output/csd_2026_customer_effort.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "csd_customer_effort"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

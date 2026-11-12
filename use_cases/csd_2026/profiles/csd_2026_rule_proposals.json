@@ -1,0 +1,18 @@
+{
+  "_comment": "Gap pass. Runs only on tickets the rule module tagged as having no applicable validation rule, and drafts the rule that would cover them. No taxonomy: the output is free text for CSD review, not a classification.",
+  "input": "runs/intermediate/csd_proposal_input.csv",
+  "output": "runs/output/csd_2026_rule_proposals.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "csd_rule_proposal"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

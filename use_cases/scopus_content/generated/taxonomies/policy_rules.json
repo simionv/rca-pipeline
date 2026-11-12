@@ -1,0 +1,306 @@
+{
+  "PA1": {
+    "label": "Title selection and CSAB evaluation",
+    "children": {
+      "PA1.1": {
+        "label": "Minimum criteria for title consideration",
+        "description": "All journal titles must meet all four criteria to be considered: peer-reviewed content with a publicly available peer-review process description; published regularly with an ISSN registered with the ISSN International Centre; English-language abstracts and titles for international readability; a publicly available publication ethics and malpractice statement."
+      },
+      "PA1.2": {
+        "label": "CSAB five-category evaluation",
+        "description": "Journals meeting minimum criteria are evaluated by CSAB on five categories: journal policy (editorial policy, peer review type, editor/author geographic diversity), content (academic contribution, abstract clarity, scope conformity, readability), journal standing (citedness, editor standing), publishing regularity (no schedule delays), and online availability (full online content, English homepage, homepage quality)."
+      },
+      "PA1.3": {
+        "label": "Title list update cadence",
+        "description": "The Scopus title list and Sources section are updated 2-3 times per year; a newly accepted title is only visible in the list as of the next update after its first content appears."
+      },
+      "PA1.4": {
+        "label": "Post-acceptance feed setup lag",
+        "description": "Once a title is accepted, Elsevier contacts the publisher to set up the content feed; it takes up to a few weeks after that before the title's content starts appearing in Scopus."
+      }
+    },
+    "description": "Rules governing whether a journal title qualifies for Scopus consideration and acceptance."
+  },
+  "PA2": {
+    "label": "Re-evaluation and discontinuation",
+    "children": {
+      "PA2.1": {
+        "label": "Three-metric, two-year re-evaluation trigger",
+        "description": "A journal is flagged for CSAB re-evaluation if it fails all three benchmarks (self-citation rate, total citation rate, CiteScore) versus subject-area peers for two consecutive years."
+      },
+      "PA2.2": {
+        "label": "Four re-evaluation triggers",
+        "description": "Beyond the metrics rule, a title can also be flagged via formal publication-standard complaints from the research community, the RADAR tool (quarterly automated scan for outlier behaviour), or continuous CSAB curation feedback."
+      },
+      "PA2.3": {
+        "label": "No retroactive removal",
+        "description": "When CSAB decides to discontinue a title's forward coverage, content already indexed in Scopus prior to that decision remains in Scopus permanently -- it is never retroactively removed."
+      },
+      "PA2.4": {
+        "label": "Five-year re-consideration rule",
+        "description": "A discontinued title cannot be reconsidered for re-evaluation until 5 years after the discontinuation decision was made."
+      }
+    },
+    "description": "Rules governing when an already-indexed title is flagged, re-evaluated, or discontinued."
+  },
+  "PA3": {
+    "label": "Document type coverage",
+    "children": {
+      "PA3.1": {
+        "label": "Covered document types",
+        "description": "Scopus covers these document types: article, article-in-press, book, chapter, conference paper, data paper, editorial, erratum, letter, note, retracted article, review, short survey."
+      },
+      "PA3.2": {
+        "label": "Book review exclusion",
+        "description": "Book reviews are not covered because they are not primary literature, would be identical in full text to the book's own record (causing confusion), and are rarely cited."
+      },
+      "PA3.3": {
+        "label": "Conference meeting abstract exclusion",
+        "description": "Conference meeting abstracts (as opposed to full conference papers) are not covered because they are not a complete or unique record of research, are generally not peer-reviewed, and are typically written before the underlying research is complete."
+      },
+      "PA3.4": {
+        "label": "Trade journal minimums",
+        "description": "Trade journal items require at minimum one named author and one page (or equivalent length for non-paginated electronic sources) to be captured."
+      },
+      "PA3.5": {
+        "label": "Roman-alphabet title requirement",
+        "description": "A citation is only selected for processing when its title is written in a language using the Roman alphabet (i.e. can be captured with a QWERTY keyboard)."
+      }
+    },
+    "description": "Rules governing which document types are covered or excluded."
+  },
+  "PA4": {
+    "label": "Conference proceedings coverage",
+    "children": {
+      "PA4.1": {
+        "label": "Full-text-only conference coverage",
+        "description": "Only conference proceedings that publish full-text papers are covered; proceedings that publish only abstracts (meeting abstracts) are not considered for coverage."
+      },
+      "PA4.2": {
+        "label": "Conference subject-area focus",
+        "description": "Conference proceedings coverage is concentrated in subject areas where conference papers make up a substantial share of published research, primarily engineering, computer science, and some areas of physics."
+      }
+    },
+    "description": "Rules governing which conference material is covered."
+  },
+  "PA5": {
+    "label": "Processing timelines",
+    "children": {
+      "PA5.1": {
+        "label": "Electronic delivery timeline",
+        "description": "For electronically delivered content (e-feeds, over 95% of material), fully indexed article data typically appears in Scopus within 2-3 weeks of publication on the publisher's website."
+      },
+      "PA5.2": {
+        "label": "Paper delivery timeline",
+        "description": "For the shrinking share of content still delivered in paper format, processing and indexing takes 4-5 weeks, depending on distribution and delivery from the publisher's warehouse."
+      }
+    },
+    "description": "Rules governing how long standard (non-AiP) content takes to appear in Scopus."
+  },
+  "PA6": {
+    "label": "Coverage period and historical content",
+    "children": {
+      "PA6.1": {
+        "label": "Selection-year-minus-4 coverage start",
+        "description": "For titles selected from 2023 onward, coverage begins from the year of selection minus 4 (e.g. selected in 2023 -> coverage starts from 2019), with exceptions for journals that have prior evaluation history."
+      },
+      "PA6.2": {
+        "label": "Pre-1996 discontinued titles still searchable",
+        "description": "Titles discontinued before 1996 are not shown in the public title list, but their previously indexed content remains searchable in Scopus."
+      }
+    },
+    "description": "Rules governing how far back a title's coverage extends."
+  },
+  "PA7": {
+    "label": "Metrics methodology",
+    "children": {
+      "PA7.1": {
+        "label": "CiteScore calculation",
+        "description": "CiteScore is calculated as citations in year X to documents published in years X-3 through X, divided by the number of documents published in years X-3 through X, and is recalculated annually."
+      },
+      "PA7.2": {
+        "label": "SJR/SNIP are third-party metrics",
+        "description": "SJR and SNIP are calculated by third parties (SCImago and CWTS respectively) -- Scopus does not control or recalculate them."
+      }
+    },
+    "description": "Rules governing how Scopus and third-party metrics are calculated."
+  },
+  "PA8": {
+    "label": "Book and book series selection",
+    "children": {
+      "PA8.1": {
+        "label": "Publisher-based book selection",
+        "description": "Book selection evaluates a publisher's complete books list, not individual titles; once a publisher is accepted, in-scope books from that publisher are indexed. Individual book suggestions outside the publisher review process are not accepted."
+      },
+      "PA8.2": {
+        "label": "Dual book/chapter indexing",
+        "description": "Books are indexed at both the book level and the individual chapter level."
+      }
+    },
+    "description": "Rules governing how books and book series are selected."
+  },
+  "PA9": {
+    "label": "Preprint server coverage",
+    "children": {
+      "PA9.1": {
+        "label": "Seven supported preprint servers",
+        "description": "Only these preprint servers are indexed: arXiv and ChemRxiv (Physical Sciences), bioRxiv and MedRxiv (Biomedical Sciences), SSRN (Social Sciences), TechRxiv (Engineering/CS), and Research Square (Multidisciplinary)."
+      },
+      "PA9.2": {
+        "label": "Preprints don't affect metrics",
+        "description": "Preprints do not affect a researcher's or journal's existing publication or citation metrics in Scopus."
+      }
+    },
+    "description": "Rules governing which preprint servers are indexed."
+  },
+  "PA10": {
+    "label": "Article-in-Press (AiP) eligibility and processing",
+    "children": {
+      "PA10.1": {
+        "label": "Mandatory DOI for AiP",
+        "description": "A DOI is mandatory for all Article-in-Press (AiP) items; this is not optional."
+      },
+      "PA10.2": {
+        "label": "Four-day AiP SLA",
+        "description": "AiP items are made available in Scopus within 4 days of the publisher's FTP delivery to Scopus -- distinct from and faster than the standard 2-3 week electronic-delivery timeline (PA5)."
+      },
+      "PA10.3": {
+        "label": "No volume/issue/page required for AiP",
+        "description": "AiP records are not required to carry volume, issue, or page data."
+      },
+      "PA10.4": {
+        "label": "No grant info for AiP",
+        "description": "Grant/funding information is not captured for AiP items."
+      }
+    },
+    "description": "Rules specific to Article-in-Press items, distinct from standard processing (PA5)."
+  },
+  "PA11": {
+    "label": "Excluded item types",
+    "children": {
+      "PA11.1": {
+        "label": "Non-primary-literature exclusions",
+        "description": "Book reviews, personal reports, obituaries (including 'In Memoriam'), indexes, and addendums are not indexed -- they are not primary research literature."
+      },
+      "PA11.2": {
+        "label": "Promotional/notice content exclusions",
+        "description": "Advertisements, society news, notices of future conferences/events, award winner notifications, Instructions to Authors, and 'In this issue'/table-of-contents items are not indexed."
+      },
+      "PA11.3": {
+        "label": "Duplicate/derivative content exclusions",
+        "description": "Reprints of articles published elsewhere, and product/video/audio reviews, are not indexed."
+      }
+    },
+    "description": "Rules on item types never indexed regardless of source (CAR Manual S1 list)."
+  },
+  "PA12": {
+    "label": "Patent indexing and coverage",
+    "children": {
+      "PA12.1": {
+        "label": "Five-office patent coverage",
+        "description": "Scopus indexes 49.2M+ patent records sourced from exactly five patent offices: WIPO, EPO, USPTO, JPO, and the UK IPO. Patents are a distinct content vertical from journal literature."
+      }
+    },
+    "description": "Rules governing Scopus's patent content vertical."
+  },
+  "PA13": {
+    "label": "Author identity and profile management",
+    "children": {
+      "PA13.1": {
+        "label": "Author Feedback Wizard, 5 working days",
+        "description": "Authors can request corrections to their Scopus Author profile via the Author Feedback Wizard; changes are implemented within 5 working days."
+      },
+      "PA13.2": {
+        "label": "Monthly ORCID sync",
+        "description": "Once an author connects their Scopus Author Identifier to ORCID, the two systems sync data on a monthly basis -- not in real time."
+      }
+    },
+    "description": "Rules governing Scopus Author Identifier assignment and correction."
+  },
+  "PA14": {
+    "label": "Affiliation profile curation",
+    "children": {
+      "PA14.1": {
+        "label": "Institution Profile Wizard corrections",
+        "description": "Corrections to an institution's affiliation profile can be requested via the Institution Profile Wizard, but only by an authorized representative of that institution."
+      }
+    },
+    "description": "Rules governing institution/affiliation profile correction."
+  },
+  "PA15": {
+    "label": "Open Access classification",
+    "children": {
+      "PA15.1": {
+        "label": "DOAJ/ROAD journal-level OA registration",
+        "description": "A journal is registered as Open Access in Scopus only if it is listed as Gold or Subsidized OA on the Directory of Open Access Journals (DOAJ) or the Directory of Open Access Scholarly Resources (ROAD)."
+      },
+      "PA15.2": {
+        "label": "Four-way document OA classification",
+        "description": "Individual documents are classified as Gold (published version, CC-licensed, OA-only journal), Hybrid Gold (published version, CC-licensed, subscription journal offering an OA option), Bronze (free to read but no CC license, unclear license, or publisher-specific license), or Green (accepted-manuscript or published version available in a repository)."
+      },
+      "PA15.3": {
+        "label": "Automated Unpaywall-sourced classification",
+        "description": "Open Access status is determined automatically by Unpaywall, not manually assigned by Scopus staff -- it updates if Unpaywall's underlying data changes, and cannot be manually toggled on request."
+      }
+    },
+    "description": "Rules governing how OA status is determined and classified."
+  },
+  "PA16": {
+    "label": "Errata and record corrections",
+    "children": {
+      "PA16.1": {
+        "label": "Bidirectional erratum linkage",
+        "description": "An erratum or retraction notice is indexed as its own document type and is linked bidirectionally to the original article it corrects."
+      },
+      "PA16.2": {
+        "label": "Correction only if Scopus differs from publisher PDF",
+        "description": "A data correction request is processed only when the Scopus record differs from the original publisher-supplied PDF/source. If Scopus already matches the publisher's PDF, the correction request is rejected -- the discrepancy is between the author and publisher, not an error in Scopus's metadata."
+      }
+    },
+    "description": "Rules governing erratum linkage and data-correction eligibility."
+  },
+  "PA17": {
+    "label": "Cited references coverage and linkage",
+    "children": {
+      "PA17.1": {
+        "label": "1970 cutoff, pre-1996 archive backfill",
+        "description": "Scopus indexes cited references for documents back to 1970 (expanded from 1996 in a 2014 project); references for documents published before 1996 were backfilled from the archives of 60 major publishers."
+      },
+      "PA17.2": {
+        "label": "References linked only if the cited source is itself indexed",
+        "description": "A cited reference is only clickable/linked in Scopus if the source it cites is itself indexed in Scopus; otherwise it appears as plain, unlinked text."
+      }
+    },
+    "description": "Rules governing how far back references are indexed and when they are linked."
+  },
+  "PA18": {
+    "label": "Missing content processing eligibility",
+    "children": {
+      "PA18.1": {
+        "label": "Journal must be selected",
+        "description": "A missing content report is only eligible for investigation if the source journal is selected in Scopus."
+      },
+      "PA18.2": {
+        "label": "Journal must be actively indexed",
+        "description": "The journal must be actively indexed, including titles that are ceased or newly accepted -- a journal that was never indexed, or was rejected, does not qualify."
+      },
+      "PA18.3": {
+        "label": "Publication date within coverage period",
+        "description": "The article's publication date must fall within the journal's Scopus coverage period (see PA6)."
+      },
+      "PA18.4": {
+        "label": "Authentic online sourcing URL required",
+        "description": "The article must be found at the publisher's authentic online sourcing URL; print and electronic PDF copies supplied directly by the customer are excluded as a source for verification."
+      },
+      "PA18.5": {
+        "label": "Six-week publication maturity",
+        "description": "The article must have been published at least 6 weeks before the support request is raised; content published more recently will not be processed as missing, since it may still be in the normal processing pipeline (see PA5)."
+      },
+      "PA18.6": {
+        "label": "Gen-CAR document type required",
+        "description": "The missing item must be a Scopus-covered ('Gen-CAR') document type; items in the PA11 exclusion list (obituaries, reprints, etc.) do not qualify as missing content. AiP items bypass criteria 4 and 5 and instead follow the PA10 4-day SLA path; preprints follow PA9 rules."
+      }
+    },
+    "description": "The six eligibility criteria a missing-content report must meet before investigation."
+  }
+}

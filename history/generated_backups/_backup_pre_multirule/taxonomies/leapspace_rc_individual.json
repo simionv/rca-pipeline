@@ -1,0 +1,44 @@
+{
+  "RCU1": {
+    "label": "User not able to access",
+    "children": {
+      "RCU1.1": {
+        "label": "General Troubleshooting steps",
+        "description": "Definition: The agent proposes generic troubleshooting, but the ticket does not establish which action solved the problem or whether the underlying cause was cache, session, browser or something else. Ticket signals / evidence: Clear cache/cookies, use another browser or incognito, sign out/sign in, or retry later, with no explicit customer confirmation of the decisive action."
+      },
+      "RCU1.2": {
+        "label": "Not enough info",
+        "description": "Definition: The individual-access ticket contains too little usable information, or too many conflicting diagnoses, to select a reliable root cause. Ticket signals / evidence: The ticket does not contain enough reliable information to determine why the user cannot access LeapSpace."
+      },
+      "RCU1.3": {
+        "label": "LeapSpace not launched yet",
+        "description": "Definition: A historical pre-launch case in which individuals had received communications or registered interest, but individual LeapSpace access was not yet available. Ticket signals / evidence: The final agent response states that the service is not currently available for individuals and will launch soon; the ticket date is around the January 2026 launch."
+      },
+      "RCU1.4": {
+        "label": "SD AI migration gap",
+        "description": "Definition: An individual SDAI subscriber did not receive or could not identify the expected LeapSpace access after the SDAI-to-LeapSpace transition. Ticket signals / evidence: The person says “I subscribed to SDAI”, received an access email, or expects SDAI access to work in LeapSpace; the ticket refers to SDAI being replaced by LeapSpace."
+      },
+      "RCU1.5": {
+        "label": "User mistakenly thought it was subscribed",
+        "description": "Definition: The user believes that they purchased or are entitled, but the profile has no active subscription; the entitlement is genuinely absent rather than merely not displayed. Ticket signals / evidence: The agent explicitly confirms that the user profile is not currently subscribed/entitled and may provide a purchase link. Do not use when a later agent confirms that a valid subscription exists."
+      },
+      "RCU1.6": {
+        "label": "Cache and cookies",
+        "description": "Definition: The browser is retaining an old Elsevier login/account/organization context and applies it to LeapSpace, preventing the individual subscription from being recognized correctly. Ticket signals / evidence: The agent asks the user to clear cache/cookies, use a private window or sign out/in, and the user confirms that access works afterward."
+      },
+      "RCU1.7": {
+        "label": "Change org issue",
+        "description": "Definition: A bug in LeapSpace’s Change Organization feature means that selecting a different organization appears to work, but the change is not correctly saved or applied, so the previous organization and its entitlements remain active. Ticket signals / evidence: The ticket explicitly mentions “Change Organization” or “change org”; changing organization in LeapSpace does not take effect, returns the user to the previous organization, or fails to apply the expected entitlement. Agents may instruct the user to change organization in ScienceDirect and then reopen LeapSpace, because this was used as a workaround for the LeapSpace bug."
+      },
+      "RCU1.8": {
+        "label": "Lack of user guidance",
+        "description": "Definition: The customer does not understand how to reach LeapSpace, needs to sign in before the option appears, or has not created the Elsevier/ScienceDirect account required for authentication. Ticket signals / evidence: “Where do I find LeapSpace?”, difficulty following the product path, instructions to sign into ScienceDirect first, or confirmation that no account/profile exists and must be created before the email can be recognized."
+      },
+      "RCU1.9": {
+        "label": "Session not refreshed after purchase",
+        "description": "Definition: The user has purchased an individual LeapSpace subscription and the entitlement is active in the account/backend, but the current LeapSpace session still reflects the user’s pre-purchase status. As a result, LeapSpace continues to show the user as unsubscribed or on a trial until the session is refreshed. Ticket signals / evidence: Use when several of the following signals are present: the user says they purchased or subscribed recently, such as “just bought,” “today” or “a few minutes ago”; the agent confirms that the subscription or entitlement is active for the same account/email; LeapSpace still displays “not subscribed,” “no individual subscription,” or only a 14-day trial; access works after signing out and back in, using incognito, reopening LeapSpace, waiting for the session to refresh, or creating a new session. An agent asking the user to add/set a password can be a strong clue, particularly for users who normally sign in through their organization, because this forces a new session rather than fixing a password problem."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'User not able to access' — an individual or personal subscription. Choose the root cause from this group only."
+  }
+}

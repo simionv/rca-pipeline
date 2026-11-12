@@ -1,0 +1,20 @@
+{
+  "SDAP1": {
+    "label": "Accessing content",
+    "children": {
+      "SDAP1.1": {
+        "label": "Accessing content",
+        "description": "Definition: Use this label only when the customer is trying to: obtain, read, download, or receive a specific article, journal, issue, archive item, content package, or supporting material; confirm whether they or their institution can access specific content; resolve an issue accessing content they expect to be entitled to; or access content they have personally purchased."
+      }
+    }
+  },
+  "SDAP2": {
+    "label": "Anything else",
+    "children": {
+      "SDAP2.1": {
+        "label": "Anything else",
+        "description": "Definition: Use this label for all other contacts, including: password, login, ID+, account activation, account switching, or SSO issues; cache, cookies, browser, device, VPN, proxy, or network issues; IP restrictions, Content Protection blocks, security controls, or high-download blocks; profile, billing, refund, cancellation, or general account-administration requests; ScienceDirect AI requests; requests that do not concern access to specific content. The word “access” alone is not enough to classify a ticket as Accessing content."
+      }
+    }
+  }
+}

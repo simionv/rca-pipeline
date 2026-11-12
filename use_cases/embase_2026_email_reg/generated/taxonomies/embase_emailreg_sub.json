@@ -1,0 +1,65 @@
+{
+  "EES1": {
+    "label": "New user registration or registration ID request",
+    "children": {
+      "EES1.1": {
+        "label": "New user registration or registration ID request",
+        "description": "Definition: An organisation, account manager or user asks for Embase accounts to be created for named people: new registration IDs and passcodes, login credentials, adding a user, or how a new colleague gets an account. Includes the agent sending out registration credentials."
+      }
+    }
+  },
+  "EES2": {
+    "label": "Remove, revoke or delete a user account",
+    "children": {
+      "EES2.1": {
+        "label": "Remove, revoke or delete a user account",
+        "description": "Definition: A user must lose access or their account must go: deactivate or revoke a user who has left, delete a user from an organisation account, or permanently delete an Elsevier account."
+      }
+    }
+  },
+  "EES3": {
+    "label": "Change or transfer the email on an account or licence",
+    "children": {
+      "EES3.1": {
+        "label": "Change or transfer the email on an account or licence",
+        "description": "Definition: The email address on an existing account is no longer valid or must change, or a licence or seat held under one email address must move to another person or address."
+      }
+    }
+  },
+  "EES4": {
+    "label": "Verification or login-details email not received",
+    "children": {
+      "EES4.1": {
+        "label": "Verification or login-details email not received",
+        "description": "Definition: An email the customer needs in order to register or sign in has not arrived: the Embase email verification notice or code, a password reset email or code, or promised login details or registration credentials."
+      }
+    }
+  },
+  "EES5": {
+    "label": "Personal account not linked to the institution or organisation",
+    "children": {
+      "EES5.1": {
+        "label": "Personal account not linked to the institution or organisation",
+        "description": "Definition: The customer has a personal Elsevier account but it is not linked, or is wrongly linked, to the institution or organisation that holds the Embase access: redirected back to the start page, no institution found, linking a personal account broke institutional access, access via the organisation email or access code does not work, or users are now required to register a personal account under SSO or email-domain access."
+      }
+    }
+  },
+  "EES6": {
+    "label": "Sign-in problem with registered credentials",
+    "children": {
+      "EES6.1": {
+        "label": "Sign-in problem with registered credentials",
+        "description": "Definition: The customer has registered credentials but cannot sign in with them - an error with an ID and passcode or email and password - or can sign in but no longer sees what belongs to the account, such as saved searches or email alerts."
+      }
+    }
+  },
+  "EES7": {
+    "label": "Other email-account issue",
+    "children": {
+      "EES7.1": {
+        "label": "Other email-account issue",
+        "description": "Definition: An email-account or registration problem that fits none of the sub-categories above."
+      }
+    }
+  }
+}

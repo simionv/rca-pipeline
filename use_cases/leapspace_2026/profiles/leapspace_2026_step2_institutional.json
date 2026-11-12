@@ -1,0 +1,16 @@
+{
+  "_comment":     "Step 2a of 2 — root cause for tickets step 1 classified as 'Institutional user cannot access' (LCR2.1). Input is the subset CSV written by notebooks/06_leapspace_2026_two_step.ipynb, not the full ticket file.",
+  "input":        "runs/intermediate/leapspace_2026_subset_institutional.csv",
+  "output":       "runs/output/leapspace_2026_step2_institutional.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col":     "Conversation",
+  "id_col":       "INCIDENT_REF",
+  "modules":      ["leapspace_rc_institutional"],
+  "batch_size":   5,
+  "max_chars":    40000,
+  "concurrency":  2,
+  "retries":      5,
+  "max_tokens":   8192,
+  "track_costs":  true,
+  "cost_report_dir": "runs/cost_reports"
+}

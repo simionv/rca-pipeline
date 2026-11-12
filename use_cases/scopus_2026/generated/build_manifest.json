@@ -1,0 +1,96 @@
+{
+  "modules": {
+    "scopus_l1": {
+      "taxonomy_hash": "0d5798c98fef8ac04bd2be75395263474a312664330fcaf9f2c614c2a5f9800d",
+      "taxonomy_written_at": "2026-11-12T14:04:01.076301+00:00",
+      "py_hash": "0d5798c98fef8ac04bd2be75395263474a312664330fcaf9f2c614c2a5f9800d",
+      "py_generated_at": "2026-11-12T13:58:25.244483+00:00"
+    },
+    "scopus_l2_access": {
+      "taxonomy_hash": "a11059db06494192c2f466ffd5f43f0765318fd35de8754a50331073642d27c9",
+      "taxonomy_written_at": "2026-11-12T14:04:01.077881+00:00",
+      "py_hash": "a11059db06494192c2f466ffd5f43f0765318fd35de8754a50331073642d27c9",
+      "py_generated_at": "2026-11-12T13:58:25.246177+00:00"
+    },
+    "scopus_l2_performance": {
+      "taxonomy_hash": "d4edc19e5bfaf5754332197992b1d1d1221d857754f9a7c924171a09903ebad7",
+      "taxonomy_written_at": "2026-11-12T14:04:01.079085+00:00",
+      "py_hash": "d4edc19e5bfaf5754332197992b1d1d1221d857754f9a7c924171a09903ebad7",
+      "py_generated_at": "2026-11-12T13:58:25.247596+00:00"
+    },
+    "scopus_l2_author_profile": {
+      "taxonomy_hash": "dc2d76ebaedbd47bd3b0b7df40ac449f70558b9fbc006ec1662a90090346920f",
+      "taxonomy_written_at": "2026-11-12T14:04:01.080462+00:00",
+      "py_hash": "dc2d76ebaedbd47bd3b0b7df40ac449f70558b9fbc006ec1662a90090346920f",
+      "py_generated_at": "2026-11-12T13:58:25.249122+00:00"
+    },
+    "scopus_l2_citation_metrics": {
+      "taxonomy_hash": "5fcfe636ea8f7bbb3e8e2c4cc483ac5c9f603c52936196c49e018299ed110470",
+      "taxonomy_written_at": "2026-11-12T14:04:01.081669+00:00",
+      "py_hash": "5fcfe636ea8f7bbb3e8e2c4cc483ac5c9f603c52936196c49e018299ed110470",
+      "py_generated_at": "2026-11-12T13:58:25.250465+00:00"
+    },
+    "scopus_l2_unclear": {
+      "taxonomy_hash": "f3c74a628798124d2802d75cdc37a746e7146f2104832a44d83f531f76fcf874",
+      "taxonomy_written_at": "2026-11-12T14:04:01.082813+00:00",
+      "py_hash": "f3c74a628798124d2802d75cdc37a746e7146f2104832a44d83f531f76fcf874",
+      "py_generated_at": "2026-11-12T13:58:25.251930+00:00"
+    },
+    "scopus_l2_funding": {
+      "taxonomy_hash": "2c0010ac8411dd19c9086d9971b8ff49e3824fef0c74e81b8645503a10a05e32",
+      "taxonomy_written_at": "2026-11-12T14:04:01.083963+00:00",
+      "py_hash": "2c0010ac8411dd19c9086d9971b8ff49e3824fef0c74e81b8645503a10a05e32",
+      "py_generated_at": "2026-11-12T13:58:25.253399+00:00"
+    },
+    "scopus_l2_content": {
+      "taxonomy_hash": "df6c29b1667cc5e391b6e119658281fd6a122ed59d522843830af21d4d60c2e0",
+      "taxonomy_written_at": "2026-11-12T14:04:01.085365+00:00",
+      "py_hash": "df6c29b1667cc5e391b6e119658281fd6a122ed59d522843830af21d4d60c2e0",
+      "py_generated_at": "2026-11-12T13:58:25.254857+00:00"
+    },
+    "scopus_l2_help_article": {
+      "taxonomy_hash": "044ececc5c1933ca42ff2196033422f4c8dc0145927bf896be5913e0d5df6d7f",
+      "taxonomy_written_at": "2026-11-12T14:04:01.086600+00:00",
+      "py_hash": "044ececc5c1933ca42ff2196033422f4c8dc0145927bf896be5913e0d5df6d7f",
+      "py_generated_at": "2026-11-12T13:58:25.256308+00:00"
+    },
+    "scopus_l2_search_feature": {
+      "taxonomy_hash": "ad62a3b89537fe34cc1a8653cb77aa7a7db18e7610f044afe096699113aa2370",
+      "taxonomy_written_at": "2026-11-12T14:04:01.087789+00:00",
+      "py_hash": "ad62a3b89537fe34cc1a8653cb77aa7a7db18e7610f044afe096699113aa2370",
+      "py_generated_at": "2026-11-12T13:58:25.257861+00:00"
+    },
+    "scopus_l2_institution_admin": {
+      "taxonomy_hash": "d2e4893404ce51a5b2ccae1229aa534ffa42ffbe8584e2696bffd483cc09333f",
+      "taxonomy_written_at": "2026-11-12T14:04:01.089151+00:00",
+      "py_hash": "d2e4893404ce51a5b2ccae1229aa534ffa42ffbe8584e2696bffd483cc09333f",
+      "py_generated_at": "2026-11-12T13:58:25.259250+00:00"
+    },
+    "scopus_l2_subscription": {
+      "taxonomy_hash": "d50630a279c5a3d181ed8c29bf67756aa561c2258d737f8ec9abff17344077b4",
+      "taxonomy_written_at": "2026-11-12T14:04:01.090307+00:00",
+      "py_hash": "d50630a279c5a3d181ed8c29bf67756aa561c2258d737f8ec9abff17344077b4",
+      "py_generated_at": "2026-11-12T13:58:25.260594+00:00"
+    },
+    "scopus_l2_non_scopus": {
+      "taxonomy_hash": "56c4027bc0ae28bbb8fc7d033a4425b8556d3247589be6a72d652fdeabd41f70",
+      "taxonomy_written_at": "2026-11-12T14:04:01.091410+00:00",
+      "py_hash": "56c4027bc0ae28bbb8fc7d033a4425b8556d3247589be6a72d652fdeabd41f70",
+      "py_generated_at": "2026-11-12T13:58:25.261938+00:00"
+    },
+    "scopus_l2_orcid": {
+      "taxonomy_hash": "93f07d38a8c577c303aa5778a9a41d911b8aa36b3bc17ccf4ab81ca6bd399a95",
+      "taxonomy_written_at": "2026-11-12T14:04:01.092463+00:00",
+      "py_hash": "93f07d38a8c577c303aa5778a9a41d911b8aa36b3bc17ccf4ab81ca6bd399a95",
+      "py_generated_at": "2026-11-12T13:58:25.263236+00:00"
+    },
+    "scopus_l2_api": {
+      "taxonomy_hash": "134b8f924c37c8b4cd14cff34fc6c8b171ca3d8fcc3824f62d5167f15db4fb13",
+      "taxonomy_written_at": "2026-11-12T14:04:01.093531+00:00",
+      "py_hash": "134b8f924c37c8b4cd14cff34fc6c8b171ca3d8fcc3824f62d5167f15db4fb13",
+      "py_generated_at": "2026-11-12T13:58:25.264480+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:01.096597+00:00",
+  "generator_version": "1.7.0"
+}

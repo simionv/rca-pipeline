@@ -1,0 +1,18 @@
+{
+  "_comment": "Stage 2 of 2 - Level 2 for tickets classified as Funding / Awarded Grants Data. Input is a subset CSV written by notebooks/20_scopus_2026_two_stage.ipynb.",
+  "input": "runs/intermediate/scopus26_subset_funding.csv",
+  "output": "runs/output/scopus26_step2_funding.xlsx",
+  "taxonomy_dir": "generated/taxonomies",
+  "text_col": "Conversation",
+  "id_col": "INCIDENT_REF",
+  "modules": [
+    "scopus_l2_funding"
+  ],
+  "batch_size": 5,
+  "max_chars": 40000,
+  "concurrency": 4,
+  "retries": 5,
+  "max_tokens": 8192,
+  "track_costs": true,
+  "cost_report_dir": "runs/cost_reports"
+}

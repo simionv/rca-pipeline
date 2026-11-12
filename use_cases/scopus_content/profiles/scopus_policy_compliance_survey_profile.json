@@ -1,0 +1,18 @@
+{
+  "input":        "data/scopus_content_effort_survey_comments.xlsx",
+  "output":       "runs/output/scopus_survey_compliance_enriched.xlsx",
+  "text_col":     "Effort Comment",
+  "id_col":       "Integration Id",
+  "taxonomy_dir": "generated/taxonomies",
+  "modules":      ["policy_understanding", "policy_compliance"],
+  "batch_size":   4,
+  "concurrency":  3,
+  "retries":      4,
+  "run_name":     "Scopus Policy Compliance — Survey Feedback",
+
+  "track_costs":      true,
+  "cost_report_dir":  "runs/cost_reports",
+
+  "run_quality_check":  true,
+  "quality_report_dir": "runs/quality_reports"
+}

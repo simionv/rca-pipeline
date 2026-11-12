@@ -1,0 +1,78 @@
+{
+  "PU1": {
+    "label": "Policy type",
+    "children": {
+      "PU1.1": {
+        "label": "Content or selection policy",
+        "description": "Customer struggles with editorial content criteria, what qualifies for inclusion in Scopus, or what has been removed or rejected from the index."
+      },
+      "PU1.2": {
+        "label": "Eligibility criteria",
+        "description": "Customer does not understand who or what qualifies for a product, service, feature, or entitlement — e.g. who can access Scopus, which journal types are eligible."
+      },
+      "PU1.3": {
+        "label": "Rules impact",
+        "description": "A policy or rule had a direct impact on the customer — e.g. their content was removed, their request was denied — and the customer does not understand why the rule applies to them."
+      },
+      "PU1.4": {
+        "label": "Policy visibility",
+        "description": "Customer could not find, access, or locate the relevant policy documentation. The policy may exist but was not surfaced or communicated clearly."
+      },
+      "PU1.5": {
+        "label": "Policy rejection",
+        "description": "Customer received a rejection decision based on policy and does not understand the grounds for the rejection or what they could do differently."
+      },
+      "PU1.6": {
+        "label": "CiteScore or journal metrics methodology",
+        "description": "Customer struggles to understand how CiteScore, SJR, SNIP, or other journal metrics are calculated, what years are included, or why scores changed."
+      },
+      "PU1.7": {
+        "label": "CSAB selection or coverage criteria",
+        "description": "Customer does not understand how Scopus decides what is indexed or removed, the CSAB evaluation process, or why a specific journal was accepted or rejected."
+      },
+      "PU1.8": {
+        "label": "Account or access policy",
+        "description": "Customer is confused about access entitlements, subscription terms, account-level policy rules, or who is authorised to access what."
+      },
+      "PU1.9": {
+        "label": "Other policy type",
+        "description": "Policy type does not fit the categories above."
+      },
+      "PU1.10": {
+        "label": "Not applicable — no policy issue",
+        "description": "Use when policy_understanding_issue is 'No'."
+      }
+    },
+    "description": "The category of policy, rule, or criterion that the customer struggled to understand."
+  },
+  "PU2": {
+    "label": "Root cause",
+    "children": {
+      "PU2.1": {
+        "label": "Confusing policy wording",
+        "description": "The policy language itself is ambiguous, overly technical, or written in a way that is hard to interpret without specialist knowledge."
+      },
+      "PU2.2": {
+        "label": "Lack of policy awareness",
+        "description": "Customer was unaware the policy existed or had recently changed. They could not reasonably have known to look for it."
+      },
+      "PU2.3": {
+        "label": "Agent explanation issue",
+        "description": "The agent's explanation of the policy was unclear, incomplete, or incorrect, contributing to the customer's confusion rather than resolving it."
+      },
+      "PU2.4": {
+        "label": "Policy disagreement",
+        "description": "Customer understands the policy but disagrees with it or considers it unfair or unreasonable. The difficulty is principled, not a comprehension problem."
+      },
+      "PU2.5": {
+        "label": "Other root cause",
+        "description": "Root cause does not fit the categories above."
+      },
+      "PU2.6": {
+        "label": "Not applicable — no policy issue",
+        "description": "Use when policy_understanding_issue is 'No'."
+      }
+    },
+    "description": "The primary reason the customer struggled to understand the policy or rule."
+  }
+}

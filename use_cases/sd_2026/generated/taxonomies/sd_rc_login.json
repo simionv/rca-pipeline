@@ -1,0 +1,44 @@
+{
+  "SDLI1": {
+    "label": "Login issues",
+    "children": {
+      "SDLI1.1": {
+        "label": "Entitlement issues",
+        "description": "Definition: Use when the user can identify their account but the expected access is not linked to it, or the user has not subscribed"
+      },
+      "SDLI1.2": {
+        "label": "User blocked due to cache and cookies issues",
+        "description": "Definition: Use when stored cookies or sessions prevent login or keep the user in the wrong account."
+      },
+      "SDLI1.3": {
+        "label": "Browser compatibility issues",
+        "description": "Definition: Use when login fails only in a specific browser, device or browser version."
+      },
+      "SDLI1.4": {
+        "label": "Not enough info",
+        "description": "Definition: Use when the user cannot log in but no likely cause is provided."
+      },
+      "SDLI1.5": {
+        "label": "Other",
+        "description": "Definition: Use for another personal account login issue not listed above."
+      },
+      "SDLI1.6": {
+        "label": "AI Trial access guidance",
+        "description": "Definition: Use when the user needs instructions to activate or access an AI trial."
+      },
+      "SDLI1.7": {
+        "label": "Wrong account unexpected account switching",
+        "description": "Definition: Use when there's a mismatch between personal and instutitional account or one is overriding the other one"
+      },
+      "SDLI1.8": {
+        "label": "Password reset email not received",
+        "description": "Definition: Use when the password reset message does not arrive / spam / junk / not found"
+      },
+      "SDLI1.9": {
+        "label": "Activation verification link issue",
+        "description": "Definition: Use when an activation, verification or one-time link is missing, invalid or not working."
+      }
+    },
+    "description": "Every ticket in this task has already been classified as 'Login issues'. Choose the root cause from this group only. That contact reason means: Use when an individual user cannot sign in to or activate their Elsevier account, with signals such as password, reset email, verification or activation link, one-time link, wrong account, account switching, cookies or browser issues, and not for institutional SSO failures."
+  }
+}

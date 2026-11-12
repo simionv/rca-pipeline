@@ -1,0 +1,24 @@
+{
+  "SCOR1": {
+    "label": "ORCID Issue",
+    "children": {
+      "SCOR1.1": {
+        "label": "ORCID Not Linking",
+        "description": "Definition: The ORCID cannot be linked to the Scopus profile."
+      },
+      "SCOR1.2": {
+        "label": "Change / Unlink ORCID",
+        "description": "Definition: The user needs to change or unlink the ORCID."
+      },
+      "SCOR1.3": {
+        "label": "ORCID Sync / Import Issue",
+        "description": "Definition: Data does not sync or import between ORCID and Scopus."
+      },
+      "SCOR1.4": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The ORCID issue is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'ORCID Issue'. Choose the Level 2 value from this group only. 'ORCID Issue' means: Definition: Linking, changing, unlinking or syncing ORCID is the main need and the customer is not blocked from access."
+  }
+}

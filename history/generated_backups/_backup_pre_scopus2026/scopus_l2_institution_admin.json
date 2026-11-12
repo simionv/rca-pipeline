@@ -1,0 +1,48 @@
+{
+  "SCIA1": {
+    "label": "Institution Admin / Support",
+    "children": {
+      "SCIA1.1": {
+        "label": "Organisation / Affiliation Profile Data",
+        "description": "Definition: The institution's affiliation/organisation profile data in Scopus is missing, incorrect or needs updating."
+      },
+      "SCIA1.2": {
+        "label": "IP / Entitlement Maintenance",
+        "description": "Definition: Routine maintenance of the institution's IP ranges, entitlements or link-resolver settings is needed."
+      },
+      "SCIA1.3": {
+        "label": "Admin Console / Role Setup",
+        "description": "Definition: Institution administrators need admin console access, roles or configuration."
+      },
+      "SCIA1.4": {
+        "label": "Usage Reports / Statistics",
+        "description": "Definition: The institution needs usage data or reports."
+      },
+      "SCIA1.5": {
+        "label": "Logo / Branding Update",
+        "description": "Definition: The institution wants its logo or branding updated in Scopus."
+      },
+      "SCIA1.6": {
+        "label": "SSO / SAML Configuration",
+        "description": "Definition: The institution's federated/SSO set-up needs configuration."
+      },
+      "SCIA1.7": {
+        "label": "Training / Onboarding",
+        "description": "Definition: The institution requests training or onboarding sessions."
+      },
+      "SCIA1.8": {
+        "label": "Link Resolver / OpenURL Setup",
+        "description": "Definition: The institution needs its link resolver / OpenURL set up or corrected."
+      },
+      "SCIA1.9": {
+        "label": "Scopus AI Feature Control / User Management",
+        "description": "Definition: The institution administrator asks how to turn Scopus AI features on or off or manage AI users."
+      },
+      "SCIA1.10": {
+        "label": "Unknown / Not Stated",
+        "description": "Definition: The cause of the institutional request is not stated."
+      }
+    },
+    "description": "Every ticket in this task has already been classified at Level 1 as 'Institution Admin / Support'. Choose the Level 2 value from this group only. 'Institution Admin / Support' means: Definition: Institution-level items that are not access blockers: admin console/roles, SSO/SAML setup, organisation/affiliation profile data, IP/entitlement maintenance, link resolver, usage reports, logo/branding, training/onboarding."
+  }
+}

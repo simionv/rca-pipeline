@@ -1,0 +1,7 @@
+Before notebooks/20_scopus_2026_two_stage.ipynb rebuilt it, generated/pipeline_config.json
+held these modules: ['scopus_l1', 'scopus_l2_access', 'scopus_l2_performance', 'scopus_l2_author_profile', 'scopus_l2_citation_metrics', 'scopus_l2_unclear', 'scopus_l2_funding', 'scopus_l2_content', 'scopus_l2_help_article', 'scopus_l2_search_feature', 'scopus_l2_institution_admin', 'scopus_l2_subscription', 'scopus_l2_non_scopus', 'scopus_l2_orcid', 'scopus_l2_api']
+
+To restore, copy pipeline_config.json and build_manifest.json from this folder back into
+generated/, or rebuild from the definition workbook that produced them, e.g.
+
+    python build_pipeline.py build --input definitions/<that workbook>.xlsx --force-all

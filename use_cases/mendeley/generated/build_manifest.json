@@ -1,0 +1,44 @@
+{
+  "modules": {
+    "contact_reason": {
+      "taxonomy_hash": "fb16d9dbae5eccaedd39247ae77dd5e4fb79b9ffd23b93e72936ac3b37d38887",
+      "taxonomy_written_at": "2026-11-12T14:04:00.349245+00:00",
+      "py_hash": "fb16d9dbae5eccaedd39247ae77dd5e4fb79b9ffd23b93e72936ac3b37d38887",
+      "py_generated_at": "2026-11-12T13:58:24.532659+00:00"
+    },
+    "root_cause": {
+      "taxonomy_hash": "778126f9750653fe76bfea9c5404739d7df043da767c94636c2ac3c23eb5595c",
+      "taxonomy_written_at": "2026-11-12T14:04:00.350713+00:00",
+      "py_hash": "778126f9750653fe76bfea9c5404739d7df043da767c94636c2ac3c23eb5595c",
+      "py_generated_at": "2026-11-12T13:58:24.534417+00:00"
+    },
+    "resolution": {
+      "taxonomy_hash": "ba0139bb32b78f97ba152130a1ce7c0d2fb577a3ec5142e56e85c39e44ec6d31",
+      "taxonomy_written_at": "2026-11-12T14:04:00.352135+00:00",
+      "py_hash": "ba0139bb32b78f97ba152130a1ce7c0d2fb577a3ec5142e56e85c39e44ec6d31",
+      "py_generated_at": "2026-11-12T13:58:24.536177+00:00"
+    },
+    "escalation": {
+      "py_hash": "1ca422ac1ce40fed4ec4f3b0716ec958a6041a7d658faa61af94ec1505141fca",
+      "py_generated_at": "2026-11-12T13:58:24.537138+00:00"
+    },
+    "troubleshooting": {
+      "taxonomy_hash": "7d03234ef62b8ec6c0002f0a523cc4ecee8effea8a919dcad4420ef7d5fc5d17",
+      "taxonomy_written_at": "2026-11-12T14:04:00.354483+00:00",
+      "py_hash": "7d03234ef62b8ec6c0002f0a523cc4ecee8effea8a919dcad4420ef7d5fc5d17",
+      "py_generated_at": "2026-11-12T13:58:24.538568+00:00"
+    },
+    "metadata": {
+      "py_hash": "6cb0caf1b604806a55f238462879c427eeee343e2e6465593a7d294c21965b3e",
+      "py_generated_at": "2026-11-12T13:58:24.539857+00:00"
+    },
+    "customer_effort": {
+      "taxonomy_hash": "8f0a3e269415d0994a419201186639d7fb6cfd83d06e2b6a03ca627dc88d90f7",
+      "taxonomy_written_at": "2026-11-12T14:04:00.356688+00:00",
+      "py_hash": "8f0a3e269415d0994a419201186639d7fb6cfd83d06e2b6a03ca627dc88d90f7",
+      "py_generated_at": "2026-11-12T13:58:24.541908+00:00"
+    }
+  },
+  "generated_at": "2026-11-12T14:04:00.358671+00:00",
+  "generator_version": "1.7.0"
+}

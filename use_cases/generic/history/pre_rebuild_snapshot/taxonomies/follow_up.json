@@ -1,0 +1,104 @@
+{
+  "FU1": {
+    "label": "Agent-owned follow-up",
+    "children": {
+      "FU1.1": {
+        "label": "Callback committed",
+        "description": "Agent committed to calling the customer back within a specified or unspecified timeframe."
+      },
+      "FU1.2": {
+        "label": "Email follow-up or confirmation committed",
+        "description": "Agent committed to sending a follow-up email — confirmation, summary, or further information."
+      },
+      "FU1.3": {
+        "label": "Case investigation committed",
+        "description": "Agent committed to investigating the issue further and reporting back with findings."
+      },
+      "FU1.4": {
+        "label": "Progress monitoring committed",
+        "description": "Agent committed to monitoring a pending action (shipment, fix, refund) and proactively updating the customer."
+      },
+      "FU1.5": {
+        "label": "Document or evidence to be provided",
+        "description": "Agent committed to sending a document, invoice, report, or evidence to the customer."
+      }
+    },
+    "description": "The agent committed to performing a specific action after the interaction ends."
+  },
+  "FU2": {
+    "label": "Customer-required action",
+    "children": {
+      "FU2.1": {
+        "label": "Customer to provide documentation or evidence",
+        "description": "Customer must submit a document, screenshot, bank statement, or other evidence."
+      },
+      "FU2.2": {
+        "label": "Customer to attempt fix and report outcome",
+        "description": "Customer was given instructions to try and must contact again to report whether the fix worked."
+      },
+      "FU2.3": {
+        "label": "Customer to complete a process or form",
+        "description": "Customer must complete an online form, application, verification step, or portal action."
+      },
+      "FU2.4": {
+        "label": "Customer to contact a third party first",
+        "description": "Customer must contact their bank, carrier, or another provider before resolution can proceed."
+      }
+    },
+    "description": "The customer must take a specific action after the interaction to advance the resolution."
+  },
+  "FU3": {
+    "label": "Internal team action",
+    "children": {
+      "FU3.1": {
+        "label": "Engineering team to investigate or fix",
+        "description": "The engineering or technical team must diagnose and fix a bug or system issue."
+      },
+      "FU3.2": {
+        "label": "Finance or billing team to process",
+        "description": "The finance team must process a refund, credit, or billing correction."
+      },
+      "FU3.3": {
+        "label": "Operations or fulfilment team to act",
+        "description": "The operations, logistics, or fulfilment team must take action (reship, rebook, expedite)."
+      },
+      "FU3.4": {
+        "label": "Compliance or management review required",
+        "description": "A compliance officer, manager, or senior stakeholder must review the case before it can close."
+      }
+    },
+    "description": "A specific internal team (not the current agent) must complete an action to close the case."
+  },
+  "FU4": {
+    "label": "Automated or system follow-up",
+    "children": {
+      "FU4.1": {
+        "label": "Automated refund or credit to be processed",
+        "description": "A system-triggered refund, credit, or billing adjustment will be processed automatically."
+      },
+      "FU4.2": {
+        "label": "Automated notification or confirmation to be sent",
+        "description": "An automated email, SMS, or in-app notification will be sent to the customer by the system."
+      },
+      "FU4.3": {
+        "label": "Scheduled system task to trigger",
+        "description": "A time-based system task (renewal, expiry, delivery window) will execute automatically."
+      }
+    },
+    "description": "An automated system or scheduled process will handle the follow-up without further human action."
+  },
+  "FU5": {
+    "label": "No follow-up required",
+    "children": {
+      "FU5.1": {
+        "label": "Fully resolved — no follow-up needed",
+        "description": "The issue was completely resolved during the interaction; nothing further is required."
+      },
+      "FU5.2": {
+        "label": "Customer chose not to pursue",
+        "description": "The customer acknowledged and closed the interaction without needing further action."
+      }
+    },
+    "description": "The interaction is complete. No post-interaction action is needed from any party."
+  }
+}

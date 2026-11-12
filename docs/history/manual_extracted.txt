@@ -1,0 +1,327 @@
+RCA Pipeline
+Technical Manual & Operations Guide
+Installation, Configuration, Day-to-Day Operations, and Troubleshooting
+Version 3.0  —  May 2026
+1. Prerequisites and Installation
+1.1 System Requirements
+The pipeline requires Python 3.9 or later, with 3.11+ recommended for best performance. It runs on Windows, macOS, and Linux. Memory requirements depend on dataset size: 4 GB RAM is sufficient for datasets up to 50,000 records; larger datasets benefit from 8 GB+.
+1.2 Python Dependencies
+pip install pandas openpyxl litellm tenacity python-dotenv
+Optional dependencies for enhanced features:
+pip install langdetect    # Better language detection (Enhancement 6)
+pip install nest-asyncio  # Required for Jupyter notebook usage
+If using the native openai backend instead of litellm:
+pip install openai
+1.3 LLM Provider Setup
+The pipeline supports two LLM backends: litellm (default, multi-provider) and the native openai SDK (direct Azure/OpenAI). Both require API credentials.
+1.3.1 Azure OpenAI (recommended)
+Create a .env file in the project root with your Azure credentials:
+AZURE_API_KEY=your-azure-openai-key
+AZURE_API_BASE=https://your-endpoint.openai.azure.com/
+AZURE_API_VERSION=2024-02-01
+RCA_MODEL=azure/your-deployment-name
+LLM_BACKEND=litellm
+When using the openai backend with Azure, omit the azure/ prefix from the model name:
+LLM_BACKEND=openai
+RCA_MODEL=your-deployment-name
+1.3.2 OpenAI Direct
+OPENAI_API_KEY=sk-your-openai-key
+USE_AZURE=false
+LLM_BACKEND=openai
+RCA_MODEL=gpt-4o
+1.4 Project Structure
+2. Quick Start (5-Minute Setup)
+This section walks through the fastest path from zero to classified output.
+Step 1: Install dependencies
+pip install pandas openpyxl litellm tenacity python-dotenv nest-asyncio
+Step 2: Configure credentials
+Create a .env file with your Azure OpenAI or OpenAI credentials (see Section 1.3).
+Step 3: Build the pipeline
+python build_pipeline.py build --input definitions/generic_pipeline_definition.xlsx
+This generates taxonomy JSON files (for the 10 taxonomy-backed modules), classification module .py files for all 19 modules, pipeline_config.json, and build_manifest.json. You should see output confirming each module was processed.
+Step 4: Run classification
+python run_pipeline.py --input data/transcripts.csv --text-col conversation
+Or using a run profile:
+python run_pipeline.py --profile profiles/my_product.json
+The enriched output is written to runs/output/. Check the log for progress and any warnings.
+Step 5: Review output
+Open the enriched Excel file. Each row has the original transcript columns plus new classification columns from all 19 modules: contact reason codes, root cause, effort scores, sentiment, agent performance, resolution quality, follow-up actions, compliance flags, VoC themes, customer profile inferences, knowledge gaps, interaction structure, containment signals, customer journey stage, and customer intent.
+3. The Pipeline Definition Excel
+Everything the pipeline needs to know is defined in one Excel workbook with three data sheets. This is the single source of truth — all generated files are derived from it.
+3.1 Modules Sheet
+Each row defines a classification module. The pipeline currently defines 19 modules organised across 7 analytical groups. The key columns are:
+The 19 modules and their groups:
+3.2 Fields Sheet
+Each row defines one output field for one module. The prompt_instruction column is the most impactful — it is the exact text sent to the LLM telling it what to produce for this field.
+Field type details: The "code" type links to a taxonomy and triggers automatic label derivation (a _label column is generated alongside the _code column). The "enum:" type validates against the specified values. The "list" type with explode_list=TRUE produces positional columns (e.g., secondary_codes_1, secondary_codes_2). The "bool" type expects true/false values.
+3.3 Taxonomy Sheet
+Defines the two-level classification hierarchy. Codes are auto-assigned by row order — never type codes manually.
+Row ordering matters. L2 rows are children of the most recent L1 row in the same module. If you insert an L2 row after the wrong L1, it will be assigned to the wrong group. Always keep L2 rows directly below their parent L1.
+Ten modules have taxonomies: contact_reason (CR), root_cause (RC), customer_effort (CE), agent_performance (AP), voice_of_customer (VOC), resolution_actions (RA), follow_up (FU), compliance_and_risk (RISK), knowledge_management (KM), and customer_intent (INT). The remaining nine modules use enum fields and free-text fields only.
+4. Building the Pipeline
+4.1 Standard Build
+python build_pipeline.py build --input definitions/generic_pipeline_definition.xlsx
+For each enabled module, the build step generates a taxonomy JSON file (always overwritten from the Excel), a module .py file (generated only if missing; warns if stale), pipeline_config.json (always regenerated), and build_manifest.json (tracks what was generated and when). The .py files contain the complete system prompt, user prompt template, output schema, and classify function. They are designed to be self-contained: each module can be imported and run independently.
+4.2 Force-Regeneration
+If you edit a module’s fields or prompt instructions in the Excel, the build step detects the change (via SHA-256 hash) and warns that the .py file is stale. Regenerate with:
+python build_pipeline.py build --input definitions/generic_pipeline_definition.xlsx --force contact_reason
+Or regenerate all modules:
+python build_pipeline.py build --input definitions/generic_pipeline_definition.xlsx --force-all
+Caution: --force overwrites any hand-edits to the .py file. Back up custom modifications before forcing.
+4.3 Dry Run
+python build_pipeline.py build --input definitions/generic_pipeline_definition.xlsx --dry-run
+Shows what would be generated without writing any files. Useful for previewing changes before committing.
+4.4 Adding a New Module
+To add a new classification module: (1) Add a row to the modules sheet with the module name, prefix, taxonomy file, and description. (2) Add field rows to the fields sheet with field names, types, and prompt instructions. (3) Add L1/L2 rows to the taxonomy sheet (if applicable). (4) Run the build step. The new module is automatically registered and will run on the next classification.
+5. Taxonomy Discovery (Cold-Start)
+If you have no taxonomy yet and want to bootstrap one from your data, use the discovery workflow.
+5.1 Run Discovery
+python build_pipeline.py discover \
+    --input definitions/generic_pipeline_definition.xlsx \
+    --data data/transcripts.csv \
+    --modules contact_reason root_cause \
+    --sample-n 100
+This samples 100 transcripts, extracts abstract categories in parallel (Pass 1), deduplicates near-duplicates, and normalises the top items into a structured taxonomy (Pass 2). Draft files are written to generated/taxonomies/drafts/.
+5.2 Review Drafts
+Open the draft JSON files and review the generated taxonomy. Common edits include merging duplicate categories that the deduplication missed, renaming vague labels to be more specific, adding descriptions to L2 codes (critical for accuracy), removing noise categories, and ensuring each L1 group has an “Other” catch-all leaf.
+5.3 Promote Drafts
+python build_pipeline.py promote-drafts --input definitions/generic_pipeline_definition.xlsx
+This copies the reviewed draft files to the live taxonomy directory. After promotion, re-run the standard build to regenerate module .py files that reference the new taxonomy.
+6. Running Classification
+6.1 Using Run Profiles
+A run profile is a JSON file containing all settings for a specific product or dataset. This avoids typing flags every time:
+{ "input": "data/transcripts.csv", "output": "runs/output/enriched.xlsx",
+  "text_col": "conversation", "batch_size": 12, "concurrency": 4,
+  "enable_confidence": true, "track_costs": true,
+  "run_quality_check": true }
+python run_pipeline.py --profile profiles/my_product.json
+CLI arguments override profile values, so you can use a profile as a baseline and tweak individual settings:
+python run_pipeline.py --profile profiles/my_product.json --concurrency 2 --batch-size 5
+6.2 CLI Reference
+6.3 Notebook Workflow
+For interactive development and quality review, use the Jupyter notebooks in the notebooks/ directory:
+01_build_and_discover.ipynb runs the build step, optionally runs discovery, reviews generated files, configures the feedback store, and performs a readiness check. Run this notebook first when setting up a new product or after editing the Excel definition.
+02_classification.ipynb runs classification with configurable sampling (SAMPLE_N = 50 for a quick sanity check, 500 for quality review, None for full run), live progress table, full post-processing, quality dashboard, confidence analysis, per-record review of lowest-confidence cases, and output export with review queue.
+03_smart_feedback.ipynb provides an interactive diagnostic walkthrough of the feedback scoring logic, per-batch selection behaviour, and strategy comparison. Includes synthetic data and requires no LLM calls for the diagnostic sections.
+The recommended workflow is: SAMPLE_N = 50 to verify everything works, SAMPLE_N = 500 to assess quality and tune prompt instructions, then SAMPLE_N = None for the full run (or switch to run_pipeline.py for production with checkpointing).
+7. Enhancement Modules — How-To
+All seven enhancements are opt-in. Enable them via the run profile JSON, CLI flags, or RunConfig fields. They compose freely: you can enable any combination.
+7.1 Confidence Scoring
+Adds a 0–1 confidence score to every classification. Low-confidence records are flagged for human review.
+Enable
+{ "enable_confidence": true, "confidence_threshold": 0.70, "export_review_queue": true }
+How it works
+The pipeline appends a confidence instruction to every system prompt. The LLM includes a "confidence" float in each JSON result object. Records below the threshold get _needs_review = True. If export_review_queue is enabled, a separate review_queue.xlsx is written with only the flagged records, sorted by confidence (lowest first).
+Output columns
+_confidence (float 0–1 or None), _needs_review (boolean)
+Tips
+Start with a threshold of 0.70. If the review queue is too large (>20%), raise the threshold. If too few records are flagged, lower it. The confidence distribution in the quality dashboard helps calibrate.
+7.2 Human-in-the-Loop Feedback
+Stores human corrections and injects them as few-shot examples in future runs.
+Adding corrections (Python)
+from rca_pipeline.enhancements.feedback import FeedbackStore
+store = FeedbackStore("runs/feedback/")
+store.add_correction("contact_reason", uid="42",
+    text="Customer cannot log in after changing password...",
+    original={"contact_reason_primary_code": "CR1.2"},
+    corrected={"contact_reason_primary_code": "CR3.1"},
+    reason="Account recovery, not login blocked")
+Importing from spreadsheet
+Add *_corrected columns to your enriched output (e.g., contact_reason_primary_code_corrected) for rows you want to fix. Optionally add a correction_reason column. Then import:
+store.import_from_review_file("runs/output/reviewed.xlsx", module="contact_reason")
+Selection strategies
+Set feedback_strategy in the profile JSON or via --feedback-strategy CLI flag. Four strategies are available: recent (most recently added corrections), diverse (one example per distinct corrected code), frequent (most commonly corrected pairs), and smart (recommended with 10+ corrections; two-stage adaptive selection with Jaccard reranking per batch).
+7.3 Hierarchical Classification
+Two-step L1→L2 classification for taxonomies with many leaf codes.
+Enable
+{ "hierarchical_modules": ["contact_reason", "root_cause"] }
+Modules not listed use the standard single-step approach. Hierarchical mode doubles LLM calls but narrows the decision space for each step. Recommended for modules with 40+ leaf codes.
+7.4 Incremental Processing
+Process only new or changed records, skipping previously classified ones.
+Enable
+{ "incremental": true, "incremental_state_file": "data/state.jsonl" }
+On each run, the pipeline compares incoming records against the state file by UID and text hash. Only new/changed records are sent to the LLM. Cached results for unchanged records are merged into the output. The state file is updated after each run.
+Fresh start
+Delete the state file to force reclassification of everything:
+rm data/state.jsonl
+7.5 Cost Tracking
+Tracks token usage and estimated USD cost per module.
+Enable
+{ "track_costs": true, "cost_report_dir": "runs/cost_reports" }
+A cost summary is printed to the log after classification, and a detailed JSON report is saved to runs/cost_reports/. The report includes per-module token counts, costs, average cost per record, and throughput metrics.
+7.6 Language Detection
+Detects transcript language and optionally translates non-English text.
+Enable
+{ "detect_language": true, "language_strategy": "translate" }
+Strategies: "translate" (translate to English before classification — most accurate), "prompt" (keep original text, adapt prompts), "detect" (detect only, add metadata columns). Install langdetect for better coverage of non-Latin scripts: pip install langdetect.
+7.7 Quality Dashboard
+Generates an automated quality report after each run.
+Enable
+{ "run_quality_check": true, "quality_report_dir": "runs/output" }
+To compare with a previous run:
+{ "previous_quality_report": "runs/output/quality_report.json" }
+The report includes coverage, code distribution alerts, evidence quality, error rates, confidence stats, anomaly detection, and run-over-run comparison. Outputs both quality_report.json and quality_report.xlsx.
+8. Post-Processing Pipeline
+After all modules complete, results are merged by UID and passed through a multi-step post-processing pipeline:
+Step 1: Merge results. All module results are combined into one row per UID. Overlapping fields are resolved by last-write-wins.
+Step 2: Enum validation. Constrained fields are validated and normalised to lowercase. Invalid values are blanked.
+Step 3: Evidence validation. Evidence and snippet fields are checked against the source transcript. A *_grounded boolean column is added for each evidence field.
+Step 4: Label derivation. For every *_code column, a corresponding *_label column is derived from the taxonomy lookup. For every *_code column with a description in the taxonomy, a *_description column is added. L1 class columns are derived from primary codes.
+Step 5: L1 code correction. Primary code fields are checked for L1-only codes (no dot). Single-child L1 codes are auto-resolved to their child. Multi-child L1 codes are kept with a warning.
+Step 6: List explosion. Fields marked with explode_list=TRUE are expanded into positional columns (_1, _2, _3).
+Step 7: Positional label derivation. For exploded code columns (e.g., secondary_codes_1), corresponding label columns are derived.
+Step 8: Column reordering. Original columns come first (in their original order), followed by enrichment columns sorted by module definition order.
+Step 9: Output exclusion. Fields marked with in_output=FALSE are stripped from the final output.
+Step 10: Confidence flagging. If confidence scoring is enabled, the _needs_review column is computed.
+9. Crash Recovery
+9.1 Checkpointing
+The production runner (run_pipeline.py) writes results to an append-only JSONL checkpoint file after each batch completes. To resume after a crash, simply re-run the same command. The runner loads the checkpoint, identifies which UIDs are already done for each module (via sentinel fields), and dispatches only the remaining work.
+The checkpoint file grows during a run and is compacted after successful completion. If the process crashes mid-batch, at most one batch of results is lost.
+9.2 Bad-UID Skip List
+UIDs that produce persistent errors (e.g., content policy violations, unparseable transcripts) are appended to a bad-UIDs text file. On subsequent runs, these UIDs are excluded from the input. To retry a previously bad UID, remove it from the file.
+9.3 Starting Fresh
+# Delete checkpoint and bad-UIDs to start fresh
+rm runs/checkpoints/*_checkpoint.jsonl runs/checkpoints/*_bad_uids.txt
+For incremental mode, also delete the state file:
+rm data/state.jsonl
+10. Troubleshooting
+11. Environment Variable Reference
+All environment variables can be set in a .env file in the project root. CLI arguments and profile values take precedence over environment variables.
+End of Manual
+
+[TABLE]
+File/Directory | Purpose
+generic_pipeline_definition.xlsx | Single source of truth: all 19 modules, fields, and taxonomies
+.env | LLM credentials (never commit to version control)
+build_pipeline.py | Reads Excel, generates .py files + config + taxonomies
+run_pipeline.py | Production runner with checkpointing and profiles
+rca_pipeline/pipeline.py | Main orchestrator (used by notebooks)
+rca_pipeline/llm_client.py | LLM calls with 4-tier resilience
+rca_pipeline/config.py | RunConfig dataclass with all settings
+rca_pipeline/taxonomy.py | Taxonomy loading, formatting, lookups
+rca_pipeline/utils.py | Pre/post-processing utilities
+rca_pipeline/discovery.py | Taxonomy discovery from raw data
+rca_pipeline/enhancements/confidence.py | Enhancement 1: Confidence scoring
+rca_pipeline/enhancements/feedback.py | Enhancement 2: Human-in-the-loop feedback
+rca_pipeline/enhancements/hierarchical.py | Enhancement 3: Two-step L1→L2 classification
+rca_pipeline/enhancements/incremental.py | Enhancement 4: Delta processing
+rca_pipeline/enhancements/cost_tracker.py | Enhancement 5: Token usage and cost
+rca_pipeline/enhancements/language.py | Enhancement 6: Language detection and translation
+rca_pipeline/enhancements/quality_dashboard.py | Enhancement 7: Automated quality reporting
+generated/taxonomies/ | Generated taxonomy JSON files
+runs/feedback/ | Human correction JSONL files
+runs/cost_reports/ | Cost tracking JSON reports
+profiles/ | Run profiles (one JSON per product/environment)
+data/ | Input transcripts
+runs/output/ | Enriched output files and quality reports
+runs/checkpoints/ | Crash-recovery JSONL files
+
+[TABLE]
+Column | Required | Description
+module_name | Yes | Python identifier (e.g., contact_reason). Must be a valid Python module name.
+taxonomy_prefix | If taxonomy | Code prefix: CR, RC, CE, AP, VOC, RA, FU, RISK, KM, INT. Leave blank for no-taxonomy modules.
+taxonomy_file | If taxonomy | Output JSON filename (e.g., contact_reason.json)
+enabled | Yes | TRUE or FALSE. Disabled modules are skipped by build and classification.
+description | Yes | Task description baked into the LLM system prompt. Be specific and actionable.
+reorder_group | No | Controls output column ordering. Defaults to module_name.
+reorder_order | No | Numeric sort order within the output. Lower = earlier.
+
+[TABLE]
+Group | Module | Prefix | Description
+Core | contact_reason | CR | Why the customer contacted support
+Core | interaction_classification | — | Structural characteristics of the interaction
+Why & Intent | root_cause | RC | Underlying cause of the issue
+Why & Intent | customer_intent | INT | Action the customer wants taken
+Customer Experience | customer_sentiment | — | Emotional tone and trajectory
+Customer Experience | customer_effort | CE | Effort burden on the customer
+Customer Experience | voice_of_customer | VOC | Explicit and implicit customer feedback
+Customer Experience | customer_journey | — | Position in the customer’s issue journey
+Agent & Comms | agent_performance | AP | Agent quality across key dimensions
+Agent & Comms | communication_effectiveness | — | Clarity and effectiveness of agent comms
+Resolution & Follow-up | resolution_quality | — | Quality and completeness of resolution
+Resolution & Follow-up | resolution_actions | RA | Specific actions taken to resolve
+Resolution & Follow-up | escalation | — | Escalation classification and handling
+Resolution & Follow-up | follow_up | FU | Follow-up actions committed
+Self-Service & Knowledge | containment_and_deflection | — | Deflection potential and barriers
+Self-Service & Knowledge | knowledge_management | KM | Documentation and knowledge gaps
+Self-Service & Knowledge | insights_and_opportunities | — | Strategic insights and opportunities
+Risk & Profile | compliance_and_risk | RISK | Compliance and risk signals
+Risk & Profile | customer_profile | — | Inferred customer characteristics
+
+[TABLE]
+Column | Required | Description
+module_name | Yes | Which module this field belongs to
+field_name | Yes | Output column name (e.g., contact_reason_primary_code)
+field_type | Yes | Data type: code, str, bool, int, float, list, or enum:val1,val2,...
+prompt_instruction | Yes | Exact instruction sent to the LLM. This is the most impactful column for accuracy.
+in_output | No | FALSE to strip from final output (still available for intermediate processing)
+explode_list | No | TRUE to expand list fields into positional columns (_1, _2, _3, ...)
+validate_enum | No | TRUE to enforce allowed values post-classification (blanks invalid entries)
+
+[TABLE]
+Column | Required | Description
+module_name | Yes | Which module this taxonomy entry belongs to
+level | Yes | L1 (top-level group) or L2 (leaf under the most recent L1)
+label | Yes | Category name (e.g., Technical & platform issues)
+description | No | Detailed description. Adding L2 descriptions is the single best accuracy improvement.
+
+[TABLE]
+Flag | Default | Description
+--input, -i | (required) | Input CSV or XLSX file
+--output, -o | <input>_enriched.xlsx | Output file path
+--profile, -p | — | Path to JSON run profile
+--text-col | transcript | Column containing transcript text
+--id-col | uid | Column containing unique record ID
+--taxonomy-dir | generated/taxonomies | Directory containing taxonomy JSONs
+--batch-size | 10 | Records per LLM batch
+--max-chars | 60000 | Max characters per batch
+--concurrency | 4 | Parallel LLM calls
+--retries | 3 | Tier 1 retry attempts
+--max-tokens | 4096 | Max tokens per LLM response
+--model | from env | LLM model string
+--backend | litellm | LLM backend: litellm or openai
+--modules | all registered | Specific modules to run (space-separated)
+--enable-confidence | false | Add confidence scores
+--confidence-threshold | 0.70 | Threshold for flagging review
+--export-review-queue | false | Export low-confidence records
+--feedback-dir | runs/feedback | Directory for correction files
+--hierarchical-modules | [] | Modules using L1→L2 classification
+--incremental | false | Only classify new/changed records
+--track-costs | false | Track token usage and cost
+--detect-language | false | Detect transcript language
+--run-quality-check | false | Generate quality report
+
+[TABLE]
+Problem | Solution
+Module X not registered | Run: python build_pipeline.py build --force X --input definitions/generic_pipeline_definition.xlsx
+Stale .py files warning | Use --force <module> or --force-all to regenerate from current Excel definition
+L1 codes in primary_code columns | Add detailed L2 descriptions in the taxonomy sheet. Regenerate with --force-all.
+Truncated JSON responses | Increase --max-tokens (e.g., 8192). Reduce --batch-size if transcripts are long.
+Rate limit errors | Reduce --concurrency (e.g., 2). The retry chain handles transient rate limits automatically.
+Azure VNet error | Check AZURE_API_BASE in .env. Ensure no conflicting environment variables.
+No batches created (0 records) | The bad-UIDs file excluded everything. Delete it and the checkpoint, then re-run.
+Sentinel auto-detected wrong | Use --sentinel module:field_name to override (e.g., --sentinel customer_sentiment:sentiment_label)
+Enum values being blanked | Expected behaviour: values not in the allowed set are normalised to lowercase and blanked if invalid.
+Hallucinated evidence | Check *_grounded columns. Strengthen verbatim instructions in prompt_instruction. Rebuild with --force-all.
+All records flagged for review | The confidence instruction may not be reaching the LLM. Verify enable_confidence=true in profile and rebuild.
+Cost tracker shows $0.00 | Verify track_costs=true in profile. The tracker must be registered before classification starts.
+Feedback corrections not applied | Verify JSONL files exist in runs/feedback/. Check that module names match exactly.
+Language detection wrong | Install langdetect for better accuracy: pip install langdetect. The built-in heuristic is basic.
+Quality report not generated | Set run_quality_check=true in profile. It defaults to false for backward compatibility.
+
+[TABLE]
+Variable | Default | Description
+AZURE_API_KEY | — | Azure OpenAI API key
+AZURE_API_BASE | — | Azure OpenAI endpoint URL
+AZURE_API_VERSION | 2024-02-01 | Azure API version
+OPENAI_API_KEY | — | OpenAI API key (non-Azure)
+USE_AZURE | true | Set to false for direct OpenAI
+LLM_BACKEND | litellm | LLM backend: litellm or openai
+RCA_MODEL | azure/your-deployment-name | LLM model string
+RCA_TEMPERATURE | 0.0 | Sampling temperature
+RCA_MAX_TOKENS | 4096 | Max tokens per response
+RCA_TIMEOUT | 120 | HTTP timeout in seconds
+RCA_BATCH_SIZE | 10 | Records per batch
+RCA_MAX_CHARS | 60000 | Max chars per batch
+RCA_CONCURRENCY | 4 | Parallel batch limit
+RCA_RETRIES | 3 | Retry attempts per call
