@@ -573,27 +573,25 @@ rca run --input data/tickets.csv --text-col Conversation --id-col INCIDENT_REF -
 | `--sentinel MOD:FIELD …` | automatic | Override the field used to decide a record is done for a module ([10.2](#102-how-done-is-decided-sentinels)). |
 | `--run-name` | input stem | Display name in the console banner and gold-eval table. |
 | `--dry-run` | off | Load config, taxonomies and input, apply the bad-UID list, batch, print a summary and stop: no LLM calls, no output, checkpoint not read. |
-| `--enable-confidence` | off | See [7.2](#72-confidence-scoring). Through `rca run` this only asks the API for log-probabilities. |
-| `--confidence-threshold` | `0.70` | See [7.2](#72-confidence-scoring). Not applied by `rca run`. |
-| `--export-review-queue` | off | See [7.2](#72-confidence-scoring). Not applied by `rca run`. |
-| `--feedback-dir` | `<workspace>/runs/feedback` | Corrections folder. `rca run` reads it only as training labels for `--eval-gold-test`; it does not inject few-shot examples ([7.3](#73-feedback-few-shot-examples)). |
-| `--feedback-max-examples` | `5` | Not applied by `rca run`. |
-| `--feedback-strategy` | `recent` | `recent`, `diverse`, `frequent` or `smart`. Not applied by `rca run`. |
-| `--hierarchical-modules M …` | none | Not applied by `rca run` ([7.4](#74-hierarchical-classification)). |
-| `--incremental` | off | Not applied by `rca run` ([7.5](#75-incremental-processing)). |
-| `--incremental-state-file` | none | Not applied by `rca run`. |
+| `--enable-confidence` | off | Ask the model for a self-reported confidence; adds `_confidence` and `_needs_review` columns ([7.2](#72-confidence-scoring)). |
+| `--confidence-threshold` | `0.70` | Records below this are flagged `_needs_review` ([7.2](#72-confidence-scoring)). |
+| `--export-review-queue` | off | Also write the flagged records to `review_queue.xlsx` next to the output ([7.2](#72-confidence-scoring)). |
+| `--feedback-dir` | none (feedback off) | Corrections folder. When set, its corrections are injected as few-shot examples ([7.3](#73-feedback-few-shot-examples)); also used as training labels by `--eval-gold-test`. |
+| `--feedback-max-examples` | `5` | Few-shot examples per module (with `--feedback-dir`). |
+| `--feedback-strategy` | `recent` | `recent`, `diverse`, `frequent` or `smart` (with `--feedback-dir`). |
+| `--hierarchical-modules M …` | none | Classify these modules in two steps, L1 then L2 ([7.4](#74-hierarchical-classification)). |
+| `--incremental` | off | Classify only new or changed records; needs `--incremental-state-file` ([7.5](#75-incremental-processing)). |
+| `--incremental-state-file` | none | State file that remembers what was classified before. |
 | `--track-costs` | off | Record tokens and estimated cost; print a summary and save a report ([7.6](#76-cost-tracking)). **Works in `rca run`.** |
 | `--cost-report-dir` | `<workspace>/runs/cost_reports` | Folder for `costs_<YYYYMMDD_HHMMSS>.json`. |
-| `--detect-language` | off | Not applied by `rca run` ([7.7](#77-language-detection)). |
-| `--language-strategy` | `translate` | `translate`, `prompt` or `detect`. Not applied by `rca run`. |
-| `--run-quality-check` | off | Not applied by `rca run` ([7.8](#78-quality-dashboard)). |
-| `--quality-report-dir` | `<workspace>/runs/output` | Not applied by `rca run`. |
-| `--previous-quality-report` | none | Not applied by `rca run`. |
-| `--eval-gold-test` | none | After the run, score contact reason / root cause against a gold CSV ([9.1](#91-built-in---eval-gold-test)). |
+| `--detect-language` | off | Detect each transcript's language before classifying ([7.7](#77-language-detection)). |
+| `--language-strategy` | `translate` | With `--detect-language`: `translate` (to English first), `prompt` or `detect`. |
+| `--run-quality-check` | off | Write a quality report after the run ([7.8](#78-quality-dashboard)). |
+| `--quality-report-dir` | `<workspace>/runs/output` | Folder for the quality report. |
+| `--previous-quality-report` | none | Earlier `quality_report.json` to compare against. |
+| `--eval-gold-test` | none | After the run, score contact reason / root cause against a gold CSV ([9.1](#91-built-in---eval-gold-test)). Skipped with `--dry-run`. |
 
-The flags marked *not applied* are accepted, forwarded into `RunConfig` and shown by `--dry-run`
-under "Enhancements enabled", but `rca run` calls the module classifiers directly and never executes
-those enhancements. They work only through the library path ([7.1](#71-where-enhancements-work)).
+All enhancement flags can also be set as profile keys of the same name (with `_` instead of `-`).
 
 #### What a run does
 
@@ -686,23 +684,23 @@ exactly. The usual convention is one profile per stage and module, named
 | `sentinel` | automatic | yes | JSON list of `"module:field"`. |
 | `run_name` | input stem | yes | |
 | `dry_run` | `false` | yes | Prefer `--dry-run` on the command line. |
-| `track_costs` | `false` | **yes** | |
-| `cost_report_dir` | `<workspace>/runs/cost_reports` | **yes** | |
-| `eval_gold_test` | none | **yes** | Remove it before a dry run ([9.1](#91-built-in---eval-gold-test)). |
-| `feedback_dir` | `<workspace>/runs/feedback` | partly | Only as training labels for `eval_gold_test`. |
-| `enable_confidence` | `false` | partly | Only requests log-probabilities; no confidence columns. |
-| `confidence_threshold` | `0.70` | no | Library path only. |
-| `export_review_queue` | `false` | no | Library path only. |
-| `feedback_max_examples` | `5` | no | Library path only. |
-| `feedback_strategy` | `recent` | no | Library path only. |
-| `hierarchical_modules` | `[]` | no | Library path only. |
-| `incremental` | `false` | no | Library path only. |
-| `incremental_state_file` | none | no | Library path only. |
-| `detect_language` | `false` | no | Library path only. |
-| `language_strategy` | `translate` | no | Library path only. |
-| `run_quality_check` | `false` | no | Library path only. |
-| `quality_report_dir` | `<workspace>/runs/output` | no | Library path only. |
-| `previous_quality_report` | none | no | Library path only. |
+| `track_costs` | `false` | yes | |
+| `cost_report_dir` | `<workspace>/runs/cost_reports` | yes | |
+| `eval_gold_test` | none | yes | Skipped on dry runs ([9.1](#91-built-in---eval-gold-test)). |
+| `feedback_dir` | none (feedback off) | yes | Corrections folder; turns on few-shot examples. |
+| `enable_confidence` | `false` | yes | Adds `_confidence` / `_needs_review`. |
+| `confidence_threshold` | `0.70` | yes | |
+| `export_review_queue` | `false` | yes | |
+| `feedback_max_examples` | `5` | yes | With `feedback_dir`. |
+| `feedback_strategy` | `recent` | yes | With `feedback_dir`. |
+| `hierarchical_modules` | `[]` | yes | |
+| `incremental` | `false` | yes | Needs `incremental_state_file`. |
+| `incremental_state_file` | none | yes | |
+| `detect_language` | `false` | yes | |
+| `language_strategy` | `translate` | yes | With `detect_language`. |
+| `run_quality_check` | `false` | yes | |
+| `quality_report_dir` | `<workspace>/runs/output` | yes | |
+| `previous_quality_report` | none | yes | |
 
 Keys that exist only on `RunConfig` (for example `lang_en_min_score`, `timeout`) are **not**
 profile keys; `rca run` ignores them.
@@ -808,19 +806,24 @@ Seven optional modules live in `rca_pipeline/enhancements/`. All are off by defa
 
 ### 7.1 Where enhancements work
 
-`rca run` calls each module's classifier directly. Only cost tracking is wired into it. The other
-enhancements run only through the **library path**, `rca_pipeline.pipeline.run_pipeline(cfg)` (or
-`run_pipeline_async`), which the generic notebooks in `notebooks/` use.
+All seven enhancements work both in `rca run` (flags or profile keys) and through the **library
+path**, `rca_pipeline.pipeline.run_pipeline(cfg)` (or `run_pipeline_async`), which the generic
+notebooks in `notebooks/` use. Both paths share the same feedback and prompt-suffix code
+(`build_feedback`, `module_suffix` in `pipeline.py`).
 
 | Enhancement | `rca run` | Library path |
 |---|---|---|
-| Confidence scoring | requests log-probabilities only; no columns | yes |
-| Feedback few-shot | no (feedback dir used only by `--eval-gold-test`) | yes |
-| Hierarchical L1→L2 | no | yes |
-| Incremental | no | yes |
-| Cost tracking | **yes** | yes |
-| Language detection / translation | no | yes |
-| Quality dashboard | no | yes |
+| Confidence scoring | yes | yes |
+| Feedback few-shot | yes — only when `--feedback-dir` / `feedback_dir` is set | yes — default folder `runs/feedback` |
+| Hierarchical L1→L2 | yes | yes |
+| Incremental | yes | yes |
+| Cost tracking | yes | yes |
+| Language detection / translation | yes | yes |
+| Quality dashboard | yes | yes |
+
+`rca run` classifies modules concurrently. Each batch runs in its own asyncio task, and the prompt
+suffix (confidence instruction + few-shot examples) and the cost-attribution label are per-task
+values (`contextvars`), so concurrent modules never see each other's examples or costs.
 
 Library path example (from inside a use-case folder, or after `os.chdir` to one, before importing):
 
@@ -849,7 +852,8 @@ with a `discovery_mode` and uses the result in memory (written to `<taxonomy_dir
 
 ### 7.2 Confidence scoring
 
-**Switch on (library path):** `enable_confidence=True`, `confidence_threshold=0.70`,
+**Switch on:** `rca run --enable-confidence [--confidence-threshold 0.70] [--export-review-queue]`,
+or the profile / library keys `enable_confidence=True`, `confidence_threshold=0.70`,
 `export_review_queue=True`.
 
 **What happens:** an instruction is appended to every system prompt asking for an extra `confidence`
@@ -868,8 +872,9 @@ value is kept.
 
 ### 7.3 Feedback few-shot examples
 
-**Switch on (library path):** `feedback_dir="feedback"` (the use case's corrections folder),
-`feedback_strategy="smart"`, `feedback_max_examples=5`.
+**Switch on:** `rca run --feedback-dir feedback [--feedback-strategy smart] [--feedback-max-examples 5]`,
+or the keys `feedback_dir="feedback"` (the use case's corrections folder), `feedback_strategy="smart"`,
+`feedback_max_examples=5`. In `rca run` feedback is used only when the folder is given explicitly.
 
 **What happens:** corrections stored in `<feedback_dir>/<module>_corrections.jsonl` are appended to
 that module's system prompt as "Known Hard Cases (Human-Corrected Examples)", each showing the
@@ -888,7 +893,7 @@ are injected**, whatever the profile says.
 
 ### 7.4 Hierarchical classification
 
-**Switch on (library path):** `hierarchical_modules=["contact_reason"]`.
+**Switch on:** `rca run --hierarchical-modules contact_reason`, or `hierarchical_modules=["contact_reason"]`.
 
 **What happens:** for each listed module, step 1 asks the model only for the L1 group (with child
 counts and descriptions); step 2 asks, per group, for the leaf within that group, using the module's
@@ -904,8 +909,8 @@ separate modules and profiles instead ([methodology](methodology.md#5-single-sta
 
 ### 7.5 Incremental processing
 
-**Switch on (library path):** `incremental=True` **and** `incremental_state_file="runs/state.jsonl"`
-(without a state file the flag does nothing).
+**Switch on:** `rca run --incremental --incremental-state-file runs/state.jsonl`, or `incremental=True`
+**and** `incremental_state_file="runs/state.jsonl"` (without a state file the flag does nothing).
 
 **What happens:** records are compared with the state file by id and a hash of the text. New and
 changed records are classified; unchanged ones reuse the cached result; the state file is updated
@@ -926,7 +931,9 @@ per-module attribution is approximate. Discovery calls are not tracked.
 
 ### 7.7 Language detection
 
-**Switch on (library path):** `detect_language=True`, `language_strategy="translate" | "prompt" | "detect"`.
+**Switch on:** `rca run --detect-language [--language-strategy translate|prompt|detect]`, or
+`detect_language=True`, `language_strategy="translate" | "prompt" | "detect"`. The strategy has no
+effect unless language detection is on.
 
 **What happens:** each transcript gets `_detected_language` and `_language_confidence`. Detection uses
 `langdetect` if installed, otherwise a common-word heuristic for English, Spanish, French, German and
@@ -937,7 +944,7 @@ prompts are not changed (so it behaves like `detect`). With `detect`, only the c
 
 ### 7.8 Quality dashboard
 
-**Switch on (library path):** `run_quality_check=True`, optionally `quality_report_dir` and
+**Switch on:** `rca run --run-quality-check`, or `run_quality_check=True`, optionally `quality_report_dir` and
 `previous_quality_report="runs/output/quality_report.json"`.
 
 **What happens:** after the output is written, `quality_report.json` and `quality_report.xlsx` are
@@ -983,8 +990,8 @@ store.import_from_review_file("runs/output/reviewed.xlsx", module="sd_contact_re
 
 Only rows where the corrected value differs from the original are imported.
 
-**Use them:** through the library path with a `feedback_strategy` ([7.3](#73-feedback-few-shot-examples)).
-`rca run` does not inject them.
+**Use them:** `rca run --feedback-dir <folder>` (or `feedback_dir` in the profile), optionally with a
+`feedback_strategy` ([7.3](#73-feedback-few-shot-examples)).
 
 **Keep corrections valid:** a correction refers to codes of one taxonomy version. If you renumber or
 replace a taxonomy, old corrections point at the wrong categories — move them aside (the LeapSpace
@@ -1013,9 +1020,8 @@ the test set and, if `feedback_dir` contains corrections, for those "training" t
 - If no gold ticket is found in the output, it runs a small extra classification ("mini pass") on the
   gold tickets as a subprocess. That pass forwards only modules, taxonomy dir, feedback settings, batch
   size, concurrency, retries and model, and hard-codes the text column `conversation`.
-- Always give `--output` explicitly; without it the evaluation fails. Remove `eval_gold_test` from the
-  profile before a `--dry-run`, otherwise it scores whatever output file already exists (and may start
-  the paid mini pass).
+- Without `--output` it scores the default output file, `<input>_enriched.xlsx` next to the input.
+- It is skipped with `--dry-run`, so a dry run never starts the paid mini pass.
 
 ### 9.2 Notebook-based scoring
 
@@ -1172,7 +1178,7 @@ Run with `python -m rca_pipeline.tools.<name>` from the use-case folder.
 | `format_definition` | `python -m rca_pipeline.tools.format_definition definitions/*.xlsx` | Adds the `Start here` sheet, colours, header notes, dropdowns and `Change log` ([3.9](#39-formatting-a-workbook-for-editors)). |
 | `convert_taxonomy` | `python -m rca_pipeline.tools.convert_taxonomy --input taxonomy.xlsx [--output-dir taxonomies] [--group-col …] [--subcategory-col …] [--rootcause-col …] [--description-col …] [--cr-prefix CR] [--rc-prefix RC] [--cr-filename contact_reason.json] [--rc-filename root_cause.json] [--sheet-name 0]` | Turns a "group / sub-category / root causes / description" spreadsheet into contact-reason and root-cause taxonomy JSONs (columns auto-detected if not given). Note that `rca build` overwrites JSONs from the workbook; use this to seed a workbook or for one-off comparisons. |
 | `taxonomy_diff` | `python -m rca_pipeline.tools.taxonomy_diff old.json new.json [--codes-only] [--output diff.xlsx]` | Lists codes added, removed and relabelled between two taxonomy JSONs. |
-| `aggregate_costs` | `python -m rca_pipeline.tools.aggregate_costs [--dir runs/cost_reports] [--since YYYY-MM-DD] [--output summary.xlsx]` | Meant to total the cost reports. **Currently matches `cost_*.json` and reads top-level keys, while the reports are `costs_*.json` with totals under `summary`, so it under-counts.** Until fixed, sum `summary.total_cost_usd` yourself (one-liner in [section 15](#15-costs)). |
+| `aggregate_costs` | `python -m rca_pipeline.tools.aggregate_costs [--dir runs/cost_reports] [--since YYYY-MM-DD] [--output summary.xlsx]` | Totals every cost report in the folder (`costs_*.json` and older `cost_*.json`): spend, records, tokens, cost per record, and a per-module breakdown; `--since` filters by run date, `--output` saves an Excel summary. |
 | `diagnose_and_fix_descriptions` | `python -m rca_pipeline.tools.diagnose_and_fix_descriptions` | Diagnostic script (runs on import): checks that taxonomy descriptions load and that `*_description` columns can be derived. |
 | `run_kfold_eval` | `python -m rca_pipeline.tools.run_kfold_eval` | LeapSpace-specific 5-fold evaluation with hard-coded paths. **Not runnable as-is after the restructuring** (it calls a `run_pipeline.py` script relative to the package folder), and it relies on feedback injection that `rca run` does not do. Use the notebook in `use_cases/leapspace_legacy` as the reference. |
 
@@ -1212,10 +1218,10 @@ Run with `python -m rca_pipeline.tools.<name>` from the use-case folder.
 - Spend in stages: free prompt review → smoke test on 20–40 tickets → gold evaluation or a
   1,000-ticket probe → full run ([methodology](methodology.md#14-cost-and-the-spend-ladder)).
 
-Total all reports in a use case (both name forms, reading the `summary` block):
+Total all reports in a use case:
 
 ```bash
-python -c "import json,glob; s=[json.load(open(p,encoding='utf-8'))['summary'] for p in sorted(glob.glob('runs/cost_reports/cost*_*.json'))]; print(len(s), 'reports, est. USD', round(sum(x['total_cost_usd'] for x in s), 2))"
+python -m rca_pipeline.tools.aggregate_costs            # from inside the use-case folder
 ```
 
 ---
@@ -1238,11 +1244,10 @@ python -c "import json,glob; s=[json.load(open(p,encoding='utf-8'))['summary'] f
 | Five consecutive tickets with `_error`, log shows a content-policy error | A refused batch is stubbed whole. | Retry the innocent ids at `batch_size` 1 in their own input. |
 | An evidence quote belongs to another ticket | Several long transcripts in one batch with a wide evidence prompt. | `batch_size` 1 for such modules; check ungrounded quotes against neighbouring rows. |
 | `BUILD STALENESS` warning on every run | A workbook in `definitions/` is newer than the last build. | Rebuild, or ignore if only notes changed. |
-| Feedback / confidence / quality settings have no effect | Not applied by `rca run` ([7.1](#71-where-enhancements-work)). | Use the library path. |
+| Feedback examples are not used | `rca run` uses feedback only when `--feedback-dir` / `feedback_dir` is set ([7.3](#73-feedback-few-shot-examples)). | Set the corrections folder. |
 | A profile setting is ignored | Unknown key (typo) or the command line gave the default value. | Validate keys ([5.4](#54-validating-a-profile)). |
 | `UnicodeEncodeError` on Windows | Console code page. | Set `PYTHONUTF8=1` and `PYTHONIOENCODING=utf-8`. |
 | Commands use the wrong use case's files | A stale `RCA_WORKSPACE` exported in the shell: the library uses it, while build/validate use the current folder. | `unset RCA_WORKSPACE`, or always use `rca --workspace …`. |
-| `--dry-run` raises `TypeError` or starts a paid pass | `eval_gold_test` is set in the profile. | Remove it before dry runs; always give `--output`. |
 | `discover` exit code 3221225477 on Windows | Crash at interpreter shutdown after finishing. | Accept if `DISCOVERY COMPLETE` was printed and the draft is new. |
 | Cost summary shows $0 or an odd price | `track_costs` off, or the model is not in the price table (default price used). | Turn it on; add the model to `_PRICING` in `cost_tracker.py`. |
 
@@ -1298,7 +1303,7 @@ Methodology, October 2026). Where they differ from the code, this manual follows
 | Build writes everything without checks | `rca build` runs `rca validate` first and stops on errors. |
 | Python 3.9+; `pip install pandas openpyxl litellm …` | Python ≥ 3.11.4; `pip install -e .` or `pip install git+<repo-url>`; extra `[notebooks]`. |
 | Generated module inlines the taxonomy (`TAXONOMY = {...}`) | The taxonomy is rendered at run time from `generated/taxonomies/*.json`; only description, instructions and schema are baked in. |
-| Enhancement flags (confidence, feedback, hierarchical, incremental, language, quality) work through the runner and profiles | Only cost tracking works in `rca run`; the others work only through `rca_pipeline.pipeline.run_pipeline`. `--enable-confidence` in `rca run` only requests log-probabilities. |
+| Enhancement flags (confidence, feedback, hierarchical, incremental, language, quality) work through the runner and profiles | They do (fixed in v0.1.1 — before that only cost tracking was applied by `rca run`). Feedback in `rca run` is opt-in: set `--feedback-dir`. |
 | A library entry point `rca-run` / `python -m rca_pipeline.pipeline` | No such entry point; call `run_pipeline(cfg)` from Python. |
 | Multi-child L1 codes are kept with a warning | Replaced by the lowest-numbered child (warning logged), and only in columns whose name contains `primary`. |
 | L1 repair uses description matching | Only sole-child and first-child rules exist (the description strategy in the docstring is not implemented). |

@@ -486,6 +486,13 @@ def _dry_run_report(
     print(f"\n{sep}\n")
 
 
+def _resolve_output(args: argparse.Namespace) -> str:
+    """The output file: --output, or <input>_enriched.xlsx next to the input."""
+    if args.output:
+        return args.output
+    return str(Path(args.input).parent / f"{Path(args.input).stem}_enriched.xlsx")
+
+
 async def run(args: argparse.Namespace) -> None:
     """Main classification loop — fully parameterised, no hardcoded paths."""
 
@@ -519,14 +526,16 @@ async def run(args: argparse.Namespace) -> None:
     from rca_pipeline.utils import (
         read_input_file, drop_enrichment_cols, post_process, write_output_file,
     )
-    from rca_pipeline.pipeline import MODULE_REGISTRY, prepare_batched_records, run_classification_module
+    from rca_pipeline.pipeline import (
+        MODULE_REGISTRY, prepare_batched_records, run_classification_module,
+        build_feedback, confidence_instruction_for, module_suffix,
+    )
+    from rca_pipeline.llm_client import set_system_prompt_suffix, set_cost_tracker_module
 
     get_credentials()
 
     # ── Resolve remaining settings ────────────────────────────────────────
-    output_file     = args.output or str(
-        Path(input_file).parent / f"{Path(input_file).stem}_enriched.xlsx"
-    )
+    output_file     = _resolve_output(args)
     taxonomy_dir    = args.taxonomy_dir
     id_col          = args.id_col
     text_col        = args.text_col
@@ -672,7 +681,47 @@ async def run(args: argparse.Namespace) -> None:
         logger.error("DataFrame has %d rows after pre-processing", len(df))
         return
 
-    sizes = [len(b) for b in batches]
+    # ── Enhancement: language detection / translation ────────────────────
+    if getattr(cfg, "detect_language", False):
+        from rca_pipeline.enhancements.language import detect_language, preprocess_multilingual
+        if getattr(cfg, "language_strategy", "detect") == "translate":
+            df = await preprocess_multilingual(df, cfg, text_col=cfg.text_col, strategy="translate")
+        else:
+            df = detect_language(df, text_col=cfg.text_col,
+                                 en_min_score=getattr(cfg, "lang_en_min_score", 0.15),
+                                 en_margin=getattr(cfg, "lang_en_margin", 0.05))
+        batches = prepare_batched_records(df, cfg)
+
+    # ── Enhancement: incremental — classify only new/changed records ─────
+    incremental_runner = None
+    cached_results: list = []
+    df_to_classify = df
+    if getattr(cfg, "incremental", False) and getattr(cfg, "incremental_state_file", None):
+        from rca_pipeline.enhancements.incremental import IncrementalRunner
+        import pandas as pd
+        incremental_runner = IncrementalRunner(cfg.incremental_state_file, cfg)
+        new_df, changed_df, unchanged_df = incremental_runner.diff(df, id_col=id_col, text_col=text_col)
+        cached_results = incremental_runner.get_cached_results(unchanged_df, id_col=id_col)
+        df_to_classify = pd.concat([new_df, changed_df], ignore_index=True)
+        batches = prepare_batched_records(df_to_classify, cfg) if len(df_to_classify) else []
+        logger.info("Incremental: %d new/changed records to classify, %d reused from %s",
+                    len(df_to_classify), len(cached_results), cfg.incremental_state_file)
+
+    # ── Enhancements applied per batch: feedback, confidence, hierarchical ─
+    feedback_dir = getattr(args, "feedback_dir", None)  # opt-in: only when set by flag or profile
+    fb = build_feedback(cfg, modules, feedback_dir)
+    confidence_instruction = confidence_instruction_for(cfg)
+    hierarchical_mods = set(getattr(cfg, "hierarchical_modules", None) or [])
+    if hierarchical_mods:
+        from rca_pipeline.enhancements.hierarchical import run_hierarchical_module
+    confidence_on = bool(getattr(cfg, "enable_confidence", False))
+    confidence_threshold = getattr(cfg, "confidence_threshold", 0.70)
+    if confidence_on:
+        from rca_pipeline.enhancements.confidence import (
+            enrich_with_confidence, export_review_queue, flag_low_confidence,
+        )
+
+    sizes = [len(b) for b in batches] or [0]
     logger.info(
         "Dataset: %d records | %d batches | sizes min=%d max=%d mean=%.1f",
         len(df), len(batches), min(sizes), max(sizes), sum(sizes) / len(sizes),
@@ -773,7 +822,16 @@ async def run(args: argparse.Namespace) -> None:
             t_start_mod[mod] = time.time()
         async with semaphore:
             try:
-                result = await run_classification_module(mod, [batch], taxonomies, cfg)
+                # Each batch runs in its own asyncio task, so these per-task
+                # settings cannot leak into another module's concurrent calls.
+                set_system_prompt_suffix(module_suffix(mod, batch, fb, cfg, confidence_instruction))
+                set_cost_tracker_module(mod)
+                if mod in hierarchical_mods:
+                    result = await run_hierarchical_module(mod, [batch], taxonomies, cfg)
+                else:
+                    result = await run_classification_module(mod, [batch], taxonomies, cfg)
+                if confidence_on:
+                    result = enrich_with_confidence(result, threshold=confidence_threshold)
                 return mod, result, None
             except Exception as e:
                 return mod, [], e
@@ -797,6 +855,7 @@ async def run(args: argparse.Namespace) -> None:
                 "Snapshots logged every 30s."
             )
 
+        ckpt_path.parent.mkdir(parents=True, exist_ok=True)
         cp = open(ckpt_path, "a", encoding="utf-8")
         try:
             for coro in asyncio.as_completed(coros):
@@ -892,7 +951,7 @@ async def run(args: argparse.Namespace) -> None:
         len(ckpt_results), len(all_new),
     )
 
-    all_results = ckpt_results + all_new
+    all_results = cached_results + ckpt_results + all_new
     grouped: dict[str, dict] = {}
     for r in all_results:
         uid = str(r.get("uid", ""))
@@ -917,7 +976,21 @@ async def run(args: argparse.Namespace) -> None:
 
     df_out = post_process(df, list(grouped.values()), taxonomies, cfg)
     logger.info("Enriched: %d rows x %d columns", len(df_out), len(df_out.columns))
+
+    if confidence_on:
+        df_out = flag_low_confidence(df_out, threshold=confidence_threshold)
+        if getattr(cfg, "export_review_queue", False):
+            Path(output_file).parent.mkdir(parents=True, exist_ok=True)
+            export_review_queue(df_out, str(Path(output_file).parent / "review_queue.xlsx"))
+
     write_output_file(df_out, output_file)
+
+    if incremental_runner is not None and len(df_to_classify) > 0:
+        cached_uids = {str(r.get("uid", "")) for r in cached_results}
+        incremental_runner.update_state(
+            [r for r in ckpt_results + all_new if str(r.get("uid", "")) not in cached_uids],
+            df_to_classify, id_col=id_col, text_col=text_col,
+        )
 
     # ── Compact checkpoint ────────────────────────────────────────────────
     try:
@@ -942,6 +1015,13 @@ async def run(args: argparse.Namespace) -> None:
             _rdir.mkdir(parents=True, exist_ok=True)
             cost_tracker.save(_rdir / f"costs_{cost_tracker._run_id}.json")
         unregister_cost_tracker()
+
+    # ── Enhancement: quality dashboard ──────────────────────────────────
+    if getattr(cfg, "run_quality_check", False):
+        from rca_pipeline.enhancements.quality_dashboard import run_quality_check
+        run_quality_check(df_out, taxonomies, cfg,
+                          getattr(cfg, "quality_report_dir", None) or str(Path(output_file).parent),
+                          getattr(cfg, "previous_quality_report", None))
 
     # ── Summary ───────────────────────────────────────────────────────────
     print()
@@ -1144,7 +1224,7 @@ def _mini_eval_pipeline(args, uid_conv_df: "pd.DataFrame") -> "pd.DataFrame | No
     import subprocess
     import pandas as pd
 
-    tmp_dir = Path(args.output).parent
+    tmp_dir = Path(_resolve_output(args)).parent
     tmp_in  = tmp_dir / "_gold_eval_in.csv"
     tmp_out = tmp_dir / "_gold_eval_out.xlsx"
 
@@ -1195,7 +1275,7 @@ def _run_gold_eval(args) -> None:
     import pandas as pd
     from sklearn.metrics import accuracy_score, f1_score
 
-    output_path = Path(args.output)
+    output_path = Path(_resolve_output(args))
     if not output_path.exists():
         logger.warning("eval-gold-test: output file not found (%s) — skipping evaluation", output_path)
         return
@@ -1479,7 +1559,8 @@ def _run_gold_eval(args) -> None:
 def main() -> None:
     args = _parse_args()
     asyncio.run(run(args))
-    if getattr(args, "eval_gold_test", None):
+    # --dry-run promises no LLM calls; the gold evaluation can start a paid mini-run.
+    if getattr(args, "eval_gold_test", None) and not getattr(args, "dry_run", False):
         _run_gold_eval(args)
 
 

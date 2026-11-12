@@ -224,7 +224,7 @@ scored against a gold set).
 
 The library can split one module into an L1 call and, per group, an L2 call with only that group's
 leaves (`hierarchical_modules`, [manual 7.4](manual.md#74-hierarchical-classification)). It narrows
-each decision at twice the calls. It runs only through the library path, and no current use case
+each decision at twice the calls. It works in `rca run` and the library path, but no current use case
 relies on it; the explicit two-stage design below gives the same narrowing with per-stage prompts,
 profiles, checkpoints and scoring.
 
@@ -402,7 +402,7 @@ on a 1,000-record sample, CJK evidence had been flagged at 9.9% against 0.32% fo
 
 ## 8. Confidence
 
-With confidence enabled (library path), the model adds a self-reported `confidence` between 0 and 1
+With confidence enabled, the model adds a self-reported `confidence` between 0 and 1
 using calibration bands, and records below a threshold (default 0.70) are flagged for review and can be
 exported to a review queue sorted lowest first. Self-reported confidence is a **triage signal**, not a
 probability: it is useful to order a review queue, but should be calibrated against a gold set before
@@ -438,9 +438,9 @@ Strategies:
 
 Cautions:
 
-- Few-shot injection runs only through the library path. `rca run` accepts the feedback settings but
-  does not inject examples; evaluations run that way were zero-shot
-  ([leapspace_legacy](../use_cases/leapspace_legacy/README.md), [evolve](../use_cases/evolve/README.md)).
+- Until v0.1.1, `rca run` accepted the feedback settings but did not inject examples, so evaluations
+  run that way were zero-shot ([leapspace_legacy](../use_cases/leapspace_legacy/README.md),
+  [evolve](../use_cases/evolve/README.md)). It now injects them whenever a feedback folder is set.
   No accuracy lift from feedback has yet been measured in this repository.
 - Corrections are tied to one taxonomy version. Retire them when codes change
   ([leapspace_2026](../use_cases/leapspace_2026/README.md) deliberately omits the old corrections).
@@ -465,7 +465,7 @@ Most failures are silent: the run exits normally and writes a plausible file. Ch
 | Retest | ≥ 80–85% agreement on ~100 tickets | Re-run with identical settings; report L1 and leaf separately. |
 | Row count | output rows = input tickets | 1:1 merge assertions in the notebook. |
 
-The **quality dashboard** (library path) automates part of this — coverage per module, rare and
+The **quality dashboard** (`--run-quality-check`) automates part of this — coverage per module, rare and
 dominant codes, unused codes, evidence types, error rate, confidence and language distributions,
 anomalies and run-over-run comparison — as JSON (for automated gating) and Excel
 ([manual 7.8](manual.md#78-quality-dashboard)).
@@ -515,9 +515,9 @@ When the gold set is small and is also the source of few-shot examples, k-fold c
 estimates accuracy as if every gold ticket were an example: each fold's training tickets become the
 examples, and the held-out fold is classified. The k-fold runs in
 [leapspace_legacy](../use_cases/leapspace_legacy/README.md) and [evolve](../use_cases/evolve/README.md)
-went through `rca run`, which does not inject examples, so they measured **zero-shot** agreement; their
-folds also shared one checkpoint. Re-run through the library path, with a unique input per fold, before
-quoting them as few-shot results.
+went through `rca run` before v0.1.1, which did not inject examples, so they measured **zero-shot**
+agreement; their folds also shared one checkpoint. Re-run with `--feedback-dir` and a unique input and
+checkpoint per fold before quoting them as few-shot results.
 
 ### 11.6 Evaluation tiers
 
@@ -605,8 +605,6 @@ tokens at small batch sizes, so trimming it lowers cost directly.
   coded, evidenced fields.
 - **Gold sets are small** (tens to a few hundred tickets), so intervals are wide and rare categories
   stay unvalidated.
-- **Enhancements in `rca run`:** only cost tracking runs there; feedback, confidence, hierarchical,
-  incremental, language and quality-dashboard features need the library path.
 - **Costs are estimates** from a static price table.
 
 ## 16. Data privacy

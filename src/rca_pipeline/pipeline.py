@@ -11,7 +11,7 @@ import importlib
 import json
 import logging
 import time
-from dataclasses import replace
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -178,6 +178,70 @@ async def run_classification_module(
 
 
 # ---------------------------------------------------------------------------
+# Prompt suffix helpers (shared with `rca run`)
+# ---------------------------------------------------------------------------
+@dataclass
+class Feedback:
+    """Few-shot material loaded from the feedback store, per module."""
+    store: Any = None
+    prompts: dict[str, str] = field(default_factory=dict)     # static strategies
+    smart_pools: dict[str, list[dict]] = field(default_factory=dict)  # 'smart' strategy
+
+
+def build_feedback(cfg: RunConfig, modules: list[str], feedback_dir: str | None) -> Feedback:
+    """Load corrections from feedback_dir and prepare few-shot text per module."""
+    fb = Feedback()
+    if FeedbackStore is None or not feedback_dir:
+        return fb
+    max_ex   = getattr(cfg, "feedback_max_examples", 5)
+    strategy = getattr(cfg, "feedback_strategy", "recent")
+    fb.store = FeedbackStore(feedback_dir)
+    stats = fb.store.get_stats()
+    if stats:
+        logger.info("Feedback store: %s", stats)
+    for mod_name in modules:
+        if strategy == "smart":
+            pool = fb.store.build_smart_pool(mod_name)
+            if pool:
+                fb.smart_pools[mod_name] = pool
+                logger.info("Feedback smart pool: %d candidates for %s", len(pool), mod_name)
+        else:
+            prompt = fb.store.build_few_shot_prompt(
+                mod_name, max_examples=max_ex, selection_strategy=strategy,
+            )
+            if prompt:
+                fb.prompts[mod_name] = prompt
+                logger.info("Feedback: %d-char few-shot prompt for %s", len(prompt), mod_name)
+    return fb
+
+
+def confidence_instruction_for(cfg: RunConfig) -> str:
+    """The confidence self-report instruction, or '' when confidence is off."""
+    if getattr(cfg, "enable_confidence", False) and inject_confidence_instruction is not None:
+        return inject_confidence_instruction("")
+    return ""
+
+
+def module_suffix(name: str, batch: list[dict] | None, fb: Feedback, cfg: RunConfig,
+                  confidence_instruction: str) -> str:
+    """System-prompt suffix for one module (and, with the 'smart' strategy, one batch)."""
+    parts = [confidence_instruction] if confidence_instruction else []
+    if name in fb.smart_pools and batch is not None:
+        reranked = fb.store.rerank_pool_for_batch(
+            fb.smart_pools[name], batch, getattr(cfg, "feedback_max_examples", 5))
+        batch_fb = fb.store.build_few_shot_prompt_for_batch(
+            reranked,
+            max_text_chars=getattr(cfg, "feedback_max_text_chars", 800),
+            max_total_chars=getattr(cfg, "feedback_max_total_chars", 4000),
+        )
+        if batch_fb:
+            parts.append(batch_fb)
+    elif name in fb.prompts:
+        parts.append(fb.prompts[name])
+    return "\n".join(parts)
+
+
+# ---------------------------------------------------------------------------
 # Main async pipeline
 # ---------------------------------------------------------------------------
 async def run_pipeline_async(cfg: RunConfig) -> pd.DataFrame:
@@ -197,35 +261,12 @@ async def run_pipeline_async(cfg: RunConfig) -> pd.DataFrame:
         logger.info("Cost tracking enabled")
 
     # ── B3 fix: load feedback store and build few-shot examples ──────────
-    feedback_store = None
-    feedback_prompts: dict[str, str] = {}   # per-module few-shot text (non-smart strategies)
-    smart_pools: dict[str, list[dict]] = {}  # per-module candidate pool (smart strategy)
-    max_ex   = getattr(cfg, "feedback_max_examples", 5)
     strategy = getattr(cfg, "feedback_strategy", "recent")
-    if FeedbackStore is not None:
-        feedback_dir = getattr(cfg, "feedback_dir", "feedback")
-        feedback_store = FeedbackStore(feedback_dir)
-        stats = feedback_store.get_stats()
-        if stats:
-            logger.info("Feedback store: %s", stats)
-        for mod_name in cfg.modules:
-            if strategy == "smart":
-                pool = feedback_store.build_smart_pool(mod_name)
-                if pool:
-                    smart_pools[mod_name] = pool
-                    logger.info("Feedback smart pool: %d candidates for %s", len(pool), mod_name)
-            else:
-                prompt = feedback_store.build_few_shot_prompt(
-                    mod_name, max_examples=max_ex, selection_strategy=strategy,
-                )
-                if prompt:
-                    feedback_prompts[mod_name] = prompt
-                    logger.info("Feedback: %d-char few-shot prompt for %s", len(prompt), mod_name)
+    fb = build_feedback(cfg, cfg.modules, getattr(cfg, "feedback_dir", "feedback"))
+    feedback_store = fb.store
 
     # ── B1 fix: build confidence instruction ─────────────────────────────
-    confidence_instruction = ""
-    if getattr(cfg, "enable_confidence", False) and inject_confidence_instruction is not None:
-        confidence_instruction = inject_confidence_instruction("")  # returns the instruction block
+    confidence_instruction = confidence_instruction_for(cfg)
 
     _section("STEP 2 · Pre-processing")
     taxonomies = load_taxonomies(cfg.taxonomy_dir)
@@ -296,44 +337,21 @@ async def run_pipeline_async(cfg: RunConfig) -> pd.DataFrame:
     # Enhancement 3: Hierarchical classification for designated modules
     hierarchical_mods = set(getattr(cfg, "hierarchical_modules", []))
 
-    # NOTE: Modules are run sequentially (not concurrently) so that each module
-    # gets its own per-module prompt suffix (confidence instruction + feedback
-    # few-shot examples) set via set_system_prompt_suffix() before the call.
-    # Concurrent execution would cause a race condition on that shared module-
-    # level global. Do not convert this loop to asyncio.gather() without first
-    # replacing _system_prompt_suffix with a per-call argument.
+    # NOTE: Modules run sequentially here; each sets its prompt suffix
+    # (confidence instruction + feedback examples) before its call.  The suffix
+    # is a per-task ContextVar, so concurrent callers (`rca run`) set it inside
+    # each task instead.
     all_results: list[dict[str, Any]] = []
     for name in cfg.modules:
-        if strategy == "smart" and feedback_store is not None and name in smart_pools:
+        if strategy == "smart" and feedback_store is not None and name in fb.smart_pools:
             # Smart strategy: build per-batch suffixes (confidence + batch-specific
             # feedback) so each batch gets few-shot examples matched to its records.
-            pool = smart_pools[name]
-            max_text_chars_fb  = getattr(cfg, "feedback_max_text_chars", 800)
-            max_total_chars_fb = getattr(cfg, "feedback_max_total_chars", 4000)
-            per_batch_fb: list[str] = []
-            for batch in batches:
-                reranked = feedback_store.rerank_pool_for_batch(pool, batch, max_ex)
-                batch_fb = feedback_store.build_few_shot_prompt_for_batch(
-                    reranked,
-                    max_text_chars=max_text_chars_fb,
-                    max_total_chars=max_total_chars_fb,
-                )
-                parts = []
-                if confidence_instruction:
-                    parts.append(confidence_instruction)
-                if batch_fb:
-                    parts.append(batch_fb)
-                per_batch_fb.append("\n".join(parts))
-            set_per_batch_suffixes(per_batch_fb)
+            set_per_batch_suffixes([module_suffix(name, batch, fb, cfg, confidence_instruction)
+                                    for batch in batches])
             set_system_prompt_suffix("")  # feedback handled per-batch
         else:
             # Static strategies: one suffix shared across all batches for this module
-            suffix_parts = []
-            if confidence_instruction:
-                suffix_parts.append(confidence_instruction)
-            if name in feedback_prompts:
-                suffix_parts.append(feedback_prompts[name])
-            set_system_prompt_suffix("\n".join(suffix_parts))
+            set_system_prompt_suffix(module_suffix(name, None, fb, cfg, confidence_instruction))
             clear_per_batch_suffixes()
 
         set_cost_tracker_module(name)

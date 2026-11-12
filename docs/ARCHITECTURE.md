@@ -163,19 +163,21 @@ rca run --profile profiles/<p>.json
     ├── load taxonomies (file list from pipeline_config.json)
     ├── read input CSV/XLSX; drop stale enrichment columns; drop ids on the bad-UID list
     ├── make batches (batch_size, max_chars)            ── --dry-run stops here
+    ├── optional: language detection / translation; incremental diff (classify new/changed only)
+    ├── optional: load feedback corrections (--feedback-dir); confidence instruction
     ├── load checkpoint; per module, keep batches with any record not yet done
     │
     ├── dispatch every (module, batch) pair concurrently (asyncio semaphore = concurrency)
-    │       └── classify_<module>() → process_batches_async() → call_batch()  [4-tier resilience]
-    │       └── append each result to runs/checkpoints/<stem>_checkpoint.jsonl
+    │       ├── per task: set prompt suffix (confidence + few-shot) and cost label (contextvars)
+    │       └── classify_<module>() or hierarchical L1→L2 → process_batches_async() → call_batch()
+    │       └── optional: confidence enrichment; append result to runs/checkpoints/<stem>_checkpoint.jsonl
     │
-    ├── merge checkpoint + new results per uid; append failed uids to <stem>_bad_uids.txt
-    ├── post_process()  (see below)
-    ├── write output; compact checkpoint; save cost report (if track_costs)
-    └── optional: gold-set evaluation (--eval-gold-test)
+    ├── merge cached incremental + checkpoint + new results per uid; append failed uids to <stem>_bad_uids.txt
+    ├── post_process()  (see below); optional low-confidence flags and review queue
+    ├── write output; update incremental state; compact checkpoint; save cost report (if track_costs)
+    ├── optional: quality dashboard
+    └── optional: gold-set evaluation (--eval-gold-test; skipped with --dry-run)
 ```
-
-`rca run` wires only the cost tracker among the enhancements.
 
 ### Library path (`rca_pipeline.pipeline.run_pipeline(cfg)`)
 
@@ -194,8 +196,11 @@ run_pipeline_async(cfg)
     └── write output; cost summary; optional quality dashboard
 ```
 
-Modules run one after another here because the prompt suffix is a module-level global in
-`llm_client.py`; running them concurrently would mix suffixes. There is no checkpointing on this path.
+Modules run one after another here; there is no checkpointing on this path. `rca run` instead runs
+all modules' batches concurrently and applies the same enhancements per batch (shared helpers
+`build_feedback`, `confidence_instruction_for`, `module_suffix` in `pipeline.py`). The prompt suffix
+and the cost-attribution label in `llm_client.py` are `contextvars`, so each asyncio task keeps its own
+values and concurrent modules never mix few-shot examples or costs.
 
 ### Post-processing (`utils.post_process`)
 
@@ -468,9 +473,11 @@ Copy `use_cases/_template`, fill in its README, edit the definition, `rca valida
 1. Create `src/rca_pipeline/enhancements/my_enhancement.py`.
 2. Add a flag to `RunConfig` in `config.py` (e.g. `enable_my_feature: bool = False`).
 3. Call it in `pipeline.py` behind `if cfg.enable_my_feature` (library path).
-4. Add a CLI flag in `runner._parse_args()` and add the field to the forwarded `_enhancement_fields`
-   list in `runner.run()`. If it should work in `rca run`, call it from `runner.run()` as well — the
-   runner does not go through `pipeline.run_pipeline_async`.
+4. Add a CLI flag in `runner._parse_args()`, add the field to the forwarded `_enhancement_fields`
+   list in `runner.run()`, and call it from `runner.run()` too — the runner does not go through
+   `pipeline.run_pipeline_async`. Put shared logic in a helper in `pipeline.py` (like
+   `module_suffix`) so both paths use the same code, and add a test like
+   `tests/test_enhancement_fixes.py::test_rca_run_applies_enhancements`.
 
 ### Adding a run profile field
 

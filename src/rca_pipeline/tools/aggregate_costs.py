@@ -1,14 +1,15 @@
 """
 aggregate_costs.py — Cost Report Aggregator
 ============================================
-Reads all cost_*.json files from runs/cost_reports/ and prints a summary
-table of total spend, records processed, and per-module breakdown.
+Reads every cost report (costs_*.json, and older cost_*.json) from
+runs/cost_reports/ and prints a summary table of total spend, records
+processed, and per-module breakdown.
 
-USAGE:
-  python scripts/aggregate_costs.py
-  python scripts/aggregate_costs.py --dir runs/cost_reports
-  python scripts/aggregate_costs.py --dir runs/cost_reports --since 2025-05-01
-  python scripts/aggregate_costs.py --output summary.xlsx
+USAGE (from a use-case folder):
+  python -m rca_pipeline.tools.aggregate_costs
+  python -m rca_pipeline.tools.aggregate_costs --dir runs/cost_reports
+  python -m rca_pipeline.tools.aggregate_costs --since 2026-05-01
+  python -m rca_pipeline.tools.aggregate_costs --output summary.xlsx
 """
 
 from __future__ import annotations
@@ -20,19 +21,28 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
+REPORT_PATTERNS = ("costs_*.json", "cost_*.json")  # CostTracker writes costs_<run_id>.json
+
+
+def _run_time(report: dict) -> datetime | None:
+    """When the run happened: summary.run_id is YYYYMMDD_HHMMSS."""
+    run_id = str(report.get("summary", {}).get("run_id", ""))
+    try:
+        return datetime.strptime(run_id, "%Y%m%d_%H%M%S").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
 def load_reports(report_dir: Path, since: datetime | None = None) -> list[dict]:
     reports = []
-    for p in sorted(report_dir.glob("cost_*.json")):
+    files = sorted({p for pattern in REPORT_PATTERNS for p in report_dir.glob(pattern)})
+    for p in files:
         try:
             data = json.loads(p.read_text(encoding="utf-8"))
             if since:
-                ts_str = data.get("timestamp") or data.get("run_id", "")
-                try:
-                    ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-                    if ts < since:
-                        continue
-                except (ValueError, AttributeError):
-                    pass
+                ts = _run_time(data)
+                if ts is not None and ts < since:
+                    continue
             data["_file"] = p.name
             reports.append(data)
         except Exception as e:
@@ -54,18 +64,19 @@ def aggregate(reports: list[dict]) -> dict:
     }
 
     for r in reports:
-        totals["total_cost_usd"]      += r.get("total_cost_usd", 0) or 0
-        totals["total_records"]       += r.get("total_records", 0) or 0
-        totals["total_tokens"]        += r.get("total_tokens", 0) or 0
-        totals["prompt_tokens"]       += r.get("prompt_tokens", 0) or 0
-        totals["completion_tokens"]   += r.get("completion_tokens", 0) or 0
+        s = r.get("summary") or {}
+        totals["total_cost_usd"]      += s.get("total_cost_usd", 0) or 0
+        totals["total_records"]       += s.get("total_records", 0) or 0
+        totals["total_tokens"]        += s.get("total_tokens", 0) or 0
+        totals["prompt_tokens"]       += s.get("total_prompt_tokens", 0) or 0
+        totals["completion_tokens"]   += s.get("total_completion_tokens", 0) or 0
 
         for mod_name, mod_data in (r.get("by_module") or {}).items():
             m = totals["by_module"][mod_name]
             m["runs"]     += 1
-            m["cost_usd"] += mod_data.get("cost_usd", 0) or 0
-            m["records"]  += mod_data.get("records", 0) or 0
-            m["tokens"]   += mod_data.get("tokens", 0) or 0
+            m["cost_usd"] += mod_data.get("total_cost_usd", 0) or 0
+            m["records"]  += mod_data.get("total_records", 0) or 0
+            m["tokens"]   += mod_data.get("total_tokens", 0) or 0
 
     return totals
 
@@ -91,13 +102,7 @@ def print_summary(totals: dict, reports: list[dict]) -> None:
             print(f"  {mod:<26}  {m['runs']:4}  ${m['cost_usd']:9.4f}  {m['records']:8,}  {m['tokens']:10,}")
 
     if reports:
-        dates = []
-        for r in reports:
-            ts_str = r.get("timestamp") or r.get("run_id", "")
-            try:
-                dates.append(datetime.fromisoformat(ts_str.replace("Z", "+00:00")))
-            except (ValueError, AttributeError):
-                pass
+        dates = [d for d in (_run_time(r) for r in reports) if d is not None]
         if dates:
             print(f"\n  Date range:  {min(dates).strftime('%Y-%m-%d')} → {max(dates).strftime('%Y-%m-%d')}")
 
@@ -113,14 +118,16 @@ def save_excel(totals: dict, reports: list[dict], output_path: Path) -> None:
 
     rows = []
     for r in reports:
+        s = r.get("summary") or {}
         rows.append({
             "file":               r.get("_file", ""),
-            "timestamp":          r.get("timestamp") or r.get("run_id", ""),
-            "total_cost_usd":     r.get("total_cost_usd", 0),
-            "total_records":      r.get("total_records", 0),
-            "total_tokens":       r.get("total_tokens", 0),
-            "prompt_tokens":      r.get("prompt_tokens", 0),
-            "completion_tokens":  r.get("completion_tokens", 0),
+            "run_id":             s.get("run_id", ""),
+            "model":              s.get("model", ""),
+            "total_cost_usd":     s.get("total_cost_usd", 0),
+            "total_records":      s.get("total_records", 0),
+            "total_tokens":       s.get("total_tokens", 0),
+            "prompt_tokens":      s.get("total_prompt_tokens", 0),
+            "completion_tokens":  s.get("total_completion_tokens", 0),
         })
 
     module_rows = []
@@ -144,7 +151,7 @@ def save_excel(totals: dict, reports: list[dict], output_path: Path) -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Aggregate cost reports from runs/cost_reports/")
-    p.add_argument("--dir", default="runs/cost_reports", help="Directory of cost_*.json files")
+    p.add_argument("--dir", default="runs/cost_reports", help="Directory of costs_*.json report files")
     p.add_argument("--since", default=None, help="Only include runs after this date (YYYY-MM-DD)")
     p.add_argument("--output", default=None, help="Save summary to Excel file (optional)")
     args = p.parse_args()
@@ -160,7 +167,7 @@ def main() -> None:
 
     reports = load_reports(report_dir, since)
     if not reports:
-        print(f"No cost_*.json files found in {report_dir}")
+        print(f"No cost reports (costs_*.json) found in {report_dir}")
         return
 
     totals = aggregate(reports)

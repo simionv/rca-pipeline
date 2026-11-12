@@ -347,6 +347,24 @@ async def classify_hierarchical(
 # ---------------------------------------------------------------------------
 # Wrapper that auto-detects taxonomy from pipeline config
 # ---------------------------------------------------------------------------
+def _load_generated_module(module_name: str):
+    """Load <workspace>/generated/modules/<module_name>.py by path.
+
+    Generated modules are not on sys.path (pipeline.py loads them by file
+    location too), so importlib.import_module(module_name) cannot find them.
+    """
+    import importlib.util
+
+    from rca_pipeline import workspace
+    path = workspace.generated_dir() / "modules" / f"{module_name}.py"
+    if not path.exists():
+        raise FileNotFoundError(f"{path} not found — run `rca build`")
+    spec = importlib.util.spec_from_file_location(f"_generated_{module_name}", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 async def run_hierarchical_module(
     module_name: str,
     batches: list[list[dict[str, str]]],
@@ -359,7 +377,6 @@ async def run_hierarchical_module(
     Pulls _build_system_prompt / _USER_PROMPT_TEMPLATE / _validate_record from
     the generated module so the L2 step returns all pipeline-defined fields.
     """
-    import importlib
     import json as _json
     from pathlib import Path
 
@@ -386,19 +403,9 @@ async def run_hierarchical_module(
     l2_user_template = None
     l2_parse_fn = None
     try:
-        mod = importlib.import_module(module_name)
+        # Loaded fresh from the workspace file, so it always reflects the last build.
+        mod = _load_generated_module(module_name)
         l2_prompt_builder = getattr(mod, "_build_system_prompt", None)
-
-        # If not found, the cached module in sys.modules may be stale (e.g. the
-        # notebook kernel was started before build_pipeline.py generated
-        # _build_system_prompt).  Force a reload to pick up the current file.
-        if l2_prompt_builder is None:
-            logger.info(
-                "Hierarchical: '%s' has no _build_system_prompt in cache — reloading module",
-                module_name,
-            )
-            mod = importlib.reload(mod)
-            l2_prompt_builder = getattr(mod, "_build_system_prompt", None)
 
         # Fallback for modules generated before _build_system_prompt existed:
         # use the static _SYSTEM_PROMPT so the L2 step still requests all
@@ -424,7 +431,7 @@ async def run_hierarchical_module(
             logger.warning(
                 "Hierarchical: '%s' has no _build_system_prompt — L2 step uses minimal "
                 "default (only code + justification). Regenerate with: "
-                "python build_pipeline.py --input <definition.xlsx> --force %s",
+                "rca build --force %s",
                 module_name, module_name,
             )
     except Exception as e:

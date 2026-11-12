@@ -405,18 +405,28 @@ _batch_n_records: contextvars.ContextVar[int] = contextvars.ContextVar(
 # B2 fix: module-level cost tracker — set by pipeline.py before classification,
 # _llm_call records usage after every successful call.
 _cost_tracker: Any = None            # Optional[CostTracker]
-_cost_tracker_module: str = ""       # current module label for attribution
+# Module label for cost attribution. A ContextVar, not a global: `rca run`
+# classifies several modules concurrently, and each asyncio task must keep
+# its own label (tasks copy the context when they are created).
+_cost_tracker_module: contextvars.ContextVar[str] = contextvars.ContextVar(
+    "_cost_tracker_module", default=""
+)
 
-# B1/B3 fix: module-level prompt suffix — appended to every system_prompt by
-# call_batch().  pipeline.py populates this before each module's classification
-# with confidence instructions and/or feedback few-shot examples.
-_system_prompt_suffix: str = ""
+# B1/B3 fix: prompt suffix — appended to every system_prompt by call_batch().
+# Set before each module's classification with confidence instructions and/or
+# feedback few-shot examples.  Per task (ContextVar) so concurrent modules in
+# `rca run` each get their own suffix.
+_system_prompt_suffix: contextvars.ContextVar[str] = contextvars.ContextVar(
+    "_system_prompt_suffix", default=""
+)
 
 # Smart feedback strategy: per-batch suffix overrides set by pipeline.py.
 # When set, process_batches_async prepends _per_batch_suffixes[slot] to the
 # base system_prompt before calling call_batch, so each batch gets its own
 # tailored few-shot examples.  _system_prompt_suffix is set to "" in this mode.
-_per_batch_suffixes: list[str] | None = None
+_per_batch_suffixes: contextvars.ContextVar[list[str] | None] = contextvars.ContextVar(
+    "_per_batch_suffixes", default=None
+)
 
 # Logprobs safety: some Azure deployments don't support logprobs and return
 # a 400 error.  We track this per-model-string so that one model's failure
@@ -692,12 +702,11 @@ def get_last_response() -> Any:
 # ---------------------------------------------------------------------------
 def _record_usage(response: Any, duration_s: float = 0.0) -> None:
     """Record token usage on the registered cost tracker (if any)."""
-    global _cost_tracker, _cost_tracker_module
     if _cost_tracker is None:
         return
     try:
         _cost_tracker.record_from_response(
-            module=_cost_tracker_module or "unknown",
+            module=_cost_tracker_module.get() or "unknown",
             response=response,
             n_records=_batch_n_records.get(1),
             duration_s=duration_s,
@@ -708,22 +717,26 @@ def _record_usage(response: Any, duration_s: float = 0.0) -> None:
 
 def register_cost_tracker(tracker: Any, module: str = "") -> None:
     """Register a cost tracker to receive usage data from every LLM call."""
-    global _cost_tracker, _cost_tracker_module
+    global _cost_tracker
     _cost_tracker = tracker
-    _cost_tracker_module = module
+    _cost_tracker_module.set(module)
 
 
 def set_cost_tracker_module(module: str) -> None:
-    """Update the module label for cost attribution."""
-    global _cost_tracker_module
-    _cost_tracker_module = module
+    """Update the module label for cost attribution (for the current task)."""
+    _cost_tracker_module.set(module)
+
+
+def get_cost_tracker_module() -> str:
+    """The module label costs are currently attributed to (for the current task)."""
+    return _cost_tracker_module.get()
 
 
 def unregister_cost_tracker() -> None:
     """Remove the cost tracker."""
-    global _cost_tracker, _cost_tracker_module
+    global _cost_tracker
     _cost_tracker = None
-    _cost_tracker_module = ""
+    _cost_tracker_module.set("")
 
 
 def get_cost_tracker() -> Any:
@@ -740,14 +753,17 @@ def set_system_prompt_suffix(suffix: str) -> None:
     Used by pipeline.py to inject confidence instructions and feedback
     few-shot examples without modifying the auto-generated module files.
     """
-    global _system_prompt_suffix
-    _system_prompt_suffix = suffix
+    _system_prompt_suffix.set(suffix)
+
+
+def get_system_prompt_suffix() -> str:
+    """The suffix call_batch() will append (for the current task)."""
+    return _system_prompt_suffix.get()
 
 
 def clear_system_prompt_suffix() -> None:
     """Remove the prompt suffix."""
-    global _system_prompt_suffix
-    _system_prompt_suffix = ""
+    _system_prompt_suffix.set("")
 
 
 def set_per_batch_suffixes(suffixes: list[str] | None) -> None:
@@ -758,14 +774,12 @@ def set_per_batch_suffixes(suffixes: list[str] | None) -> None:
     for feedback.  pipeline.py sets _system_prompt_suffix to "" in this mode
     so call_batch does not double-append anything.
     """
-    global _per_batch_suffixes
-    _per_batch_suffixes = list(suffixes) if suffixes is not None else None
+    _per_batch_suffixes.set(list(suffixes) if suffixes is not None else None)
 
 
 def clear_per_batch_suffixes() -> None:
     """Clear per-batch suffix overrides."""
-    global _per_batch_suffixes
-    _per_batch_suffixes = None
+    _per_batch_suffixes.set(None)
 
 
 # ---------------------------------------------------------------------------
@@ -811,8 +825,9 @@ async def call_batch(
     # B1/B3 fix: append confidence instruction and/or feedback few-shot
     # examples if a suffix has been registered by pipeline.py.
     effective_prompt = system_prompt
-    if _system_prompt_suffix:
-        effective_prompt = system_prompt + _system_prompt_suffix
+    suffix = _system_prompt_suffix.get()
+    if suffix:
+        effective_prompt = system_prompt + suffix
 
     messages     = [
         {"role": "system", "content": effective_prompt},
@@ -993,16 +1008,17 @@ async def process_batches_async(
         # suffix (confidence instruction + batch-specific few-shot examples).
         # Slots out of range fall back silently to the base prompt.
         effective_sp = system_prompt
-        if _per_batch_suffixes is not None:
-            if slot < len(_per_batch_suffixes):
-                batch_suffix = _per_batch_suffixes[slot]
+        per_batch = _per_batch_suffixes.get()
+        if per_batch is not None:
+            if slot < len(per_batch):
+                batch_suffix = per_batch[slot]
                 if batch_suffix:
                     effective_sp = system_prompt + batch_suffix
             else:
                 logger.debug(
                     "_process_one slot %d out of range for _per_batch_suffixes "
                     "(len=%d) — using base prompt",
-                    slot, len(_per_batch_suffixes),
+                    slot, len(per_batch),
                 )
         async with semaphore:
             return await call_batch(

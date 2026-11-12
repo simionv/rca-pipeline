@@ -86,6 +86,7 @@ to an old Windows path, so change that before running.
 - A round of reviewed disagreements with written reasons is cheap and goes straight back in as few-shot examples.
 
 ## Known issues
+- **These results are zero-shot, not few-shot.** The notebook passed the gold tickets with `--feedback-dir`, but before v0.1.1 `rca run` silently ignored that setting, so no examples reached the model, in the full run or in the k-fold folds (which also shared one checkpoint). Re-run with v0.1.1 or later, with a separate input and checkpoint per fold, to measure the real effect of the examples.
 - `rca validate` passes with 24 warnings: 21 repeated L2 labels (expected by design), `resolution` and
   `troubleshooting` have no taxonomy, and `troubleshooting` has no code field.
 - `root_cause` is kept in the workbook but disabled. `resolution`, `escalation`, `troubleshooting` and `metadata`

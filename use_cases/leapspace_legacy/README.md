@@ -107,6 +107,7 @@ notebook still starts with a hard-coded `os.chdir` to the old project folder; ch
 - Small gold classes (3 or fewer tickets) make per-class scores meaningless; aim for 10+ per class.
 
 ## Known issues
+- **These results are zero-shot, not few-shot.** The notebook passed the gold tickets with `--feedback-dir`, but before v0.1.1 `rca run` silently ignored that setting, so no examples reached the model, in the full run or in the k-fold folds (which also shared one checkpoint). Re-run with v0.1.1 or later, with a separate input and checkpoint per fold, to measure the real effect of the examples.
 - `rca validate`: no errors, **53 warnings**: 39 root causes have no description, and 14 labels
   (for example *Other*, *Not enough info*, *Session data conflict/ cache and cookies issue*) appear
   under more than one contact reason. The repeats are expected in a hierarchical taxonomy; the
